@@ -395,6 +395,126 @@
     visibility: hidden;
   }
 
+  /* Sci-Fi status / terminal (single muted-green accent, rest stays monochrome) */
+  .status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 9999px;
+    background: #4ade80;
+    box-shadow: 0 0 10px #4ade80;
+    animation: statusPulse 2.2s ease-in-out infinite;
+  }
+  .terminal {
+    background: #0b0b0d;
+    border: 1px solid #26262b;
+    border-radius: 6px;
+    font-family: 'JetBrains Mono', ui-monospace, monospace;
+    font-size: 12px;
+    line-height: 1.7;
+    padding: 12px 14px;
+    overflow: hidden;
+    text-align: left;
+  }
+  .terminal-line {
+    color: #a1a1aa;
+    white-space: pre-wrap;
+  }
+  .terminal-line .ok { color: #4ade80; }
+  .terminal-line .dim { color: #63636b; }
+  .terminal-cursor {
+    display: inline-block;
+    width: 7px;
+    height: 13px;
+    background: #4ade80;
+    vertical-align: text-bottom;
+    animation: blink 1s step-end infinite;
+  }
+
+  /* Glassmorphism card */
+  .glass {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+  }
+
+  /* Border beam (light travelling around the card edge) */
+  .border-beam {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+  }
+  .border-beam::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: conic-gradient(from var(--beam-angle, 0deg), transparent 0deg, rgba(255, 255, 255, 0.4) 30deg, transparent 60deg, transparent 340deg, rgba(255, 255, 255, 0.15) 356deg, transparent 360deg);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    animation: borderBeam 4s linear infinite;
+    pointer-events: none;
+  }
+  .border-beam > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Toast (copy/export success splash) */
+  .toast {
+    position: fixed;
+    bottom: 26px;
+    left: 50%;
+    transform: translateX(-50%) translateY(24px);
+    background: #1c1c20;
+    border: 1px solid #3f3f46;
+    color: #e4e4e7;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 300;
+    pointer-events: none;
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+
+  /* Architecture map */
+  .arch-node { cursor: pointer; }
+  .arch-node rect {
+    fill: #121214;
+    stroke: #2c2c31;
+    transition: stroke 0.3s ease, fill 0.3s ease;
+  }
+  .arch-node text { fill: #d4d4d8; font-family: 'JetBrains Mono', monospace; }
+  .arch-node .arch-sub { fill: #63636b; font-size: 10px; }
+  .arch-edge {
+    stroke: #2c2c31;
+    stroke-width: 1.5;
+    fill: none;
+    transition: opacity 0.3s ease, stroke-width 0.3s ease;
+  }
+  .arch-particle { fill: #e4e4e7; }
+  .arch-node.dim, .arch-edge.dim { opacity: 0.25; }
+  .arch-node.active rect { stroke: #e4e4e7; fill: #1c1c20; }
+  .arch-node.active text { fill: #ffffff; }
+
+  @keyframes statusPulse {
+    0%, 100% { opacity: 1; box-shadow: 0 0 10px #4ade80; }
+    50% { opacity: 0.45; box-shadow: 0 0 2px #4ade80; }
+  }
+  @keyframes blink {
+    50% { opacity: 0; }
+  }
+  @keyframes borderBeam {
+    to { --beam-angle: 360deg; }
+  }
+
   /* Light sweep (ambient, monochrome) */
   .light-sweep {
     position: absolute;
@@ -435,6 +555,12 @@
   .prose-pf code { @apply bg-zinc-800/60 text-zinc-100 rounded px-1 py-0.5 text-[0.85em] font-mono; }
   .prose-pf pre { @apply bg-[#0d0d0f] border border-[#26262b] rounded-md p-4 overflow-x-auto my-3 text-sm font-mono text-zinc-200; }
   .prose-pf blockquote { @apply border-l-2 border-zinc-600 pl-3 my-2 text-zinc-400; }
+}
+
+@property --beam-angle {
+  syntax: '<angle>';
+  initial-value: 0deg;
+  inherits: false;
 }
 
 @keyframes kineticUp {

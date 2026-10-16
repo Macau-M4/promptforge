@@ -1,0 +1,91 @@
+---
+// Interactive SVG architecture map — no dependencies, SVG + animateMotion + vanilla JS.
+const nodes = [
+  { id: 'markdown', cx: 88, cy: 68, title: 'Markdown Prompts', sub: '24 files · MIT', desc: 'Prompt library as plain markdown + YAML frontmatter. Zero database, fully forkable.' },
+  { id: 'zod', cx: 330, cy: 68, title: 'Zod Schema', sub: 'validate on PR', desc: 'Every contribution is type-checked against a strict schema; a GitHub Action auto-tags the category.' },
+  { id: 'astro', cx: 572, cy: 68, title: 'Astro Build', sub: 'static export', desc: '38 static pages generated from content at build time. No server, no runtime framework.' },
+  { id: 'github', cx: 814, cy: 68, title: 'GitHub Pages', sub: '$0 hosting', desc: 'Served from the gh-pages branch over the global CDN. Free hosting, forever.' },
+  { id: 'browser', cx: 814, cy: 252, title: 'Client Browser', sub: 'search · vote · run', desc: 'Search, filter, vote (localStorage) and run prompts entirely in your browser.' },
+  { id: 'llm', cx: 572, cy: 252, title: 'Keyless LLM', sub: 'Pollinations', desc: 'Runs prompts with zero API key via a direct edge fetch. No account, no credit card.' }
+];
+
+const edges = [
+  { id: 'e1', from: 'markdown', to: 'zod', d: 'M176,68 L242,68', dur: '1.6s' },
+  { id: 'e2', from: 'zod', to: 'astro', d: 'M418,68 L484,68', dur: '1.8s' },
+  { id: 'e3', from: 'astro', to: 'github', d: 'M660,68 L726,68', dur: '1.5s' },
+  { id: 'e4', from: 'github', to: 'browser', d: 'M814,96 L814,224', dur: '1.7s' },
+  { id: 'e5', from: 'llm', to: 'browser', d: 'M660,252 L726,252', dur: '1.9s' }
+];
+---
+
+<div class="panel p-4 sm:p-6">
+  <svg viewBox="0 0 920 320" class="w-full h-auto" role="img" aria-label="PromptForge system architecture">
+    <!-- Edges -->
+    {edges.map((e) => (
+      <path class="arch-edge" data-from={e.from} data-to={e.to} d={e.d} />
+    ))}
+
+    <!-- Data-flow particles -->
+    {edges.map((e) => (
+      <>
+        <circle r="3" class="arch-particle">
+          <animateMotion dur={e.dur} repeatCount="indefinite" path={e.d} />
+        </circle>
+        {e.id === 'e5' && (
+          <circle r="3" class="arch-particle">
+            <animateMotion dur={e.dur} repeatCount="indefinite" path={e.d} keyPoints="1;0" keyTimes="0;1" />
+          </circle>
+        )}
+      </>
+    ))}
+
+    <!-- Nodes -->
+    {nodes.map((n) => (
+      <g class="arch-node" data-node={n.id}>
+        <rect x={n.cx - 88} y={n.cy - 28} width="176" height="56" rx="8" />
+        <text x={n.cx} y={n.cy - 2} text-anchor="middle" font-size="12.5" font-weight="600">{n.title}</text>
+        <text x={n.cx} y={n.cy + 15} text-anchor="middle" class="arch-sub">{n.sub}</text>
+      </g>
+    ))}
+
+    <!-- Bidirectional label -->
+    <text x="693" y="238" text-anchor="middle" font-size="9" fill="#63636b" font-family="JetBrains Mono, monospace">keyless fetch</text>
+  </svg>
+
+  <div id="arch-panel" class="mt-4 min-h-[52px] text-sm text-zinc-400">
+    <span class="text-zinc-600">Hover a node to inspect it.</span>
+  </div>
+</div>
+
+<script>
+  const archNodes = document.querySelectorAll<SVGGElement>('.arch-node');
+  const archEdges = document.querySelectorAll<SVGPathElement>('.arch-edge');
+  const panel = document.getElementById('arch-panel');
+
+  const details: Record<string, { title: string; desc: string }> = {
+    markdown: { title: 'Markdown Prompts', desc: 'Prompt library as plain markdown + YAML frontmatter. Zero database, fully forkable.' },
+    zod: { title: 'Zod Schema', desc: 'Every contribution is type-checked against a strict schema; a GitHub Action auto-tags the category.' },
+    astro: { title: 'Astro Build', desc: '38 static pages generated from content at build time. No server, no runtime framework.' },
+    github: { title: 'GitHub Pages', desc: 'Served from the gh-pages branch over the global CDN. Free hosting, forever.' },
+    browser: { title: 'Client Browser', desc: 'Search, filter, vote (localStorage) and run prompts entirely in your browser.' },
+    llm: { title: 'Keyless LLM', desc: 'Runs prompts with zero API key via a direct edge fetch. No account, no credit card.' }
+  };
+
+  archNodes.forEach((node) => {
+    node.addEventListener('mouseenter', () => {
+      const id = node.dataset.node || '';
+      archNodes.forEach((n) => n.classList.toggle('dim', n !== node));
+      archEdges.forEach((e) => {
+        const connected = e.dataset.from === id || e.dataset.to === id;
+        e.classList.toggle('dim', !connected);
+      });
+      node.classList.add('active');
+      const d = details[id];
+      if (d && panel) panel.innerHTML = `<strong class="text-zinc-100">${d.title}</strong><span class="block mt-1 text-zinc-400">${d.desc}</span>`;
+    });
+    node.addEventListener('mouseleave', () => {
+      archNodes.forEach((n) => n.classList.remove('dim', 'active'));
+      archEdges.forEach((e) => e.classList.remove('dim'));
+    });
+  });
+</script>

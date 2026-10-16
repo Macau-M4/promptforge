@@ -59,24 +59,66 @@ const base = import.meta.env.BASE_URL;
     </div>
   </section>
 
-  <!-- STATS -->
+  <!-- STATS / COMMAND CENTER -->
   <section class="border-y border-[#1c1c20]">
-    <div class="mx-auto max-w-6xl grid grid-cols-2 sm:grid-cols-4">
-      <div class="py-10 px-6 border-r border-b sm:border-b-0 border-[#1c1c20]" data-reveal>
-        <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={data.length}>{data.length}</div>
-        <div class="mono-label mt-2">Prompts</div>
+    <div class="mx-auto max-w-6xl">
+      <div class="flex items-center gap-3 px-5 sm:px-6 pt-7" data-reveal>
+        <span class="status-dot"></span>
+        <span class="mono-label text-zinc-400">All systems operational · $0/mo hosting · 100% open source</span>
       </div>
-      <div class="py-10 px-6 border-r border-b sm:border-b-0 border-[#1c1c20]" data-reveal data-reveal-delay="80">
-        <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={catCount}>{catCount}</div>
-        <div class="mono-label mt-2">Categories</div>
+      <div class="grid grid-cols-2 sm:grid-cols-4 mt-6">
+        <div class="py-10 px-6 border-r border-b sm:border-b-0 border-[#1c1c20]" data-reveal>
+          <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={data.length}>{data.length}</div>
+          <div class="mono-label mt-2">Prompts</div>
+        </div>
+        <div class="py-10 px-6 border-r border-b sm:border-b-0 border-[#1c1c20]" data-reveal data-reveal-delay="80">
+          <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={catCount}>{catCount}</div>
+          <div class="mono-label mt-2">Categories</div>
+        </div>
+        <div class="py-10 px-6 border-r border-b sm:border-b-0 border-[#1c1c20]" data-reveal data-reveal-delay="160">
+          <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={paths.length}>{paths.length}</div>
+          <div class="mono-label mt-2">Learning paths</div>
+        </div>
+        <div class="py-10 px-6" data-reveal data-reveal-delay="240">
+          <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={totalVotes}>{totalVotes}</div>
+          <div class="mono-label mt-2">Net votes</div>
+        </div>
       </div>
-      <div class="py-10 px-6 border-r border-b sm:border-b-0 border-[#1c1c20]" data-reveal data-reveal-delay="160">
-        <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={paths.length}>{paths.length}</div>
-        <div class="mono-label mt-2">Learning paths</div>
+      <div class="px-5 sm:px-6 pb-8 mt-6">
+        <div class="terminal max-w-2xl" data-reveal>
+          <div class="terminal-line text-zinc-500">~/promptforge $ status</div>
+          <div id="terminal-lines" aria-live="polite"></div>
+        </div>
       </div>
-      <div class="py-10 px-6" data-reveal data-reveal-delay="240">
-        <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={totalVotes}>{totalVotes}</div>
-        <div class="mono-label mt-2">Net votes</div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS (scroll-triggered stepper) -->
+  <section id="how" class="mx-auto max-w-6xl px-5 sm:px-6 py-24 scroll-mt-16">
+    <div class="mb-12" data-reveal>
+      <p class="mono-label mb-3">How PromptForge works</p>
+      <h2 class="display text-3xl sm:text-5xl text-zinc-100">Forge in 4 steps</h2>
+    </div>
+    <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+      <div class="border-beam glass rounded-lg p-6" data-reveal>
+        <div class="mono-label text-zinc-500 mb-3">Step 01</div>
+        <h3 class="text-lg font-semibold text-zinc-100">Browse &amp; Search</h3>
+        <p class="text-sm text-zinc-400 mt-2">ค้นหา กรอง และโหวต Prompt คุณภาพสูงที่ผ่านการรับรอง</p>
+      </div>
+      <div class="border-beam glass rounded-lg p-6" data-reveal data-reveal-delay="90">
+        <div class="mono-label text-zinc-500 mb-3">Step 02</div>
+        <h3 class="text-lg font-semibold text-zinc-100">Interactive Paths</h3>
+        <p class="text-sm text-zinc-400 mt-2">เดินตามเส้นทางการเรียนรู้แบบเป็นขั้นตอน จากเริ่มต้นถึงขั้นสูง</p>
+      </div>
+      <div class="border-beam glass rounded-lg p-6" data-reveal data-reveal-delay="180">
+        <div class="mono-label text-zinc-500 mb-3">Step 03</div>
+        <h3 class="text-lg font-semibold text-zinc-100">Run in Playground</h3>
+        <p class="text-sm text-zinc-400 mt-2">ทดสอบรันและปรับ Parameter ในเบราว์เซอร์ได้ทันที ไม่ต้องใช้ key</p>
+      </div>
+      <div class="border-beam glass rounded-lg p-6" data-reveal data-reveal-delay="270">
+        <div class="mono-label text-zinc-500 mb-3">Step 04</div>
+        <h3 class="text-lg font-semibold text-zinc-100">Contribute via PR</h3>
+        <p class="text-sm text-zinc-400 mt-2">แชร์ Prompt ใหม่ ๆ เข้าสู่คลังผ่าน GitHub pull request</p>
       </div>
     </div>
   </section>
@@ -121,5 +163,63 @@ const base = import.meta.env.BASE_URL;
       }, { threshold: 0.5 });
       counters.forEach((c) => io.observe(c));
     } else counters.forEach((c) => c.textContent = c.dataset.count || '0');
+
+    // Terminal typewriter log
+    const termEl = document.getElementById('terminal-lines');
+    if (termEl) {
+      const lines = [
+        { pre: '[PROMPTFORGE-CLI] Loading prompt schema... ', ok: 'PASS' },
+        { pre: '[LLM-ROUTER] Pollinations Keyless Gateway... ', ok: 'CONNECTED' },
+        { pre: '[BUILD] Astro Static Engine... ', ok: '100% OPTIMIZED' },
+        { pre: '[HOSTING] GitHub Pages CDN... ', ok: '$0/MONTH' }
+      ];
+      let started = false;
+      const esc = (s: string) => s.replace(/[&<>]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c] as string));
+      const run = () => {
+        if (started) return;
+        started = true;
+        let done = 0;
+        let ci = 0;
+        const render = () => {
+          let html = '';
+          for (let i = 0; i < done; i++) {
+            html += `<div class="terminal-line"><span class="dim">${esc(lines[i].pre)}</span><span class="ok">${esc(lines[i].ok)}</span></div>`;
+          }
+          if (done < lines.length) {
+            const l = lines[done];
+            const full = l.pre + l.ok;
+            const typed = full.slice(0, ci);
+            const inOk = ci > l.pre.length;
+            const prePart = inOk ? l.pre : typed;
+            const okPart = inOk ? typed.slice(l.pre.length) : '';
+            html += `<div class="terminal-line">${esc(prePart)}<span class="ok">${esc(okPart)}</span><span class="terminal-cursor"></span></div>`;
+          }
+          termEl.innerHTML = html;
+        };
+        const step = () => {
+          const l = lines[done];
+          const fullLen = l.pre.length + l.ok.length;
+          ci++;
+          render();
+          if (ci >= fullLen) {
+            done++;
+            ci = 0;
+            if (done >= lines.length) return;
+            setTimeout(step, 220);
+          } else {
+            setTimeout(step, 12);
+          }
+        };
+        step();
+      };
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver((es) => {
+          if (es[0].isIntersecting) { run(); io.disconnect(); }
+        }, { threshold: 0.3 });
+        io.observe(termEl);
+      } else {
+        run();
+      }
+    }
   </script>
 </Layout>

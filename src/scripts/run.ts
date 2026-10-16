@@ -65,6 +65,38 @@ function esc(s: string) {
   return s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] as string));
 }
 
+function showToast(message: string) {
+  let toast = document.getElementById('pf-toast');
+  if (!toast) {
+    toast = document.createElement('div');
+    toast.id = 'pf-toast';
+    toast.className = 'toast';
+    document.body.appendChild(toast);
+  }
+  toast.textContent = message;
+  toast.classList.add('show');
+  clearTimeout((toast as any)._t);
+  (toast as any)._t = setTimeout(() => toast.classList.remove('show'), 2200);
+}
+
+// Typewriter streaming for the LLM output (ease-out, capped for long text).
+async function typeOut(el: HTMLElement, text: string) {
+  el.textContent = '';
+  if (!text) return;
+  const total = text.length;
+  const duration = Math.min(1800, Math.max(400, total * 4));
+  const t0 = performance.now();
+  await new Promise<void>((resolve) => {
+    const tick = (now: number) => {
+      const p = Math.min((now - t0) / duration, 1);
+      el.textContent = text.slice(0, Math.floor(total * (1 - Math.pow(1 - p, 3))));
+      if (p < 1) requestAnimationFrame(tick);
+      else { el.textContent = text; resolve(); }
+    };
+    requestAnimationFrame(tick);
+  });
+}
+
 const KEY_PREFIX = 'pf.llm.key.';
 
 function getKey(provider: string): string {
@@ -204,7 +236,13 @@ export function initRun() {
           </div>
           <button id="run-btn" class="btn-primary w-full py-3">▶ Run prompt</button>
           <div id="status" class="text-sm text-zinc-400"></div>
-          <div id="output" class="hidden panel p-4 whitespace-pre-wrap text-zinc-200 text-sm leading-relaxed max-h-96 overflow-y-auto"></div>
+          <div id="output-wrap" class="hidden">
+            <div class="flex items-center justify-between mb-2">
+              <span class="mono-label">Output</span>
+              <button id="copy-output" class="btn-ghost px-2.5 py-1 text-xs">Copy</button>
+            </div>
+            <div id="output" class="panel p-4 whitespace-pre-wrap text-zinc-200 text-sm leading-relaxed max-h-96 overflow-y-auto"></div>
+          </div>
         </section>
       </div>`;
 
@@ -223,6 +261,8 @@ export function initRun() {
     const runBtn = app.querySelector('#run-btn') as HTMLButtonElement;
     const status = app.querySelector('#status') as HTMLDivElement;
     const output = app.querySelector('#output') as HTMLDivElement;
+    const outputWrap = app.querySelector('#output-wrap') as HTMLDivElement;
+    const copyOutput = app.querySelector('#copy-output') as HTMLButtonElement;
 
     preview.value = current?.prompt || '';
     varCount.textContent = vars.length ? `${vars.length} variable${vars.length > 1 ? 's' : ''}` : '';
@@ -248,6 +288,19 @@ export function initRun() {
     });
     keyInput?.addEventListener('change', () => setKey(providerId, keyInput.value));
 
+    copyOutput.addEventListener('click', async () => {
+      const text = output.textContent || '';
+      if (!text) return;
+      try {
+        await navigator.clipboard.writeText(text);
+        copyOutput.textContent = 'Copied ✓';
+        showToast('Output copied to clipboard');
+        setTimeout(() => (copyOutput.textContent = 'Copy'), 1500);
+      } catch {
+        showToast('Copy failed');
+      }
+    });
+
     runBtn.addEventListener('click', async () => {
       if (running) return;
       const key = provider().needsKey && !keyInput?.value ? '' : (keyInput?.value || '');
@@ -264,11 +317,12 @@ export function initRun() {
       runBtn.disabled = true;
       runBtn.textContent = 'Running…';
       status.innerHTML = '<span class="text-zinc-400">Generating with ' + esc(provider().label) + ' (' + esc(modelSel.value) + ')…</span>';
-      output.classList.add('hidden');
+      outputWrap.classList.add('hidden');
       try {
         const text = await runPrompt(provider(), modelSel.value, finalPrompt);
-        output.textContent = text;
-        output.classList.remove('hidden');
+        outputWrap.classList.remove('hidden');
+        status.innerHTML = '<span class="text-zinc-400">Streaming output…</span>';
+        await typeOut(output, text);
         status.innerHTML = '<span class="text-zinc-300">Done ✓</span>';
       } catch (e: any) {
         status.innerHTML = `<span class="text-zinc-300">Error: ${esc(String(e?.message || e))}. If a keyed provider fails, it may be a CORS or key issue — try Pollinations (no key).</span>`;
