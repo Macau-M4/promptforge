@@ -193,6 +193,9 @@ const base = import.meta.env.BASE_URL;
             const prePart = inOk ? l.pre : typed;
             const okPart = inOk ? typed.slice(l.pre.length) : '';
             html += `<div class="terminal-line">${esc(prePart)}<span class="ok">${esc(okPart)}</span><span class="terminal-cursor"></span></div>`;
+          } else {
+            // Typing finished — keep a blinking cursor so the terminal never freezes.
+            html += `<div class="terminal-line"><span class="dim">~/promptforge $ </span><span class="terminal-cursor"></span></div>`;
           }
           termEl.innerHTML = html;
         };

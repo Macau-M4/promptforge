@@ -42,11 +42,13 @@ export function initHero() {
     }));
   }
 
-  // Orb center (right-of-center on desktop, centered on small screens)
-  const orb = () => ({
-    x: W < 768 ? W * 0.5 : W * 0.72,
-    y: H * 0.46,
-    r: Math.min(W, H) * (W < 768 ? 0.22 : 0.20)
+  // Orb center (right-of-center on desktop, centered on small screens).
+  // t is seconds — the sphere gently floats, drifts and breathes so it never
+  // looks frozen, in addition to its rotating ring + orbiting dot.
+  const orb = (t: number) => ({
+    x: (W < 768 ? W * 0.5 : W * 0.72) + Math.sin(t * 0.5) * 8,
+    y: H * 0.46 + Math.sin(t * 0.7) * 12,
+    r: Math.min(W, H) * (W < 768 ? 0.22 : 0.20) * (1 + Math.sin(t * 0.45 + 1) * 0.02)
   });
 
   function drawChromeOrb(o: { x: number; y: number; r: number }, t: number) {
@@ -197,7 +199,7 @@ export function initHero() {
     ctx.clearRect(0, 0, W, H);
     drawGrid();
     drawParticles(t / 1000);
-    drawChromeOrb(orb(), t / 1000);
+    drawChromeOrb(orb(t / 1000), t / 1000);
     drawPointerLight();
   }
 
