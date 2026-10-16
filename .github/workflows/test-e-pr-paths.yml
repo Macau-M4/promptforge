@@ -1,0 +1,10 @@
+name: test-e-pr-paths
+on:
+  pull_request:
+    paths:
+      - 'src/**'
+jobs:
+  hi:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo ok-e
