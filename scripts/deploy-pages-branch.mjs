@@ -58,7 +58,10 @@ async function main() {
     const rel = relative(root, f).split(sep).join('/');
     return { path: rel, mode: '100644', type: 'blob', content: readFileSync(f).toString('utf8') };
   });
-  console.log(`Preparing ${tree.length} files from dist/`);
+  // GitHub Pages runs Jekyll by default and ignores `_`-prefixed dirs (e.g. _astro).
+  // A .nojekyll file at the root disables Jekyll so assets are served as-is.
+  tree.push({ path: '.nojekyll', mode: '100644', type: 'blob', content: '' });
+  console.log(`Preparing ${tree.length} files from dist/ (+.nojekyll)`);
 
   const treeRes = await gh(`/repos/${owner}/${repo}/git/trees`, 'POST', { base_tree: null, tree });
   const treeSha = treeRes.data.sha;
