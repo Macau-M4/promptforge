@@ -1,1 +1,7 @@
-IyBwbnBtIHNldHRpbmdzIChwbnBtIDEwKyByZWFkcyBidWlsZCBhcHByb3ZhbHMgZnJvbSBwbnBtLXdvcmtzcGFjZS55YW1sKS4KcGFja2FnZXM6CiAgLSAnLicKCmFsbG93QnVpbGRzOgogIGVzYnVpbGQ6IHRydWUKICBzaGFycDogdHJ1ZQo=
+# pnpm settings (pnpm 10+ reads build approvals from pnpm-workspace.yaml).
+packages:
+  - '.'
+
+allowBuilds:
+  esbuild: true
+  sharp: true

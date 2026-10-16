@@ -1,1 +1,155 @@
-IyDimpLvuI8gUHJvbXB0Rm9yZ2UKCj4gVGhlIGZyZWUsIG9wZW4tc291cmNlIGxpYnJhcnkgb2YgQUkgcHJvbXB0cywgY29tbWFuZHMsIHRvb2xzIGFuZCB3b3JrZmxvd3Mg4oCUIGFuZCB0aGUKPiBndWlkZXMgdGhhdCB0ZWFjaCB5b3UgaG93IHRvIHVzZSB0aGVtLgoKKipaZXJvIHBhaWQgc2VydmljZXMuIFplcm8gY3JlZGl0IGNhcmQuIFplcm8gcmVjdXJyaW5nIGNvc3QuKiogQSBmdWxseSBzdGF0aWMgc2l0ZToKY29udGVudCBpcyBtYXJrZG93biBpbiBnaXQsIHZvdGVzIGxpdmUgaW4geW91ciBicm93c2VyLCBhdXRoIGlzIEdpdEh1YiBPQXV0aCwgYW5kIHRoZQpMTE0gYmFja2VuZHMgYXJlIGFsbCBmcmVlIHRpZXJzIG9yIGtleWxlc3MuCgojIyDinKggRmVhdHVyZXMKCnwgIyB8IEZlYXR1cmUgfCBIb3cgaXQgd29ya3MgfAp8LS0tfC0tLXwtLS18CnwgMSB8ICoqUHJvbXB0IGJyb3dzZXIqKiB8IENhcmQgZ3JpZCwgbGl2ZSBzZWFyY2gsIGZpbHRlciBieSBjYXRlZ29yeSArIGRpZmZpY3VsdHkgfAp8IDIgfCAqKlZvdGluZyoqIHwgVXAvZG93biB2b3RlcyBwZXJzaXN0ZWQgaW4gYGxvY2FsU3RvcmFnZWAgKHNlZWRlZCBzY29yZXMgaW4gZnJvbnRtYXR0ZXIpIHwKfCAzIHwgKipUcmVuZGluZyBzb3J0KiogfCBgc2NvcmUgw5cgcmVjZW5jeWAgZGVjYXksIGFsb25nc2lkZSAidG9wIiBhbmQgIm5ld2VzdCIgfAp8IDQgfCAqKkxlYXJuaW5nIHBhdGhzKiogfCAzIHRyYWNrcyDigJQgKlN0YXJ0IGhlcmUg4oaSIEFkdmFuY2Ug4oaSIE1hc3RlciogfAp8IDUgfCAqKlJ1biBpbiBwYWdlKiogfCBFeGVjdXRlIGFueSBwcm9tcHQgYWdhaW5zdCBhIGZyZWUgTExNLCBkaXJlY3RseSBpbiB0aGUgYnJvd3NlciB8CnwgNiB8ICoqQ29udHJpYnV0aW9ucyoqIHwgU3VibWl0IHZpYSBHaXRIdWIgUFI7IENJIHZhbGlkYXRlcyArIGF1dG8tdGFncyB8CnwgNyB8ICoqQXV0aCoqIHwgR2l0SHViIE9BdXRoICoqRGV2aWNlIEZsb3cqKiDigJQgbm8gYmFja2VuZCwgbm8gY2xpZW50IHNlY3JldCB8CnwgOCB8ICoqQXV0by10YWdnaW5nKiogfCBGcmVlIGtleXdvcmQgc2NvcmluZyBhc3NpZ25zIGNhdGVnb3JpZXMgdG8gbmV3IHN1Ym1pc3Npb25zIHwKCiMjIPCfp7EgVGVjaCBzdGFjayAoYWxsIGZyZWUgLyBvcGVuIHNvdXJjZSkKCi0gKipGcm9udGVuZDoqKiBbQXN0cm9dKGh0dHBzOi8vYXN0cm8uYnVpbGQpIChzdGF0aWMgZXhwb3J0KQotICoqU3R5bGluZzoqKiBbVGFpbHdpbmQgQ1NTXShodHRwczovL3RhaWx3aW5kY3NzLmNvbSkKLSAqKkNvbnRlbnQ6KiogbWFya2Rvd24gZmlsZXMgaW4gYHNyYy9jb250ZW50L3twcm9tcHRzLHBhdGhzLHRvb2xzfS9gCi0gKipTY2hlbWE6KiogW1pvZF0oaHR0cHM6Ly96b2QuZGV2KSAodmFsaWRhdGVkIGF0IGJ1aWxkIHRpbWUgYW5kIGluIENJKQotICoqSG9zdGluZzoqKiBHaXRIdWIgUGFnZXMgKHdvcmtmbG93IGluY2x1ZGVkKSDigJQgYWxzbyBDbG91ZGZsYXJlL1ZlcmNlbC9OZXRsaWZ5IGZyZWUgdGllcnMKLSAqKkNJOioqIEdpdEh1YiBBY3Rpb25zICh2YWxpZGF0ZSArIGF1dG8tdGFnICsgZGVwbG95KQotICoqTExNOioqIFtQb2xsaW5hdGlvbnNdKGh0dHBzOi8vdGV4dC5wb2xsaW5hdGlvbnMuYWkvKSAoa2V5bGVzcyksIEdvb2dsZSBBSSBTdHVkaW8sIEdyb3EsIE9wZW5Sb3V0ZXIgZnJlZSBtb2RlbHMsIG9yIGxvY2FsIFdlYkxMTQotICoqQXV0aDoqKiBHaXRIdWIgT0F1dGggRGV2aWNlIEZsb3cgKGZyZWUpCgojIyDwn5qAIFF1aWNrIHN0YXJ0IChmb3JrICsgc2VsZi1ob3N0KQoKIyMjIDEuIEZvcmsgJiBjbG9uZQoKMS4gQ2xpY2sgKipGb3JrKiogb24gdGhpcyByZXBvLgoyLiBDbG9uZSB5b3VyIGZvcmsgYW5kIGluc3RhbGw6CgpgYGBiYXNoCnBucG0gaW5zdGFsbApwbnBtIGRldiAgICAgICAgIyBodHRwOi8vbG9jYWxob3N0OjQzMjEKYGBgCgojIyMgMi4gQ29uZmlndXJlIChvcHRpb25hbCwgZm9yIGxvZ2luKQoKQ3JlYXRlIGEgZnJlZSBHaXRIdWIgT0F1dGggQXBwIChubyBjcmVkaXQgY2FyZCk6CgoxLiBHbyB0byAqKkdpdEh1YiDihpIgU2V0dGluZ3Mg4oaSIERldmVsb3BlciBzZXR0aW5ncyDihpIgT0F1dGggQXBwcyDihpIgTmV3IE9BdXRoIEFwcCoqLgoyLiBTZXQgKkhvbWVwYWdlIFVSTCogdG8geW91ciBzaXRlIFVSTCBhbmQgKkF1dGhvcml6YXRpb24gY2FsbGJhY2sgVVJMKiB0byB0aGUgc2FtZSBVUkwuCjMuIFVuZGVyIHlvdXIgbmV3IGFwcCDihpIgKipHZW5lcmFsKiosIGNoZWNrICoqIkVuYWJsZSBEZXZpY2UgRmxvdyIqKi4KNC4gQ29weSB0aGUgKipDbGllbnQgSUQqKiAocHVibGljLCBzYWZlIHRvIGNvbW1pdCkgaW50byBgLmVudmA6CgpgYGBiYXNoCiMgLmVudgpQVUJMSUNfR0lUSFVCX0NMSUVOVF9JRD15b3VyX2NsaWVudF9pZApQVUJMSUNfUkVQTz15b3VyLXVzZXJuYW1lL3lvdXItcmVwby1uYW1lCmBgYAoKV2l0aG91dCBhIENsaWVudCBJRCwgdGhlICJTaWduIGluIiBidXR0b24gc2hvd3MgZnJpZW5kbHkgc2V0dXAgaW5zdHJ1Y3Rpb25zIGluc3RlYWQg4oCUCmV2ZXJ5dGhpbmcgZWxzZSBzdGlsbCB3b3Jrcy4KCiMjIyAzLiBEZXBsb3kgdG8gR2l0SHViIFBhZ2VzIChmcmVlKQoKMS4gUHVzaCB0byBgbWFpbmAuCjIuIEluIHRoZSByZXBvLCBnbyB0byAqKlNldHRpbmdzIOKGkiBQYWdlcyoqIOKGkiBzZXQgKlNvdXJjZSogdG8gKipHaXRIdWIgQWN0aW9ucyoqLgozLiBUaGUgaW5jbHVkZWQgYC5naXRodWIvd29ya2Zsb3dzL2RlcGxveS55bWxgIGJ1aWxkcyBhbmQgZGVwbG95cyBhdXRvbWF0aWNhbGx5LgoKWW91ciBzaXRlIGlzIGxpdmUgYXQgYGh0dHBzOi8vPHlvdT4uZ2l0aHViLmlvLzxyZXBvPi9gIChvciBgaHR0cHM6Ly88eW91Pi5naXRodWIuaW8vYAppZiB0aGUgcmVwbyBpcyBuYW1lZCBgPHlvdT4uZ2l0aHViLmlvYCkuCgo+ICoqT25lLWNvbW1hbmQgYWx0ZXJuYXRpdmU6KiogYHNjcmlwdHMvZGVwbG95LWdpdGh1Yi5tanNgIGNyZWF0ZXMgdGhlIHJlcG8sIHB1c2hlcwo+IGV2ZXJ5dGhpbmcsIGVuYWJsZXMgUGFnZXMgYW5kIHRyaWdnZXJzIHRoZSBkZXBsb3kgd29ya2Zsb3cgdmlhIHRoZSBHaXRIdWIgUkVTVCBBUEkg4oCUCj4gbm8gbG9jYWwgZ2l0IG5lZWRlZC4gUnVuIGl0IHdpdGggYSBjbGFzc2ljIFBBVCB0aGF0IGhhcyBgcmVwb2AgKyBgd29ya2Zsb3dgIHNjb3BlOgo+Cj4gYGBgYmFzaAo+IG5vZGUgc2NyaXB0cy9kZXBsb3ktZ2l0aHViLm1qcyBnaHBfeHh4IHByb21wdGZvcmdlCj4gYGBgCgojIyMjIEFsdGVybmF0aXZlIGZyZWUgaG9zdHMKCnwgSG9zdCB8IEhvdyB8CnwtLS18LS0tfAp8ICoqQ2xvdWRmbGFyZSBQYWdlcyoqIHwgQnVpbGQgY29tbWFuZCBgcG5wbSBidWlsZGAsIG91dHB1dCBgZGlzdGAsIHNldCBgUFVCTElDX0JBU0U9L2AgfAp8ICoqVmVyY2VsKiogfCBJbXBvcnQgcmVwbywgZnJhbWV3b3JrIHByZXNldCAiT3RoZXIiLCBidWlsZCBgcG5wbSBidWlsZGAsIG91dHB1dCBgZGlzdGAgfAp8ICoqTmV0bGlmeSoqIHwgSW1wb3J0IHJlcG8sIGJ1aWxkIGBwbnBtIGJ1aWxkYCwgcHVibGlzaCBkaXIgYGRpc3RgIHwKCkFsbCBhcmUgZnJlZSB0aWVycyB3aXRoIG5vIGNyZWRpdCBjYXJkLiBGb3IgYW55IG9mIHRoZW0gc2V0IHRoZSBlbnYgdmFycyBmcm9tCmAuZW52LmV4YW1wbGVgIGluIHRoZSBob3N0J3MgYnVpbGQgc2V0dGluZ3MuCgojIyDilrbvuI8gUnVuIGluIHBhZ2Ug4oCUIGZyZWUgTExNIGJhY2tlbmRzCgpUaGUgKipSdW4qKiBwYWdlIHNlbmRzIHRoZSBwcm9tcHQgc3RyYWlnaHQgZnJvbSB5b3VyIGJyb3dzZXIgdG8gYSBmcmVlIEFQSS4gWW91ciBrZXkKKGlmIGFueSkgaXMgc3RvcmVkIGluIGBsb2NhbFN0b3JhZ2VgIGFuZCBuZXZlciB0b3VjaGVzIGEgUHJvbXB0Rm9yZ2Ugc2VydmVyICh0aGVyZQppc24ndCBvbmUpLgoKfCBQcm92aWRlciB8IEtleSByZXF1aXJlZCB8IE5vdGVzIHwKfC0tLXwtLS18LS0tfAp8ICoqUG9sbGluYXRpb25zKiogfCDinYwgbm9uZSB8IERlZmF1bHQuIFdvcmtzIGluc3RhbnRseSwgZmFpci11c2UgbGltaXRzLiB8CnwgKipHb29nbGUgQUkgU3R1ZGlvKiogfCBmcmVlIGtleSB8IGBnZW1pbmktMi4wLWZsYXNoYCBldGMuIE5vIGNhcmQgbmVlZGVkLiB8CnwgKipHcm9xKiogfCBmcmVlIGtleSB8IFZlcnkgZmFzdCBvcGVuIG1vZGVscy4gTm8gY2FyZCBuZWVkZWQuIHwKfCAqKk9wZW5Sb3V0ZXIqKiB8IGZyZWUga2V5IHwgTWFueSBgOmZyZWVgIG1vZGVscyBiZWhpbmQgb25lIEFQSS4gfAoKIyMg8J+Xs++4jyBWb3RpbmcgJiB0cmVuZGluZwoKLSBFYWNoIHByb21wdCdzIGB1cHZvdGVzYC9gZG93bnZvdGVzYCBpbiBmcm9udG1hdHRlciBhcmUgdGhlICoqc2VlZCoqLgotIEEgdmlzaXRvcidzIHZvdGUgaXMgc3RvcmVkIGluIGBsb2NhbFN0b3JhZ2VgIChgcGYudm90ZXNgKSBhbmQgbWVyZ2VkIG9uIHJlbmRlci4KLSAqKlRyZW5kaW5nKiogPSBgKHVwdm90ZXMg4oiSIGRvd252b3Rlcykgw5cgMS8oMSArIGFnZURheXMvNylgIOKAlCByZWNlbmN5LXdlaWdodGVkIHNvIGZyZXNoCiAgcHJvbXB0cyBjYW4gc3VyZmFjZSB3aXRob3V0IGJ1cnlpbmcgZXZlcmdyZWVuIHF1YWxpdHkuCgpUbyBtYWtlIHZvdGluZyBwZXJzaXN0ICoqZ2xvYmFsbHkqKiAoc2hhcmVkIGFjcm9zcyB2aXNpdG9ycyksIHN3YXAgdGhlIGxvY2FsU3RvcmFnZQpsYXllciBpbiBgc3JjL3NjcmlwdHMvYnJvd3Nlci50c2AgZm9yIGEgZnJlZSBTdXBhYmFzZSBwcm9qZWN0IG9yIGEgc21hbGwgS1YvQVBJLiBUaGUKZGF0YSBtb2RlbCBpcyBhIHNpbXBsZSBgeyBwcm9tcHRJZDoge3VwLCBkb3dufSB9YCBtYXAuCgojIyDwn6SdIENvbnRyaWJ1dGluZwoKU2VlIFtDT05UUklCVVRJTkcubWRdKENPTlRSSUJVVElORy5tZCkuIEluIHNob3J0OgoKMS4gRm9yayB0aGUgcmVwby4KMi4gQWRkIGEgbWFya2Rvd24gZmlsZSB0byBgc3JjL2NvbnRlbnQvcHJvbXB0cy9gICh0ZW1wbGF0ZSBpbiBDT05UUklCVVRJTkcpLgozLiBgcG5wbSBydW4gdmFsaWRhdGVgIGxvY2FsbHkuCjQuIE9wZW4gYSBQUiDigJQgYSBHaXRIdWIgQWN0aW9uIHZhbGlkYXRlcyB0aGUgWm9kIHNjaGVtYSBhbmQgYXV0by10YWdzIHRoZSBjYXRlZ29yeS4KCiMjIPCfk4EgUHJvamVjdCBzdHJ1Y3R1cmUKCmBgYApzcmMvCiAgY29udGVudC5jb25maWcudHMgICAgICAgICMgQXN0cm8gY29udGVudCBjb2xsZWN0aW9ucyArIFpvZCBzY2hlbWEKICBjb250ZW50LwogICAgcHJvbXB0cy8qLm1kICAgICAgICAgICAjIHRoZSBwcm9tcHQgbGlicmFyeQogICAgcGF0aHMvKi5tZCAgICAgICAgICAgICAjIGxlYXJuaW5nIHBhdGhzCiAgICB0b29scy8qLm1kICAgICAgICAgICAgICMgZnJlZSBMTE0gcHJvdmlkZXJzL3Rvb2xzCiAgbGliLyAgICAgICAgICAgICAgICAgICAgICMgc2hhcmVkIGhlbHBlcnMgKHRyZW5kaW5nLCBtYXJrZG93biwgY29uc3RhbnRzKQogIHNjcmlwdHMvICAgICAgICAgICAgICAgICAjIGNsaWVudC1zaWRlIFRTIChicm93c2VyLCBydW4sIGF1dGgsIHZvdGluZykKICBwYWdlcy8gICAgICAgICAgICAgICAgICAgIyBBc3RybyByb3V0ZXMKICBsYXlvdXRzL0xheW91dC5hc3RybyAgICAgIyBzaXRlIGNocm9tZQpzY3JpcHRzLwogIHZhbGlkYXRlLm1qcyAgICAgICAgICAgICAjIHN0YW5kYWxvbmUgWm9kIHZhbGlkYXRpb24gKENJKQogIGF1dG8tdGFnLm1qcyAgICAgICAgICAgICAjIGtleXdvcmQtYmFzZWQgY2F0ZWdvcnkgaW5mZXJlbmNlCiAgY2ktYW5ub3RhdGUubWpzICAgICAgICAgICMgUFIgY29tbWVudCArIGxhYmVsIGdsdWUgKENJKQouZ2l0aHViL3dvcmtmbG93cy8KICB2YWxpZGF0ZS55bWwgICAgICAgICAgICAgIyBzY2hlbWEgdmFsaWRhdGlvbiBvbiBQUgogIGF1dG8tdGFnLnltbCAgICAgICAgICAgICAjIGF1dG8tdGFnZ2luZyBvbiBQUgogIGRlcGxveS55bWwgICAgICAgICAgICAgICAjIEdpdEh1YiBQYWdlcyBkZXBsb3kKYGBgCgojIyDwn5K4IENvc3QKCi0gKipUb3RhbCBtb250aGx5IGNvc3Q6IDAuKiogTm8gc2VydmVyLCBubyBkYXRhYmFzZSwgbm8gcGFpZCBhdXRoLCBubyBwYWlkIExMTS4KLSBUaGUgb25seSBvcHRpb25hbCAiY3JlZGVudGlhbHMiIGFyZSBmcmVlLXRpZXIgQVBJIGtleXMgeW91IGNyZWF0ZSB5b3Vyc2VsZi4KCiMjIPCfk4QgTGljZW5zZQoKTUlUIOKAlCBzZWUgW0xJQ0VOU0VdKExJQ0VOU0UpLiBDb250ZW50IChwcm9tcHRzKSBpcyBhbHNvIE1JVCBzbyBhbnlvbmUgY2FuIGZvcmsgYW5kIHJldXNlLgo=
+# ⚒️ PromptForge
+
+> The free, open-source library of AI prompts, commands, tools and workflows — and the
+> guides that teach you how to use them.
+
+**Zero paid services. Zero credit card. Zero recurring cost.** A fully static site:
+content is markdown in git, votes live in your browser, auth is GitHub OAuth, and the
+LLM backends are all free tiers or keyless.
+
+## ✨ Features
+
+| # | Feature | How it works |
+|---|---|---|
+| 1 | **Prompt browser** | Card grid, live search, filter by category + difficulty |
+| 2 | **Voting** | Up/down votes persisted in `localStorage` (seeded scores in frontmatter) |
+| 3 | **Trending sort** | `score × recency` decay, alongside "top" and "newest" |
+| 4 | **Learning paths** | 3 tracks — *Start here → Advance → Master* |
+| 5 | **Run in page** | Execute any prompt against a free LLM, directly in the browser |
+| 6 | **Contributions** | Submit via GitHub PR; CI validates + auto-tags |
+| 7 | **Auth** | GitHub OAuth **Device Flow** — no backend, no client secret |
+| 8 | **Auto-tagging** | Free keyword scoring assigns categories to new submissions |
+
+## 🧱 Tech stack (all free / open source)
+
+- **Frontend:** [Astro](https://astro.build) (static export)
+- **Styling:** [Tailwind CSS](https://tailwindcss.com)
+- **Content:** markdown files in `src/content/{prompts,paths,tools}/`
+- **Schema:** [Zod](https://zod.dev) (validated at build time and in CI)
+- **Hosting:** GitHub Pages (workflow included) — also Cloudflare/Vercel/Netlify free tiers
+- **CI:** GitHub Actions (validate + auto-tag + deploy)
+- **LLM:** [Pollinations](https://text.pollinations.ai/) (keyless), Google AI Studio, Groq, OpenRouter free models, or local WebLLM
+- **Auth:** GitHub OAuth Device Flow (free)
+
+## 🚀 Quick start (fork + self-host)
+
+### 1. Fork & clone
+
+1. Click **Fork** on this repo.
+2. Clone your fork and install:
+
+```bash
+pnpm install
+pnpm dev        # http://localhost:4321
+```
+
+### 2. Configure (optional, for login)
+
+Create a free GitHub OAuth App (no credit card):
+
+1. Go to **GitHub → Settings → Developer settings → OAuth Apps → New OAuth App**.
+2. Set *Homepage URL* to your site URL and *Authorization callback URL* to the same URL.
+3. Under your new app → **General**, check **"Enable Device Flow"**.
+4. Copy the **Client ID** (public, safe to commit) into `.env`:
+
+```bash
+# .env
+PUBLIC_GITHUB_CLIENT_ID=your_client_id
+PUBLIC_REPO=your-username/your-repo-name
+```
+
+Without a Client ID, the "Sign in" button shows friendly setup instructions instead —
+everything else still works.
+
+### 3. Deploy to GitHub Pages (free)
+
+1. Push to `main`.
+2. In the repo, go to **Settings → Pages** → set *Source* to **GitHub Actions**.
+3. The included `.github/workflows/deploy.yml` builds and deploys automatically.
+
+Your site is live at `https://<you>.github.io/<repo>/` (or `https://<you>.github.io/`
+if the repo is named `<you>.github.io`).
+
+> **One-command alternative:** `scripts/deploy-github.mjs` creates the repo, pushes
+> everything, enables Pages and triggers the deploy workflow via the GitHub REST API —
+> no local git needed. Run it with a classic PAT that has `repo` + `workflow` scope:
+>
+> ```bash
+> node scripts/deploy-github.mjs ghp_xxx promptforge
+> ```
+
+#### Alternative free hosts
+
+| Host | How |
+|---|---|
+| **Cloudflare Pages** | Build command `pnpm build`, output `dist`, set `PUBLIC_BASE=/` |
+| **Vercel** | Import repo, framework preset "Other", build `pnpm build`, output `dist` |
+| **Netlify** | Import repo, build `pnpm build`, publish dir `dist` |
+
+All are free tiers with no credit card. For any of them set the env vars from
+`.env.example` in the host's build settings.
+
+## ▶️ Run in page — free LLM backends
+
+The **Run** page sends the prompt straight from your browser to a free API. Your key
+(if any) is stored in `localStorage` and never touches a PromptForge server (there
+isn't one).
+
+| Provider | Key required | Notes |
+|---|---|---|
+| **Pollinations** | ❌ none | Default. Works instantly, fair-use limits. |
+| **Google AI Studio** | free key | `gemini-2.0-flash` etc. No card needed. |
+| **Groq** | free key | Very fast open models. No card needed. |
+| **OpenRouter** | free key | Many `:free` models behind one API. |
+
+## 🗳️ Voting & trending
+
+- Each prompt's `upvotes`/`downvotes` in frontmatter are the **seed**.
+- A visitor's vote is stored in `localStorage` (`pf.votes`) and merged on render.
+- **Trending** = `(upvotes − downvotes) × 1/(1 + ageDays/7)` — recency-weighted so fresh
+  prompts can surface without burying evergreen quality.
+
+To make voting persist **globally** (shared across visitors), swap the localStorage
+layer in `src/scripts/browser.ts` for a free Supabase project or a small KV/API. The
+data model is a simple `{ promptId: {up, down} }` map.
+
+## 🤝 Contributing
+
+See [CONTRIBUTING.md](CONTRIBUTING.md). In short:
+
+1. Fork the repo.
+2. Add a markdown file to `src/content/prompts/` (template in CONTRIBUTING).
+3. `pnpm run validate` locally.
+4. Open a PR — a GitHub Action validates the Zod schema and auto-tags the category.
+
+## 📁 Project structure
+
+```
+src/
+  content.config.ts        # Astro content collections + Zod schema
+  content/
+    prompts/*.md           # the prompt library
+    paths/*.md             # learning paths
+    tools/*.md             # free LLM providers/tools
+  lib/                     # shared helpers (trending, markdown, constants)
+  scripts/                 # client-side TS (browser, run, auth, voting)
+  pages/                   # Astro routes
+  layouts/Layout.astro     # site chrome
+scripts/
+  validate.mjs             # standalone Zod validation (CI)
+  auto-tag.mjs             # keyword-based category inference
+  ci-annotate.mjs          # PR comment + label glue (CI)
+.github/workflows/
+  validate.yml             # schema validation on PR
+  auto-tag.yml             # auto-tagging on PR
+  deploy.yml               # GitHub Pages deploy
+```
+
+## 💸 Cost
+
+- **Total monthly cost: 0.** No server, no database, no paid auth, no paid LLM.
+- The only optional "credentials" are free-tier API keys you create yourself.
+
+## 📄 License
+
+MIT — see [LICENSE](LICENSE). Content (prompts) is also MIT so anyone can fork and reuse.

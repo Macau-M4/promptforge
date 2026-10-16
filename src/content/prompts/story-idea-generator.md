@@ -1,1 +1,40 @@
-LS0tCnRpdGxlOiAiU3RvcnkgSWRlYSBHZW5lcmF0b3IiCmRlc2NyaXB0aW9uOiAiR2VuZXJhdGUgb3JpZ2luYWwgc3RvcnkgcHJlbWlzZXMgd2l0aCBhIGhvb2ssIGNvbmZsaWN0LCBhbmQgdHdpc3QsIGZpbHRlcmVkIHRvIHlvdXIgZ2VucmUuIgpjYXRlZ29yeTogImNyZWF0aXZlIgp0YWdzOiBbImZpY3Rpb24iLCAiaWRlYXMiLCAiYnJhaW5zdG9ybWluZyJdCmRpZmZpY3VsdHk6ICJiZWdpbm5lciIKbW9kZWw6ICJhbnkiCmF1dGhvcjogImNvbW11bml0eSIKY3JlYXRlZDogIjIwMjQtMDItMTAiCnVwZGF0ZWQ6ICIyMDI1LTAxLTA4Igp1cHZvdGVzOiA2Ngpkb3dudm90ZXM6IDIKdmVyc2lvbjogMQotLS0KCiMjIFRoZSBwcm9tcHQKCmBgYHRleHQKR2VuZXJhdGUge3tjb3VudH19IG9yaWdpbmFsIHN0b3J5IGlkZWFzLgoKR2VucmU6IHt7Z2VucmV9fQpUb25lOiB7e3RvbmV9fQpDb25zdHJhaW50czoge3tjb25zdHJhaW50c319IChvciAibm9uZSIpCgpGb3IgZWFjaCBpZGVhIGdpdmU6CjEuIExPR0xJTkUg4oCUIG9uZSBzZW50ZW5jZSB3aXRoIHByb3RhZ29uaXN0ICsgZ29hbCArIG9ic3RhY2xlLgoyLiBUSEUgSE9PSyDigJQgd2h5IHdlIGNhbid0IGxvb2sgYXdheSBpbiB0aGUgZmlyc3QgcGFnZS4KMy4gVEhFIFRXSVNUIOKAlCBhIG1pZHBvaW50IG9yIGVuZGluZyByZXZlcnNhbC4KNC4gVEhFTUUg4oCUIHRoZSB1bmRlcmx5aW5nIHF1ZXN0aW9uIGl0IGV4cGxvcmVzLgoKTWFrZSB0aGVtIGRpc3RpbmN0IGZyb20gZWFjaCBvdGhlci4gQXZvaWQgdGhlIG1vc3Qgb2J2aW91cyBjbGljaMOpcyBvZiB0aGUgZ2VucmUuCmBgYAoKIyMgV2hlbiB0byB1c2UgaXQKClVzZSBpdCB0byB1bmJsb2NrIHRoZSBibGFuayBwYWdlLiBHZW5lcmF0ZSAxMCwgcGljayB0aGUgMiB0aGF0IGl0Y2gsIHRoZW4gZGV2ZWxvcCB0aGUgd2lubmVyIHdpdGggYSBmb2xsb3ctdXAgcHJvbXB0LgoKIyMgUHJvIHRpcAoKUmUtcnVuIHdpdGggdGhlIHNhbWUgYHt7Z2VucmV9fWAgYnV0IGEgd2lsZGx5IGRpZmZlcmVudCBge3t0b25lfX1gIChlLmcuICJjb3p5IiB2cyAiZHJlYWQiKSB0byBmb3JjZSBnZW51aW5lbHkgbmV3IHRlcnJpdG9yeS4K
+---
+title: "Story Idea Generator"
+description: "Generate original story premises with a hook, conflict, and twist, filtered to your genre."
+category: "creative"
+tags: ["fiction", "ideas", "brainstorming"]
+difficulty: "beginner"
+model: "any"
+author: "community"
+created: "2024-02-10"
+updated: "2025-01-08"
+upvotes: 66
+downvotes: 2
+version: 1
+---
+
+## The prompt
+
+```text
+Generate {{count}} original story ideas.
+
+Genre: {{genre}}
+Tone: {{tone}}
+Constraints: {{constraints}} (or "none")
+
+For each idea give:
+1. LOGLINE — one sentence with protagonist + goal + obstacle.
+2. THE HOOK — why we can't look away in the first page.
+3. THE TWIST — a midpoint or ending reversal.
+4. THEME — the underlying question it explores.
+
+Make them distinct from each other. Avoid the most obvious clichés of the genre.
+```
+
+## When to use it
+
+Use it to unblock the blank page. Generate 10, pick the 2 that itch, then develop the winner with a follow-up prompt.
+
+## Pro tip
+
+Re-run with the same `{{genre}}` but a wildly different `{{tone}}` (e.g. "cozy" vs "dread") to force genuinely new territory.

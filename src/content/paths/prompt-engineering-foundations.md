@@ -1,1 +1,43 @@
-LS0tCnRpdGxlOiAiUHJvbXB0IEVuZ2luZWVyaW5nIEZvdW5kYXRpb25zIgpkZXNjcmlwdGlvbjogIlN0YXJ0IGhlcmUuIExlYXJuIHRoZSBjb3JlIHNraWxsczogY2xlYXIgaW5zdHJ1Y3Rpb25zLCBwZXJzb25hcywgcmV3cml0aW5nLCBhbmQgc3RydWN0dXJlZCBvdXRwdXQuIgpsZXZlbDogInN0YXJ0IgpvcmRlcjogMQpwcm9tcHRzOgogIC0gZXhwbGFpbi1saWtlLWltLTEyCiAgLSBjb3B5ZWRpdG9yLWdyYW1tYXItcHJvCiAgLSB0b25lLW9mLXZvaWNlLXJld3JpdGVyCiAgLSBzdG9yeS1pZGVhLWdlbmVyYXRvcgogIC0gc3dvdC1hbmFseXNpcy1nZW5lcmF0b3IKICAtIHNvY3JhdGljLXR1dG9yCiAgLSBwcmlvcml0aXplLXRhc2stbGlzdAogIC0gbWVldGluZy1ub3Rlcy1hY3Rpb24taXRlbXMKLS0tCgojIFByb21wdCBFbmdpbmVlcmluZyBGb3VuZGF0aW9ucwoKVGhpcyBpcyB5b3VyICoqU3RhcnQgSGVyZSoqIHRyYWNrLiBObyBwcmlvciBleHBlcmllbmNlIG5lZWRlZCDigJQgYnkgdGhlIGVuZCB5b3UnbGwKd3JpdGUgcHJvbXB0cyB0aGF0IHJlbGlhYmx5IHByb2R1Y2Ugd2hhdCB5b3UgYWN0dWFsbHkgYXNrZWQgZm9yLgoKIyMgVGhlIDQgc2tpbGxzIHRoYXQgbWF0dGVyIG1vc3QKCjEuICoqQmUgc3BlY2lmaWMqKiDigJQgdmFndWUgaW5wdXQgZ2V0cyB2YWd1ZSBvdXRwdXQuCjIuICoqR2l2ZSBpdCBhIHJvbGUqKiDigJQgYSBwZXJzb25hICgiYWN0IGFzIGEgc2VuaW9yIGVkaXRvciIpIGJpYXNlcyB0aGUgYW5zd2VyIHVzZWZ1bGx5LgozLiAqKlNwZWNpZnkgdGhlIG91dHB1dCBzaGFwZSoqIOKAlCBhc2sgZm9yIHNlY3Rpb25zLCB0YWJsZXMsIG9yIGJ1bGxldHMgc28geW91IGNhbiB1c2UgdGhlIHJlc3VsdC4KNC4gKipJdGVyYXRlKiog4oCUIHRoZSBmaXJzdCBhbnN3ZXIgaXMgYSBkcmFmdCwgbm90IGEgZGVsaXZlcmFibGUuCgojIyBZb3VyIHBhdGgKCjEuICoqVW5kZXJzdGFuZCBob3cgbW9kZWxzICJ0aGluayIqKiDigJQgcnVuICpFeHBsYWluIExpa2UgSSdtIDEyKiBvbiBhIGNvbmNlcHQgeW91IGtub3cgd2VsbCwgYW5kIG5vdGljZSBob3cgYW5hbG9neSBkb2VzIHRoZSBoZWF2eSBsaWZ0aW5nLgoyLiAqKkxlYXJuIHRvIGVkaXQsIG5vdCBqdXN0IGdlbmVyYXRlKiog4oCUIHJ1biAqQ29weWVkaXRvciAmIEdyYW1tYXIgUHJvKiBvbiB5b3VyIG93biB3cml0aW5nIGFuZCByZWFkIHRoZSAid2h5IiBsaXN0LgozLiAqKk1hdGNoIGFueSB2b2ljZSoqIOKAlCB1c2UgKlRvbmUtb2YtVm9pY2UgUmV3cml0ZXIqIHRvIG1vdmUgYSBwYXJhZ3JhcGggYmV0d2VlbiBmb3JtYWwsIGZyaWVuZGx5LCBhbmQgcHVuY2h5Lgo0LiAqKkdlbmVyYXRlIGlkZWFzIG9uIGRlbWFuZCoqIOKAlCB1c2UgKlN0b3J5IElkZWEgR2VuZXJhdG9yKiB0byBzZWUgaG93IGNvbnN0cmFpbnRzIHNoYXBlIGNyZWF0aXZpdHkuCjUuICoqU3RydWN0dXJlIHlvdXIgdGhpbmtpbmcqKiDigJQgcnVuICpTV09UIEFuYWx5c2lzIEdlbmVyYXRvciogb24gYSByZWFsIGRlY2lzaW9uIHlvdSdyZSBmYWNpbmcuCjYuICoqTGVhcm4gYnkgcXVlc3Rpb25pbmcqKiDigJQgc3BlbmQgMTAgbWludXRlcyB3aXRoIHRoZSAqU29jcmF0aWMgVHV0b3IqIG9uIGEgdG9waWMgeW91J3JlIHN0dWNrIG9uLgo3LiAqKkFwcGx5IGl0IHRvIHlvdXIgd2VlayoqIOKAlCBmaW5pc2ggd2l0aCAqUHJpb3JpdGl6ZSBNeSBUYXNrIExpc3QqIGFuZCAqTWVldGluZyBOb3RlcyDihpIgQWN0aW9uIEl0ZW1zKi4KCiMjIFdoZW4geW91J3JlIGRvbmUKCllvdSBzaG91bGQgYmUgYWJsZSB0byB0YWtlIGFueSB2YWd1ZSB0YXNrIGFuZCB0dXJuIGl0IGludG8gYSBwcm9tcHQgdGhhdCByZXR1cm5zIGEKdXNhYmxlLCB3ZWxsLXN0cnVjdHVyZWQgcmVzdWx0LiBUaGVuIG1vdmUgb24gdG8gdGhlICoqQWR2YW5jZSoqIHRyYWNrIHRvIGNoYWluIHRoZXNlCnNraWxscyBpbnRvIHdvcmtmbG93cy4K
+---
+title: "Prompt Engineering Foundations"
+description: "Start here. Learn the core skills: clear instructions, personas, rewriting, and structured output."
+level: "start"
+order: 1
+prompts:
+  - explain-like-im-12
+  - copyeditor-grammar-pro
+  - tone-of-voice-rewriter
+  - story-idea-generator
+  - swot-analysis-generator
+  - socratic-tutor
+  - prioritize-task-list
+  - meeting-notes-action-items
+---
+
+# Prompt Engineering Foundations
+
+This is your **Start Here** track. No prior experience needed — by the end you'll
+write prompts that reliably produce what you actually asked for.
+
+## The 4 skills that matter most
+
+1. **Be specific** — vague input gets vague output.
+2. **Give it a role** — a persona ("act as a senior editor") biases the answer usefully.
+3. **Specify the output shape** — ask for sections, tables, or bullets so you can use the result.
+4. **Iterate** — the first answer is a draft, not a deliverable.
+
+## Your path
+
+1. **Understand how models "think"** — run *Explain Like I'm 12* on a concept you know well, and notice how analogy does the heavy lifting.
+2. **Learn to edit, not just generate** — run *Copyeditor & Grammar Pro* on your own writing and read the "why" list.
+3. **Match any voice** — use *Tone-of-Voice Rewriter* to move a paragraph between formal, friendly, and punchy.
+4. **Generate ideas on demand** — use *Story Idea Generator* to see how constraints shape creativity.
+5. **Structure your thinking** — run *SWOT Analysis Generator* on a real decision you're facing.
+6. **Learn by questioning** — spend 10 minutes with the *Socratic Tutor* on a topic you're stuck on.
+7. **Apply it to your week** — finish with *Prioritize My Task List* and *Meeting Notes → Action Items*.
+
+## When you're done
+
+You should be able to take any vague task and turn it into a prompt that returns a
+usable, well-structured result. Then move on to the **Advance** track to chain these
+skills into workflows.

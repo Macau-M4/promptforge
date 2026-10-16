@@ -1,1 +1,42 @@
-LS0tCnRpdGxlOiAiQXV0b21hdGlvbiAmIENvZGluZyBXb3JrZmxvd3MiCmRlc2NyaXB0aW9uOiAiQWR2YW5jZS4gVHVybiBwcm9tcHRzIGludG8gcmVwZWF0YWJsZSB3b3JrOiBjb250ZW50IHN5c3RlbXMsIENMSSBoZWxwZXJzLCBhbmQgY29kZSBxdWFsaXR5LiIKbGV2ZWw6ICJhZHZhbmNlIgpvcmRlcjogMgpwcm9tcHRzOgogIC0gc2VvLWJsb2ctcG9zdC1nZW5lcmF0b3IKICAtIHNvY2lhbC1wb3N0LWlkZWEtZW5naW5lCiAgLSBsYW5kaW5nLXBhZ2UtY29weXdyaXRlcgogIC0gZmxhc2hjYXJkLXF1aXotbWFrZXIKICAtIHRlcm1pbmFsLWNvbW1hbmQtZ2VuZXJhdG9yCiAgLSByZWdleC1idWlsZGVyLWZyb20tZGVzY3JpcHRpb24KICAtIGRhdGEtaW5zaWdodC1zdW1tYXJpemVyCiAgLSBjb2RlLXJldmlldy1leHBlcnQKLS0tCgojIEF1dG9tYXRpb24gJiBDb2RpbmcgV29ya2Zsb3dzCgpUaGlzICoqQWR2YW5jZSoqIHRyYWNrIGlzIGFib3V0IG1vdmluZyBmcm9tIG9uZS1vZmYgcHJvbXB0cyB0byByZXBlYXRhYmxlIHdvcmtmbG93cy4KWW91J2xsIGJ1aWxkIGNvbnRlbnQgc3lzdGVtcyBhbmQgc3RhcnQgYXV0b21hdGluZyB0aGUgYm9yaW5nIHBhcnRzIG9mIGNvZGluZy4KCiMjIFdoYXQgY2hhbmdlcyBhdCB0aGlzIGxldmVsCgotIFByb21wdHMgYmVjb21lICoqdGVtcGxhdGVzKiogd2l0aCBge3t2YXJpYWJsZXN9fWAgeW91IHJldXNlIGRhaWx5LgotIFlvdSBzdGFydCAqKmNoYWluaW5nKiogcHJvbXB0czogb25lIGdlbmVyYXRlcywgdGhlIG5leHQgcmVmaW5lcy4KLSBZb3UgdXNlIHRoZSBtb2RlbCBhcyBhICoqcGFpciBwcm9ncmFtbWVyKiosIG5vdCBhIHNlYXJjaCBib3guCgojIyBZb3VyIHBhdGgKCjEuICoqQnVpbGQgYSBjb250ZW50IHN5c3RlbSoqIOKAlCBydW4gKlNFTyBCbG9nIFBvc3QgR2VuZXJhdG9yKiBmb3IgYW4gb3V0bGluZSwgdGhlbiAqTGFuZGluZyBQYWdlIENvcHl3cml0ZXIqIGZvciB0aGUgcGFnZSB0aGF0IHNlbGxzIGl0LgoyLiAqKkZpbGwgYSBjYWxlbmRhcioqIOKAlCB1c2UgKlNvY2lhbCBQb3N0IElkZWEgRW5naW5lKiB0byBnZW5lcmF0ZSBhIG1vbnRoIG9mIGhvb2tzLCB0aGVuIHJld3JpdGUgdGhlIGJlc3QgaW4geW91ciBvd24gdm9pY2UuCjMuICoqTGVhcm4gZmFzdGVyKiog4oCUIHR1cm4geW91ciBub3RlcyBpbnRvICpGbGFzaGNhcmQgJiBRdWl6IE1ha2VyKiBkZWNrcyBhbmQgcXVpeiB5b3Vyc2VsZiBhIHdlZWsgbGF0ZXIuCjQuICoqU3RvcCBndWVzc2luZyBhdCB0aGUgQ0xJKiog4oCUIHVzZSAqVGVybWluYWwgQ29tbWFuZCBHZW5lcmF0b3IqIGZvciBldmVyeSBjb21tYW5kIHlvdSdkIG90aGVyd2lzZSBHb29nbGUuCjUuICoqTWF0Y2ggdGV4dCBwcmVjaXNlbHkqKiDigJQgdXNlICpSZWdleCBCdWlsZGVyIGZyb20gRGVzY3JpcHRpb24qIGZvciB2YWxpZGF0aW9uIGFuZCBmaW5kLWFuZC1yZXBsYWNlLgo2LiAqKlJlYWQgeW91ciBudW1iZXJzKiog4oCUIHBhc3RlIGEgQ1NWIGludG8gKkRhdGEgSW5zaWdodCBTdW1tYXJpemVyKiBhbmQgZ2V0IHRoZSBoZWFkbGluZSArIG5leHQgc3RlcC4KNy4gKipTaGlwIHNhZmVyIGNvZGUqKiDigJQgcnVuICpDb2RlIFJldmlldyBFeHBlcnQqIG9uIHlvdXIgUFJzIGJlZm9yZSBhc2tpbmcgYSBodW1hbi4KCiMjIFdoZW4geW91J3JlIGRvbmUKCllvdSdsbCBoYXZlIGEgc2V0IG9mIHJldXNhYmxlIHByb21wdCB0ZW1wbGF0ZXMgYW5kIHRoZSBoYWJpdCBvZiBydW5uaW5nIGNvZGUgYW5kCmNvbnRlbnQgdGhyb3VnaCBhIHNlY29uZCBwYXNzIGJlZm9yZSBzaGlwcGluZy4gTW92ZSB0byAqKk1hc3RlcioqIHRvIG9yY2hlc3RyYXRlCmxhcmdlciBzeXN0ZW1zLgo=
+---
+title: "Automation & Coding Workflows"
+description: "Advance. Turn prompts into repeatable work: content systems, CLI helpers, and code quality."
+level: "advance"
+order: 2
+prompts:
+  - seo-blog-post-generator
+  - social-post-idea-engine
+  - landing-page-copywriter
+  - flashcard-quiz-maker
+  - terminal-command-generator
+  - regex-builder-from-description
+  - data-insight-summarizer
+  - code-review-expert
+---
+
+# Automation & Coding Workflows
+
+This **Advance** track is about moving from one-off prompts to repeatable workflows.
+You'll build content systems and start automating the boring parts of coding.
+
+## What changes at this level
+
+- Prompts become **templates** with `{{variables}}` you reuse daily.
+- You start **chaining** prompts: one generates, the next refines.
+- You use the model as a **pair programmer**, not a search box.
+
+## Your path
+
+1. **Build a content system** — run *SEO Blog Post Generator* for an outline, then *Landing Page Copywriter* for the page that sells it.
+2. **Fill a calendar** — use *Social Post Idea Engine* to generate a month of hooks, then rewrite the best in your own voice.
+3. **Learn faster** — turn your notes into *Flashcard & Quiz Maker* decks and quiz yourself a week later.
+4. **Stop guessing at the CLI** — use *Terminal Command Generator* for every command you'd otherwise Google.
+5. **Match text precisely** — use *Regex Builder from Description* for validation and find-and-replace.
+6. **Read your numbers** — paste a CSV into *Data Insight Summarizer* and get the headline + next step.
+7. **Ship safer code** — run *Code Review Expert* on your PRs before asking a human.
+
+## When you're done
+
+You'll have a set of reusable prompt templates and the habit of running code and
+content through a second pass before shipping. Move to **Master** to orchestrate
+larger systems.

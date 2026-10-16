@@ -1,1 +1,33 @@
-LS0tCnRpdGxlOiAiV2ViTExNIChsb2NhbCkiCmRlc2NyaXB0aW9uOiAiUnVuIG1vZGVscyBlbnRpcmVseSBpbiB5b3VyIGJyb3dzZXIgd2l0aCBXZWJHUFUg4oCUIHplcm8gQVBJIGtleSwgemVybyBzZXJ2ZXIsIHplcm8gY29zdC4iCmNhdGVnb3J5OiAiY29kaW5nIgpraW5kOiAibG9jYWwiCnVybDogImh0dHBzOi8vd2VibGxtLm1sYy5haS8iCmZyZWU6IHRydWUKLS0tCgojIFdlYkxMTSDigJQgcnVuIG1vZGVscyBpbiB0aGUgYnJvd3NlcgoKV2ViTExNIHJ1bnMgTExNcyBsb2NhbGx5IGluIHlvdXIgYnJvd3NlciB1c2luZyBXZWJHUFUuIE5vIEFQSSBrZXksIG5vIHNlcnZlciwgbm8KcHJpdmFjeSBjb25jZXJucyDigJQgdGhlIG1vZGVsIHJ1bnMgb24geW91ciBvd24gaGFyZHdhcmUuCgojIyBSZXF1aXJlbWVudHMKCi0gQSByZWNlbnQgQ2hyb21lL0VkZ2UvRmlyZWZveCB3aXRoICoqV2ViR1BVKiogZW5hYmxlZC4KLSBFbm91Z2ggUkFNICg44oCTMTYgR0IgZGVwZW5kaW5nIG9uIHRoZSBtb2RlbCkuCi0gUGF0aWVuY2UgZm9yIHRoZSBmaXJzdCBtb2RlbCBkb3dubG9hZCAoaHVuZHJlZHMgb2YgTUIgdG8gYSBmZXcgR0IpLgoKIyMgRnJlZSBtb2RlbHMgKGV4YW1wbGVzKQoKLSBgTGxhbWEtMy4yLTFCLUluc3RydWN0YCDigJQgc21hbGwgYW5kIGZhc3QuCi0gYFF3ZW4yLjUtMC41Qi1JbnN0cnVjdGAg4oCUIHRpbnksIHJ1bnMgYWxtb3N0IGFueXdoZXJlLgotIGBNaXN0cmFsLTdCLUluc3RydWN0YCDigJQgYmV0dGVyIHF1YWxpdHksIGxhcmdlciBkb3dubG9hZC4KCiMjIFdoeSB1c2UgaXQKCi0gKioxMDAlIGZyZWUgYW5kIHByaXZhdGUqKiDigJQgbm90aGluZyBsZWF2ZXMgeW91ciBkZXZpY2UuCi0gR3JlYXQgZmFsbGJhY2sgd2hlbiB5b3UgZG9uJ3Qgd2FudCB0byBzaGFyZSBjb250ZW50IHdpdGggYW4gQVBJLgotIFByb21wdEZvcmdlJ3MgUnVuIHBhZ2UgY2FuIGJlIHBvaW50ZWQgYXQgYW55IE9wZW5BSS1jb21wYXRpYmxlIG9yIGtleWxlc3MgZW5kcG9pbnQ7CiAgV2ViTExNIGlzIHRoZSAiZnVsbHkgbG9jYWwiIG9wdGlvbiB0byB1bmRlcnN0YW5kLCBldmVuIHRob3VnaCB0aGUgaW4tcGFnZSBSdW4gdXNlcwogIHRoZSBrZXlsZXNzIFBvbGxpbmF0aW9ucyBlbmRwb2ludCBieSBkZWZhdWx0IGZvciBpbnN0YW50IHJlc3VsdHMuCg==
+---
+title: "WebLLM (local)"
+description: "Run models entirely in your browser with WebGPU — zero API key, zero server, zero cost."
+category: "coding"
+kind: "local"
+url: "https://webllm.mlc.ai/"
+free: true
+---
+
+# WebLLM — run models in the browser
+
+WebLLM runs LLMs locally in your browser using WebGPU. No API key, no server, no
+privacy concerns — the model runs on your own hardware.
+
+## Requirements
+
+- A recent Chrome/Edge/Firefox with **WebGPU** enabled.
+- Enough RAM (8–16 GB depending on the model).
+- Patience for the first model download (hundreds of MB to a few GB).
+
+## Free models (examples)
+
+- `Llama-3.2-1B-Instruct` — small and fast.
+- `Qwen2.5-0.5B-Instruct` — tiny, runs almost anywhere.
+- `Mistral-7B-Instruct` — better quality, larger download.
+
+## Why use it
+
+- **100% free and private** — nothing leaves your device.
+- Great fallback when you don't want to share content with an API.
+- PromptForge's Run page can be pointed at any OpenAI-compatible or keyless endpoint;
+  WebLLM is the "fully local" option to understand, even though the in-page Run uses
+  the keyless Pollinations endpoint by default for instant results.

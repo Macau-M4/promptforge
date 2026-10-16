@@ -1,1 +1,40 @@
-LS0tCnRpdGxlOiAiRXhwbGFpbiBMaWtlIEknbSAxMiIKZGVzY3JpcHRpb246ICJCcmVhayBhbnkgaGFyZCBjb25jZXB0IGludG8gYSBzaW1wbGUgZXhwbGFuYXRpb24gdXNpbmcgYW4gYW5hbG9neSBhIGNoaWxkIHdvdWxkIGdldC4iCmNhdGVnb3J5OiAibGVhcm5pbmciCnRhZ3M6IFsiZXhwbGFuYXRpb24iLCAiYW5hbG9neSIsICJzaW1wbGlmeSJdCmRpZmZpY3VsdHk6ICJiZWdpbm5lciIKbW9kZWw6ICJhbnkiCmF1dGhvcjogImNvbW11bml0eSIKY3JlYXRlZDogIjIwMjQtMDEtMjUiCnVwZGF0ZWQ6ICIyMDI1LTAxLTA1Igp1cHZvdGVzOiA5Mgpkb3dudm90ZXM6IDMKdmVyc2lvbjogMQotLS0KCiMjIFRoZSBwcm9tcHQKCmBgYHRleHQKRXhwbGFpbiB0aGlzIGNvbmNlcHQgc28gYSBzbWFydCAxMi15ZWFyLW9sZCB3b3VsZCB1bmRlcnN0YW5kIGl0LgoKQ29uY2VwdDoge3tjb25jZXB0fX0KV2hhdCB0aGUgbGlzdGVuZXIgYWxyZWFkeSBrbm93czoge3tiYWNrZ3JvdW5kfX0KClJ1bGVzOgotIFN0YXJ0IHdpdGggYSBvbmUtc2VudGVuY2UgcGxhaW4tRW5nbGlzaCBkZWZpbml0aW9uLgotIFVzZSBPTkUgY29uY3JldGUgYW5hbG9neSBmcm9tIGV2ZXJ5ZGF5IGxpZmUuCi0gRXhwbGFpbiB0aGUgbW9zdCBpbXBvcnRhbnQgMi0zIGRldGFpbHMsIG5vIGphcmdvbiAob3IgZGVmaW5lIGphcmdvbiBpbmxpbmUpLgotIEVuZCB3aXRoIGEgInRyeSB0aGlzIiBtZW50YWwgY2hlY2sgdGhhdCBwcm92ZXMgdW5kZXJzdGFuZGluZy4KLSBUaGVuLCBvcHRpb25hbGx5LCBhIG9uZS1wYXJhZ3JhcGggImFkdmFuY2VkIHZlcnNpb24iIGZvciBhZHVsdHMuCgpLZWVwIGl0IHNob3J0IOKAlCB1bmRlciAyMDAgd29yZHMgZm9yIHRoZSBzaW1wbGUgcGFydC4KYGBgCgojIyBXaGVuIHRvIHVzZSBpdAoKVXNlIGl0IHdoZW4geW91IChvciBzb21lb25lIHlvdSdyZSB0ZWFjaGluZykgaGl0IGEgd2FsbCB3aXRoIGEgdG9waWMuIElmIHlvdSBjYW4ndCBleHBsYWluIGl0IHNpbXBseSwgeW91IGRvbid0IHVuZGVyc3RhbmQgaXQgeWV0IOKAlCB0aGlzIHByb21wdCBpcyBhbHNvIGEgZ3JlYXQgc2VsZi10ZXN0LgoKIyMgUHJvIHRpcAoKQ2hhaW4gaXQ6IGFmdGVyIHRoZSBzaW1wbGUgdmVyc2lvbiwgcGFzdGUgdGhlICJhZHZhbmNlZCB2ZXJzaW9uIiBpbnRvIHRoZSBzYW1lIHByb21wdCB3aXRoIGEgaGlnaGVyIGB7e2JhY2tncm91bmR9fWAgdG8gY2xpbWIgdGhlIGxhZGRlci4K
+---
+title: "Explain Like I'm 12"
+description: "Break any hard concept into a simple explanation using an analogy a child would get."
+category: "learning"
+tags: ["explanation", "analogy", "simplify"]
+difficulty: "beginner"
+model: "any"
+author: "community"
+created: "2024-01-25"
+updated: "2025-01-05"
+upvotes: 92
+downvotes: 3
+version: 1
+---
+
+## The prompt
+
+```text
+Explain this concept so a smart 12-year-old would understand it.
+
+Concept: {{concept}}
+What the listener already knows: {{background}}
+
+Rules:
+- Start with a one-sentence plain-English definition.
+- Use ONE concrete analogy from everyday life.
+- Explain the most important 2-3 details, no jargon (or define jargon inline).
+- End with a "try this" mental check that proves understanding.
+- Then, optionally, a one-paragraph "advanced version" for adults.
+
+Keep it short — under 200 words for the simple part.
+```
+
+## When to use it
+
+Use it when you (or someone you're teaching) hit a wall with a topic. If you can't explain it simply, you don't understand it yet — this prompt is also a great self-test.
+
+## Pro tip
+
+Chain it: after the simple version, paste the "advanced version" into the same prompt with a higher `{{background}}` to climb the ladder.

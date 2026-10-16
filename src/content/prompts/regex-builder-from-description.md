@@ -1,1 +1,43 @@
-LS0tCnRpdGxlOiAiUmVnZXggQnVpbGRlciBmcm9tIERlc2NyaXB0aW9uIgpkZXNjcmlwdGlvbjogIkRlc2NyaWJlIGEgdGV4dCBwYXR0ZXJuIGluIHdvcmRzIGFuZCBnZXQgYSB3b3JraW5nLCBleHBsYWluZWQgcmVndWxhciBleHByZXNzaW9uLiIKY2F0ZWdvcnk6ICJhdXRvbWF0aW9uIgp0YWdzOiBbInJlZ2V4IiwgInBhdHRlcm4tbWF0Y2hpbmciLCAidGV4dCJdCmRpZmZpY3VsdHk6ICJpbnRlcm1lZGlhdGUiCm1vZGVsOiAiYW55IgphdXRob3I6ICJjb21tdW5pdHkiCmNyZWF0ZWQ6ICIyMDI0LTA0LTIyIgp1cGRhdGVkOiAiMjAyNS0wMS0yNyIKdXB2b3RlczogNTUKZG93bnZvdGVzOiAzCnZlcnNpb246IDEKLS0tCgojIyBUaGUgcHJvbXB0CgpgYGB0ZXh0CldyaXRlIGEgcmVndWxhciBleHByZXNzaW9uIHRoYXQgbWF0Y2hlcyB0aGUgcGF0dGVybiBJIGRlc2NyaWJlLgoKUGF0dGVybiBkZXNjcmlwdGlvbjoge3tkZXNjcmlwdGlvbn19CkZsYXZvcjoge3tmbGF2b3J9fSAoZS5nLiBKYXZhU2NyaXB0LCBQeXRob24sIFBDUkUpCkV4YW1wbGVzIHRoYXQgU0hPVUxEIG1hdGNoOgp7e21hdGNoRXhhbXBsZXN9fQpFeGFtcGxlcyB0aGF0IHNob3VsZCBOT1QgbWF0Y2g6Cnt7bm90TWF0Y2hFeGFtcGxlc319CgpPdXRwdXQ6CjEuIFBBVFRFUk4g4oCUIHRoZSByZWdleCBpbiBhIGNvZGUgYmxvY2suCjIuIEJSRUFLRE9XTiDigJQgZWFjaCB0b2tlbiBleHBsYWluZWQgbGluZSBieSBsaW5lLgozLiBURVNUIENBU0VTIOKAlCBzaG93IHRoZSBtYXRjaCByZXN1bHQgZm9yIGV2ZXJ5IGV4YW1wbGUgSSBnYXZlLgo0LiBHT1RDSEFTIOKAlCBlZGdlIGNhc2VzIG9yIGZsYXZvciBkaWZmZXJlbmNlcyB0byB3YXRjaCBvdXQgZm9yLgoKRG8gbm90IGFkZCBhbmNob3JzIHVubGVzcyBJIGFzayBmb3IgdGhlbS4KYGBgCgojIyBXaGVuIHRvIHVzZSBpdAoKVXNlIGl0IGZvciB2YWxpZGF0aW9uIChlbWFpbHMsIHBob25lcywgSURzKSwgZXh0cmFjdGlvbiwgb3IgZmluZC1hbmQtcmVwbGFjZS4gUHJvdmlkaW5nIG5vbi1tYXRjaCBleGFtcGxlcyBkcmFtYXRpY2FsbHkgaW1wcm92ZXMgYWNjdXJhY3kuCgojIyBQcm8gdGlwCgpBbHdheXMgc3RhdGUgdGhlIGB7e2ZsYXZvcn19YCDigJQgbG9va2JlaGluZCwgbmFtZWQgZ3JvdXBzLCBhbmQgdW5pY29kZSBzdXBwb3J0IGRpZmZlciBiZXR3ZWVuIGVuZ2luZXMgYW5kIGNhdXNlIHNpbGVudCBidWdzLgo=
+---
+title: "Regex Builder from Description"
+description: "Describe a text pattern in words and get a working, explained regular expression."
+category: "automation"
+tags: ["regex", "pattern-matching", "text"]
+difficulty: "intermediate"
+model: "any"
+author: "community"
+created: "2024-04-22"
+updated: "2025-01-27"
+upvotes: 55
+downvotes: 3
+version: 1
+---
+
+## The prompt
+
+```text
+Write a regular expression that matches the pattern I describe.
+
+Pattern description: {{description}}
+Flavor: {{flavor}} (e.g. JavaScript, Python, PCRE)
+Examples that SHOULD match:
+{{matchExamples}}
+Examples that should NOT match:
+{{notMatchExamples}}
+
+Output:
+1. PATTERN — the regex in a code block.
+2. BREAKDOWN — each token explained line by line.
+3. TEST CASES — show the match result for every example I gave.
+4. GOTCHAS — edge cases or flavor differences to watch out for.
+
+Do not add anchors unless I ask for them.
+```
+
+## When to use it
+
+Use it for validation (emails, phones, IDs), extraction, or find-and-replace. Providing non-match examples dramatically improves accuracy.
+
+## Pro tip
+
+Always state the `{{flavor}}` — lookbehind, named groups, and unicode support differ between engines and cause silent bugs.

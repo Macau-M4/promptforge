@@ -1,1 +1,80 @@
-Ly8gQ29yZS1sb2dpYyB0ZXN0cyBmb3IgUHJvbXB0Rm9yZ2UgKHJ1biB3aXRoIGBwbnBtIHRlc3RgLCB1c2VzIE5vZGUncyBidWlsdC1pbiBydW5uZXIpLgovLyBJbXBvcnRzIHRoZSByZWFsIFR5cGVTY3JpcHQgbW9kdWxlcyBkaXJlY3RseSAoTm9kZSAyNCBzdHJpcHMgdHlwZXMgbmF0aXZlbHkpLgppbXBvcnQgeyB0ZXN0IH0gZnJvbSAnbm9kZTp0ZXN0JzsKaW1wb3J0IGFzc2VydCBmcm9tICdub2RlOmFzc2VydC9zdHJpY3QnOwppbXBvcnQgeyBzY29yZSwgcmVjZW5jeUZhY3RvciwgdHJlbmRpbmcsIHNvcnRCeVRyZW5kaW5nLCBzb3J0QnlUb3AsIHNvcnRCeU5ld2VzdCwgYWdlSW5EYXlzIH0gZnJvbSAnLi4vc3JjL2xpYi90cmVuZGluZy50cyc7CmltcG9ydCB7IGV4dHJhY3RQcm9tcHRCbG9jaywgZXh0cmFjdFZhcmlhYmxlcywgZmlsbFZhcmlhYmxlcyB9IGZyb20gJy4uL3NyYy9saWIvbWFya2Rvd24udHMnOwppbXBvcnQgeyBpbmZlckNhdGVnb3J5IH0gZnJvbSAnLi4vc2NyaXB0cy9hdXRvLXRhZy5tanMnOwoKdGVzdCgnc2NvcmUgPSB1cHZvdGVzIC0gZG93bnZvdGVzJywgKCkgPT4gewogIGFzc2VydC5lcXVhbChzY29yZSh7IHVwdm90ZXM6IDEwLCBkb3dudm90ZXM6IDMgfSksIDcpOwogIGFzc2VydC5lcXVhbChzY29yZSh7IHVwdm90ZXM6IDAsIGRvd252b3RlczogNSB9KSwgLTUpOwp9KTsKCnRlc3QoJ3JlY2VuY3lGYWN0b3IgZGVjYXlzIHdpdGggYWdlIGFuZCBpcyAxIGZvciBmcmVzaCBjb250ZW50JywgKCkgPT4gewogIGNvbnN0IG5vdyA9IG5ldyBEYXRlKCcyMDI1LTA0LTAxVDAwOjAwOjAwWicpOwogIGFzc2VydC5lcXVhbChyZWNlbmN5RmFjdG9yKCcyMDI1LTA0LTAxJywgbm93KSwgMSk7CiAgY29uc3Qgb2xkZXIgPSByZWNlbmN5RmFjdG9yKCcyMDI1LTAzLTI1Jywgbm93KTsKICBjb25zdCBvbGRlc3QgPSByZWNlbmN5RmFjdG9yKCcyMDI0LTAxLTAxJywgbm93KTsKICBhc3NlcnQub2sob2xkZXIgPCAxICYmIG9sZGVzdCA8IG9sZGVyLCAnb2xkZXIgY29udGVudCBtdXN0IGhhdmUgYSBsb3dlciByZWNlbmN5IGZhY3RvcicpOwp9KTsKCnRlc3QoJ3RyZW5kaW5nID0gc2NvcmUgeCByZWNlbmN5JywgKCkgPT4gewogIGNvbnN0IG5vdyA9IG5ldyBEYXRlKCcyMDI1LTA0LTAxVDAwOjAwOjAwWicpOwogIGNvbnN0IGl0ZW0gPSB7IGlkOiAnYScsIHVwdm90ZXM6IDEwLCBkb3dudm90ZXM6IDAsIHVwZGF0ZWQ6ICcyMDI1LTA0LTAxJyB9OwogIGFzc2VydC5lcXVhbCh0cmVuZGluZyhpdGVtLCBub3cpLCAxMCk7Cn0pOwoKdGVzdCgnYWdlSW5EYXlzIGlzIG5vbi1uZWdhdGl2ZScsICgpID0+IHsKICBjb25zdCBub3cgPSBuZXcgRGF0ZSgnMjAyNS0wNC0wMVQwMDowMDowMFonKTsKICBhc3NlcnQuZXF1YWwoYWdlSW5EYXlzKCcyMDI1LTA0LTAxJywgbm93KSwgMCk7CiAgYXNzZXJ0LmVxdWFsKGFnZUluRGF5cygnMjAyNS0wMy0yNycsIG5vdyksIDUpOwp9KTsKCnRlc3QoJ3NvcnRCeVRyZW5kaW5nIG9yZGVycyBieSBzY29yZSB4IHJlY2VuY3kgKGZyZXNoIGJlYXRzIG9sZGVyIHdpdGggc2FtZSBzY29yZSknLCAoKSA9PiB7CiAgY29uc3QgYSA9IHsgaWQ6ICdhJywgdXB2b3RlczogNTAsIGRvd252b3RlczogMCwgdXBkYXRlZDogJzIwMjUtMDMtMzAnIH07CiAgY29uc3QgYiA9IHsgaWQ6ICdiJywgdXB2b3RlczogNTAsIGRvd252b3RlczogMCwgdXBkYXRlZDogJzIwMjQtMDEtMDEnIH07CiAgY29uc3Qgc29ydGVkID0gc29ydEJ5VHJlbmRpbmcoW2IsIGFdKTsKICBhc3NlcnQuZXF1YWwoc29ydGVkWzBdLmlkLCAnYScpOwp9KTsKCnRlc3QoJ3NvcnRCeU5ld2VzdCBvcmRlcnMgYnkgdXBkYXRlZCBkZXNjJywgKCkgPT4gewogIGNvbnN0IGxpc3QgPSBbCiAgICB7IGlkOiAnb2xkJywgdXB2b3RlczogMCwgZG93bnZvdGVzOiAwLCB1cGRhdGVkOiAnMjAyNC0wMS0wMScgfSwKICAgIHsgaWQ6ICduZXcnLCB1cHZvdGVzOiAwLCBkb3dudm90ZXM6IDAsIHVwZGF0ZWQ6ICcyMDI1LTA0LTAxJyB9LAogICAgeyBpZDogJ21pZCcsIHVwdm90ZXM6IDAsIGRvd252b3RlczogMCwgdXBkYXRlZDogJzIwMjQtMTItMDEnIH0KICBdOwogIGFzc2VydC5kZWVwRXF1YWwoc29ydEJ5TmV3ZXN0KGxpc3QpLm1hcCgoeCkgPT4geC5pZCksIFsnbmV3JywgJ21pZCcsICdvbGQnXSk7Cn0pOwoKdGVzdCgnZXh0cmFjdFByb21wdEJsb2NrIHJldHVybnMgdGhlIGZpcnN0IGZlbmNlZCBjb2RlIGJsb2NrIGNvbnRlbnRzJywgKCkgPT4gewogIGNvbnN0IG1kID0gJyMgVGl0bGVcblxuIyMgVGhlIHByb21wdFxuXG5gYGB0ZXh0XG5IZWxsbyB7e25hbWV9fVxuYGBgXG5cbiMjIE5vdGVzXG4nOwogIGFzc2VydC5lcXVhbChleHRyYWN0UHJvbXB0QmxvY2sobWQpLCAnSGVsbG8ge3tuYW1lfX0nKTsKfSk7Cgp0ZXN0KCdleHRyYWN0UHJvbXB0QmxvY2sgZmFsbHMgYmFjayB0byB0cmltbWVkIGJvZHkgd2hlbiBubyBmZW5jZScsICgpID0+IHsKICBhc3NlcnQuZXF1YWwoZXh0cmFjdFByb21wdEJsb2NrKCdwbGFpbiB0ZXh0JyksICdwbGFpbiB0ZXh0Jyk7Cn0pOwoKdGVzdCgnZXh0cmFjdFZhcmlhYmxlcyBmaW5kcyB1bmlxdWUge3twbGFjZWhvbGRlcnN9fScsICgpID0+IHsKICBhc3NlcnQuZGVlcEVxdWFsKGV4dHJhY3RWYXJpYWJsZXMoJ2Ege3t4fX0gYW5kIHt7eH19IHBsdXMge3t5fX0nKSwgWyd4JywgJ3knXSk7Cn0pOwoKdGVzdCgnZmlsbFZhcmlhYmxlcyBzdWJzdGl0dXRlcyBhbmQgbGVhdmVzIG1pc3Npbmcgb25lcyBpbnRhY3QnLCAoKSA9PiB7CiAgY29uc3Qgb3V0ID0gZmlsbFZhcmlhYmxlcygnSGkge3tuYW1lfX0sIGZyb20ge3tjaXR5fX0nLCB7IG5hbWU6ICdBZGEnIH0pOwogIGFzc2VydC5lcXVhbChvdXQsICdIaSBBZGEsIGZyb20ge3tjaXR5fX0nKTsKfSk7Cgp0ZXN0KCdhdXRvLXRhZ2dlciBpbmZlcnMgY2F0ZWdvcmllcyBmcm9tIHRleHQnLCAoKSA9PiB7CiAgYXNzZXJ0LmVxdWFsKGluZmVyQ2F0ZWdvcnkoJ0dlbmVyYXRlIGEgdW5pdCB0ZXN0IGZvciB0aGlzIHB5dGhvbiBmdW5jdGlvbiBhbmQgcmV2aWV3IHRoZSBjb2RlJykuY2F0ZWdvcnksICdjb2RpbmcnKTsKICBhc3NlcnQuZXF1YWwoaW5mZXJDYXRlZ29yeSgnUmV3cml0ZSB0aGlzIGJsb2cgYXJ0aWNsZSBhbmQgaW1wcm92ZSB0aGUgdG9uZSBmb3IgbXkgYXVkaWVuY2UnKS5jYXRlZ29yeSwgJ3dyaXRpbmcnKTsKICBhc3NlcnQuZXF1YWwoaW5mZXJDYXRlZ29yeSgnRXhwbGFpbiBxdWFudHVtIHBoeXNpY3MgdG8gYSBiZWdpbm5lcicpLmNhdGVnb3J5LCAnbGVhcm5pbmcnKTsKICAvLyBBbHJlYWR5LXZhbGlkIGNhdGVnb3J5IGlzIHJlc3BlY3RlZCAobm90IG92ZXJyaWRkZW4pLgogIGFzc2VydC5kZWVwRXF1YWwoaW5mZXJDYXRlZ29yeSgnc29tZXRoaW5nJywgJ21hcmtldGluZycpLCB7IGNhdGVnb3J5OiAnbWFya2V0aW5nJywgaW5mZXJyZWQ6IGZhbHNlIH0pOwp9KTsKCnRlc3QoJ2F1dG8tdGFnZ2VyIHJldHVybnMgbnVsbCB3aGVuIG5vIGtleXdvcmQgbWF0Y2hlcycsICgpID0+IHsKICBjb25zdCByID0gaW5mZXJDYXRlZ29yeSgnenp6eiBxcXFxJyk7CiAgYXNzZXJ0LmVxdWFsKHIuY2F0ZWdvcnksIG51bGwpOwogIGFzc2VydC5lcXVhbChyLmluZmVycmVkLCBmYWxzZSk7Cn0pOwo=
+// Core-logic tests for PromptForge (run with `pnpm test`, uses Node's built-in runner).
+// Imports the real TypeScript modules directly (Node 24 strips types natively).
+import { test } from 'node:test';
+import assert from 'node:assert/strict';
+import { score, recencyFactor, trending, sortByTrending, sortByTop, sortByNewest, ageInDays } from '../src/lib/trending.ts';
+import { extractPromptBlock, extractVariables, fillVariables } from '../src/lib/markdown.ts';
+import { inferCategory } from '../scripts/auto-tag.mjs';
+
+test('score = upvotes - downvotes', () => {
+  assert.equal(score({ upvotes: 10, downvotes: 3 }), 7);
+  assert.equal(score({ upvotes: 0, downvotes: 5 }), -5);
+});
+
+test('recencyFactor decays with age and is 1 for fresh content', () => {
+  const now = new Date('2025-04-01T00:00:00Z');
+  assert.equal(recencyFactor('2025-04-01', now), 1);
+  const older = recencyFactor('2025-03-25', now);
+  const oldest = recencyFactor('2024-01-01', now);
+  assert.ok(older < 1 && oldest < older, 'older content must have a lower recency factor');
+});
+
+test('trending = score x recency', () => {
+  const now = new Date('2025-04-01T00:00:00Z');
+  const item = { id: 'a', upvotes: 10, downvotes: 0, updated: '2025-04-01' };
+  assert.equal(trending(item, now), 10);
+});
+
+test('ageInDays is non-negative', () => {
+  const now = new Date('2025-04-01T00:00:00Z');
+  assert.equal(ageInDays('2025-04-01', now), 0);
+  assert.equal(ageInDays('2025-03-27', now), 5);
+});
+
+test('sortByTrending orders by score x recency (fresh beats older with same score)', () => {
+  const a = { id: 'a', upvotes: 50, downvotes: 0, updated: '2025-03-30' };
+  const b = { id: 'b', upvotes: 50, downvotes: 0, updated: '2024-01-01' };
+  const sorted = sortByTrending([b, a]);
+  assert.equal(sorted[0].id, 'a');
+});
+
+test('sortByNewest orders by updated desc', () => {
+  const list = [
+    { id: 'old', upvotes: 0, downvotes: 0, updated: '2024-01-01' },
+    { id: 'new', upvotes: 0, downvotes: 0, updated: '2025-04-01' },
+    { id: 'mid', upvotes: 0, downvotes: 0, updated: '2024-12-01' }
+  ];
+  assert.deepEqual(sortByNewest(list).map((x) => x.id), ['new', 'mid', 'old']);
+});
+
+test('extractPromptBlock returns the first fenced code block contents', () => {
+  const md = '# Title\n\n## The prompt\n\n```text\nHello {{name}}\n```\n\n## Notes\n';
+  assert.equal(extractPromptBlock(md), 'Hello {{name}}');
+});
+
+test('extractPromptBlock falls back to trimmed body when no fence', () => {
+  assert.equal(extractPromptBlock('plain text'), 'plain text');
+});
+
+test('extractVariables finds unique {{placeholders}}', () => {
+  assert.deepEqual(extractVariables('a {{x}} and {{x}} plus {{y}}'), ['x', 'y']);
+});
+
+test('fillVariables substitutes and leaves missing ones intact', () => {
+  const out = fillVariables('Hi {{name}}, from {{city}}', { name: 'Ada' });
+  assert.equal(out, 'Hi Ada, from {{city}}');
+});
+
+test('auto-tagger infers categories from text', () => {
+  assert.equal(inferCategory('Generate a unit test for this python function and review the code').category, 'coding');
+  assert.equal(inferCategory('Rewrite this blog article and improve the tone for my audience').category, 'writing');
+  assert.equal(inferCategory('Explain quantum physics to a beginner').category, 'learning');
+  // Already-valid category is respected (not overridden).
+  assert.deepEqual(inferCategory('something', 'marketing'), { category: 'marketing', inferred: false });
+});
+
+test('auto-tagger returns null when no keyword matches', () => {
+  const r = inferCategory('zzzz qqqq');
+  assert.equal(r.category, null);
+  assert.equal(r.inferred, false);
+});

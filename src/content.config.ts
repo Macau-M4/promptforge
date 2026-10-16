@@ -1,1 +1,59 @@
-aW1wb3J0IHsgZGVmaW5lQ29sbGVjdGlvbiwgeiB9IGZyb20gJ2FzdHJvOmNvbnRlbnQnOwppbXBvcnQgeyBnbG9iIH0gZnJvbSAnYXN0cm8vbG9hZGVycyc7CgpleHBvcnQgY29uc3QgY2F0ZWdvcmllcyA9IFsKICAnd3JpdGluZycsCiAgJ2NvZGluZycsCiAgJ3Byb2R1Y3Rpdml0eScsCiAgJ2FuYWx5c2lzJywKICAnY3JlYXRpdmUnLAogICdsZWFybmluZycsCiAgJ21hcmtldGluZycsCiAgJ2F1dG9tYXRpb24nCl0gYXMgY29uc3Q7CgpleHBvcnQgY29uc3QgZGlmZmljdWx0aWVzID0gWydiZWdpbm5lcicsICdpbnRlcm1lZGlhdGUnLCAnYWR2YW5jZWQnXSBhcyBjb25zdDsKCmNvbnN0IHByb21wdCA9IGRlZmluZUNvbGxlY3Rpb24oewogIGxvYWRlcjogZ2xvYih7IHBhdHRlcm46ICcqKi8qLm1kJywgYmFzZTogJy4vc3JjL2NvbnRlbnQvcHJvbXB0cycgfSksCiAgc2NoZW1hOiB6Lm9iamVjdCh7CiAgICB0aXRsZTogei5zdHJpbmcoKS5taW4oMykubWF4KDE0MCksCiAgICBkZXNjcmlwdGlvbjogei5zdHJpbmcoKS5taW4oMTApLm1heCgzMjApLAogICAgY2F0ZWdvcnk6IHouZW51bShjYXRlZ29yaWVzKSwKICAgIHRhZ3M6IHouYXJyYXkoei5zdHJpbmcoKS5taW4oMikubWF4KDQwKSkubWluKDEpLm1heCg4KSwKICAgIGRpZmZpY3VsdHk6IHouZW51bShkaWZmaWN1bHRpZXMpLAogICAgbW9kZWw6IHouc3RyaW5nKCkubWluKDEpLm1heCg4MCkuZGVmYXVsdCgnYW55JyksCiAgICBhdXRob3I6IHouc3RyaW5nKCkubWluKDEpLm1heCg4MCkuZGVmYXVsdCgnY29tbXVuaXR5JyksCiAgICBjcmVhdGVkOiB6LnN0cmluZygpLnJlZ2V4KC9eXGR7NH0tXGR7Mn0tXGR7Mn0kLyksCiAgICB1cGRhdGVkOiB6LnN0cmluZygpLnJlZ2V4KC9eXGR7NH0tXGR7Mn0tXGR7Mn0kLyksCiAgICB1cHZvdGVzOiB6Lm51bWJlcigpLmludCgpLm1pbigwKS5kZWZhdWx0KDApLAogICAgZG93bnZvdGVzOiB6Lm51bWJlcigpLmludCgpLm1pbigwKS5kZWZhdWx0KDApLAogICAgdmVyc2lvbjogei5udW1iZXIoKS5pbnQoKS5wb3NpdGl2ZSgpLmRlZmF1bHQoMSkKICB9KQp9KTsKCmNvbnN0IHBhdGggPSBkZWZpbmVDb2xsZWN0aW9uKHsKICBsb2FkZXI6IGdsb2IoeyBwYXR0ZXJuOiAnKiovKi5tZCcsIGJhc2U6ICcuL3NyYy9jb250ZW50L3BhdGhzJyB9KSwKICBzY2hlbWE6IHoub2JqZWN0KHsKICAgIHRpdGxlOiB6LnN0cmluZygpLm1pbigzKS5tYXgoMTQwKSwKICAgIGRlc2NyaXB0aW9uOiB6LnN0cmluZygpLm1pbigxMCkubWF4KDMyMCksCiAgICBsZXZlbDogei5lbnVtKFsnc3RhcnQnLCAnYWR2YW5jZScsICdtYXN0ZXInXSksCiAgICBvcmRlcjogei5udW1iZXIoKS5pbnQoKS5taW4oMSksCiAgICAvLyBwcm9tcHQgaWRzIChmaWxlbmFtZXMgd2l0aG91dCBleHRlbnNpb24pIHRoYXQgYmVsb25nIHRvIHRoaXMgcGF0aAogICAgcHJvbXB0czogei5hcnJheSh6LnN0cmluZygpKS5taW4oMSkubWF4KDYwKQogIH0pCn0pOwoKY29uc3QgdG9vbCA9IGRlZmluZUNvbGxlY3Rpb24oewogIGxvYWRlcjogZ2xvYih7IHBhdHRlcm46ICcqKi8qLm1kJywgYmFzZTogJy4vc3JjL2NvbnRlbnQvdG9vbHMnIH0pLAogIHNjaGVtYTogei5vYmplY3QoewogICAgdGl0bGU6IHouc3RyaW5nKCkubWluKDMpLm1heCgxNDApLAogICAgZGVzY3JpcHRpb246IHouc3RyaW5nKCkubWluKDEwKS5tYXgoMzIwKSwKICAgIGNhdGVnb3J5OiB6LmVudW0oY2F0ZWdvcmllcyksCiAgICBraW5kOiB6LmVudW0oWydmcmVlLWFwaScsICdsb2NhbCcsICdwbGF0Zm9ybScsICd1dGlsaXR5J10pLAogICAgdXJsOiB6LnN0cmluZygpLnVybCgpLm9wdGlvbmFsKCksCiAgICBmcmVlOiB6LmJvb2xlYW4oKS5kZWZhdWx0KHRydWUpCiAgfSkKfSk7CgpleHBvcnQgY29uc3QgY29sbGVjdGlvbnMgPSB7IHByb21wdCwgcGF0aCwgdG9vbCB9Owo=
+import { defineCollection, z } from 'astro:content';
+import { glob } from 'astro/loaders';
+
+export const categories = [
+  'writing',
+  'coding',
+  'productivity',
+  'analysis',
+  'creative',
+  'learning',
+  'marketing',
+  'automation'
+] as const;
+
+export const difficulties = ['beginner', 'intermediate', 'advanced'] as const;
+
+const prompt = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/prompts' }),
+  schema: z.object({
+    title: z.string().min(3).max(140),
+    description: z.string().min(10).max(320),
+    category: z.enum(categories),
+    tags: z.array(z.string().min(2).max(40)).min(1).max(8),
+    difficulty: z.enum(difficulties),
+    model: z.string().min(1).max(80).default('any'),
+    author: z.string().min(1).max(80).default('community'),
+    created: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+    upvotes: z.number().int().min(0).default(0),
+    downvotes: z.number().int().min(0).default(0),
+    version: z.number().int().positive().default(1)
+  })
+});
+
+const path = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/paths' }),
+  schema: z.object({
+    title: z.string().min(3).max(140),
+    description: z.string().min(10).max(320),
+    level: z.enum(['start', 'advance', 'master']),
+    order: z.number().int().min(1),
+    // prompt ids (filenames without extension) that belong to this path
+    prompts: z.array(z.string()).min(1).max(60)
+  })
+});
+
+const tool = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/tools' }),
+  schema: z.object({
+    title: z.string().min(3).max(140),
+    description: z.string().min(10).max(320),
+    category: z.enum(categories),
+    kind: z.enum(['free-api', 'local', 'platform', 'utility']),
+    url: z.string().url().optional(),
+    free: z.boolean().default(true)
+  })
+});
+
+export const collections = { prompt, path, tool };

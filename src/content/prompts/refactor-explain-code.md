@@ -1,1 +1,41 @@
-LS0tCnRpdGxlOiAiUmVmYWN0b3IgJiBFeHBsYWluIENvZGUiCmRlc2NyaXB0aW9uOiAiUmV3cml0ZSBtZXNzeSBjb2RlIHRvIGJlIGNsZWFuZXIgYW5kIHNpbXBsZXIsIHRoZW4gZXhwbGFpbiBldmVyeSBjaGFuZ2UgbGluZSBieSBsaW5lLiIKY2F0ZWdvcnk6ICJjb2RpbmciCnRhZ3M6IFsicmVmYWN0b3JpbmciLCAiZXhwbGFpbiIsICJjbGVhbi1jb2RlIl0KZGlmZmljdWx0eTogImludGVybWVkaWF0ZSIKbW9kZWw6ICJhbnkiCmF1dGhvcjogImNvbW11bml0eSIKY3JlYXRlZDogIjIwMjQtMDYtMjAiCnVwZGF0ZWQ6ICIyMDI1LTAyLTExIgp1cHZvdGVzOiA4OApkb3dudm90ZXM6IDQKdmVyc2lvbjogMQotLS0KCiMjIFRoZSBwcm9tcHQKCmBgYHRleHQKUmVmYWN0b3IgdGhlIGZvbGxvd2luZyB7e2xhbmd1YWdlfX0gY29kZSBmb3IgcmVhZGFiaWxpdHkgYW5kIHNpbXBsaWNpdHkgV0lUSE9VVCBjaGFuZ2luZyBpdHMgYmVoYXZpb3IuCgpDb25zdHJhaW50czoKLSBLZWVwIHRoZSBzYW1lIHB1YmxpYyBBUEkgLyBmdW5jdGlvbiBzaWduYXR1cmVzIHVubGVzcyBhIGNoYW5nZSBpcyBjbGVhcmx5IG5lZWRlZC4KLSBQcmVmZXIgY2xhcml0eSBvdmVyIGNsZXZlcm5lc3MuCi0gRG8gbm90IGFkZCBuZXcgZGVwZW5kZW5jaWVzLgoKT3V0cHV0OgoxLiBSRUZBQ1RPUkVEIOKAlCB0aGUgaW1wcm92ZWQgY29kZS4KMi4gQ0hBTkdFUyDigJQgYSBsaXN0IG1hcHBpbmcgZWFjaCBjaGFuZ2UgdG8gdGhlIHJlYXNvbiAoZS5nLiAiZXh0cmFjdGVkIGR1cGxpY2F0ZWQgbG9vcCIsICJyZW5hbWVkIGZsYWcgZm9yIGNsYXJpdHkiKS4KMy4gUklTS1Mg4oCUIGFueXRoaW5nIHRoYXQgY291bGQgc3VidGx5IGRpZmZlciBpbiBlZGdlIGNhc2VzLgoKQ29kZSAoe3tsYW5ndWFnZX19KToKe3tjb2RlfX0KYGBgCgojIyBXaGVuIHRvIHVzZSBpdAoKVXNlIGl0IG9uIHdvcmtpbmctYnV0LXVnbHkgY29kZSB5b3UgaW5oZXJpdGVkLiBUaGUgYFJJU0tTYCBzZWN0aW9uIGlzIGltcG9ydGFudCDigJQgYWx3YXlzIHNraW0gaXQgYmVmb3JlIHRydXN0aW5nIHRoZSByZWZhY3Rvci4KCiMjIFBybyB0aXAKCkFzayBpdCB0byBhZGQgdHlwZSBoaW50cyAvIEpTRG9jIGluIHRoZSBzYW1lIHBhc3MgaWYgdGhlIGNvZGViYXNlIGxhY2tzIHRoZW0uCg==
+---
+title: "Refactor & Explain Code"
+description: "Rewrite messy code to be cleaner and simpler, then explain every change line by line."
+category: "coding"
+tags: ["refactoring", "explain", "clean-code"]
+difficulty: "intermediate"
+model: "any"
+author: "community"
+created: "2024-06-20"
+updated: "2025-02-11"
+upvotes: 88
+downvotes: 4
+version: 1
+---
+
+## The prompt
+
+```text
+Refactor the following {{language}} code for readability and simplicity WITHOUT changing its behavior.
+
+Constraints:
+- Keep the same public API / function signatures unless a change is clearly needed.
+- Prefer clarity over cleverness.
+- Do not add new dependencies.
+
+Output:
+1. REFACTORED — the improved code.
+2. CHANGES — a list mapping each change to the reason (e.g. "extracted duplicated loop", "renamed flag for clarity").
+3. RISKS — anything that could subtly differ in edge cases.
+
+Code ({{language}}):
+{{code}}
+```
+
+## When to use it
+
+Use it on working-but-ugly code you inherited. The `RISKS` section is important — always skim it before trusting the refactor.
+
+## Pro tip
+
+Ask it to add type hints / JSDoc in the same pass if the codebase lacks them.

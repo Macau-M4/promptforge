@@ -1,1 +1,43 @@
-LS0tCnRpdGxlOiAiU29jaWFsIFBvc3QgSWRlYSBFbmdpbmUiCmRlc2NyaXB0aW9uOiAiR2VuZXJhdGUgYSBtb250aCBvZiBwbGF0Zm9ybS1uYXRpdmUgcG9zdCBpZGVhcywgaG9va3MsIGFuZCBDVEFzIGZvciB5b3VyIG5pY2hlLiIKY2F0ZWdvcnk6ICJtYXJrZXRpbmciCnRhZ3M6IFsic29jaWFsLW1lZGlhIiwgImNvbnRlbnQiLCAiaG9va3MiXQpkaWZmaWN1bHR5OiAiYmVnaW5uZXIiCm1vZGVsOiAiYW55IgphdXRob3I6ICJjb21tdW5pdHkiCmNyZWF0ZWQ6ICIyMDI0LTA2LTExIgp1cGRhdGVkOiAiMjAyNS0wMi0wMiIKdXB2b3RlczogNjMKZG93bnZvdGVzOiAzCnZlcnNpb246IDEKLS0tCgojIyBUaGUgcHJvbXB0CgpgYGB0ZXh0CkdlbmVyYXRlIHt7Y291bnR9fSBzb2NpYWwgbWVkaWEgcG9zdCBpZGVhcyBmb3Ige3twbGF0Zm9ybX19LgoKTXkgbmljaGUgLyBhY2NvdW50OiB7e25pY2hlfX0KTXkgZ29hbDoge3tnb2FsfX0KVm9pY2U6IHt7dm9pY2V9fQoKRm9yIGVhY2ggaWRlYSBnaXZlOgoxLiBIT09LIOKAlCB0aGUgZmlyc3QgbGluZSB0aGF0IHN0b3BzIHRoZSBzY3JvbGwuCjIuIFBSRU1JU0Ug4oCUIHdoYXQgdGhlIHBvc3QgaXMgYWJvdXQgaW4gb25lIHNlbnRlbmNlLgozLiBGT1JNQVQg4oCUIHRleHQsIGNhcm91c2VsLCBzaG9ydCB2aWRlbywgb3IgaW1hZ2UgKGFuZCB3aHkpLgo0LiBDVEEg4oCUIHdoYXQgdGhlIHJlYWRlciBzaG91bGQgZG8uCgpSZXF1aXJlbWVudHM6Ci0gVmFyeSB0aGUgZm9ybWF0cyBhbmQgYW5nbGVzIChlZHVjYXRpb25hbCwgc3RvcnksIGNvbnRyYXJpYW4sIGhvdy10bywgYmVoaW5kLXRoZS1zY2VuZXMpLgotIE1ha2UgaG9va3MgcGxhdGZvcm0tbmF0aXZlIChlLmcuIHNob3J0IGFuZCBwdW5jaHkgZm9yIHt7cGxhdGZvcm19fSkuCi0gRmxhZyB0aGUgdG9wIDMgaWRlYXMgeW91J2QgcG9zdCBmaXJzdCBhbmQgd2h5LgpgYGAKCiMjIFdoZW4gdG8gdXNlIGl0CgpVc2UgaXQgdG8gZmlsbCBhIGNvbnRlbnQgY2FsZW5kYXIgaW4gb25lIHNpdHRpbmcuIFBpY2sgdGhlIGJlc3QgaG9va3MsIHRoZW4gZXhwYW5kIGVhY2ggaW50byBhIGZ1bGwgcG9zdC4KCiMjIFBybyB0aXAKCkFzayBmb3IgYSAicmVtaXgiIHBhc3MgYWZ0ZXJ3YXJkOiB0YWtlIHRoZSB0b3AgaWRlYSBhbmQgZ2VuZXJhdGUgNSB2YXJpYXRpb25zIG9mIGp1c3QgdGhlIGhvb2sg4oCUIGhvb2tzIGFyZSA4MCUgb2YgdGhlIGJhdHRsZS4K
+---
+title: "Social Post Idea Engine"
+description: "Generate a month of platform-native post ideas, hooks, and CTAs for your niche."
+category: "marketing"
+tags: ["social-media", "content", "hooks"]
+difficulty: "beginner"
+model: "any"
+author: "community"
+created: "2024-06-11"
+updated: "2025-02-02"
+upvotes: 63
+downvotes: 3
+version: 1
+---
+
+## The prompt
+
+```text
+Generate {{count}} social media post ideas for {{platform}}.
+
+My niche / account: {{niche}}
+My goal: {{goal}}
+Voice: {{voice}}
+
+For each idea give:
+1. HOOK — the first line that stops the scroll.
+2. PREMISE — what the post is about in one sentence.
+3. FORMAT — text, carousel, short video, or image (and why).
+4. CTA — what the reader should do.
+
+Requirements:
+- Vary the formats and angles (educational, story, contrarian, how-to, behind-the-scenes).
+- Make hooks platform-native (e.g. short and punchy for {{platform}}).
+- Flag the top 3 ideas you'd post first and why.
+```
+
+## When to use it
+
+Use it to fill a content calendar in one sitting. Pick the best hooks, then expand each into a full post.
+
+## Pro tip
+
+Ask for a "remix" pass afterward: take the top idea and generate 5 variations of just the hook — hooks are 80% of the battle.

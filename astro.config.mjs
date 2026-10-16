@@ -1,1 +1,14 @@
-Ly8gQHRzLWNoZWNrCmltcG9ydCB7IGRlZmluZUNvbmZpZyB9IGZyb20gJ2FzdHJvL2NvbmZpZyc7CmltcG9ydCB0YWlsd2luZCBmcm9tICdAYXN0cm9qcy90YWlsd2luZCc7CgovLyBQVUJMSUNfU0lURSAgOiBjYW5vbmljYWwgVVJMLCBlLmcuIGh0dHBzOi8vVVNFUi5naXRodWIuaW8vUkVQTyAgKHVzZWQgZm9yIHNpdGVtYXAvb2cvYXRvbSkKLy8gUFVCTElDX0JBU0UgIDogYmFzZSBwYXRoLCBkZWZhdWx0ICIvIiBmb3IgYSAqLmdpdGh1Yi5pbyB1c2VyIHNpdGUgb3IgYSBjdXN0b20gcm9vdDsKLy8gICAgICAgICAgICAgICAgc2V0IHRvICIvcmVwby8iIHdoZW4gaG9zdGVkIGFzIGEgR2l0SHViIFBhZ2VzICpwcm9qZWN0KiBzaXRlLgpleHBvcnQgZGVmYXVsdCBkZWZpbmVDb25maWcoewogIHNpdGU6IHByb2Nlc3MuZW52LlBVQkxJQ19TSVRFIHx8ICdodHRwczovL3Byb21wdGZvcmdlLnBhZ2VzLmRldicsCiAgYmFzZTogcHJvY2Vzcy5lbnYuUFVCTElDX0JBU0UgfHwgJy8nLAogIG91dHB1dDogJ3N0YXRpYycsCiAgdHJhaWxpbmdTbGFzaDogJ2lnbm9yZScsCiAgaW50ZWdyYXRpb25zOiBbdGFpbHdpbmQoKV0sCn0pOwo=
+// @ts-check
+import { defineConfig } from 'astro/config';
+import tailwind from '@astrojs/tailwind';
+
+// PUBLIC_SITE  : canonical URL, e.g. https://USER.github.io/REPO  (used for sitemap/og/atom)
+// PUBLIC_BASE  : base path, default "/" for a *.github.io user site or a custom root;
+//                set to "/repo/" when hosted as a GitHub Pages *project* site.
+export default defineConfig({
+  site: process.env.PUBLIC_SITE || 'https://promptforge.pages.dev',
+  base: process.env.PUBLIC_BASE || '/',
+  output: 'static',
+  trailingSlash: 'ignore',
+  integrations: [tailwind()],
+});

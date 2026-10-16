@@ -1,1 +1,26 @@
-Ly8gU2hhcmVkIGNsaWVudCArIGJ1aWxkIGNvbnN0YW50cy4gS2VlcCBpbiBzeW5jIHdpdGggY29udGVudC5jb25maWcudHMuCgpleHBvcnQgY29uc3QgQ0FURUdPUklFUyA9IFsKICB7IGlkOiAnd3JpdGluZycsIGxhYmVsOiAnV3JpdGluZycsIGVtb2ppOiAn4pyN77iPJyB9LAogIHsgaWQ6ICdjb2RpbmcnLCBsYWJlbDogJ0NvZGluZycsIGVtb2ppOiAn8J+SuycgfSwKICB7IGlkOiAncHJvZHVjdGl2aXR5JywgbGFiZWw6ICdQcm9kdWN0aXZpdHknLCBlbW9qaTogJ+KaoScgfSwKICB7IGlkOiAnYW5hbHlzaXMnLCBsYWJlbDogJ0FuYWx5c2lzICYgUmVzZWFyY2gnLCBlbW9qaTogJ/CflKwnIH0sCiAgeyBpZDogJ2NyZWF0aXZlJywgbGFiZWw6ICdDcmVhdGl2ZScsIGVtb2ppOiAn8J+OqCcgfSwKICB7IGlkOiAnbGVhcm5pbmcnLCBsYWJlbDogJ0xlYXJuaW5nJywgZW1vamk6ICfwn5OaJyB9LAogIHsgaWQ6ICdtYXJrZXRpbmcnLCBsYWJlbDogJ01hcmtldGluZycsIGVtb2ppOiAn8J+ToycgfSwKICB7IGlkOiAnYXV0b21hdGlvbicsIGxhYmVsOiAnQXV0b21hdGlvbicsIGVtb2ppOiAn8J+klicgfQpdIGFzIGNvbnN0OwoKZXhwb3J0IGNvbnN0IERJRkZJQ1VMVElFUyA9IFsKICB7IGlkOiAnYmVnaW5uZXInLCBsYWJlbDogJ0JlZ2lubmVyJywgY29sb3I6ICd0ZXh0LWVtZXJhbGQtMzAwIGJnLWVtZXJhbGQtNTAwLzEwIGJvcmRlci1lbWVyYWxkLTUwMC8zMCcgfSwKICB7IGlkOiAnaW50ZXJtZWRpYXRlJywgbGFiZWw6ICdJbnRlcm1lZGlhdGUnLCBjb2xvcjogJ3RleHQtYW1iZXItMzAwIGJnLWFtYmVyLTUwMC8xMCBib3JkZXItYW1iZXItNTAwLzMwJyB9LAogIHsgaWQ6ICdhZHZhbmNlZCcsIGxhYmVsOiAnQWR2YW5jZWQnLCBjb2xvcjogJ3RleHQtcm9zZS0zMDAgYmctcm9zZS01MDAvMTAgYm9yZGVyLXJvc2UtNTAwLzMwJyB9Cl0gYXMgY29uc3Q7CgpleHBvcnQgZnVuY3Rpb24gY2F0ZWdvcnlNZXRhKGlkOiBzdHJpbmcpIHsKICByZXR1cm4gQ0FURUdPUklFUy5maW5kKChjKSA9PiBjLmlkID09PSBpZCkgPz8geyBpZCwgbGFiZWw6IGlkLCBlbW9qaTogJ/Cfk6YnIH07Cn0KCmV4cG9ydCBmdW5jdGlvbiBkaWZmaWN1bHR5TWV0YShpZDogc3RyaW5nKSB7CiAgcmV0dXJuIERJRkZJQ1VMVElFUy5maW5kKChkKSA9PiBkLmlkID09PSBpZCkgPz8gRElGRklDVUxUSUVTWzBdOwp9Cg==
+// Shared client + build constants. Keep in sync with content.config.ts.
+
+export const CATEGORIES = [
+  { id: 'writing', label: 'Writing', emoji: '✍️' },
+  { id: 'coding', label: 'Coding', emoji: '💻' },
+  { id: 'productivity', label: 'Productivity', emoji: '⚡' },
+  { id: 'analysis', label: 'Analysis & Research', emoji: '🔬' },
+  { id: 'creative', label: 'Creative', emoji: '🎨' },
+  { id: 'learning', label: 'Learning', emoji: '📚' },
+  { id: 'marketing', label: 'Marketing', emoji: '📣' },
+  { id: 'automation', label: 'Automation', emoji: '🤖' }
+] as const;
+
+export const DIFFICULTIES = [
+  { id: 'beginner', label: 'Beginner', color: 'text-emerald-300 bg-emerald-500/10 border-emerald-500/30' },
+  { id: 'intermediate', label: 'Intermediate', color: 'text-amber-300 bg-amber-500/10 border-amber-500/30' },
+  { id: 'advanced', label: 'Advanced', color: 'text-rose-300 bg-rose-500/10 border-rose-500/30' }
+] as const;
+
+export function categoryMeta(id: string) {
+  return CATEGORIES.find((c) => c.id === id) ?? { id, label: id, emoji: '📦' };
+}
+
+export function difficultyMeta(id: string) {
+  return DIFFICULTIES.find((d) => d.id === id) ?? DIFFICULTIES[0];
+}

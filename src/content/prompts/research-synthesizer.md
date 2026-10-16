@@ -1,1 +1,45 @@
-LS0tCnRpdGxlOiAiUmVzZWFyY2ggU3ludGhlc2l6ZXIiCmRlc2NyaXB0aW9uOiAiTWVyZ2UgbXVsdGlwbGUgc291cmNlcyBpbnRvIGEgY2l0ZWQsIGJhbGFuY2VkIGJyaWVmIHRoYXQgaGlnaGxpZ2h0cyBhZ3JlZW1lbnRzIGFuZCBjb25mbGljdHMuIgpjYXRlZ29yeTogImFuYWx5c2lzIgp0YWdzOiBbInJlc2VhcmNoIiwgInN5bnRoZXNpcyIsICJsaXRlcmF0dXJlIl0KZGlmZmljdWx0eTogImFkdmFuY2VkIgptb2RlbDogImFueSIKYXV0aG9yOiAiY29tbXVuaXR5IgpjcmVhdGVkOiAiMjAyNC0xMi0wMiIKdXBkYXRlZDogIjIwMjUtMDMtMjUiCnVwdm90ZXM6IDU4CmRvd252b3RlczogNQp2ZXJzaW9uOiAxCi0tLQoKIyMgVGhlIHByb21wdAoKYGBgdGV4dApTeW50aGVzaXplIHRoZSBmb2xsb3dpbmcgc291cmNlIG1hdGVyaWFsIGludG8gYSByZXNlYXJjaCBicmllZi4KClF1ZXN0aW9uIEknbSB0cnlpbmcgdG8gYW5zd2VyOgp7e3F1ZXN0aW9ufX0KClNvdXJjZXMgKGxhYmVsIGVhY2ggd2l0aCBbUzFdLCBbUzJdLCAuLi4pOgoiIiIKe3tzb3VyY2VzfX0KIiIiCgpPdXRwdXQ6CjEuIEFOU1dFUiDigJQgYSBkaXJlY3QgYW5zd2VyIHRvIHRoZSBxdWVzdGlvbiBpbiAyLTMgc2VudGVuY2VzLgoyLiBDT05TRU5TVVMg4oCUIHBvaW50cyB3aGVyZSBzb3VyY2VzIGFncmVlLgozLiBESVNBR1JFRU1FTlRTIOKAlCBwb2ludHMgd2hlcmUgdGhleSBjb25mbGljdCwgYW5kIHdoYXQgdGhlIGRpc2FncmVlbWVudCBpcyBhYm91dC4KNC4gR0FQUyDigJQgd2hhdCBub25lIG9mIHRoZSBzb3VyY2VzIGFkZHJlc3MuCjUuIENJVEFUSU9OUyDigJQgaW5saW5lIHJlZmVyZW5jZXMgbGlrZSBbUzFdLCBbUzNdIHdoZXJldmVyIHlvdSBzdGF0ZSBhIHNwZWNpZmljIGNsYWltLgoKTmV2ZXIgaW52ZW50IGEgc291cmNlLiBJZiBhIGNsYWltIGhhcyBubyBzdXBwb3J0aW5nIHNvdXJjZSwgbWFyayBpdCBhcyBbaW5mZXJlbmNlXS4KYGBgCgojIyBXaGVuIHRvIHVzZSBpdAoKUGFzdGUgYSBmZXcgYWJzdHJhY3RzLCBhcnRpY2xlcywgb3Igbm90ZXMgeW91J3ZlIGFscmVhZHkgY29sbGVjdGVkLiBJdCBjb21wcmVzc2VzIGhvdXJzIG9mIGNyb3NzLXJlZmVyZW5jaW5nIGludG8gb25lIHBhc3MuCgojIyBQcm8gdGlwCgpMYWJlbCB5b3VyIHNvdXJjZXMgYmVmb3JlIHBhc3Rpbmcgc28gdGhlIGNpdGF0aW9ucyBzdGF5IHRyYWNlYWJsZSBiYWNrIHRvIHdoYXQgeW91IGFjdHVhbGx5IHJlYWQuCg==
+---
+title: "Research Synthesizer"
+description: "Merge multiple sources into a cited, balanced brief that highlights agreements and conflicts."
+category: "analysis"
+tags: ["research", "synthesis", "literature"]
+difficulty: "advanced"
+model: "any"
+author: "community"
+created: "2024-12-02"
+updated: "2025-03-25"
+upvotes: 58
+downvotes: 5
+version: 1
+---
+
+## The prompt
+
+```text
+Synthesize the following source material into a research brief.
+
+Question I'm trying to answer:
+{{question}}
+
+Sources (label each with [S1], [S2], ...):
+"""
+{{sources}}
+"""
+
+Output:
+1. ANSWER — a direct answer to the question in 2-3 sentences.
+2. CONSENSUS — points where sources agree.
+3. DISAGREEMENTS — points where they conflict, and what the disagreement is about.
+4. GAPS — what none of the sources address.
+5. CITATIONS — inline references like [S1], [S3] wherever you state a specific claim.
+
+Never invent a source. If a claim has no supporting source, mark it as [inference].
+```
+
+## When to use it
+
+Paste a few abstracts, articles, or notes you've already collected. It compresses hours of cross-referencing into one pass.
+
+## Pro tip
+
+Label your sources before pasting so the citations stay traceable back to what you actually read.

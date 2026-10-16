@@ -1,1 +1,170 @@
-Ly8gT25lLXNob3QgZGVwbG95bWVudCBoZWxwZXI6IHB1c2ggdGhpcyByZXBvIHRvIEdpdEh1YiBhbmQgZW5hYmxlIFBhZ2VzIOKAlAovLyBlbnRpcmVseSB2aWEgdGhlIEdpdEh1YiBSRVNUIEFQSSAobm8gbG9jYWwgZ2l0IHJlcXVpcmVkKS4KLy8KLy8gVXNhZ2U6Ci8vICAgbm9kZSBzY3JpcHRzL2RlcGxveS1naXRodWIubWpzIDxyZXBvLW5hbWU+IFstLW9yZyBPUkddICAgICAoR0lUSFVCX1RPS0VOIGVudiB2YXIpCi8vICAgbm9kZSBzY3JpcHRzL2RlcGxveS1naXRodWIubWpzIDxHSVRIVUJfVE9LRU4+IDxyZXBvLW5hbWU+Ci8vCi8vIFRoZSB0b2tlbiBuZWVkczogcmVwbyBzY29wZSAoY2xhc3NpYykgb3IgIkNvbnRlbnRzOiByZWFkICYgd3JpdGUiLAovLyAiQWRtaW5pc3RyYXRpb246IHJlYWQgJiB3cml0ZSIsICJQYWdlczogcmVhZCAmIHdyaXRlIiAoZmluZS1ncmFpbmVkKS4KaW1wb3J0IHsgcmVhZGRpclN5bmMsIHJlYWRGaWxlU3luYywgc3RhdFN5bmMgfSBmcm9tICdub2RlOmZzJzsKaW1wb3J0IHsgam9pbiwgcmVsYXRpdmUsIHNlcCB9IGZyb20gJ25vZGU6cGF0aCc7Cgpjb25zdCBhcmdzID0gcHJvY2Vzcy5hcmd2LnNsaWNlKDIpOwpsZXQgdG9rZW4gPSBwcm9jZXNzLmVudi5HSVRIVUJfVE9LRU4gfHwgJyc7CmxldCByZXBvTmFtZSA9ICcnOwpjb25zdCBvcmdJZHggPSBhcmdzLmluZGV4T2YoJy0tb3JnJyk7CmNvbnN0IG9yZyA9IG9yZ0lkeCA+PSAwID8gYXJnc1tvcmdJZHggKyAxXSA6IG51bGw7Cgpmb3IgKGNvbnN0IGEgb2YgYXJncykgewogIGlmIChhID09PSAnLS1vcmcnIHx8IGEgPT09IG9yZykgY29udGludWU7CiAgaWYgKCF0b2tlbiAmJiAoYS5zdGFydHNXaXRoKCdnaHBfJykgfHwgYS5zdGFydHNXaXRoKCdnaXRodWJfcGF0XycpKSkgewogICAgdG9rZW4gPSBhOwogICAgY29udGludWU7CiAgfQogIGlmICghcmVwb05hbWUpIHsKICAgIHJlcG9OYW1lID0gYTsKICAgIGNvbnRpbnVlOwogIH0KfQoKaWYgKCF0b2tlbiB8fCAhcmVwb05hbWUpIHsKICBjb25zb2xlLmVycm9yKCdVc2FnZTogbm9kZSBzY3JpcHRzL2RlcGxveS1naXRodWIubWpzIDxyZXBvLW5hbWU+IFstLW9yZyBPUkddICAgKHNldCBHSVRIVUJfVE9LRU4gZW52IHZhciknKTsKICBjb25zb2xlLmVycm9yKCcgICBvcjogbm9kZSBzY3JpcHRzL2RlcGxveS1naXRodWIubWpzIDxHSVRIVUJfVE9LRU4+IDxyZXBvLW5hbWU+Jyk7CiAgcHJvY2Vzcy5leGl0KDEpOwp9Cgpjb25zdCByb290ID0gcHJvY2Vzcy5jd2QoKTsKCmFzeW5jIGZ1bmN0aW9uIGdoKHBhdGgsIG1ldGhvZCA9ICdHRVQnLCBib2R5KSB7CiAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goYGh0dHBzOi8vYXBpLmdpdGh1Yi5jb20ke3BhdGh9YCwgewogICAgbWV0aG9kLAogICAgaGVhZGVyczogewogICAgICBBdXRob3JpemF0aW9uOiBgQmVhcmVyICR7dG9rZW59YCwKICAgICAgQWNjZXB0OiAnYXBwbGljYXRpb24vdm5kLmdpdGh1Yitqc29uJywKICAgICAgJ1gtR2l0SHViLUFwaS1WZXJzaW9uJzogJzIwMjItMTEtMjgnLAogICAgICAnQ29udGVudC1UeXBlJzogJ2FwcGxpY2F0aW9uL2pzb24nCiAgICB9LAogICAgYm9keTogYm9keSA/IEpTT04uc3RyaW5naWZ5KGJvZHkpIDogdW5kZWZpbmVkCiAgfSk7CiAgY29uc3QgdGV4dCA9IGF3YWl0IHJlcy50ZXh0KCk7CiAgbGV0IGRhdGE7CiAgdHJ5IHsKICAgIGRhdGEgPSBKU09OLnBhcnNlKHRleHQpOwogIH0gY2F0Y2ggewogICAgZGF0YSA9IHRleHQ7CiAgfQogIGlmICghcmVzLm9rKSB7CiAgICB0aHJvdyBuZXcgRXJyb3IoYCR7bWV0aG9kfSAke3BhdGh9IOKGkiAke3Jlcy5zdGF0dXN9OiAke0pTT04uc3RyaW5naWZ5KGRhdGEpfWApOwogIH0KICByZXR1cm4geyBzdGF0dXM6IHJlcy5zdGF0dXMsIGRhdGEgfTsKfQoKY29uc3QgRVhDTFVERSA9IG5ldyBTZXQoWydub2RlX21vZHVsZXMnLCAnZGlzdCcsICcuYXN0cm8nLCAnLnRvb2xzJywgJy5naXQnXSk7CgpmdW5jdGlvbiBjb2xsZWN0RmlsZXMoZGlyLCBvdXQgPSBbXSkgewogIGZvciAoY29uc3QgbmFtZSBvZiByZWFkZGlyU3luYyhkaXIpKSB7CiAgICBpZiAoRVhDTFVERS5oYXMobmFtZSkpIGNvbnRpbnVlOwogICAgaWYgKG5hbWUgPT09ICcuZW52JyB8fCAobmFtZS5zdGFydHNXaXRoKCcuZW52LicpICYmIG5hbWUgIT09ICcuZW52LmV4YW1wbGUnKSkgY29udGludWU7CiAgICBjb25zdCBmdWxsID0gam9pbihkaXIsIG5hbWUpOwogICAgY29uc3Qgc3QgPSBzdGF0U3luYyhmdWxsKTsKICAgIGlmIChzdC5pc0RpcmVjdG9yeSgpKSBjb2xsZWN0RmlsZXMoZnVsbCwgb3V0KTsKICAgIGVsc2UgaWYgKHN0LmlzRmlsZSgpKSBvdXQucHVzaChmdWxsKTsKICB9CiAgcmV0dXJuIG91dDsKfQoKYXN5bmMgZnVuY3Rpb24gbWFpbigpIHsKICAvLyAxLiBXaG8gYW0gST8KICBjb25zdCBtZSA9IChhd2FpdCBnaCgnL3VzZXInKSkuZGF0YTsKICBjb25zdCBvd25lciA9IG9yZyB8fCBtZS5sb2dpbjsKICBjb25zb2xlLmxvZyhgQXV0aGVudGljYXRlZCBhcyAke21lLmxvZ2lufS4gT3duZXI6ICR7b3duZXJ9LCByZXBvOiAke3JlcG9OYW1lfWApOwoKICAvLyAyLiBFbnN1cmUgdGhlIHJlcG8gZXhpc3RzLCBpbml0aWFsaXplZCB3aXRoIGF0IGxlYXN0IG9uZSBjb21taXQuCiAgY29uc3QgcmVwb1VybCA9IG9yZyA/IGAvb3Jncy8ke293bmVyfS9yZXBvc2AgOiAnL3VzZXIvcmVwb3MnOwogIGNvbnN0IGV4aXN0aW5nID0gYXdhaXQgZ2goYC9yZXBvcy8ke293bmVyfS8ke3JlcG9OYW1lfWApLmNhdGNoKCgpID0+IG51bGwpOwogIGlmICghZXhpc3RpbmcpIHsKICAgIGF3YWl0IGdoKHJlcG9VcmwsICdQT1NUJywgewogICAgICBuYW1lOiByZXBvTmFtZSwKICAgICAgZGVzY3JpcHRpb246ICdQcm9tcHRGb3JnZSDigJQgZnJlZSwgb3Blbi1zb3VyY2UgbGlicmFyeSBvZiBBSSBwcm9tcHRzLCBjb21tYW5kcywgdG9vbHMgYW5kIHdvcmtmbG93cy4nLAogICAgICBob21lcGFnZTogYGh0dHBzOi8vJHtvd25lcn0uZ2l0aHViLmlvLyR7cmVwb05hbWV9L2AsCiAgICAgIHByaXZhdGU6IGZhbHNlLAogICAgICBoYXNfaXNzdWVzOiB0cnVlLAogICAgICBoYXNfcHJvamVjdHM6IGZhbHNlLAogICAgICBoYXNfd2lraTogZmFsc2UsCiAgICAgIGF1dG9faW5pdDogdHJ1ZQogICAgfSk7CiAgICBjb25zb2xlLmxvZyhgQ3JlYXRlZCByZXBvICR7b3duZXJ9LyR7cmVwb05hbWV9IChhdXRvLWluaXRpYWxpemVkKS5gKTsKICB9IGVsc2UgewogICAgY29uc29sZS5sb2coYFJlcG8gJHtvd25lcn0vJHtyZXBvTmFtZX0gYWxyZWFkeSBleGlzdHMuYCk7CiAgfQoKICAvLyAzLiBFbnN1cmUgdGhlcmUgaXMgYSBIRUFEIGNvbW1pdCBvbiBtYWluIChzZWVkIG9uZSBpZiB0aGUgcmVwbyBpcyBlbXB0eSkuCiAgbGV0IG1haW5SZWYgPSBhd2FpdCBnaChgL3JlcG9zLyR7b3duZXJ9LyR7cmVwb05hbWV9L2dpdC9yZWZzL2hlYWRzL21haW5gKS5jYXRjaCgoKSA9PiBudWxsKTsKICBpZiAoIW1haW5SZWYpIHsKICAgIC8vIEVtcHR5IHJlcG9zaXRvcnk6IHNlZWQgYW4gaW5pdGlhbCBjb21taXQgdmlhIHRoZSBjb250ZW50cyBBUEkuCiAgICBhd2FpdCBnaChgL3JlcG9zLyR7b3duZXJ9LyR7cmVwb05hbWV9L2NvbnRlbnRzL1JFQURNRS5tZGAsICdQVVQnLCB7CiAgICAgIG1lc3NhZ2U6ICdJbml0aWFsIGNvbW1pdCcsCiAgICAgIGNvbnRlbnQ6IEJ1ZmZlci5mcm9tKCcjIHByb21wdGZvcmdlXG4nKS50b1N0cmluZygnYmFzZTY0JykKICAgIH0pOwogICAgbWFpblJlZiA9IGF3YWl0IGdoKGAvcmVwb3MvJHtvd25lcn0vJHtyZXBvTmFtZX0vZ2l0L3JlZnMvaGVhZHMvbWFpbmApOwogICAgY29uc29sZS5sb2coJ1NlZWRlZCBpbml0aWFsIGNvbW1pdCBvbiBtYWluLicpOwogIH0KICBjb25zdCBwYXJlbnRTaGEgPSBtYWluUmVmLmRhdGEub2JqZWN0LnNoYTsKCiAgLy8gNC4gQnVpbGQgdGhlIGdpdCB0cmVlIGZyb20gYWxsIHByb2plY3QgZmlsZXMuCiAgY29uc3QgZmlsZXMgPSBjb2xsZWN0RmlsZXMocm9vdCk7CiAgY29uc3QgdHJlZSA9IGZpbGVzLm1hcCgoZikgPT4gewogICAgY29uc3QgcmVsID0gcmVsYXRpdmUocm9vdCwgZikuc3BsaXQoc2VwKS5qb2luKCcvJyk7CiAgICBjb25zdCBjb250ZW50ID0gcmVhZEZpbGVTeW5jKGYpOwogICAgaWYgKGNvbnRlbnQubGVuZ3RoID4gOTBfMDAwXzAwMCkgdGhyb3cgbmV3IEVycm9yKGBmaWxlIHRvbyBsYXJnZTogJHtyZWx9YCk7CiAgICByZXR1cm4geyBwYXRoOiByZWwsIG1vZGU6ICcxMDA2NDQnLCB0eXBlOiAnYmxvYicsIGNvbnRlbnQ6IGNvbnRlbnQudG9TdHJpbmcoJ2Jhc2U2NCcpIH07CiAgfSk7CiAgY29uc29sZS5sb2coYFByZXBhcmluZyAke3RyZWUubGVuZ3RofSBmaWxlc+KApmApOwogIGNvbnN0IHRyZWVSZXMgPSBhd2FpdCBnaChgL3JlcG9zLyR7b3duZXJ9LyR7cmVwb05hbWV9L2dpdC90cmVlc2AsICdQT1NUJywgeyBiYXNlX3RyZWU6IG51bGwsIHRyZWUgfSk7CiAgY29uc3QgdHJlZVNoYSA9IHRyZWVSZXMuZGF0YS5zaGE7CgogIC8vIDUuIENyZWF0ZSB0aGUgY29tbWl0IG9uIHRvcCBvZiB0aGUgcGFyZW50LCB0aGVuIHVwZGF0ZSBtYWluLgogIGNvbnN0IGNvbW1pdFJlcyA9IGF3YWl0IGdoKGAvcmVwb3MvJHtvd25lcn0vJHtyZXBvTmFtZX0vZ2l0L2NvbW1pdHNgLCAnUE9TVCcsIHsKICAgIG1lc3NhZ2U6ICdQcm9tcHRGb3JnZSBzdGF0aWMgc2l0ZScsCiAgICB0cmVlOiB0cmVlU2hhLAogICAgcGFyZW50czogW3BhcmVudFNoYV0KICB9KTsKICBjb25zdCBjb21taXRTaGEgPSBjb21taXRSZXMuZGF0YS5zaGE7CgogIGF3YWl0IGdoKGAvcmVwb3MvJHtvd25lcn0vJHtyZXBvTmFtZX0vZ2l0L3JlZnMvaGVhZHMvbWFpbmAsICdQQVRDSCcsIHsgc2hhOiBjb21taXRTaGEsIGZvcmNlOiB0cnVlIH0pOwogIGNvbnNvbGUubG9nKGBQdXNoZWQgJHt0cmVlLmxlbmd0aH0gZmlsZXMgdG8gbWFpbiBAICR7Y29tbWl0U2hhLnNsaWNlKDAsIDcpfWApOwoKICAvLyA2LiBFbmFibGUgR2l0SHViIFBhZ2VzIHZpYSB0aGUgQWN0aW9ucyB3b3JrZmxvdy4KICB0cnkgewogICAgYXdhaXQgZ2goYC9yZXBvcy8ke293bmVyfS8ke3JlcG9OYW1lfS9wYWdlc2AsICdQT1NUJywgeyBidWlsZF90eXBlOiAnd29ya2Zsb3cnIH0pOwogICAgY29uc29sZS5sb2coJ0dpdEh1YiBQYWdlcyBlbmFibGVkIChidWlsZF90eXBlOiB3b3JrZmxvdykuJyk7CiAgfSBjYXRjaCAoZSkgewogICAgY29uc29sZS53YXJuKCdQYWdlcyBzZXR1cCBub3RlOicsIGUubWVzc2FnZSk7CiAgfQoKICAvLyA3LiBFbnN1cmUgdGhlIGRlcGxveSB3b3JrZmxvdyBydW5zICh0aGUgQVBJIHB1c2ggdXN1YWxseSB0cmlnZ2VycyBpdDsgZGlzcGF0Y2ggYXMgZmFsbGJhY2spLgogIGF3YWl0IG5ldyBQcm9taXNlKChyKSA9PiBzZXRUaW1lb3V0KHIsIDQwMDApKTsKICB0cnkgewogICAgY29uc3QgcnVucyA9IGF3YWl0IGdoKGAvcmVwb3MvJHtvd25lcn0vJHtyZXBvTmFtZX0vYWN0aW9ucy9ydW5zP2JyYW5jaD1tYWluJnBlcl9wYWdlPTEwYCk7CiAgICBjb25zdCBhbHJlYWR5ID0gKHJ1bnMuZGF0YS53b3JrZmxvd19ydW5zIHx8IFtdKS5zb21lKChyKSA9PiByLm5hbWUgPT09ICdEZXBsb3kgdG8gR2l0SHViIFBhZ2VzJyk7CiAgICBpZiAoYWxyZWFkeSkgewogICAgICBjb25zb2xlLmxvZygnRGVwbG95IHdvcmtmbG93IGFscmVhZHkgdHJpZ2dlcmVkIGJ5IHRoZSBwdXNoLicpOwogICAgfSBlbHNlIHsKICAgICAgYXdhaXQgZ2goYC9yZXBvcy8ke293bmVyfS8ke3JlcG9OYW1lfS9hY3Rpb25zL3dvcmtmbG93cy9kZXBsb3kueW1sL2Rpc3BhdGNoZXNgLCAnUE9TVCcsIHsgcmVmOiAnbWFpbicgfSk7CiAgICAgIGNvbnNvbGUubG9nKCdUcmlnZ2VyZWQgZGVwbG95IHdvcmtmbG93IHZpYSB3b3JrZmxvd19kaXNwYXRjaC4nKTsKICAgIH0KICB9IGNhdGNoIChlKSB7CiAgICBjb25zb2xlLndhcm4oJ1dvcmtmbG93IHRyaWdnZXIgbm90ZTonLCBlLm1lc3NhZ2UpOwogIH0KCiAgY29uc29sZS5sb2coYFxuUmVwbzogICAgICBodHRwczovL2dpdGh1Yi5jb20vJHtvd25lcn0vJHtyZXBvTmFtZX1gKTsKICBjb25zb2xlLmxvZyhgQWN0aW9uczogICBodHRwczovL2dpdGh1Yi5jb20vJHtvd25lcn0vJHtyZXBvTmFtZX0vYWN0aW9uc2ApOwogIGNvbnNvbGUubG9nKGBTaXRlIFVSTDogIGh0dHBzOi8vJHtvd25lcn0uZ2l0aHViLmlvLyR7cmVwb05hbWV9L2ApOwogIGNvbnNvbGUubG9nKCdUaGUgZGVwbG95IHdvcmtmbG93IHRha2VzIDHigJMzIG1pbnV0ZXM7IHRoZSBzaXRlIGlzIGxpdmUgb25jZSBpdCBjb21wbGV0ZXMuJyk7Cn0KCm1haW4oKS5jYXRjaCgoZSkgPT4gewogIGNvbnNvbGUuZXJyb3IoJ1xuRGVwbG95IGZhaWxlZDonLCBlLm1lc3NhZ2UpOwogIHByb2Nlc3MuZXhpdCgxKTsKfSk7Cg==
+// One-shot deployment helper: push this repo to GitHub and enable Pages —
+// entirely via the GitHub REST API (no local git required).
+//
+// Usage:
+//   node scripts/deploy-github.mjs <repo-name> [--org ORG]     (GITHUB_TOKEN env var)
+//   node scripts/deploy-github.mjs <GITHUB_TOKEN> <repo-name>
+//
+// The token needs: repo scope (classic) or "Contents: read & write",
+// "Administration: read & write", "Pages: read & write" (fine-grained).
+import { readdirSync, readFileSync, statSync } from 'node:fs';
+import { join, relative, sep } from 'node:path';
+
+const args = process.argv.slice(2);
+let token = process.env.GITHUB_TOKEN || '';
+let repoName = '';
+const orgIdx = args.indexOf('--org');
+const org = orgIdx >= 0 ? args[orgIdx + 1] : null;
+
+for (const a of args) {
+  if (a === '--org' || a === org) continue;
+  if (!token && (a.startsWith('ghp_') || a.startsWith('github_pat_'))) {
+    token = a;
+    continue;
+  }
+  if (!repoName) {
+    repoName = a;
+    continue;
+  }
+}
+
+if (!token || !repoName) {
+  console.error('Usage: node scripts/deploy-github.mjs <repo-name> [--org ORG]   (set GITHUB_TOKEN env var)');
+  console.error('   or: node scripts/deploy-github.mjs <GITHUB_TOKEN> <repo-name>');
+  process.exit(1);
+}
+
+const root = process.cwd();
+
+async function gh(path, method = 'GET', body) {
+  const res = await fetch(`https://api.github.com${path}`, {
+    method,
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      'Content-Type': 'application/json'
+    },
+    body: body ? JSON.stringify(body) : undefined
+  });
+  const text = await res.text();
+  let data;
+  try {
+    data = JSON.parse(text);
+  } catch {
+    data = text;
+  }
+  if (!res.ok) {
+    throw new Error(`${method} ${path} → ${res.status}: ${JSON.stringify(data)}`);
+  }
+  return { status: res.status, data };
+}
+
+const EXCLUDE = new Set(['node_modules', 'dist', '.astro', '.tools', '.git']);
+
+function collectFiles(dir, out = []) {
+  for (const name of readdirSync(dir)) {
+    if (EXCLUDE.has(name)) continue;
+    if (name === '.env' || (name.startsWith('.env.') && name !== '.env.example')) continue;
+    const full = join(dir, name);
+    const st = statSync(full);
+    if (st.isDirectory()) collectFiles(full, out);
+    else if (st.isFile()) out.push(full);
+  }
+  return out;
+}
+
+async function main() {
+  // 1. Who am I?
+  const me = (await gh('/user')).data;
+  const owner = org || me.login;
+  console.log(`Authenticated as ${me.login}. Owner: ${owner}, repo: ${repoName}`);
+
+  // 2. Ensure the repo exists, initialized with at least one commit.
+  const repoUrl = org ? `/orgs/${owner}/repos` : '/user/repos';
+  const existing = await gh(`/repos/${owner}/${repoName}`).catch(() => null);
+  if (!existing) {
+    await gh(repoUrl, 'POST', {
+      name: repoName,
+      description: 'PromptForge — free, open-source library of AI prompts, commands, tools and workflows.',
+      homepage: `https://${owner}.github.io/${repoName}/`,
+      private: false,
+      has_issues: true,
+      has_projects: false,
+      has_wiki: false,
+      auto_init: true
+    });
+    console.log(`Created repo ${owner}/${repoName} (auto-initialized).`);
+  } else {
+    console.log(`Repo ${owner}/${repoName} already exists.`);
+  }
+
+  // 3. Ensure there is a HEAD commit on main (seed one if the repo is empty).
+  let mainRef = await gh(`/repos/${owner}/${repoName}/git/refs/heads/main`).catch(() => null);
+  if (!mainRef) {
+    // Empty repository: seed an initial commit via the contents API.
+    await gh(`/repos/${owner}/${repoName}/contents/README.md`, 'PUT', {
+      message: 'Initial commit',
+      content: Buffer.from('# promptforge\n').toString('base64')
+    });
+    mainRef = await gh(`/repos/${owner}/${repoName}/git/refs/heads/main`);
+    console.log('Seeded initial commit on main.');
+  }
+  const parentSha = mainRef.data.object.sha;
+
+  // 4. Build the git tree from all project files.
+  const files = collectFiles(root);
+  const tree = files.map((f) => {
+    const rel = relative(root, f).split(sep).join('/');
+    const content = readFileSync(f);
+    if (content.length > 90_000_000) throw new Error(`file too large: ${rel}`);
+    return { path: rel, mode: '100644', type: 'blob', content: content.toString('utf8') };
+  });
+  console.log(`Preparing ${tree.length} files…`);
+  const treeRes = await gh(`/repos/${owner}/${repoName}/git/trees`, 'POST', { base_tree: null, tree });
+  const treeSha = treeRes.data.sha;
+
+  // 5. Create the commit on top of the parent, then update main.
+  const commitRes = await gh(`/repos/${owner}/${repoName}/git/commits`, 'POST', {
+    message: 'PromptForge static site',
+    tree: treeSha,
+    parents: [parentSha]
+  });
+  const commitSha = commitRes.data.sha;
+
+  await gh(`/repos/${owner}/${repoName}/git/refs/heads/main`, 'PATCH', { sha: commitSha, force: true });
+  console.log(`Pushed ${tree.length} files to main @ ${commitSha.slice(0, 7)}`);
+
+  // 6. Enable GitHub Pages via the Actions workflow.
+  try {
+    await gh(`/repos/${owner}/${repoName}/pages`, 'POST', { build_type: 'workflow' });
+    console.log('GitHub Pages enabled (build_type: workflow).');
+  } catch (e) {
+    console.warn('Pages setup note:', e.message);
+  }
+
+  // 7. Ensure the deploy workflow runs (the API push usually triggers it; dispatch as fallback).
+  await new Promise((r) => setTimeout(r, 4000));
+  try {
+    const runs = await gh(`/repos/${owner}/${repoName}/actions/runs?branch=main&per_page=10`);
+    const already = (runs.data.workflow_runs || []).some((r) => r.name === 'Deploy to GitHub Pages');
+    if (already) {
+      console.log('Deploy workflow already triggered by the push.');
+    } else {
+      await gh(`/repos/${owner}/${repoName}/actions/workflows/deploy.yml/dispatches`, 'POST', { ref: 'main' });
+      console.log('Triggered deploy workflow via workflow_dispatch.');
+    }
+  } catch (e) {
+    console.warn('Workflow trigger note:', e.message);
+  }
+
+  console.log(`\nRepo:      https://github.com/${owner}/${repoName}`);
+  console.log(`Actions:   https://github.com/${owner}/${repoName}/actions`);
+  console.log(`Site URL:  https://${owner}.github.io/${repoName}/`);
+  console.log('The deploy workflow takes 1–3 minutes; the site is live once it completes.');
+}
+
+main().catch((e) => {
+  console.error('\nDeploy failed:', e.message);
+  process.exit(1);
+});

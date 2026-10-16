@@ -1,1 +1,42 @@
-LS0tCmltcG9ydCBMYXlvdXQgZnJvbSAnLi4vbGF5b3V0cy9MYXlvdXQuYXN0cm8nOwppbXBvcnQgeyBnZXRDb2xsZWN0aW9uIH0gZnJvbSAnYXN0cm86Y29udGVudCc7CmltcG9ydCB7IGV4dHJhY3RQcm9tcHRCbG9jayB9IGZyb20gJy4uL2xpYi9tYXJrZG93bic7Cgpjb25zdCBwcm9tcHRzID0gYXdhaXQgZ2V0Q29sbGVjdGlvbigncHJvbXB0Jyk7CmNvbnN0IGRhdGEgPSBwcm9tcHRzLm1hcCgocCkgPT4gKHsKICBpZDogcC5pZCwKICB0aXRsZTogcC5kYXRhLnRpdGxlLAogIGNhdGVnb3J5OiBwLmRhdGEuY2F0ZWdvcnksCiAgcHJvbXB0OiBleHRyYWN0UHJvbXB0QmxvY2socC5ib2R5IHx8ICcnKQp9KSk7Ci0tLQoKPExheW91dAogIHRpdGxlPSJSdW4gYSBwcm9tcHQiCiAgZGVzY3JpcHRpb249IkV4ZWN1dGUgYW55IHByb21wdCBhZ2FpbnN0IGEgZnJlZSBMTE0gKFBvbGxpbmF0aW9ucyBrZXlsZXNzLCBHZW1pbmksIEdyb3Egb3IgT3BlblJvdXRlcikgZGlyZWN0bHkgaW4geW91ciBicm93c2VyLiIKPgogIDxzZWN0aW9uIGNsYXNzPSJteC1hdXRvIG1heC13LTZ4bCBweC00IHNtOnB4LTYgcHktMTIiPgogICAgPGgxIGNsYXNzPSJ0ZXh0LTR4bCBmb250LWV4dHJhYm9sZCB0cmFja2luZy10aWdodCI+UnVuIGEgcHJvbXB0IDxzcGFuIGNsYXNzPSJncmFkLXRleHQiPmluLXBhZ2U8L3NwYW4+PC9oMT4KICAgIDxwIGNsYXNzPSJtdC0zIHRleHQtbGcgdGV4dC1zbGF0ZS00MDAgbWF4LXctM3hsIj4KICAgICAgUGljayBhIHByb21wdCwgZmlsbCBpdHMgPGNvZGUgY2xhc3M9ImJnLXdoaXRlLzEwIHB4LTEuNSBweS0wLjUgcm91bmRlZCB0ZXh0LWluZGlnby0yMDAgZm9udC1tb25vIHRleHQtc20iPnsie3t2YXJpYWJsZXN9fSJ9PC9jb2RlPiwKICAgICAgY2hvb3NlIGEgcHJvdmlkZXIsIGFuZCBydW4uIDxzdHJvbmcgY2xhc3M9InRleHQtc2xhdGUtMjAwIj5Qb2xsaW5hdGlvbnMgbmVlZHMgbm8ga2V5PC9zdHJvbmc+IOKAlAogICAgICBpdCB3b3JrcyBpbnN0YW50bHksIGZvciBmcmVlLiBPdGhlciBwcm92aWRlcnMgYWNjZXB0IGEgZnJlZSBrZXkgeW91IHBhc3RlIGhlcmUKICAgICAgKHN0b3JlZCBvbmx5IGluIHlvdXIgYnJvd3NlcidzIGxvY2FsU3RvcmFnZSwgbmV2ZXIgc2VudCB0byBhIHNlcnZlcikuCiAgICA8L3A+CgogICAgPGRpdiBjbGFzcz0ibXQtNiBwYW5lbCBwLTQgdGV4dC1zbSB0ZXh0LXNsYXRlLTQwMCBmbGV4IGZsZXgtd3JhcCBnYXAteC02IGdhcC15LTIiPgogICAgICA8c3Bhbj7inIUgTm8gYWNjb3VudCBuZWVkZWQ8L3NwYW4+CiAgICAgIDxzcGFuPvCflJIgS2V5cyBzdGF5IGluIHlvdXIgYnJvd3Nlcjwvc3Bhbj4KICAgICAgPHNwYW4+8J+SuCAkMCDigJQgbm8gY3JlZGl0IGNhcmQsIGV2ZXI8L3NwYW4+CiAgICA8L2Rpdj4KCiAgICA8ZGl2IGlkPSJydW4tYXBwIiBjbGFzcz0ibXQtOCI+PC9kaXY+CiAgPC9zZWN0aW9uPgoKICA8c2NyaXB0IHR5cGU9ImFwcGxpY2F0aW9uL2pzb24iIGlkPSJydW4tZGF0YSIgc2V0Omh0bWw9e0pTT04uc3RyaW5naWZ5KGRhdGEpfT48L3NjcmlwdD4KICA8c2NyaXB0PgogICAgaW1wb3J0IHsgaW5pdFJ1biB9IGZyb20gJy4uL3NjcmlwdHMvcnVuJzsKICAgIGluaXRSdW4oKTsKICA8L3NjcmlwdD4KPC9MYXlvdXQ+Cg==
+---
+import Layout from '../layouts/Layout.astro';
+import { getCollection } from 'astro:content';
+import { extractPromptBlock } from '../lib/markdown';
+
+const prompts = await getCollection('prompt');
+const data = prompts.map((p) => ({
+  id: p.id,
+  title: p.data.title,
+  category: p.data.category,
+  prompt: extractPromptBlock(p.body || '')
+}));
+---
+
+<Layout
+  title="Run a prompt"
+  description="Execute any prompt against a free LLM (Pollinations keyless, Gemini, Groq or OpenRouter) directly in your browser."
+>
+  <section class="mx-auto max-w-6xl px-4 sm:px-6 py-12">
+    <h1 class="text-4xl font-extrabold tracking-tight">Run a prompt <span class="grad-text">in-page</span></h1>
+    <p class="mt-3 text-lg text-slate-400 max-w-3xl">
+      Pick a prompt, fill its <code class="bg-white/10 px-1.5 py-0.5 rounded text-indigo-200 font-mono text-sm">{"{{variables}}"}</code>,
+      choose a provider, and run. <strong class="text-slate-200">Pollinations needs no key</strong> —
+      it works instantly, for free. Other providers accept a free key you paste here
+      (stored only in your browser's localStorage, never sent to a server).
+    </p>
+
+    <div class="mt-6 panel p-4 text-sm text-slate-400 flex flex-wrap gap-x-6 gap-y-2">
+      <span>✅ No account needed</span>
+      <span>🔒 Keys stay in your browser</span>
+      <span>💸 $0 — no credit card, ever</span>
+    </div>
+
+    <div id="run-app" class="mt-8"></div>
+  </section>
+
+  <script type="application/json" id="run-data" set:html={JSON.stringify(data)}></script>
+  <script>
+    import { initRun } from '../scripts/run';
+    initRun();
+  </script>
+</Layout>

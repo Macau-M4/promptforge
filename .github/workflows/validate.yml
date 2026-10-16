@@ -10,11 +10,15 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
       - run: npm install
+
       - name: Validate content against Zod schema
         run: npm run validate
-      - name: Build site
+
+      - name: Build site (validates Astro content collections too)
         run: npm run build

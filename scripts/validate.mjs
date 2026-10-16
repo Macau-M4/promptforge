@@ -1,1 +1,132 @@
-Ly8gU3RhbmRhbG9uZSBab2Qgc2NoZW1hIHZhbGlkYXRpb24gZm9yIGFsbCBjb250ZW50IGZpbGVzLgovLyBSdW46IG5vZGUgc2NyaXB0cy92YWxpZGF0ZS5tanMgIChhbHNvIHJ1bnMgaW4gQ0kgb24gZXZlcnkgUFIpCmltcG9ydCB7IHJlYWRkaXJTeW5jLCByZWFkRmlsZVN5bmMgfSBmcm9tICdub2RlOmZzJzsKaW1wb3J0IHsgam9pbiwgZXh0bmFtZSB9IGZyb20gJ25vZGU6cGF0aCc7CmltcG9ydCB7IGZpbGVVUkxUb1BhdGggfSBmcm9tICdub2RlOnVybCc7CmltcG9ydCBtYXR0ZXIgZnJvbSAnZ3JheS1tYXR0ZXInOwppbXBvcnQgeyB6IH0gZnJvbSAnem9kJzsKCmNvbnN0IF9fZGlybmFtZSA9IGZpbGVVUkxUb1BhdGgobmV3IFVSTCgnLicsIGltcG9ydC5tZXRhLnVybCkpOwpjb25zdCBST09UID0gam9pbihfX2Rpcm5hbWUsICcuLicpOwpjb25zdCBDT05URU5UID0gam9pbihST09ULCAnc3JjJywgJ2NvbnRlbnQnKTsKCmNvbnN0IGNhdGVnb3JpZXMgPSBbCiAgJ3dyaXRpbmcnLAogICdjb2RpbmcnLAogICdwcm9kdWN0aXZpdHknLAogICdhbmFseXNpcycsCiAgJ2NyZWF0aXZlJywKICAnbGVhcm5pbmcnLAogICdtYXJrZXRpbmcnLAogICdhdXRvbWF0aW9uJwpdOwpjb25zdCBkaWZmaWN1bHRpZXMgPSBbJ2JlZ2lubmVyJywgJ2ludGVybWVkaWF0ZScsICdhZHZhbmNlZCddOwoKY29uc3QgcHJvbXB0U2NoZW1hID0gei5vYmplY3QoewogIHRpdGxlOiB6LnN0cmluZygpLm1pbigzKS5tYXgoMTQwKSwKICBkZXNjcmlwdGlvbjogei5zdHJpbmcoKS5taW4oMTApLm1heCgzMjApLAogIGNhdGVnb3J5OiB6LmVudW0oY2F0ZWdvcmllcyksCiAgdGFnczogei5hcnJheSh6LnN0cmluZygpLm1pbigyKS5tYXgoNDApKS5taW4oMSkubWF4KDgpLAogIGRpZmZpY3VsdHk6IHouZW51bShkaWZmaWN1bHRpZXMpLAogIG1vZGVsOiB6LnN0cmluZygpLm1pbigxKS5tYXgoODApLmRlZmF1bHQoJ2FueScpLAogIGF1dGhvcjogei5zdHJpbmcoKS5taW4oMSkubWF4KDgwKS5kZWZhdWx0KCdjb21tdW5pdHknKSwKICBjcmVhdGVkOiB6LnN0cmluZygpLnJlZ2V4KC9eXGR7NH0tXGR7Mn0tXGR7Mn0kLyksCiAgdXBkYXRlZDogei5zdHJpbmcoKS5yZWdleCgvXlxkezR9LVxkezJ9LVxkezJ9JC8pLAogIHVwdm90ZXM6IHoubnVtYmVyKCkuaW50KCkubWluKDApLmRlZmF1bHQoMCksCiAgZG93bnZvdGVzOiB6Lm51bWJlcigpLmludCgpLm1pbigwKS5kZWZhdWx0KDApLAogIHZlcnNpb246IHoubnVtYmVyKCkuaW50KCkucG9zaXRpdmUoKS5kZWZhdWx0KDEpCn0pOwoKY29uc3QgcGF0aFNjaGVtYSA9IHoub2JqZWN0KHsKICB0aXRsZTogei5zdHJpbmcoKS5taW4oMykubWF4KDE0MCksCiAgZGVzY3JpcHRpb246IHouc3RyaW5nKCkubWluKDEwKS5tYXgoMzIwKSwKICBsZXZlbDogei5lbnVtKFsnc3RhcnQnLCAnYWR2YW5jZScsICdtYXN0ZXInXSksCiAgb3JkZXI6IHoubnVtYmVyKCkuaW50KCkubWluKDEpLAogIHByb21wdHM6IHouYXJyYXkoei5zdHJpbmcoKSkubWluKDEpLm1heCg2MCkKfSk7Cgpjb25zdCB0b29sU2NoZW1hID0gei5vYmplY3QoewogIHRpdGxlOiB6LnN0cmluZygpLm1pbigzKS5tYXgoMTQwKSwKICBkZXNjcmlwdGlvbjogei5zdHJpbmcoKS5taW4oMTApLm1heCgzMjApLAogIGNhdGVnb3J5OiB6LmVudW0oY2F0ZWdvcmllcyksCiAga2luZDogei5lbnVtKFsnZnJlZS1hcGknLCAnbG9jYWwnLCAncGxhdGZvcm0nLCAndXRpbGl0eSddKSwKICB1cmw6IHouc3RyaW5nKCkudXJsKCkub3B0aW9uYWwoKSwKICBmcmVlOiB6LmJvb2xlYW4oKS5kZWZhdWx0KHRydWUpCn0pOwoKZnVuY3Rpb24gbGlzdE1hcmtkb3duKGRpcikgewogIHRyeSB7CiAgICByZXR1cm4gcmVhZGRpclN5bmMoZGlyKS5maWx0ZXIoKGYpID0+IGV4dG5hbWUoZikgPT09ICcubWQnKTsKICB9IGNhdGNoIHsKICAgIHJldHVybiBbXTsKICB9Cn0KCmNvbnN0IGVycm9ycyA9IFtdOwpsZXQgY291bnQgPSAwOwoKZnVuY3Rpb24gdmFsaWRhdGVHcm91cChkaXIsIHNjaGVtYSwgbGFiZWwsIGV4dHJhQ2hlY2tzKSB7CiAgY29uc3QgZmlsZXMgPSBsaXN0TWFya2Rvd24oZGlyKTsKICBpZiAoZmlsZXMubGVuZ3RoID09PSAwKSB7CiAgICBlcnJvcnMucHVzaChgWyR7bGFiZWx9XSBubyBtYXJrZG93biBmaWxlcyBmb3VuZCBpbiAke2Rpcn1gKTsKICAgIHJldHVybjsKICB9CiAgZm9yIChjb25zdCBmaWxlIG9mIGZpbGVzKSB7CiAgICBjb25zdCBmdWxsID0gam9pbihkaXIsIGZpbGUpOwogICAgY29uc3QgcmF3ID0gcmVhZEZpbGVTeW5jKGZ1bGwsICd1dGY4Jyk7CiAgICBjb25zdCB7IGRhdGEsIGNvbnRlbnQgfSA9IG1hdHRlcihyYXcpOwogICAgY29uc3QgcmVzdWx0ID0gc2NoZW1hLnNhZmVQYXJzZShkYXRhKTsKICAgIGlmICghcmVzdWx0LnN1Y2Nlc3MpIHsKICAgICAgZm9yIChjb25zdCBpc3N1ZSBvZiByZXN1bHQuZXJyb3IuaXNzdWVzKSB7CiAgICAgICAgZXJyb3JzLnB1c2goYFske2xhYmVsfV0gJHtmaWxlfTogJHtpc3N1ZS5wYXRoLmpvaW4oJy4nKSB8fCAncm9vdCd9IOKAlCAke2lzc3VlLm1lc3NhZ2V9YCk7CiAgICAgIH0KICAgIH0KICAgIGlmIChleHRyYUNoZWNrcykgewogICAgICBjb25zdCBleHRyYSA9IGV4dHJhQ2hlY2tzKGRhdGEsIGNvbnRlbnQsIGZpbGUpOwogICAgICBpZiAoZXh0cmEpIGVycm9ycy5wdXNoKGBbJHtsYWJlbH1dICR7ZmlsZX06ICR7ZXh0cmF9YCk7CiAgICB9CiAgICBjb3VudCsrOwogIH0KfQoKdmFsaWRhdGVHcm91cCgKICBqb2luKENPTlRFTlQsICdwcm9tcHRzJyksCiAgcHJvbXB0U2NoZW1hLAogICdwcm9tcHRzJywKICAoZGF0YSwgY29udGVudCwgZmlsZSkgPT4gewogICAgaWYgKCEvYGBgW1xzXFNdKj9gYGAvLnRlc3QoY29udGVudCkpIHsKICAgICAgcmV0dXJuICdtaXNzaW5nIGZlbmNlZCBjb2RlIGJsb2NrICh0aGUgY29weWFibGUgcHJvbXB0KSc7CiAgICB9CiAgICBpZiAoIS9eXGR7NH0tXGR7Mn0tXGR7Mn0kLy50ZXN0KGRhdGEuY3JlYXRlZCkgfHwgIS9eXGR7NH0tXGR7Mn0tXGR7Mn0kLy50ZXN0KGRhdGEudXBkYXRlZCkpIHsKICAgICAgcmV0dXJuICdpbnZhbGlkIGRhdGUgZm9ybWF0ICh1c2UgWVlZWS1NTS1ERCknOwogICAgfQogICAgaWYgKGRhdGEuY3JlYXRlZCA+IGRhdGEudXBkYXRlZCkgcmV0dXJuICdjcmVhdGVkIGRhdGUgaXMgYWZ0ZXIgdXBkYXRlZCBkYXRlJzsKICAgIHJldHVybiBudWxsOwogIH0KKTsKCnZhbGlkYXRlR3JvdXAoam9pbihDT05URU5ULCAncGF0aHMnKSwgcGF0aFNjaGVtYSwgJ3BhdGhzJywgKGRhdGEpID0+IHsKICBpZiAoIWRhdGEucHJvbXB0cyB8fCBkYXRhLnByb21wdHMubGVuZ3RoID09PSAwKSByZXR1cm4gJ3BhdGhzIG11c3QgcmVmZXJlbmNlIGF0IGxlYXN0IG9uZSBwcm9tcHQgaWQnOwogIHJldHVybiBudWxsOwp9KTsKCnZhbGlkYXRlR3JvdXAoam9pbihDT05URU5ULCAndG9vbHMnKSwgdG9vbFNjaGVtYSwgJ3Rvb2xzJyk7CgovLyBDcm9zcy1jaGVjazogZXZlcnkgcHJvbXB0IGlkIHJlZmVyZW5jZWQgYnkgYSBwYXRoIG11c3QgZXhpc3QuCmNvbnN0IHByb21wdEZpbGVzID0gbGlzdE1hcmtkb3duKGpvaW4oQ09OVEVOVCwgJ3Byb21wdHMnKSkubWFwKChmKSA9PiBmLnJlcGxhY2UoL1wubWQkLywgJycpKTsKZm9yIChjb25zdCBmaWxlIG9mIGxpc3RNYXJrZG93bihqb2luKENPTlRFTlQsICdwYXRocycpKSkgewogIGNvbnN0IHsgZGF0YSB9ID0gbWF0dGVyKHJlYWRGaWxlU3luYyhqb2luKENPTlRFTlQsICdwYXRocycsIGZpbGUpLCAndXRmOCcpKTsKICBmb3IgKGNvbnN0IGlkIG9mIGRhdGEucHJvbXB0cyB8fCBbXSkgewogICAgaWYgKCFwcm9tcHRGaWxlcy5pbmNsdWRlcyhpZCkpIHsKICAgICAgZXJyb3JzLnB1c2goYFtwYXRoc10gJHtmaWxlfTogcmVmZXJlbmNlcyBtaXNzaW5nIHByb21wdCAiJHtpZH0iYCk7CiAgICB9CiAgfQp9CgppZiAoZXJyb3JzLmxlbmd0aCkgewogIGNvbnNvbGUuZXJyb3IoYFxu4p2MIFZhbGlkYXRpb24gZmFpbGVkIHdpdGggJHtlcnJvcnMubGVuZ3RofSBlcnJvcihzKTpcbmApOwogIGZvciAoY29uc3QgZSBvZiBlcnJvcnMpIGNvbnNvbGUuZXJyb3IoJyAg4oCiICcgKyBlKTsKICBwcm9jZXNzLmV4aXQoMSk7Cn0KCmNvbnNvbGUubG9nKGBcbuKchSBWYWxpZGF0ZWQgJHtjb3VudH0gY29udGVudCBmaWxlcyAoJHtwcm9tcHRGaWxlcy5sZW5ndGh9IHByb21wdHMpIOKAlCBhbGwgZ29vZC5gKTsK
+// Standalone Zod schema validation for all content files.
+// Run: node scripts/validate.mjs  (also runs in CI on every PR)
+import { readdirSync, readFileSync } from 'node:fs';
+import { join, extname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+import matter from 'gray-matter';
+import { z } from 'zod';
+
+const __dirname = fileURLToPath(new URL('.', import.meta.url));
+const ROOT = join(__dirname, '..');
+const CONTENT = join(ROOT, 'src', 'content');
+
+const categories = [
+  'writing',
+  'coding',
+  'productivity',
+  'analysis',
+  'creative',
+  'learning',
+  'marketing',
+  'automation'
+];
+const difficulties = ['beginner', 'intermediate', 'advanced'];
+
+const promptSchema = z.object({
+  title: z.string().min(3).max(140),
+  description: z.string().min(10).max(320),
+  category: z.enum(categories),
+  tags: z.array(z.string().min(2).max(40)).min(1).max(8),
+  difficulty: z.enum(difficulties),
+  model: z.string().min(1).max(80).default('any'),
+  author: z.string().min(1).max(80).default('community'),
+  created: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  updated: z.string().regex(/^\d{4}-\d{2}-\d{2}$/),
+  upvotes: z.number().int().min(0).default(0),
+  downvotes: z.number().int().min(0).default(0),
+  version: z.number().int().positive().default(1)
+});
+
+const pathSchema = z.object({
+  title: z.string().min(3).max(140),
+  description: z.string().min(10).max(320),
+  level: z.enum(['start', 'advance', 'master']),
+  order: z.number().int().min(1),
+  prompts: z.array(z.string()).min(1).max(60)
+});
+
+const toolSchema = z.object({
+  title: z.string().min(3).max(140),
+  description: z.string().min(10).max(320),
+  category: z.enum(categories),
+  kind: z.enum(['free-api', 'local', 'platform', 'utility']),
+  url: z.string().url().optional(),
+  free: z.boolean().default(true)
+});
+
+function listMarkdown(dir) {
+  try {
+    return readdirSync(dir).filter((f) => extname(f) === '.md');
+  } catch {
+    return [];
+  }
+}
+
+const errors = [];
+let count = 0;
+
+function validateGroup(dir, schema, label, extraChecks) {
+  const files = listMarkdown(dir);
+  if (files.length === 0) {
+    errors.push(`[${label}] no markdown files found in ${dir}`);
+    return;
+  }
+  for (const file of files) {
+    const full = join(dir, file);
+    const raw = readFileSync(full, 'utf8');
+    const { data, content } = matter(raw);
+    const result = schema.safeParse(data);
+    if (!result.success) {
+      for (const issue of result.error.issues) {
+        errors.push(`[${label}] ${file}: ${issue.path.join('.') || 'root'} — ${issue.message}`);
+      }
+    }
+    if (extraChecks) {
+      const extra = extraChecks(data, content, file);
+      if (extra) errors.push(`[${label}] ${file}: ${extra}`);
+    }
+    count++;
+  }
+}
+
+validateGroup(
+  join(CONTENT, 'prompts'),
+  promptSchema,
+  'prompts',
+  (data, content, file) => {
+    if (!/```[\s\S]*?```/.test(content)) {
+      return 'missing fenced code block (the copyable prompt)';
+    }
+    if (!/^\d{4}-\d{2}-\d{2}$/.test(data.created) || !/^\d{4}-\d{2}-\d{2}$/.test(data.updated)) {
+      return 'invalid date format (use YYYY-MM-DD)';
+    }
+    if (data.created > data.updated) return 'created date is after updated date';
+    return null;
+  }
+);
+
+validateGroup(join(CONTENT, 'paths'), pathSchema, 'paths', (data) => {
+  if (!data.prompts || data.prompts.length === 0) return 'paths must reference at least one prompt id';
+  return null;
+});
+
+validateGroup(join(CONTENT, 'tools'), toolSchema, 'tools');
+
+// Cross-check: every prompt id referenced by a path must exist.
+const promptFiles = listMarkdown(join(CONTENT, 'prompts')).map((f) => f.replace(/\.md$/, ''));
+for (const file of listMarkdown(join(CONTENT, 'paths'))) {
+  const { data } = matter(readFileSync(join(CONTENT, 'paths', file), 'utf8'));
+  for (const id of data.prompts || []) {
+    if (!promptFiles.includes(id)) {
+      errors.push(`[paths] ${file}: references missing prompt "${id}"`);
+    }
+  }
+}
+
+if (errors.length) {
+  console.error(`\n❌ Validation failed with ${errors.length} error(s):\n`);
+  for (const e of errors) console.error('  • ' + e);
+  process.exit(1);
+}
+
+console.log(`\n✅ Validated ${count} content files (${promptFiles.length} prompts) — all good.`);

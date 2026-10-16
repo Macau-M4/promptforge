@@ -1,1 +1,45 @@
-Ly8gVHJlbmRpbmcgPSBzY29yZSDDlyByZWNlbmN5LiBzY29yZSA9IHVwdm90ZXMgLSBkb3dudm90ZXM7Ci8vIHJlY2VuY3kgaXMgYSBkZWNheSBzbyBuZXdlciBjb250ZW50IHJhbmtzIGhpZ2hlciB0aGFuIG9sZCBjb250ZW50Ci8vIHdpdGggdGhlIHNhbWUgc2NvcmUuIFB1cmUgZnVuY3Rpb24g4oaSIHVuaXQtdGVzdGFibGUgYW5kIHJldXNlZCBpbiBDSS4KCmV4cG9ydCBpbnRlcmZhY2UgVm90ZWFibGUgewogIGlkOiBzdHJpbmc7CiAgdXB2b3RlczogbnVtYmVyOwogIGRvd252b3RlczogbnVtYmVyOwogIHVwZGF0ZWQ6IHN0cmluZzsgLy8gSVNPIGRhdGUgWVlZWS1NTS1ERAp9CgpleHBvcnQgZnVuY3Rpb24gc2NvcmUodjogUGljazxWb3RlYWJsZSwgJ3Vwdm90ZXMnIHwgJ2Rvd252b3Rlcyc+KTogbnVtYmVyIHsKICByZXR1cm4gdi51cHZvdGVzIC0gdi5kb3dudm90ZXM7Cn0KCi8qKiBEYXlzIHNpbmNlIGEgWVlZWS1NTS1ERCBkYXRlICgwIGlmIGluIHRoZSBmdXR1cmUpLiAqLwpleHBvcnQgZnVuY3Rpb24gYWdlSW5EYXlzKGRhdGU6IHN0cmluZywgbm93OiBEYXRlID0gbmV3IERhdGUoKSk6IG51bWJlciB7CiAgY29uc3QgdCA9IG5ldyBEYXRlKGRhdGUgKyAnVDAwOjAwOjAwWicpLmdldFRpbWUoKTsKICBjb25zdCBtcyA9IG5vdy5nZXRUaW1lKCkgLSB0OwogIHJldHVybiBNYXRoLm1heCgwLCBtcyAvIDg2XzQwMF8wMDApOwp9CgovKiogR3Jhdml0eSBjb250cm9scyBob3cgZmFzdCBvbGRlciBjb250ZW50IGRlY2F5cy4gNyA9ICJhYm91dCBhIHdlZWsiIGhhbGYtbGlmZSBmZWVsLiAqLwpleHBvcnQgZnVuY3Rpb24gcmVjZW5jeUZhY3RvcihkYXRlOiBzdHJpbmcsIG5vdzogRGF0ZSA9IG5ldyBEYXRlKCksIGdyYXZpdHkgPSA3KTogbnVtYmVyIHsKICBjb25zdCBkYXlzID0gYWdlSW5EYXlzKGRhdGUsIG5vdyk7CiAgcmV0dXJuIDEgLyAoMSArIGRheXMgLyBncmF2aXR5KTsKfQoKZXhwb3J0IGZ1bmN0aW9uIHRyZW5kaW5nKHY6IFZvdGVhYmxlLCBub3c6IERhdGUgPSBuZXcgRGF0ZSgpLCBncmF2aXR5ID0gNyk6IG51bWJlciB7CiAgcmV0dXJuIHNjb3JlKHYpICogcmVjZW5jeUZhY3Rvcih2LnVwZGF0ZWQsIG5vdywgZ3Jhdml0eSk7Cn0KCmV4cG9ydCBmdW5jdGlvbiBzb3J0QnlUcmVuZGluZzxUIGV4dGVuZHMgVm90ZWFibGU+KGl0ZW1zOiBUW10pOiBUW10gewogIHJldHVybiBbLi4uaXRlbXNdLnNvcnQoCiAgICAoYSwgYikgPT4gdHJlbmRpbmcoYikgLSB0cmVuZGluZyhhKSB8fCBzY29yZShiKSAtIHNjb3JlKGEpIHx8IGIudXB2b3RlcyAtIGEudXB2b3RlcwogICk7Cn0KCmV4cG9ydCBmdW5jdGlvbiBzb3J0QnlUb3A8VCBleHRlbmRzIFZvdGVhYmxlPihpdGVtczogVFtdKTogVFtdIHsKICByZXR1cm4gWy4uLml0ZW1zXS5zb3J0KChhLCBiKSA9PiBzY29yZShiKSAtIHNjb3JlKGEpKTsKfQoKZXhwb3J0IGZ1bmN0aW9uIHNvcnRCeU5ld2VzdDxUIGV4dGVuZHMgVm90ZWFibGU+KGl0ZW1zOiBUW10pOiBUW10gewogIHJldHVybiBbLi4uaXRlbXNdLnNvcnQoKGEsIGIpID0+IChhLnVwZGF0ZWQgPCBiLnVwZGF0ZWQgPyAxIDogYS51cGRhdGVkID4gYi51cGRhdGVkID8gLTEgOiAwKSk7Cn0K
+// Trending = score × recency. score = upvotes - downvotes;
+// recency is a decay so newer content ranks higher than old content
+// with the same score. Pure function → unit-testable and reused in CI.
+
+export interface Voteable {
+  id: string;
+  upvotes: number;
+  downvotes: number;
+  updated: string; // ISO date YYYY-MM-DD
+}
+
+export function score(v: Pick<Voteable, 'upvotes' | 'downvotes'>): number {
+  return v.upvotes - v.downvotes;
+}
+
+/** Days since a YYYY-MM-DD date (0 if in the future). */
+export function ageInDays(date: string, now: Date = new Date()): number {
+  const t = new Date(date + 'T00:00:00Z').getTime();
+  const ms = now.getTime() - t;
+  return Math.max(0, ms / 86_400_000);
+}
+
+/** Gravity controls how fast older content decays. 7 = "about a week" half-life feel. */
+export function recencyFactor(date: string, now: Date = new Date(), gravity = 7): number {
+  const days = ageInDays(date, now);
+  return 1 / (1 + days / gravity);
+}
+
+export function trending(v: Voteable, now: Date = new Date(), gravity = 7): number {
+  return score(v) * recencyFactor(v.updated, now, gravity);
+}
+
+export function sortByTrending<T extends Voteable>(items: T[]): T[] {
+  return [...items].sort(
+    (a, b) => trending(b) - trending(a) || score(b) - score(a) || b.upvotes - a.upvotes
+  );
+}
+
+export function sortByTop<T extends Voteable>(items: T[]): T[] {
+  return [...items].sort((a, b) => score(b) - score(a));
+}
+
+export function sortByNewest<T extends Voteable>(items: T[]): T[] {
+  return [...items].sort((a, b) => (a.updated < b.updated ? 1 : a.updated > b.updated ? -1 : 0));
+}

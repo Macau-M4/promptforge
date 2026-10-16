@@ -1,1 +1,43 @@
-LS0tCnRpdGxlOiAiTWVldGluZyBOb3RlcyDihpIgQWN0aW9uIEl0ZW1zIgpkZXNjcmlwdGlvbjogIkNvbnZlcnQgcmF3LCBtZXNzeSBtZWV0aW5nIG5vdGVzIGludG8gYSBjbGVhbiBzdW1tYXJ5IHdpdGggb3duZXJzIGFuZCBuZXh0IGFjdGlvbnMuIgpjYXRlZ29yeTogInByb2R1Y3Rpdml0eSIKdGFnczogWyJtZWV0aW5ncyIsICJub3RlcyIsICJzdW1tYXJ5Il0KZGlmZmljdWx0eTogImJlZ2lubmVyIgptb2RlbDogImFueSIKYXV0aG9yOiAiY29tbXVuaXR5IgpjcmVhdGVkOiAiMjAyNC0wNS0zMCIKdXBkYXRlZDogIjIwMjUtMDEtMTQiCnVwdm90ZXM6IDU3CmRvd252b3RlczogMQp2ZXJzaW9uOiAxCi0tLQoKIyMgVGhlIHByb21wdAoKYGBgdGV4dApUdXJuIHRoZXNlIHJhdyBtZWV0aW5nIG5vdGVzIGludG8gYSBwcm9mZXNzaW9uYWwgc3VtbWFyeS4KCk91dHB1dDoKMS4gVEw7RFIg4oCUIDItMyBzZW50ZW5jZSBzdW1tYXJ5LgoyLiBERUNJU0lPTlMg4oCUIHdoYXQgd2FzIGRlY2lkZWQsIHdpdGggYSBvbmUtbGluZSByYXRpb25hbGUgaWYgc3RhdGVkLgozLiBBQ1RJT04gSVRFTVMg4oCUIGEgdGFibGU6IFRhc2sgfCBPd25lciB8IER1ZSAob3IgIlRCRCIpLiBJZiBubyBvd25lciBpcyBzdGF0ZWQsIHdyaXRlICJ1bmFzc2lnbmVkIi4KNC4gT1BFTiBRVUVTVElPTlMg4oCUIHRoaW5ncyBzdGlsbCB1bnJlc29sdmVkLgo1LiBORVhUIE1FRVRJTkcg4oCUIHN1Z2dlc3RlZCBhZ2VuZGEgaWYgbm90ZXMgaW1wbHkgb25lLgoKUnVsZXM6Ci0gRG8gbm90IGludmVudCBvd25lcnMsIGRhdGVzLCBvciBkZWNpc2lvbnMuIE1hcmsgdW5jZXJ0YWludHkgYXMgW3VuY2xlYXJdLgoKTm90ZXM6CiIiIgp7e25vdGVzfX0KIiIiCmBgYAoKIyMgV2hlbiB0byB1c2UgaXQKCkR1bXAgeW91ciByYXcgdHJhbnNjcmlwdCBvciBidWxsZXQgam90dGluZ3MgcmlnaHQgYWZ0ZXIgYSBjYWxsLiBJdCB0dXJucyAxMCBtaW51dGVzIG9mIGNsZWFuLXVwIGludG8gMzAgc2Vjb25kcy4KCiMjIFBybyB0aXAKCkFzayBpdCB0byBmb3JtYXQgQUNUSU9OIElURU1TIGFzIGEgbWFya2Rvd24gY2hlY2tsaXN0IHNvIHlvdSBjYW4gcGFzdGUgc3RyYWlnaHQgaW50byBhIHRhc2sgdHJhY2tlci4K
+---
+title: "Meeting Notes → Action Items"
+description: "Convert raw, messy meeting notes into a clean summary with owners and next actions."
+category: "productivity"
+tags: ["meetings", "notes", "summary"]
+difficulty: "beginner"
+model: "any"
+author: "community"
+created: "2024-05-30"
+updated: "2025-01-14"
+upvotes: 57
+downvotes: 1
+version: 1
+---
+
+## The prompt
+
+```text
+Turn these raw meeting notes into a professional summary.
+
+Output:
+1. TL;DR — 2-3 sentence summary.
+2. DECISIONS — what was decided, with a one-line rationale if stated.
+3. ACTION ITEMS — a table: Task | Owner | Due (or "TBD"). If no owner is stated, write "unassigned".
+4. OPEN QUESTIONS — things still unresolved.
+5. NEXT MEETING — suggested agenda if notes imply one.
+
+Rules:
+- Do not invent owners, dates, or decisions. Mark uncertainty as [unclear].
+
+Notes:
+"""
+{{notes}}
+"""
+```
+
+## When to use it
+
+Dump your raw transcript or bullet jottings right after a call. It turns 10 minutes of clean-up into 30 seconds.
+
+## Pro tip
+
+Ask it to format ACTION ITEMS as a markdown checklist so you can paste straight into a task tracker.

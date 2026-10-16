@@ -1,1 +1,10 @@
-aW1wb3J0IHR5cGUgeyBBUElSb3V0ZSB9IGZyb20gJ2FzdHJvJzsKCmV4cG9ydCBjb25zdCBHRVQ6IEFQSVJvdXRlID0gKHsgc2l0ZSB9KSA9PiB7CiAgY29uc3QgYmFzZSA9IGltcG9ydC5tZXRhLmVudi5CQVNFX1VSTCB8fCAnLyc7CiAgY29uc3Qgc2l0ZW1hcCA9IGAkeyhzaXRlPy5vcmlnaW4gPz8gJ2h0dHBzOi8vcHJvbXB0Zm9yZ2UucGFnZXMuZGV2Jyl9JHtiYXNlfXNpdGVtYXAueG1sYDsKICByZXR1cm4gbmV3IFJlc3BvbnNlKAogICAgYFVzZXItYWdlbnQ6ICpcbkFsbG93OiAvXG5cblNpdGVtYXA6ICR7c2l0ZW1hcH1cbmAsCiAgICB7IGhlYWRlcnM6IHsgJ0NvbnRlbnQtVHlwZSc6ICd0ZXh0L3BsYWluOyBjaGFyc2V0PXV0Zi04JyB9IH0KICApOwp9Owo=
+import type { APIRoute } from 'astro';
+
+export const GET: APIRoute = ({ site }) => {
+  const base = import.meta.env.BASE_URL || '/';
+  const sitemap = `${(site?.origin ?? 'https://promptforge.pages.dev')}${base}sitemap.xml`;
+  return new Response(
+    `User-agent: *\nAllow: /\n\nSitemap: ${sitemap}\n`,
+    { headers: { 'Content-Type': 'text/plain; charset=utf-8' } }
+  );
+};

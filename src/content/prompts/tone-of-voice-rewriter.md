@@ -1,1 +1,42 @@
-LS0tCnRpdGxlOiAiVG9uZS1vZi1Wb2ljZSBSZXdyaXRlciIKZGVzY3JpcHRpb246ICJSZXdyaXRlIGFueSB0ZXh0IHRvIG1hdGNoIGEgZGVzY3JpYmVkIGJyYW5kIHZvaWNlIHdoaWxlIGtlZXBpbmcgdGhlIG1lYW5pbmcgaW50YWN0LiIKY2F0ZWdvcnk6ICJ3cml0aW5nIgp0YWdzOiBbInJld3JpdGUiLCAiYnJhbmQtdm9pY2UiLCAiZWRpdGluZyJdCmRpZmZpY3VsdHk6ICJiZWdpbm5lciIKbW9kZWw6ICJhbnkiCmF1dGhvcjogImNvbW11bml0eSIKY3JlYXRlZDogIjIwMjQtMDgtMDIiCnVwZGF0ZWQ6ICIyMDI1LTAyLTA1Igp1cHZvdGVzOiA5Ngpkb3dudm90ZXM6IDMKdmVyc2lvbjogMQotLS0KCiMjIFRoZSBwcm9tcHQKCmBgYHRleHQKUmV3cml0ZSB0aGUgdGV4dCBiZWxvdyB0byBtYXRjaCB0aGUgdGFyZ2V0IHZvaWNlLgoKVGFyZ2V0IHZvaWNlOiB7e3ZvaWNlfX0KKGUuZy4gIndhcm0gYW5kIGNvbmZpZGVudCwgbGlrZSBhIGhlbHBmdWwgbWVudG9yIiwgb3IgInNob3J0IGFuZCBwdW5jaHksIGxpa2UgYSBUd2l0dGVyIHRocmVhZCIpCgpSdWxlczoKLSBLZWVwIGFsbCBmYWN0cyBhbmQgbnVtYmVycyBleGFjdGx5IHRoZSBzYW1lLgotIERvIG5vdCBhZGQgY2xhaW1zIHRoYXQgYXJlIG5vdCBpbiB0aGUgb3JpZ2luYWwuCi0gTWF0Y2ggdGhlIHZvY2FidWxhcnksIHNlbnRlbmNlIGxlbmd0aCwgYW5kIHJoeXRobSBvZiB0aGUgdm9pY2UuCi0gT3V0cHV0IHRoZSByZXdyaXR0ZW4gdGV4dCBvbmx5LCB0aGVuIGEgb25lLWxpbmUgbm90ZSBleHBsYWluaW5nIHlvdXIgbWFpbiBjaGFuZ2VzLgoKVGV4dCB0byByZXdyaXRlOgoiIiIKe3t0ZXh0fX0KIiIiCmBgYAoKIyMgV2hlbiB0byB1c2UgaXQKClVzZSBpdCB3aGVuIGEgZHJhZnQgaXMgdGVjaG5pY2FsbHkgY29ycmVjdCBidXQgc291bmRzIG9mZi1icmFuZC4gR3JlYXQgZm9yIHR1cm5pbmcgYSBkcnkgY2hhbmdlbG9nIGludG8gYSBmcmllbmRseSBhbm5vdW5jZW1lbnQuCgojIyBQcm8gdGlwCgpLZWVwIGEgc21hbGwgbGlicmFyeSBvZiB2b2ljZSBkZXNjcmlwdGlvbnMgYW5kIHJldXNlIHRoZSBleGFjdCBzYW1lIHN0cmluZyBmb3IgY29uc2lzdGVuY3kgYWNyb3NzIGEgd2hvbGUgc2l0ZS4K
+---
+title: "Tone-of-Voice Rewriter"
+description: "Rewrite any text to match a described brand voice while keeping the meaning intact."
+category: "writing"
+tags: ["rewrite", "brand-voice", "editing"]
+difficulty: "beginner"
+model: "any"
+author: "community"
+created: "2024-08-02"
+updated: "2025-02-05"
+upvotes: 96
+downvotes: 3
+version: 1
+---
+
+## The prompt
+
+```text
+Rewrite the text below to match the target voice.
+
+Target voice: {{voice}}
+(e.g. "warm and confident, like a helpful mentor", or "short and punchy, like a Twitter thread")
+
+Rules:
+- Keep all facts and numbers exactly the same.
+- Do not add claims that are not in the original.
+- Match the vocabulary, sentence length, and rhythm of the voice.
+- Output the rewritten text only, then a one-line note explaining your main changes.
+
+Text to rewrite:
+"""
+{{text}}
+"""
+```
+
+## When to use it
+
+Use it when a draft is technically correct but sounds off-brand. Great for turning a dry changelog into a friendly announcement.
+
+## Pro tip
+
+Keep a small library of voice descriptions and reuse the exact same string for consistency across a whole site.

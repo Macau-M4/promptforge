@@ -1,1 +1,42 @@
-LS0tCnRpdGxlOiAiSW1hZ2UgU3R5bGUtVHJhbnNmZXIgUHJvbXB0IgpkZXNjcmlwdGlvbjogIkNvbXBvc2UgYSBwcmVjaXNlLCByZXVzYWJsZSBpbWFnZS1nZW5lcmF0aW9uIHByb21wdCB3aXRoIGEgY29uc2lzdGVudCB2aXN1YWwgc3R5bGUgYmxvY2suIgpjYXRlZ29yeTogImNyZWF0aXZlIgp0YWdzOiBbImltYWdlIiwgImFydC1kaXJlY3Rpb24iLCAic3R5bGUiXQpkaWZmaWN1bHR5OiAiYWR2YW5jZWQiCm1vZGVsOiAiYW55IgphdXRob3I6ICJjb21tdW5pdHkiCmNyZWF0ZWQ6ICIyMDI0LTExLTIyIgp1cGRhdGVkOiAiMjAyNS0wMy0yMiIKdXB2b3RlczogMzkKZG93bnZvdGVzOiA2CnZlcnNpb246IDEKLS0tCgojIyBUaGUgcHJvbXB0CgpgYGB0ZXh0CkFjdCBhcyBhbiBhcnQgZGlyZWN0b3IuIFdyaXRlIGEgc2luZ2xlLCBzZWxmLWNvbnRhaW5lZCBpbWFnZS1nZW5lcmF0aW9uIHByb21wdC4KClN1YmplY3Q6IHt7c3ViamVjdH19CkRlc2lyZWQgbW9vZDoge3ttb29kfX0KTWVkaXVtL3N0eWxlIHJlZmVyZW5jZToge3tzdHlsZX19CgpCdWlsZCB0aGUgcHJvbXB0IHdpdGggdGhlc2UgY29tcG9uZW50cywgc2VwYXJhdGVkIGJ5IGNvbW1hczoKMS4gU1VCSkVDVCDigJQgdGhlIGV4YWN0IHRoaW5nIGluIGZyYW1lLCB3aXRoIGNvbXBvc2l0aW9uLgoyLiBFTlZJUk9OTUVOVCDigJQgc2V0dGluZywgbGlnaHRpbmcsIHRpbWUgb2YgZGF5LgozLiBTVFlMRSDigJQgbWVkaXVtLCBhcnRpc3QvcGVyaW9kIHJlZmVyZW5jZXMsIHJlbmRlcmluZyAoZS5nLiAiMzVtbSBmaWxtIiwgIm9jdGFuZSByZW5kZXIiKS4KNC4gTU9PRCDigJQgZW1vdGlvbmFsIHJlZ2lzdGVyIGFuZCBjb2xvciBwYWxldHRlLgo1LiBURUNITklDQUwg4oCUIGNhbWVyYSBhbmdsZSwgbGVucywgZGVwdGggb2YgZmllbGQsIHJlc29sdXRpb24gaGludHMuCjYuIE5FR0FUSVZFIOKAlCB3aGF0IG11c3QgTk9UIGFwcGVhci4KCk91dHB1dCB0aGUgZmluYWwgcHJvbXB0IGFzIG9uZSBibG9jayBvZiBjb21tYS1zZXBhcmF0ZWQgdGV4dCByZWFkeSB0byBwYXN0ZSwgdGhlbiBhIDMtbGluZSBub3RlIG9uIHdoeSB5b3UgY2hvc2UgZWFjaCBzdHlsZSBlbGVtZW50LgpgYGAKCiMjIFdoZW4gdG8gdXNlIGl0CgpVc2UgaXQgdG8gZ28gZnJvbSBhIHZhZ3VlIGlkZWEgdG8gYSBwcm9tcHQgeW91IGNhbiBwYXN0ZSBpbnRvIGFueSBpbWFnZSBtb2RlbCAoTWlkam91cm5leSwgU3RhYmxlIERpZmZ1c2lvbiwgREFMTMK3RSwgRmx1eCkuCgojIyBQcm8gdGlwCgpLZWVwIHRoZSBTVFlMRSBibG9jayBpZGVudGljYWwgYWNyb3NzIGEgc2VyaWVzIHRvIGdldCBhIHZpc3VhbGx5IGNvbnNpc3RlbnQgc2V0IG9mIGltYWdlcyBmb3Igb25lIHByb2plY3QuCg==
+---
+title: "Image Style-Transfer Prompt"
+description: "Compose a precise, reusable image-generation prompt with a consistent visual style block."
+category: "creative"
+tags: ["image", "art-direction", "style"]
+difficulty: "advanced"
+model: "any"
+author: "community"
+created: "2024-11-22"
+updated: "2025-03-22"
+upvotes: 39
+downvotes: 6
+version: 1
+---
+
+## The prompt
+
+```text
+Act as an art director. Write a single, self-contained image-generation prompt.
+
+Subject: {{subject}}
+Desired mood: {{mood}}
+Medium/style reference: {{style}}
+
+Build the prompt with these components, separated by commas:
+1. SUBJECT — the exact thing in frame, with composition.
+2. ENVIRONMENT — setting, lighting, time of day.
+3. STYLE — medium, artist/period references, rendering (e.g. "35mm film", "octane render").
+4. MOOD — emotional register and color palette.
+5. TECHNICAL — camera angle, lens, depth of field, resolution hints.
+6. NEGATIVE — what must NOT appear.
+
+Output the final prompt as one block of comma-separated text ready to paste, then a 3-line note on why you chose each style element.
+```
+
+## When to use it
+
+Use it to go from a vague idea to a prompt you can paste into any image model (Midjourney, Stable Diffusion, DALL·E, Flux).
+
+## Pro tip
+
+Keep the STYLE block identical across a series to get a visually consistent set of images for one project.

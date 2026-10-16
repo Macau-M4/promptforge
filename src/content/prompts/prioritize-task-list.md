@@ -1,1 +1,40 @@
-LS0tCnRpdGxlOiAiUHJpb3JpdGl6ZSBNeSBUYXNrIExpc3QiCmRlc2NyaXB0aW9uOiAiU29ydCBhIGJhY2tsb2cgaW50byBhbiBFaXNlbmhvd2VyIG1hdHJpeCBhbmQgdGVsbCB5b3UgZXhhY3RseSB3aGF0IHRvIGRvIGZpcnN0LiIKY2F0ZWdvcnk6ICJwcm9kdWN0aXZpdHkiCnRhZ3M6IFsicHJpb3JpdGl6YXRpb24iLCAiZWlzZW5ob3dlciIsICJwbGFubmluZyJdCmRpZmZpY3VsdHk6ICJiZWdpbm5lciIKbW9kZWw6ICJhbnkiCmF1dGhvcjogImNvbW11bml0eSIKY3JlYXRlZDogIjIwMjQtMDQtMTgiCnVwZGF0ZWQ6ICIyMDI1LTAyLTIwIgp1cHZvdGVzOiA2OQpkb3dudm90ZXM6IDIKdmVyc2lvbjogMQotLS0KCiMjIFRoZSBwcm9tcHQKCmBgYHRleHQKQWN0IGFzIG15IHByb2R1Y3Rpdml0eSBjb2FjaC4gUHJpb3JpdGl6ZSB0aGlzIHRhc2sgbGlzdCB1c2luZyB0aGUgRWlzZW5ob3dlciBtYXRyaXggKHVyZ2VudC9pbXBvcnRhbnQpLgoKTXkgdGFza3M6Cnt7dGFza3N9fQoKT3V0cHV0OgoxLiBETyBGSVJTVCDigJQgdXJnZW50IEFORCBpbXBvcnRhbnQuCjIuIFNDSEVEVUxFIOKAlCBpbXBvcnRhbnQgYnV0IG5vdCB1cmdlbnQgKHdpdGggYSBzdWdnZXN0ZWQgZGF5L2Jsb2NrKS4KMy4gREVMRUdBVEUg4oCUIHVyZ2VudCBidXQgbm90IGltcG9ydGFudCAoc3VnZ2VzdCB3aG8vd2hhdCB0b29sKS4KNC4gRUxJTUlOQVRFIOKAlCBuZWl0aGVyLCB3aXRoIGEgb25lLWxpbmUgcmVhc29uLgo1LiBBIHNob3J0IHJhdGlvbmFsZSBmb3IgdGhlIHRvcCBpdGVtIGFuZCBhIHJlYWxpc3RpYyAid2hhdCB0byBkbyBpbiB0aGUgbmV4dCAyIGhvdXJzIiBwbGFuLgoKSWYgYSB0YXNrJ3MgdXJnZW5jeSBpcyB1bmNsZWFyLCBhc2sgcmF0aGVyIHRoYW4gYXNzdW1lLgpgYGAKCiMjIFdoZW4gdG8gdXNlIGl0CgpQYXN0ZSB5b3VyIHJhdyB0by1kbyBkdW1wIGF0IHRoZSBzdGFydCBvZiB0aGUgZGF5LiBUaGUgdmFsdWUgaXMgdGhlIGZvcmNlZCBzcGxpdCBiZXR3ZWVuICJidXN5IiBhbmQgImFjdHVhbGx5IGltcG9ydGFudCIuCgojIyBQcm8gdGlwCgpBZGQgeW91ciB3ZWVrbHkgZ29hbHMgYWJvdmUgdGhlIHRhc2sgbGlzdCBzbyB0aGUgbW9kZWwgd2VpZ2hzIHRhc2tzIGFnYWluc3QgeW91ciBhY3R1YWwgb2JqZWN0aXZlcywgbm90IGp1c3QgdXJnZW5jeS4K
+---
+title: "Prioritize My Task List"
+description: "Sort a backlog into an Eisenhower matrix and tell you exactly what to do first."
+category: "productivity"
+tags: ["prioritization", "eisenhower", "planning"]
+difficulty: "beginner"
+model: "any"
+author: "community"
+created: "2024-04-18"
+updated: "2025-02-20"
+upvotes: 69
+downvotes: 2
+version: 1
+---
+
+## The prompt
+
+```text
+Act as my productivity coach. Prioritize this task list using the Eisenhower matrix (urgent/important).
+
+My tasks:
+{{tasks}}
+
+Output:
+1. DO FIRST — urgent AND important.
+2. SCHEDULE — important but not urgent (with a suggested day/block).
+3. DELEGATE — urgent but not important (suggest who/what tool).
+4. ELIMINATE — neither, with a one-line reason.
+5. A short rationale for the top item and a realistic "what to do in the next 2 hours" plan.
+
+If a task's urgency is unclear, ask rather than assume.
+```
+
+## When to use it
+
+Paste your raw to-do dump at the start of the day. The value is the forced split between "busy" and "actually important".
+
+## Pro tip
+
+Add your weekly goals above the task list so the model weighs tasks against your actual objectives, not just urgency.

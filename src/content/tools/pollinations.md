@@ -1,1 +1,37 @@
-LS0tCnRpdGxlOiAiUG9sbGluYXRpb25zIEFJIgpkZXNjcmlwdGlvbjogIkZyZWUsIGtleWxlc3MgdGV4dCBhbmQgaW1hZ2UgZ2VuZXJhdGlvbiBBUEkg4oCUIHRoZSBkZWZhdWx0IHByb3ZpZGVyIGZvciB0aGUgaW4tcGFnZSBSdW4gZmVhdHVyZS4gTm8gYWNjb3VudCwgbm8gY2FyZC4iCmNhdGVnb3J5OiAiY29kaW5nIgpraW5kOiAiZnJlZS1hcGkiCnVybDogImh0dHBzOi8vdGV4dC5wb2xsaW5hdGlvbnMuYWkvIgpmcmVlOiB0cnVlCi0tLQoKIyBQb2xsaW5hdGlvbnMgQUkKCkEgZnJpZW5kbHkgb3Blbi1zb3VyY2UgR2VuLUFJIHBsYXRmb3JtLiBJdHMgdGV4dCBlbmRwb2ludCBpcyAqKmNvbXBsZXRlbHkgZnJlZSBhbmQKcmVxdWlyZXMgbm8gQVBJIGtleSoqLCB3aGljaCBpcyB3aHkgUHJvbXB0Rm9yZ2UgdXNlcyBpdCBhcyB0aGUgZGVmYXVsdCAiUnVuIiBiYWNrZW5kLgoKIyMgUXVpY2sgZmFjdHMKCi0gKipDb3N0OioqIGZyZWUsIG5vIHNpZ251cCwgbm8gcmF0ZS1saW1pdCBrZXkgcmVxdWlyZWQgKGZhaXItdXNlIGxpbWl0cyBhcHBseSkuCi0gKipUZXh0IGVuZHBvaW50OioqIGBHRVQgaHR0cHM6Ly90ZXh0LnBvbGxpbmF0aW9ucy5haS97cHJvbXB0fWAg4oCUIHJldHVybnMgcGxhaW4gdGV4dC4KLSAqKkNoYXQtY29tcGxldGlvbnMgZW5kcG9pbnQ6KiogYFBPU1QgaHR0cHM6Ly90ZXh0LnBvbGxpbmF0aW9ucy5haS9vcGVuYWlgIOKAlCBPcGVuQUktc3R5bGUuCi0gKipJbWFnZSBlbmRwb2ludDoqKiBgR0VUIGh0dHBzOi8vaW1hZ2UucG9sbGluYXRpb25zLmFpL3Byb21wdC97cHJvbXB0fWAg4oCUIHJldHVybnMgYW4gaW1hZ2UuCgojIyBVc2VmdWwgcXVlcnkgcGFyYW1zCgp8IFBhcmFtIHwgV2hhdCBpdCBkb2VzIHwKfC0tLXwtLS18CnwgYG1vZGVsYCB8IGBvcGVuYWlgIChkZWZhdWx0KSwgYG1pc3RyYWxgLCBgbGxhbWFgLCBgZGVlcHNlZWtgLCBgcGhpYCwgYGdlbWluaWAgfAp8IGBzeXN0ZW1gIHwgc3lzdGVtL2luc3RydWN0aW9ucyBtZXNzYWdlIHwKfCBgc2VlZGAgfCBkZXRlcm1pbmlzdGljIG91dHB1dCB8CnwgYGpzb25gIHwgYHRydWVgIHRvIGZvcmNlIEpTT04gfAp8IGBzdHJlYW1gIHwgYHRydWVgIGZvciBzZXJ2ZXItc2VudCBldmVudHMgfAp8IGBwcml2YXRlYCB8IGB0cnVlYCB0byBub3QgbG9nL2Rpc3BsYXkgeW91ciBwcm9tcHQgcHVibGljbHkgfAoKIyMgVHJ5IGl0CgpSdW4gYW55IHByb21wdCBvbiB0aGlzIHNpdGUncyAqKlJ1bioqIHBhZ2Ugd2l0aCBQb2xsaW5hdGlvbnMgc2VsZWN0ZWQg4oCUIGl0IHdvcmtzCmltbWVkaWF0ZWx5IHdpdGggbm8ga2V5LiBGb3IgbW9yZSBjb250cm9sIG9yIGhpZ2hlciB0aHJvdWdocHV0LCBhZGQgYSBmcmVlIEdlbWluaQpvciBHcm9xIGtleS4K
+---
+title: "Pollinations AI"
+description: "Free, keyless text and image generation API — the default provider for the in-page Run feature. No account, no card."
+category: "coding"
+kind: "free-api"
+url: "https://text.pollinations.ai/"
+free: true
+---
+
+# Pollinations AI
+
+A friendly open-source Gen-AI platform. Its text endpoint is **completely free and
+requires no API key**, which is why PromptForge uses it as the default "Run" backend.
+
+## Quick facts
+
+- **Cost:** free, no signup, no rate-limit key required (fair-use limits apply).
+- **Text endpoint:** `GET https://text.pollinations.ai/{prompt}` — returns plain text.
+- **Chat-completions endpoint:** `POST https://text.pollinations.ai/openai` — OpenAI-style.
+- **Image endpoint:** `GET https://image.pollinations.ai/prompt/{prompt}` — returns an image.
+
+## Useful query params
+
+| Param | What it does |
+|---|---|
+| `model` | `openai` (default), `mistral`, `llama`, `deepseek`, `phi`, `gemini` |
+| `system` | system/instructions message |
+| `seed` | deterministic output |
+| `json` | `true` to force JSON |
+| `stream` | `true` for server-sent events |
+| `private` | `true` to not log/display your prompt publicly |
+
+## Try it
+
+Run any prompt on this site's **Run** page with Pollinations selected — it works
+immediately with no key. For more control or higher throughput, add a free Gemini
+or Groq key.

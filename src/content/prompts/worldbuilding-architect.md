@@ -1,1 +1,45 @@
-LS0tCnRpdGxlOiAiV29ybGRidWlsZGluZyBBcmNoaXRlY3QiCmRlc2NyaXB0aW9uOiAiRGVzaWduIGEgY29oZXJlbnQgZmljdGlvbmFsIHdvcmxkIOKAlCBnZW9ncmFwaHksIHBvbGl0aWNzLCBtYWdpYy90ZWNoIHJ1bGVzLCBhbmQgY29uZmxpY3RzLiIKY2F0ZWdvcnk6ICJjcmVhdGl2ZSIKdGFnczogWyJ3b3JsZGJ1aWxkaW5nIiwgImZpY3Rpb24iLCAic2V0dGluZyJdCmRpZmZpY3VsdHk6ICJpbnRlcm1lZGlhdGUiCm1vZGVsOiAiYW55IgphdXRob3I6ICJjb21tdW5pdHkiCmNyZWF0ZWQ6ICIyMDI0LTEwLTE5Igp1cGRhdGVkOiAiMjAyNS0wMi0xNCIKdXB2b3RlczogNTEKZG93bnZvdGVzOiAzCnZlcnNpb246IDEKLS0tCgojIyBUaGUgcHJvbXB0CgpgYGB0ZXh0CkRlc2lnbiBhIGZpY3Rpb25hbCB3b3JsZCBmb3IgYSB7e21lZGl1bX19IHByb2plY3QuCgpQcmVtaXNlIC8gc2VlZCBpZGVhOgp7e3ByZW1pc2V9fQoKRGV2ZWxvcCB0aGVzZSBkaW1lbnNpb25zIGNvbnNpc3RlbnRseToKMS4gUEhZU0lDQUwg4oCUIGdlb2dyYXBoeSwgY2xpbWF0ZSwga2V5IGxvY2F0aW9ucy4KMi4gQ1VMVFVSRSDigJQgdmFsdWVzLCBjdXN0b21zLCB0YWJvb3MsIHJlbGlnaW9uL2JlbGllZiBzeXN0ZW1zLgozLiBQT1dFUiDigJQgd2hvIGhvbGRzIHBvd2VyLCBhbmQgaG93IGl0J3MgY29udGVzdGVkIChvciB0aGUgbWFnaWMvdGVjaCBydWxlcyBpZiBhbnkpLgo0LiBFQ09OT01ZIOKAlCB3aGF0IHBlb3BsZSBkbywgdHJhZGUsIGFuZCBmaWdodCBvdmVyLgo1LiBDT05GTElDVCDigJQgdGhlIGNlbnRyYWwgdGVuc2lvbiB0aGF0IGdlbmVyYXRlcyBzdG9yaWVzLgoKUnVsZXM6Ci0gRGVmaW5lIDMgImxhd3MiIG9mIHRoZSB3b3JsZCAod2hhdCBpcyBhbHdheXMgdHJ1ZSkuCi0gUG9pbnQgb3V0IDIgaW50ZXJuYWwgY29udHJhZGljdGlvbnMgYSB3cml0ZXIgc2hvdWxkIHdhdGNoIG91dCBmb3IuCi0gRW5kIHdpdGggMyBzdG9yeSBob29rcyB0aGF0IGZhbGwgbmF0dXJhbGx5IG91dCBvZiB0aGUgc2V0dGluZy4KCktlZXAgaXQgc3BlY2lmaWMg4oCUIGF2b2lkIGdlbmVyaWMgZmFudGFzeS9zY2ktZmkgYm9pbGVycGxhdGUuCmBgYAoKIyMgV2hlbiB0byB1c2UgaXQKClVzZSBpdCBiZWZvcmUgd3JpdGluZyB0byBtYWtlIHRoZSBzZXR0aW5nIGZlZWwgbGl2ZWQtaW4uIFRoZSAiMyBsYXdzIiBiZWNvbWUgeW91ciBndWFyZHJhaWxzIGZvciBjb25zaXN0ZW5jeSBsYXRlci4KCiMjIFBybyB0aXAKClNhdmUgdGhlIG91dHB1dCwgdGhlbiBpbiBsYXRlciBjaGFwdGVycyBhc2sgdGhlIG1vZGVsICJ3b3VsZCBYIGJyZWFrIGFueSBvZiB0aGUgMyBsYXdzPyIgdG8gY2F0Y2ggY29udGludWl0eSBlcnJvcnMuCg==
+---
+title: "Worldbuilding Architect"
+description: "Design a coherent fictional world — geography, politics, magic/tech rules, and conflicts."
+category: "creative"
+tags: ["worldbuilding", "fiction", "setting"]
+difficulty: "intermediate"
+model: "any"
+author: "community"
+created: "2024-10-19"
+updated: "2025-02-14"
+upvotes: 51
+downvotes: 3
+version: 1
+---
+
+## The prompt
+
+```text
+Design a fictional world for a {{medium}} project.
+
+Premise / seed idea:
+{{premise}}
+
+Develop these dimensions consistently:
+1. PHYSICAL — geography, climate, key locations.
+2. CULTURE — values, customs, taboos, religion/belief systems.
+3. POWER — who holds power, and how it's contested (or the magic/tech rules if any).
+4. ECONOMY — what people do, trade, and fight over.
+5. CONFLICT — the central tension that generates stories.
+
+Rules:
+- Define 3 "laws" of the world (what is always true).
+- Point out 2 internal contradictions a writer should watch out for.
+- End with 3 story hooks that fall naturally out of the setting.
+
+Keep it specific — avoid generic fantasy/sci-fi boilerplate.
+```
+
+## When to use it
+
+Use it before writing to make the setting feel lived-in. The "3 laws" become your guardrails for consistency later.
+
+## Pro tip
+
+Save the output, then in later chapters ask the model "would X break any of the 3 laws?" to catch continuity errors.

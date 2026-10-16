@@ -1,1 +1,25 @@
-ewogICJuYW1lIjogInByb21wdGZvcmdlIiwKICAidHlwZSI6ICJtb2R1bGUiLAogICJ2ZXJzaW9uIjogIjAuMS4wIiwKICAicHJpdmF0ZSI6IHRydWUsCiAgInBhY2thZ2VNYW5hZ2VyIjogInBucG1AMTEuNy4wIiwKICAiZGVzY3JpcHRpb24iOiAiUHJvbXB0Rm9yZ2Ug4oCUIGEgZnJlZSwgb3Blbi1zb3VyY2UgbGlicmFyeSBvZiBBSSBwcm9tcHRzLCBjb21tYW5kcywgdG9vbHMgYW5kIHdvcmtmbG93cy4gTGVhcm4sIHZvdGUsIHJ1biBhbmQgY29udHJpYnV0ZS4iLAogICJzY3JpcHRzIjogewogICAgImRldiI6ICJhc3RybyBkZXYiLAogICAgImJ1aWxkIjogImFzdHJvIGJ1aWxkIiwKICAgICJwcmV2aWV3IjogImFzdHJvIHByZXZpZXciLAogICAgInZhbGlkYXRlIjogIm5vZGUgc2NyaXB0cy92YWxpZGF0ZS5tanMiLAogICAgInRlc3QiOiAibm9kZSAtLXRlc3QgdGVzdC9jb3JlLnRlc3QubWpzIgogIH0sCiAgImRlcGVuZGVuY2llcyI6IHsKICAgICJhc3RybyI6ICI1LjE4LjIiLAogICAgImdyYXktbWF0dGVyIjogIjQuMC4zIiwKICAgICJ6b2QiOiAiMy4yNS43NiIKICB9LAogICJkZXZEZXBlbmRlbmNpZXMiOiB7CiAgICAiQGFzdHJvanMvdGFpbHdpbmQiOiAiNi4wLjIiLAogICAgInRhaWx3aW5kY3NzIjogIjMuNC4xOSIsCiAgICAidHlwZXNjcmlwdCI6ICI1LjkuMyIKICB9Cn0K
+{
+  "name": "promptforge",
+  "type": "module",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.7.0",
+  "description": "PromptForge — a free, open-source library of AI prompts, commands, tools and workflows. Learn, vote, run and contribute.",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "validate": "node scripts/validate.mjs",
+    "test": "node --test test/core.test.mjs"
+  },
+  "dependencies": {
+    "astro": "5.18.2",
+    "gray-matter": "4.0.3",
+    "zod": "3.25.76"
+  },
+  "devDependencies": {
+    "@astrojs/tailwind": "6.0.2",
+    "tailwindcss": "3.4.19",
+    "typescript": "5.9.3"
+  }
+}

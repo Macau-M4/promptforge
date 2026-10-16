@@ -1,1 +1,27 @@
-IyMgV2hhdCBkb2VzIHRoaXMgUFIgZG8/Cgo8IS0tIERlc2NyaWJlIHdoYXQgeW91J3JlIGFkZGluZyBvciBjaGFuZ2luZyBpbiAxLTIgc2VudGVuY2VzLiAtLT4KCiMjIFR5cGUgb2YgY29udHJpYnV0aW9uCgotIFsgXSBOZXcgcHJvbXB0IChgc3JjL2NvbnRlbnQvcHJvbXB0cy9gKQotIFsgXSBOZXcgbGVhcm5pbmcgcGF0aCAoYHNyYy9jb250ZW50L3BhdGhzL2ApCi0gWyBdIE5ldyB0b29sIChgc3JjL2NvbnRlbnQvdG9vbHMvYCkKLSBbIF0gRml4IC8gaW1wcm92ZW1lbnQgdG8gZXhpc3RpbmcgY29udGVudAotIFsgXSBTaXRlIGNvZGUgY2hhbmdlCgojIyBDaGVja2xpc3QKCi0gWyBdIE15IGNvbnRlbnQgZm9sbG93cyB0aGUgZmlsZSBmb3JtYXQgaW4gYENPTlRSSUJVVElORy5tZGAgKFlBTUwgZnJvbnRtYXR0ZXIgKyBhIGZlbmNlZCAiVGhlIHByb21wdCIgYmxvY2spLgotIFsgXSBJIHNldCBhIHZhbGlkIGBjYXRlZ29yeWAgKHdyaXRpbmcgLyBjb2RpbmcgLyBwcm9kdWN0aXZpdHkgLyBhbmFseXNpcyAvIGNyZWF0aXZlIC8gbGVhcm5pbmcgLyBtYXJrZXRpbmcgLyBhdXRvbWF0aW9uKS4KLSBbIF0gSSByYW4gYHBucG0gcnVuIHZhbGlkYXRlYCBsb2NhbGx5IGFuZCBpdCBwYXNzZWQuCi0gWyBdIERhdGVzIHVzZSBgWVlZWS1NTS1ERGAgYW5kIGBjcmVhdGVkYCBpcyBub3QgYWZ0ZXIgYHVwZGF0ZWRgLgoKIyMgQXV0by10YWdnaW5nCgpJZiB5b3UgbGVhdmUgYGNhdGVnb3J5YCBlbXB0eSBvciB1bmNlcnRhaW4sIHRoZSBhdXRvLXRhZ2dlciBBY3Rpb24gd2lsbCBzdWdnZXN0IG9uZQpmcm9tIHlvdXIgdGl0bGUvZGVzY3JpcHRpb24uIFlvdSBjYW4gb3ZlcnJpZGUgaXQgaW4geW91ciBmcm9udG1hdHRlci4KCi0tLQoKX1RoYW5rcyBmb3IgY29udHJpYnV0aW5nISDwn46JXwo=
+## What does this PR do?
+
+<!-- Describe what you're adding or changing in 1-2 sentences. -->
+
+## Type of contribution
+
+- [ ] New prompt (`src/content/prompts/`)
+- [ ] New learning path (`src/content/paths/`)
+- [ ] New tool (`src/content/tools/`)
+- [ ] Fix / improvement to existing content
+- [ ] Site code change
+
+## Checklist
+
+- [ ] My content follows the file format in `CONTRIBUTING.md` (YAML frontmatter + a fenced "The prompt" block).
+- [ ] I set a valid `category` (writing / coding / productivity / analysis / creative / learning / marketing / automation).
+- [ ] I ran `pnpm run validate` locally and it passed.
+- [ ] Dates use `YYYY-MM-DD` and `created` is not after `updated`.
+
+## Auto-tagging
+
+If you leave `category` empty or uncertain, the auto-tagger Action will suggest one
+from your title/description. You can override it in your frontmatter.
+
+---
+
+_Thanks for contributing! 🎉_

@@ -1,1 +1,166 @@
-Ly8gR2l0SHViIE9BdXRoICJEZXZpY2UgRmxvdyIgbG9naW4g4oCUIHJ1bnMgZnVsbHkgY2xpZW50LXNpZGUsIG5vIGJhY2tlbmQsCi8vIG5vIGNsaWVudCBzZWNyZXQuIE9ubHkgbmVlZHMgYSBwdWJsaWMgR2l0SHViIE9BdXRoIEFwcCAiQ2xpZW50IElEIi4KCmNvbnN0IFRPS0VOX0tFWSA9ICdwZi5naXRodWIudG9rZW4nOwpjb25zdCBVU0VSX0tFWSA9ICdwZi5naXRodWIudXNlcic7CmNvbnN0IFNDT1BFID0gJ3JlYWQ6dXNlcic7Cgp0eXBlIEdpdEh1YlVzZXIgPSB7IGxvZ2luOiBzdHJpbmc7IGF2YXRhcl91cmw6IHN0cmluZzsgbmFtZT86IHN0cmluZzsgaHRtbF91cmw6IHN0cmluZyB9OwoKZnVuY3Rpb24gZ2V0Q2xpZW50SWQoKTogc3RyaW5nIHsKICAvLyBQVUJMSUNfR0lUSFVCX0NMSUVOVF9JRCBpcyBpbmxpbmVkIGF0IGJ1aWxkIHRpbWUgYnkgQXN0cm8uCiAgY29uc3QgZnJvbUVudiA9IChpbXBvcnQubWV0YSBhcyBhbnkpLmVudj8uUFVCTElDX0dJVEhVQl9DTElFTlRfSUQgYXMgc3RyaW5nIHwgdW5kZWZpbmVkOwogIGNvbnN0IGZyb21Mb2NhbCA9IGxvY2FsU3RvcmFnZS5nZXRJdGVtKCdwZi5naXRodWIuY2xpZW50SWQnKTsKICByZXR1cm4gKGZyb21FbnYgfHwgZnJvbUxvY2FsIHx8ICcnKS50cmltKCk7Cn0KCmV4cG9ydCBmdW5jdGlvbiBpc1NpZ25lZEluKCk6IGJvb2xlYW4gewogIHJldHVybiAhIWxvY2FsU3RvcmFnZS5nZXRJdGVtKFRPS0VOX0tFWSk7Cn0KCmV4cG9ydCBmdW5jdGlvbiBnZXRVc2VyKCk6IEdpdEh1YlVzZXIgfCBudWxsIHsKICB0cnkgewogICAgcmV0dXJuIEpTT04ucGFyc2UobG9jYWxTdG9yYWdlLmdldEl0ZW0oVVNFUl9LRVkpIHx8ICdudWxsJyk7CiAgfSBjYXRjaCB7CiAgICByZXR1cm4gbnVsbDsKICB9Cn0KCmV4cG9ydCBmdW5jdGlvbiBzaWduT3V0KCkgewogIGxvY2FsU3RvcmFnZS5yZW1vdmVJdGVtKFRPS0VOX0tFWSk7CiAgbG9jYWxTdG9yYWdlLnJlbW92ZUl0ZW0oVVNFUl9LRVkpOwp9CgpmdW5jdGlvbiBzbGVlcChtczogbnVtYmVyKSB7CiAgcmV0dXJuIG5ldyBQcm9taXNlKChyKSA9PiBzZXRUaW1lb3V0KHIsIG1zKSk7Cn0KCmZ1bmN0aW9uIGVzYyhzOiBzdHJpbmcpIHsKICByZXR1cm4gcy5yZXBsYWNlKC9bJjw+IiddL2csIChjKSA9PiAoeyAnJic6ICcmYW1wOycsICc8JzogJyZsdDsnLCAnPic6ICcmZ3Q7JywgJyInOiAnJnF1b3Q7JywgIiciOiAnJiMzOTsnIH1bY10gYXMgc3RyaW5nKSk7Cn0KCmFzeW5jIGZ1bmN0aW9uIHN0YXJ0RGV2aWNlRmxvdyhjbGllbnRJZDogc3RyaW5nLCBlbDogSFRNTEVsZW1lbnQpIHsKICBlbC5pbm5lckhUTUwgPSAnPHNwYW4gY2xhc3M9InRleHQtc20gdGV4dC1zbGF0ZS0zMDAiPkNvbnRhY3RpbmcgR2l0SHVi4oCmPC9zcGFuPic7CiAgdHJ5IHsKICAgIGNvbnN0IHJlcyA9IGF3YWl0IGZldGNoKCdodHRwczovL2dpdGh1Yi5jb20vbG9naW4vZGV2aWNlL2NvZGUnLCB7CiAgICAgIG1ldGhvZDogJ1BPU1QnLAogICAgICBoZWFkZXJzOiB7IEFjY2VwdDogJ2FwcGxpY2F0aW9uL2pzb24nLCAnQ29udGVudC1UeXBlJzogJ2FwcGxpY2F0aW9uL2pzb24nIH0sCiAgICAgIGJvZHk6IEpTT04uc3RyaW5naWZ5KHsgY2xpZW50X2lkOiBjbGllbnRJZCwgc2NvcGU6IFNDT1BFIH0pCiAgICB9KTsKICAgIGNvbnN0IGRhdGEgPSBhd2FpdCByZXMuanNvbigpOwogICAgaWYgKCFkYXRhLmRldmljZV9jb2RlKSB7CiAgICAgIGVsLmlubmVySFRNTCA9IGA8c3BhbiBjbGFzcz0idGV4dC1zbSB0ZXh0LXJvc2UtMzAwIj5HaXRIdWIgZXJyb3I6ICR7ZXNjKGRhdGEuZXJyb3JfZGVzY3JpcHRpb24gfHwgZGF0YS5lcnJvciB8fCAndW5rbm93bicpfTwvc3Bhbj5gOwogICAgICByZXR1cm47CiAgICB9CiAgICBjb25zdCBjb2RlRWwgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdzcGFuJyk7CiAgICBjb2RlRWwuaW5uZXJIVE1MID0gYAogICAgICA8ZGl2IGNsYXNzPSJmbGV4IGZsZXgtY29sIGdhcC0yIHRleHQtc20iPgogICAgICAgIDxkaXYgY2xhc3M9ImZvbnQtc2VtaWJvbGQgdGV4dC1zbGF0ZS0xMDAiPkVudGVyIGNvZGUgPHNwYW4gY2xhc3M9ImZvbnQtbW9ubyB0ZXh0LWluZGlnby0zMDAgdGV4dC1iYXNlIj4ke2VzYyhkYXRhLnVzZXJfY29kZSl9PC9zcGFuPjwvZGl2PgogICAgICAgIDxhIGhyZWY9IiR7ZXNjKGRhdGEudmVyaWZpY2F0aW9uX3VyaSl9IiB0YXJnZXQ9Il9ibGFuayIgcmVsPSJub29wZW5lciIgY2xhc3M9ImJ0bi1wcmltYXJ5Ij5PcGVuIEdpdEh1YiDihpI8L2E+CiAgICAgICAgPGRpdiBjbGFzcz0idGV4dC14cyB0ZXh0LXNsYXRlLTQwMCI+V2FpdGluZyBmb3IgYXV0aG9yaXphdGlvbuKApjwvZGl2PgogICAgICA8L2Rpdj5gOwogICAgZWwuYXBwZW5kQ2hpbGQoY29kZUVsKTsKICAgIHdpbmRvdy5vcGVuKGRhdGEudmVyaWZpY2F0aW9uX3VyaSwgJ19ibGFuaycpOwogICAgYXdhaXQgcG9sbFRva2VuKGNsaWVudElkLCBkYXRhLCBlbCk7CiAgfSBjYXRjaCAoZTogYW55KSB7CiAgICBlbC5pbm5lckhUTUwgPSBgPHNwYW4gY2xhc3M9InRleHQtc20gdGV4dC1yb3NlLTMwMCI+TmV0d29yayBlcnJvcjogJHtlc2MoU3RyaW5nKGUpKX08L3NwYW4+YDsKICB9Cn0KCmFzeW5jIGZ1bmN0aW9uIHBvbGxUb2tlbihjbGllbnRJZDogc3RyaW5nLCBkYXRhOiBhbnksIGVsOiBIVE1MRWxlbWVudCkgewogIGxldCBpbnRlcnZhbCA9IE1hdGgubWF4KDUsIGRhdGEuaW50ZXJ2YWwgfHwgNSk7CiAgY29uc3QgZGVhZGxpbmUgPSBEYXRlLm5vdygpICsgKGRhdGEuZXhwaXJlc19pbiB8fCA5MDApICogMTAwMDsKICB3aGlsZSAoRGF0ZS5ub3coKSA8IGRlYWRsaW5lKSB7CiAgICBhd2FpdCBzbGVlcChpbnRlcnZhbCAqIDEwMDApOwogICAgdHJ5IHsKICAgICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goJ2h0dHBzOi8vZ2l0aHViLmNvbS9sb2dpbi9vYXV0aC9hY2Nlc3NfdG9rZW4nLCB7CiAgICAgICAgbWV0aG9kOiAnUE9TVCcsCiAgICAgICAgaGVhZGVyczogeyBBY2NlcHQ6ICdhcHBsaWNhdGlvbi9qc29uJywgJ0NvbnRlbnQtVHlwZSc6ICdhcHBsaWNhdGlvbi9qc29uJyB9LAogICAgICAgIGJvZHk6IEpTT04uc3RyaW5naWZ5KHsKICAgICAgICAgIGNsaWVudF9pZDogY2xpZW50SWQsCiAgICAgICAgICBkZXZpY2VfY29kZTogZGF0YS5kZXZpY2VfY29kZSwKICAgICAgICAgIGdyYW50X3R5cGU6ICd1cm46aWV0ZjpwYXJhbXM6b2F1dGg6Z3JhbnQtdHlwZTpkZXZpY2VfY29kZScKICAgICAgICB9KQogICAgICB9KTsKICAgICAgY29uc3QgdG9rID0gYXdhaXQgcmVzLmpzb24oKTsKICAgICAgaWYgKHRvay5hY2Nlc3NfdG9rZW4pIHsKICAgICAgICBhd2FpdCBsb2FkVXNlcih0b2suYWNjZXNzX3Rva2VuKTsKICAgICAgICByZW5kZXIoKTsKICAgICAgICByZXR1cm47CiAgICAgIH0KICAgICAgaWYgKHRvay5lcnJvciA9PT0gJ2F1dGhvcml6YXRpb25fcGVuZGluZycpIGNvbnRpbnVlOwogICAgICBpZiAodG9rLmVycm9yID09PSAnc2xvd19kb3duJykgewogICAgICAgIGludGVydmFsICs9IDU7CiAgICAgICAgY29udGludWU7CiAgICAgIH0KICAgICAgZWwuaW5uZXJIVE1MID0gYDxzcGFuIGNsYXNzPSJ0ZXh0LXNtIHRleHQtcm9zZS0zMDAiPkxvZ2luIGVycm9yOiAke2VzYyh0b2suZXJyb3JfZGVzY3JpcHRpb24gfHwgdG9rLmVycm9yKX08L3NwYW4+YDsKICAgICAgcmV0dXJuOwogICAgfSBjYXRjaCAoZTogYW55KSB7CiAgICAgIGVsLmlubmVySFRNTCA9IGA8c3BhbiBjbGFzcz0idGV4dC1zbSB0ZXh0LXJvc2UtMzAwIj5OZXR3b3JrIGVycm9yOiAke2VzYyhTdHJpbmcoZSkpfTwvc3Bhbj5gOwogICAgICByZXR1cm47CiAgICB9CiAgfQogIGVsLmlubmVySFRNTCA9ICc8c3BhbiBjbGFzcz0idGV4dC1zbSB0ZXh0LXJvc2UtMzAwIj5UaW1lZCBvdXQg4oCUIHBsZWFzZSB0cnkgYWdhaW4uPC9zcGFuPic7Cn0KCmFzeW5jIGZ1bmN0aW9uIGxvYWRVc2VyKHRva2VuOiBzdHJpbmcpIHsKICB0cnkgewogICAgY29uc3QgcmVzID0gYXdhaXQgZmV0Y2goJ2h0dHBzOi8vYXBpLmdpdGh1Yi5jb20vdXNlcicsIHsKICAgICAgaGVhZGVyczogeyBBdXRob3JpemF0aW9uOiBgQmVhcmVyICR7dG9rZW59YCwgQWNjZXB0OiAnYXBwbGljYXRpb24vanNvbicgfQogICAgfSk7CiAgICBjb25zdCB1c2VyID0gYXdhaXQgcmVzLmpzb24oKTsKICAgIGxvY2FsU3RvcmFnZS5zZXRJdGVtKFRPS0VOX0tFWSwgdG9rZW4pOwogICAgbG9jYWxTdG9yYWdlLnNldEl0ZW0oVVNFUl9LRVksIEpTT04uc3RyaW5naWZ5KHVzZXIpKTsKICB9IGNhdGNoIHsKICAgIGxvY2FsU3RvcmFnZS5zZXRJdGVtKFRPS0VOX0tFWSwgdG9rZW4pOwogIH0KfQoKZnVuY3Rpb24gcmVuZGVyKCkgewogIGNvbnN0IGVsID0gZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ2F1dGgtd2lkZ2V0Jyk7CiAgaWYgKCFlbCkgcmV0dXJuOwogIGNvbnN0IHVzZXIgPSBnZXRVc2VyKCk7CiAgaWYgKHVzZXIpIHsKICAgIGVsLmlubmVySFRNTCA9IGAKICAgICAgPGRpdiBjbGFzcz0iZmxleCBpdGVtcy1jZW50ZXIgZ2FwLTIiPgogICAgICAgIDxpbWcgc3JjPSIke2VzYyh1c2VyLmF2YXRhcl91cmwpfSIgYWx0PSIiIGNsYXNzPSJ3LTcgaC03IHJvdW5kZWQtZnVsbCByaW5nLTEgcmluZy13aGl0ZS8yMCIgcmVmZXJyZXJwb2xpY3k9Im5vLXJlZmVycmVyIiAvPgogICAgICAgIDxzcGFuIGNsYXNzPSJ0ZXh0LXNtIHRleHQtc2xhdGUtMjAwIGhpZGRlbiBzbTppbmxpbmUiPiR7ZXNjKHVzZXIubG9naW4pfTwvc3Bhbj4KICAgICAgICA8YnV0dG9uIGRhdGEtbG9nb3V0IGNsYXNzPSJidG4tZ2hvc3QgcHgtMi41IHB5LTEuNSB0ZXh0LXhzIj5TaWduIG91dDwvYnV0dG9uPgogICAgICA8L2Rpdj5gOwogICAgZWwucXVlcnlTZWxlY3RvcignW2RhdGEtbG9nb3V0XScpPy5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsICgpID0+IHsKICAgICAgc2lnbk91dCgpOwogICAgICByZW5kZXIoKTsKICAgIH0pOwogIH0gZWxzZSB7CiAgICBjb25zdCBjbGllbnRJZCA9IGdldENsaWVudElkKCk7CiAgICBpZiAoIWNsaWVudElkKSB7CiAgICAgIGVsLmlubmVySFRNTCA9IGAKICAgICAgICA8YnV0dG9uIGRhdGEtbG9naW4gY2xhc3M9ImJ0bi1naG9zdCBweC0zIHB5LTIgdGV4dC14cyIgdGl0bGU9IkxvZ2luIHJlcXVpcmVzIGEgR2l0SHViIE9BdXRoIENsaWVudCBJRCAoZnJlZSB0byBjcmVhdGUpIj5TaWduIGluIHdpdGggR2l0SHViPC9idXR0b24+YDsKICAgICAgZWwucXVlcnlTZWxlY3RvcignW2RhdGEtbG9naW5dJyk/LmFkZEV2ZW50TGlzdGVuZXIoJ2NsaWNrJywgKCkgPT4gewogICAgICAgIGVsLmlubmVySFRNTCA9IGAKICAgICAgICAgIDxkaXYgY2xhc3M9InBhbmVsIHAtMyB0ZXh0LXhzIHRleHQtc2xhdGUtMzAwIG1heC13LXhzIj4KICAgICAgICAgICAgPHAgY2xhc3M9ImZvbnQtc2VtaWJvbGQgdGV4dC1zbGF0ZS0xMDAgbWItMSI+TG9naW4gaXNuJ3QgY29uZmlndXJlZCB5ZXQ8L3A+CiAgICAgICAgICAgIDxwIGNsYXNzPSJsZWFkaW5nLXJlbGF4ZWQiPlNldCA8Y29kZSBjbGFzcz0iYmctd2hpdGUvMTAgcHgtMSByb3VuZGVkIj5QVUJMSUNfR0lUSFVCX0NMSUVOVF9JRDwvY29kZT4gKGEgZnJlZSBHaXRIdWIgT0F1dGggQXBwIENsaWVudCBJRCB3aXRoIERldmljZSBGbG93IGVuYWJsZWQpLjwvcD4KICAgICAgICAgICAgPGEgaHJlZj0iaHR0cHM6Ly9naXRodWIuY29tL3NldHRpbmdzL2RldmVsb3BlcnMiIHRhcmdldD0iX2JsYW5rIiByZWw9Im5vb3BlbmVyIiBjbGFzcz0idGV4dC1pbmRpZ28tMzAwIHVuZGVybGluZSI+Q3JlYXRlIG9uZSDihpI8L2E+CiAgICAgICAgICA8L2Rpdj5gOwogICAgICB9KTsKICAgIH0gZWxzZSB7CiAgICAgIGVsLmlubmVySFRNTCA9IGA8YnV0dG9uIGRhdGEtbG9naW4gY2xhc3M9ImJ0bi1naG9zdCBweC0zIHB5LTIgdGV4dC14cyI+U2lnbiBpbiB3aXRoIEdpdEh1YjwvYnV0dG9uPmA7CiAgICAgIGVsLnF1ZXJ5U2VsZWN0b3IoJ1tkYXRhLWxvZ2luXScpPy5hZGRFdmVudExpc3RlbmVyKCdjbGljaycsICgpID0+IHsKICAgICAgICBjb25zdCBib3ggPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCdkaXYnKTsKICAgICAgICBib3guY2xhc3NOYW1lID0gJ3BhbmVsIHAtMyBmbGV4IGZsZXgtY29sIGdhcC0yIG1heC13LXhzJzsKICAgICAgICBlbC5pbm5lckhUTUwgPSAnJzsKICAgICAgICBlbC5hcHBlbmRDaGlsZChib3gpOwogICAgICAgIHN0YXJ0RGV2aWNlRmxvdyhjbGllbnRJZCwgYm94KTsKICAgICAgfSk7CiAgICB9CiAgfQp9CgpleHBvcnQgZnVuY3Rpb24gaW5pdEF1dGgoKSB7CiAgaWYgKGRvY3VtZW50LnJlYWR5U3RhdGUgPT09ICdsb2FkaW5nJykgewogICAgZG9jdW1lbnQuYWRkRXZlbnRMaXN0ZW5lcignRE9NQ29udGVudExvYWRlZCcsIHJlbmRlcik7CiAgfSBlbHNlIHsKICAgIHJlbmRlcigpOwogIH0KfQo=
+// GitHub OAuth "Device Flow" login — runs fully client-side, no backend,
+// no client secret. Only needs a public GitHub OAuth App "Client ID".
+
+const TOKEN_KEY = 'pf.github.token';
+const USER_KEY = 'pf.github.user';
+const SCOPE = 'read:user';
+
+type GitHubUser = { login: string; avatar_url: string; name?: string; html_url: string };
+
+function getClientId(): string {
+  // PUBLIC_GITHUB_CLIENT_ID is inlined at build time by Astro.
+  const fromEnv = (import.meta as any).env?.PUBLIC_GITHUB_CLIENT_ID as string | undefined;
+  const fromLocal = localStorage.getItem('pf.github.clientId');
+  return (fromEnv || fromLocal || '').trim();
+}
+
+export function isSignedIn(): boolean {
+  return !!localStorage.getItem(TOKEN_KEY);
+}
+
+export function getUser(): GitHubUser | null {
+  try {
+    return JSON.parse(localStorage.getItem(USER_KEY) || 'null');
+  } catch {
+    return null;
+  }
+}
+
+export function signOut() {
+  localStorage.removeItem(TOKEN_KEY);
+  localStorage.removeItem(USER_KEY);
+}
+
+function sleep(ms: number) {
+  return new Promise((r) => setTimeout(r, ms));
+}
+
+function esc(s: string) {
+  return s.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] as string));
+}
+
+async function startDeviceFlow(clientId: string, el: HTMLElement) {
+  el.innerHTML = '<span class="text-sm text-slate-300">Contacting GitHub…</span>';
+  try {
+    const res = await fetch('https://github.com/login/device/code', {
+      method: 'POST',
+      headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+      body: JSON.stringify({ client_id: clientId, scope: SCOPE })
+    });
+    const data = await res.json();
+    if (!data.device_code) {
+      el.innerHTML = `<span class="text-sm text-rose-300">GitHub error: ${esc(data.error_description || data.error || 'unknown')}</span>`;
+      return;
+    }
+    const codeEl = document.createElement('span');
+    codeEl.innerHTML = `
+      <div class="flex flex-col gap-2 text-sm">
+        <div class="font-semibold text-slate-100">Enter code <span class="font-mono text-indigo-300 text-base">${esc(data.user_code)}</span></div>
+        <a href="${esc(data.verification_uri)}" target="_blank" rel="noopener" class="btn-primary">Open GitHub →</a>
+        <div class="text-xs text-slate-400">Waiting for authorization…</div>
+      </div>`;
+    el.appendChild(codeEl);
+    window.open(data.verification_uri, '_blank');
+    await pollToken(clientId, data, el);
+  } catch (e: any) {
+    el.innerHTML = `<span class="text-sm text-rose-300">Network error: ${esc(String(e))}</span>`;
+  }
+}
+
+async function pollToken(clientId: string, data: any, el: HTMLElement) {
+  let interval = Math.max(5, data.interval || 5);
+  const deadline = Date.now() + (data.expires_in || 900) * 1000;
+  while (Date.now() < deadline) {
+    await sleep(interval * 1000);
+    try {
+      const res = await fetch('https://github.com/login/oauth/access_token', {
+        method: 'POST',
+        headers: { Accept: 'application/json', 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          client_id: clientId,
+          device_code: data.device_code,
+          grant_type: 'urn:ietf:params:oauth:grant-type:device_code'
+        })
+      });
+      const tok = await res.json();
+      if (tok.access_token) {
+        await loadUser(tok.access_token);
+        render();
+        return;
+      }
+      if (tok.error === 'authorization_pending') continue;
+      if (tok.error === 'slow_down') {
+        interval += 5;
+        continue;
+      }
+      el.innerHTML = `<span class="text-sm text-rose-300">Login error: ${esc(tok.error_description || tok.error)}</span>`;
+      return;
+    } catch (e: any) {
+      el.innerHTML = `<span class="text-sm text-rose-300">Network error: ${esc(String(e))}</span>`;
+      return;
+    }
+  }
+  el.innerHTML = '<span class="text-sm text-rose-300">Timed out — please try again.</span>';
+}
+
+async function loadUser(token: string) {
+  try {
+    const res = await fetch('https://api.github.com/user', {
+      headers: { Authorization: `Bearer ${token}`, Accept: 'application/json' }
+    });
+    const user = await res.json();
+    localStorage.setItem(TOKEN_KEY, token);
+    localStorage.setItem(USER_KEY, JSON.stringify(user));
+  } catch {
+    localStorage.setItem(TOKEN_KEY, token);
+  }
+}
+
+function render() {
+  const el = document.getElementById('auth-widget');
+  if (!el) return;
+  const user = getUser();
+  if (user) {
+    el.innerHTML = `
+      <div class="flex items-center gap-2">
+        <img src="${esc(user.avatar_url)}" alt="" class="w-7 h-7 rounded-full ring-1 ring-white/20" referrerpolicy="no-referrer" />
+        <span class="text-sm text-slate-200 hidden sm:inline">${esc(user.login)}</span>
+        <button data-logout class="btn-ghost px-2.5 py-1.5 text-xs">Sign out</button>
+      </div>`;
+    el.querySelector('[data-logout]')?.addEventListener('click', () => {
+      signOut();
+      render();
+    });
+  } else {
+    const clientId = getClientId();
+    if (!clientId) {
+      el.innerHTML = `
+        <button data-login class="btn-ghost px-3 py-2 text-xs" title="Login requires a GitHub OAuth Client ID (free to create)">Sign in with GitHub</button>`;
+      el.querySelector('[data-login]')?.addEventListener('click', () => {
+        el.innerHTML = `
+          <div class="panel p-3 text-xs text-slate-300 max-w-xs">
+            <p class="font-semibold text-slate-100 mb-1">Login isn't configured yet</p>
+            <p class="leading-relaxed">Set <code class="bg-white/10 px-1 rounded">PUBLIC_GITHUB_CLIENT_ID</code> (a free GitHub OAuth App Client ID with Device Flow enabled).</p>
+            <a href="https://github.com/settings/developers" target="_blank" rel="noopener" class="text-indigo-300 underline">Create one →</a>
+          </div>`;
+      });
+    } else {
+      el.innerHTML = `<button data-login class="btn-ghost px-3 py-2 text-xs">Sign in with GitHub</button>`;
+      el.querySelector('[data-login]')?.addEventListener('click', () => {
+        const box = document.createElement('div');
+        box.className = 'panel p-3 flex flex-col gap-2 max-w-xs';
+        el.innerHTML = '';
+        el.appendChild(box);
+        startDeviceFlow(clientId, box);
+      });
+    }
+  }
+}
+
+export function initAuth() {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', render);
+  } else {
+    render();
+  }
+}

@@ -1,1 +1,41 @@
-LS0tCnRpdGxlOiAiQ29kZSBSZXZpZXcgRXhwZXJ0IgpkZXNjcmlwdGlvbjogIkdldCBhIHN0cnVjdHVyZWQsIHNldmVyaXR5LXJhbmtlZCBjb2RlIHJldmlldyB0aGF0IGNhdGNoZXMgYnVncywgc2VjdXJpdHkgaXNzdWVzIGFuZCBzbWVsbHMuIgpjYXRlZ29yeTogImNvZGluZyIKdGFnczogWyJjb2RlLXJldmlldyIsICJzZWN1cml0eSIsICJiZXN0LXByYWN0aWNlcyJdCmRpZmZpY3VsdHk6ICJpbnRlcm1lZGlhdGUiCm1vZGVsOiAiYW55IgphdXRob3I6ICJjb21tdW5pdHkiCmNyZWF0ZWQ6ICIyMDI0LTEwLTAxIgp1cGRhdGVkOiAiMjAyNS0wMy0wMiIKdXB2b3RlczogMTMyCmRvd252b3RlczogNQp2ZXJzaW9uOiAyCi0tLQoKIyMgVGhlIHByb21wdAoKYGBgdGV4dApBY3QgYXMgYSBzZW5pb3Ige3tsYW5ndWFnZX19IGVuZ2luZWVyIGRvaW5nIGEgdGhvcm91Z2ggY29kZSByZXZpZXcuCgpSZXZpZXcgdGhpcyBjb2RlICh7e2xhbmd1YWdlfX0pOgp7e2NvZGV9fQoKUmVwb3J0IGlzc3VlcyBncm91cGVkIGJ5IHNldmVyaXR5OgotIPCflLQgQkxPQ0tFUiDigJQgYnVnIG9yIHNlY3VyaXR5IGlzc3VlIHRoYXQgbXVzdCBiZSBmaXhlZAotIPCfn6AgTUFKT1Ig4oCUIGNvcnJlY3RuZXNzIG9yIG1haW50YWluYWJpbGl0eSByaXNrCi0g8J+foSBNSU5PUiDigJQgc3R5bGUsIG5hbWluZywgb3Igbml0cGljawotIPCfn6IgTklUIOKAlCBvcHRpb25hbCBwb2xpc2gKCkZvciBlYWNoIGlzc3VlIGdpdmU6IHRoZSBhcmVhLCB3aGF0IGlzIHdyb25nLCB3aHkgaXQgbWF0dGVycywgYW5kIGEgY29uY3JldGUgZml4IChzaG93IHRoZSBjb3JyZWN0ZWQgc25pcHBldCkuCgpFbmQgd2l0aCBhIHNob3J0ICJXb3VsZCBJIGFwcHJvdmU/IiB2ZXJkaWN0IGFuZCB0aGUgdG9wIDMgaW1wcm92ZW1lbnRzLgpgYGAKCiMjIFdoZW4gdG8gdXNlIGl0CgpQYXN0ZSBhIFBSIGRpZmYgb3IgYSBzaW5nbGUgZmlsZSBpbnRvIGB7e2NvZGV9fWAgYmVmb3JlIG1lcmdpbmcuIFdvcmtzIGJlc3Qgb24gZm9jdXNlZCBjaHVua3MgKHVuZGVyIH4zMDAgbGluZXMpIHNvIHRoZSBtb2RlbCBkb2Vzbid0IGxvc2UgdGhlIHBsb3QuCgojIyBQcm8gdGlwCgpQYWlyIGl0IHdpdGggYSBsaW50ZXI7IHRoZSBtb2RlbCBjYXRjaGVzIHNlbWFudGljIGlzc3VlcyBhbmQgc2VjdXJpdHkgaG9sZXMgYSBsaW50ZXIgY2FuJ3QsIHdoaWxlIHRoZSBsaW50ZXIgY2F0Y2hlcyB0aGUgbWVjaGFuaWNhbCBzdHVmZiBmb3IgZnJlZS4K
+---
+title: "Code Review Expert"
+description: "Get a structured, severity-ranked code review that catches bugs, security issues and smells."
+category: "coding"
+tags: ["code-review", "security", "best-practices"]
+difficulty: "intermediate"
+model: "any"
+author: "community"
+created: "2024-10-01"
+updated: "2025-03-02"
+upvotes: 132
+downvotes: 5
+version: 2
+---
+
+## The prompt
+
+```text
+Act as a senior {{language}} engineer doing a thorough code review.
+
+Review this code ({{language}}):
+{{code}}
+
+Report issues grouped by severity:
+- 🔴 BLOCKER — bug or security issue that must be fixed
+- 🟠 MAJOR — correctness or maintainability risk
+- 🟡 MINOR — style, naming, or nitpick
+- 🟢 NIT — optional polish
+
+For each issue give: the area, what is wrong, why it matters, and a concrete fix (show the corrected snippet).
+
+End with a short "Would I approve?" verdict and the top 3 improvements.
+```
+
+## When to use it
+
+Paste a PR diff or a single file into `{{code}}` before merging. Works best on focused chunks (under ~300 lines) so the model doesn't lose the plot.
+
+## Pro tip
+
+Pair it with a linter; the model catches semantic issues and security holes a linter can't, while the linter catches the mechanical stuff for free.

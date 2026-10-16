@@ -1,1 +1,92 @@
-Ly8gQ0kgZ2x1ZSBmb3IgdGhlIGF1dG8tdGFnZ2VyLiBSdW5zIGluc2lkZSBHaXRIdWIgQWN0aW9ucyBvbiBwdWxsIHJlcXVlc3RzOgovLyBmaW5kcyBjaGFuZ2VkIHByb21wdCBmaWxlcywgaW5mZXJzIGNhdGVnb3JpZXMsIHBvc3RzIGEgUFIgY29tbWVudCBhbmQgYWRkcwovLyAiY2F0ZWdvcnk6KiIgbGFiZWxzLiBVc2VzIG9ubHkgdGhlIGF1dG8tcHJvdmlkZWQgR0lUSFVCX1RPS0VOIChubyBzZWNyZXRzKS4KaW1wb3J0IHsgcmVhZEZpbGVTeW5jIH0gZnJvbSAnbm9kZTpmcyc7CmltcG9ydCB7IGV4ZWNTeW5jIH0gZnJvbSAnbm9kZTpjaGlsZF9wcm9jZXNzJzsKaW1wb3J0IG1hdHRlciBmcm9tICdncmF5LW1hdHRlcic7CmltcG9ydCB7IGluZmVyQ2F0ZWdvcnksIENBVEVHT1JJRVMgfSBmcm9tICcuL2F1dG8tdGFnLm1qcyc7Cgpjb25zdCB0b2tlbiA9IHByb2Nlc3MuZW52LkdJVEhVQl9UT0tFTjsKY29uc3QgcmVwbyA9IHByb2Nlc3MuZW52LkdJVEhVQl9SRVBPU0lUT1JZOwpjb25zdCBiYXNlUmVmID0gcHJvY2Vzcy5lbnYuR0lUSFVCX0JBU0VfUkVGIHx8ICdtYWluJzsKCmlmICghdG9rZW4gfHwgIXJlcG8pIHsKICBjb25zb2xlLmVycm9yKCdNaXNzaW5nIEdJVEhVQl9UT0tFTiBvciBHSVRIVUJfUkVQT1NJVE9SWS4nKTsKICBwcm9jZXNzLmV4aXQoMSk7Cn0KCmxldCBwck51bWJlciA9IG51bGw7CnRyeSB7CiAgY29uc3QgZXZlbnQgPSBKU09OLnBhcnNlKHJlYWRGaWxlU3luYyhwcm9jZXNzLmVudi5HSVRIVUJfRVZFTlRfUEFUSCwgJ3V0ZjgnKSk7CiAgcHJOdW1iZXIgPSBldmVudC5wdWxsX3JlcXVlc3Q/Lm51bWJlciB8fCBldmVudC5udW1iZXIgfHwgbnVsbDsKfSBjYXRjaCB7CiAgLyogbm9vcCAqLwp9CmlmICghcHJOdW1iZXIpIHsKICBjb25zb2xlLmxvZygnTm90IGEgcHVsbF9yZXF1ZXN0IGV2ZW50OyBza2lwcGluZy4nKTsKICBwcm9jZXNzLmV4aXQoMCk7Cn0KCmxldCBjaGFuZ2VkID0gW107CnRyeSB7CiAgY2hhbmdlZCA9IGV4ZWNTeW5jKGBnaXQgZGlmZiAtLW5hbWUtb25seSBvcmlnaW4vJHtiYXNlUmVmfS4uLkhFQUQgLS0gJ3NyYy9jb250ZW50L3Byb21wdHMvKi5tZCdgLCB7IGVuY29kaW5nOiAndXRmOCcgfSkKICAgIC50cmltKCkKICAgIC5zcGxpdCgnXG4nKQogICAgLmZpbHRlcihCb29sZWFuKTsKfSBjYXRjaCB7CiAgY2hhbmdlZCA9IFtdOwp9CgppZiAoY2hhbmdlZC5sZW5ndGggPT09IDApIHsKICBjb25zb2xlLmxvZygnTm8gcHJvbXB0IGZpbGVzIGNoYW5nZWQ7IG5vdGhpbmcgdG8gdGFnLicpOwogIHByb2Nlc3MuZXhpdCgwKTsKfQoKY29uc3QgcmVzdWx0cyA9IGNoYW5nZWQubWFwKChmaWxlKSA9PiB7CiAgY29uc3QgeyBkYXRhLCBjb250ZW50IH0gPSBtYXR0ZXIocmVhZEZpbGVTeW5jKGZpbGUsICd1dGY4JykpOwogIGNvbnN0IHRleHQgPSBbZGF0YS50aXRsZSwgZGF0YS5kZXNjcmlwdGlvbiwgKGRhdGEudGFncyB8fCBbXSkuam9pbignICcpLCBjb250ZW50XS5qb2luKCcgJyk7CiAgY29uc3QgciA9IGluZmVyQ2F0ZWdvcnkodGV4dCwgZGF0YS5jYXRlZ29yeSk7CiAgcmV0dXJuIHsgZmlsZTogZmlsZS5yZXBsYWNlKC9ec3JjXC9jb250ZW50XC9wcm9tcHRzXC8vLCAnJyksIC4uLnIgfTsKfSk7Cgpjb25zdCBsYWJlbHMgPSBbLi4ubmV3IFNldChyZXN1bHRzLmZpbHRlcigocikgPT4gci5pbmZlcnJlZCkubWFwKChyKSA9PiBgY2F0ZWdvcnk6JHtyLmNhdGVnb3J5fWApKV07CmNvbnN0IGxpbmVzID0gcmVzdWx0cy5tYXAoKHIpID0+IHsKICBjb25zdCBpY29uID0gci5pbmZlcnJlZCA/ICfinIUnIDogci5jYXRlZ29yeSA/ICfihLnvuI8nIDogJ+KaoO+4jyc7CiAgY29uc3Qgc3RhdHVzID0gci5pbmZlcnJlZAogICAgPyBgYXV0by10YWdnZWQgKioke3IuY2F0ZWdvcnl9KipgCiAgICA6IHIuY2F0ZWdvcnkKICAgICAgPyBgYWxyZWFkeSB0YWdnZWQgKioke3IuY2F0ZWdvcnl9KipgCiAgICAgIDogJ2NvdWxkIG5vdCBhdXRvLXRhZyDigJQgcGxlYXNlIGFkZCBhIGBjYXRlZ29yeWAgbWFudWFsbHknOwogIHJldHVybiBgLSAke2ljb259IFxgJHtyLmZpbGV9XGAg4oaSICR7c3RhdHVzfWA7Cn0pOwoKY29uc3QgYm9keSA9IGDwn6SWICoqQXV0by10YWdnZXIqKiByZXZpZXdlZCB0aGUgcHJvbXB0IGZpbGUocykgaW4gdGhpcyBQUjpcblxuJHtsaW5lcy5qb2luKCdcbicpfVxuXG4+IENhdGVnb3JpZXM6ICR7Q0FURUdPUklFUy5tYXAoKGMpID0+ICdgJyArIGMgKyAnYCcpLmpvaW4oJywgJyl9LiBUbyBvdmVycmlkZSwgZWRpdCB0aGUgXGBjYXRlZ29yeVxgIGZpZWxkIGluIHlvdXIgZnJvbnRtYXR0ZXIuYDsKCmFzeW5jIGZ1bmN0aW9uIGFwaShwYXRoLCBtZXRob2QsIHBheWxvYWQpIHsKICBjb25zdCByZXMgPSBhd2FpdCBmZXRjaChgaHR0cHM6Ly9hcGkuZ2l0aHViLmNvbS9yZXBvcy8ke3JlcG99LyR7cGF0aH1gLCB7CiAgICBtZXRob2QsCiAgICBoZWFkZXJzOiB7CiAgICAgIEF1dGhvcml6YXRpb246IGBCZWFyZXIgJHt0b2tlbn1gLAogICAgICBBY2NlcHQ6ICdhcHBsaWNhdGlvbi92bmQuZ2l0aHViK2pzb24nLAogICAgICAnWC1HaXRIdWItQXBpLVZlcnNpb24nOiAnMjAyMi0xMS0yOCcsCiAgICAgICdDb250ZW50LVR5cGUnOiAnYXBwbGljYXRpb24vanNvbicKICAgIH0sCiAgICBib2R5OiBwYXlsb2FkID8gSlNPTi5zdHJpbmdpZnkocGF5bG9hZCkgOiB1bmRlZmluZWQKICB9KTsKICBpZiAoIXJlcy5vaykgewogICAgY29uc3QgdCA9IGF3YWl0IHJlcy50ZXh0KCk7CiAgICB0aHJvdyBuZXcgRXJyb3IoYCR7bWV0aG9kfSAke3BhdGh9IOKGkiAke3Jlcy5zdGF0dXN9OiAke3R9YCk7CiAgfQogIHJldHVybiByZXM7Cn0KCnRyeSB7CiAgYXdhaXQgYXBpKGBpc3N1ZXMvJHtwck51bWJlcn0vY29tbWVudHNgLCAnUE9TVCcsIHsgYm9keSB9KTsKICBpZiAobGFiZWxzLmxlbmd0aCkgewogICAgYXdhaXQgYXBpKGBpc3N1ZXMvJHtwck51bWJlcn0vbGFiZWxzYCwgJ1BPU1QnLCB7IGxhYmVscyB9KTsKICB9CiAgY29uc29sZS5sb2coJ0Fubm90YXRlZCBQUiB3aXRoIGF1dG8tdGFnIHJlc3VsdHMgYW5kIGxhYmVsczonLCBsYWJlbHMuam9pbignLCAnKSB8fCAnKG5vbmUpJyk7Cn0gY2F0Y2ggKGUpIHsKICBjb25zb2xlLmVycm9yKGUubWVzc2FnZSk7CiAgcHJvY2Vzcy5leGl0KDEpOwp9Cg==
+// CI glue for the auto-tagger. Runs inside GitHub Actions on pull requests:
+// finds changed prompt files, infers categories, posts a PR comment and adds
+// "category:*" labels. Uses only the auto-provided GITHUB_TOKEN (no secrets).
+import { readFileSync } from 'node:fs';
+import { execSync } from 'node:child_process';
+import matter from 'gray-matter';
+import { inferCategory, CATEGORIES } from './auto-tag.mjs';
+
+const token = process.env.GITHUB_TOKEN;
+const repo = process.env.GITHUB_REPOSITORY;
+const baseRef = process.env.GITHUB_BASE_REF || 'main';
+
+if (!token || !repo) {
+  console.error('Missing GITHUB_TOKEN or GITHUB_REPOSITORY.');
+  process.exit(1);
+}
+
+let prNumber = null;
+try {
+  const event = JSON.parse(readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
+  prNumber = event.pull_request?.number || event.number || null;
+} catch {
+  /* noop */
+}
+if (!prNumber) {
+  console.log('Not a pull_request event; skipping.');
+  process.exit(0);
+}
+
+let changed = [];
+try {
+  changed = execSync(`git diff --name-only origin/${baseRef}...HEAD -- 'src/content/prompts/*.md'`, { encoding: 'utf8' })
+    .trim()
+    .split('\n')
+    .filter(Boolean);
+} catch {
+  changed = [];
+}
+
+if (changed.length === 0) {
+  console.log('No prompt files changed; nothing to tag.');
+  process.exit(0);
+}
+
+const results = changed.map((file) => {
+  const { data, content } = matter(readFileSync(file, 'utf8'));
+  const text = [data.title, data.description, (data.tags || []).join(' '), content].join(' ');
+  const r = inferCategory(text, data.category);
+  return { file: file.replace(/^src\/content\/prompts\//, ''), ...r };
+});
+
+const labels = [...new Set(results.filter((r) => r.inferred).map((r) => `category:${r.category}`))];
+const lines = results.map((r) => {
+  const icon = r.inferred ? '✅' : r.category ? 'ℹ️' : '⚠️';
+  const status = r.inferred
+    ? `auto-tagged **${r.category}**`
+    : r.category
+      ? `already tagged **${r.category}**`
+      : 'could not auto-tag — please add a `category` manually';
+  return `- ${icon} \`${r.file}\` → ${status}`;
+});
+
+const body = `🤖 **Auto-tagger** reviewed the prompt file(s) in this PR:\n\n${lines.join('\n')}\n\n> Categories: ${CATEGORIES.map((c) => '`' + c + '`').join(', ')}. To override, edit the \`category\` field in your frontmatter.`;
+
+async function api(path, method, payload) {
+  const res = await fetch(`https://api.github.com/repos/${repo}/${path}`, {
+    method,
+    headers: {
+      Authorization: `Bearer ${token}`,
+      Accept: 'application/vnd.github+json',
+      'X-GitHub-Api-Version': '2022-11-28',
+      'Content-Type': 'application/json'
+    },
+    body: payload ? JSON.stringify(payload) : undefined
+  });
+  if (!res.ok) {
+    const t = await res.text();
+    throw new Error(`${method} ${path} → ${res.status}: ${t}`);
+  }
+  return res;
+}
+
+try {
+  await api(`issues/${prNumber}/comments`, 'POST', { body });
+  if (labels.length) {
+    await api(`issues/${prNumber}/labels`, 'POST', { labels });
+  }
+  console.log('Annotated PR with auto-tag results and labels:', labels.join(', ') || '(none)');
+} catch (e) {
+  console.error(e.message);
+  process.exit(1);
+}

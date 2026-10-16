@@ -1,1 +1,57 @@
-Ly8gTWluaW1hbCB6ZXJvLWRlcGVuZGVuY3kgc3RhdGljIHNlcnZlciBmb3IgdGhlIGJ1aWx0IGBkaXN0L2AgZm9sZGVyLgovLyBVc2VmdWwgZm9yIGxvY2FsIHByZXZpZXcgKGJlaGluZCBhIHR1bm5lbC9wcm94eSkg4oCUIG5vIGhvc3QgYmxvY2tpbmcuCi8vIFJ1bjogbm9kZSBzY3JpcHRzL3NlcnZlLm1qcyAgIChQT1JUIGVudiB2YXIgb3ZlcnJpZGVzIHRoZSBkZWZhdWx0IDQzMjEpCmltcG9ydCB7IGNyZWF0ZVNlcnZlciB9IGZyb20gJ25vZGU6aHR0cCc7CmltcG9ydCB7IHJlYWRGaWxlU3luYywgZXhpc3RzU3luYywgc3RhdFN5bmMgfSBmcm9tICdub2RlOmZzJzsKaW1wb3J0IHsgam9pbiwgbm9ybWFsaXplLCBleHRuYW1lIH0gZnJvbSAnbm9kZTpwYXRoJzsKCmNvbnN0IHJvb3QgPSBqb2luKHByb2Nlc3MuY3dkKCksICdkaXN0Jyk7CmNvbnN0IHBvcnQgPSBOdW1iZXIocHJvY2Vzcy5lbnYuUE9SVCB8fCA0MzIxKTsKCmNvbnN0IHR5cGVzID0gewogICcuaHRtbCc6ICd0ZXh0L2h0bWw7IGNoYXJzZXQ9dXRmLTgnLAogICcuanMnOiAndGV4dC9qYXZhc2NyaXB0OyBjaGFyc2V0PXV0Zi04JywKICAnLm1qcyc6ICd0ZXh0L2phdmFzY3JpcHQ7IGNoYXJzZXQ9dXRmLTgnLAogICcuY3NzJzogJ3RleHQvY3NzOyBjaGFyc2V0PXV0Zi04JywKICAnLnN2Zyc6ICdpbWFnZS9zdmcreG1sJywKICAnLmpzb24nOiAnYXBwbGljYXRpb24vanNvbjsgY2hhcnNldD11dGYtOCcsCiAgJy54bWwnOiAnYXBwbGljYXRpb24veG1sOyBjaGFyc2V0PXV0Zi04JywKICAnLnR4dCc6ICd0ZXh0L3BsYWluOyBjaGFyc2V0PXV0Zi04JywKICAnLnBuZyc6ICdpbWFnZS9wbmcnLAogICcuanBnJzogJ2ltYWdlL2pwZWcnLAogICcuanBlZyc6ICdpbWFnZS9qcGVnJywKICAnLndlYnAnOiAnaW1hZ2Uvd2VicCcsCiAgJy5pY28nOiAnaW1hZ2UveC1pY29uJywKICAnLndvZmYyJzogJ2ZvbnQvd29mZjInCn07Cgpjb25zdCBzZXJ2ZXIgPSBjcmVhdGVTZXJ2ZXIoKHJlcSwgcmVzKSA9PiB7CiAgdHJ5IHsKICAgIGxldCBwYXRobmFtZSA9IGRlY29kZVVSSUNvbXBvbmVudChuZXcgVVJMKHJlcS51cmwsICdodHRwOi8vbG9jYWxob3N0JykucGF0aG5hbWUpOwogICAgaWYgKHBhdGhuYW1lLmVuZHNXaXRoKCcvJykpIHBhdGhuYW1lICs9ICdpbmRleC5odG1sJzsKICAgIGxldCBmaWxlID0gbm9ybWFsaXplKGpvaW4ocm9vdCwgcGF0aG5hbWUpKTsKICAgIGlmIChmaWxlICE9PSByb290ICYmICFmaWxlLnN0YXJ0c1dpdGgocm9vdCArICdcXCcpICYmICFmaWxlLnN0YXJ0c1dpdGgocm9vdCArICcvJykpIHsKICAgICAgcmVzLndyaXRlSGVhZCg0MDMpOwogICAgICByZXMuZW5kKCdGb3JiaWRkZW4nKTsKICAgICAgcmV0dXJuOwogICAgfQogICAgbGV0IHN0YXR1cyA9IDIwMDsKICAgIGlmICghZXhpc3RzU3luYyhmaWxlKSB8fCBzdGF0U3luYyhmaWxlKS5pc0RpcmVjdG9yeSgpKSB7CiAgICAgIGlmIChleGlzdHNTeW5jKGZpbGUpICYmIHN0YXRTeW5jKGZpbGUpLmlzRGlyZWN0b3J5KCkpIGZpbGUgPSBqb2luKGZpbGUsICdpbmRleC5odG1sJyk7CiAgICAgIGlmICghZXhpc3RzU3luYyhmaWxlKSkgewogICAgICAgIGZpbGUgPSBqb2luKHJvb3QsICc0MDQuaHRtbCcpOwogICAgICAgIHN0YXR1cyA9IDQwNDsKICAgICAgfQogICAgfQogICAgY29uc3QgZXh0ID0gZXh0bmFtZShmaWxlKS50b0xvd2VyQ2FzZSgpOwogICAgcmVzLndyaXRlSGVhZChzdGF0dXMsIHsgJ0NvbnRlbnQtVHlwZSc6IHR5cGVzW2V4dF0gfHwgJ2FwcGxpY2F0aW9uL29jdGV0LXN0cmVhbScgfSk7CiAgICByZXMuZW5kKHJlYWRGaWxlU3luYyhmaWxlKSk7CiAgfSBjYXRjaCAoZSkgewogICAgcmVzLndyaXRlSGVhZCg1MDApOwogICAgcmVzLmVuZChTdHJpbmcoZSkpOwogIH0KfSk7CgpzZXJ2ZXIubGlzdGVuKHBvcnQsICcxMjcuMC4wLjEnLCAoKSA9PiB7CiAgY29uc29sZS5sb2coYFNlcnZpbmcgZGlzdC8gYXQgaHR0cDovLzEyNy4wLjAuMToke3BvcnR9YCk7Cn0pOwo=
+// Minimal zero-dependency static server for the built `dist/` folder.
+// Useful for local preview (behind a tunnel/proxy) — no host blocking.
+// Run: node scripts/serve.mjs   (PORT env var overrides the default 4321)
+import { createServer } from 'node:http';
+import { readFileSync, existsSync, statSync } from 'node:fs';
+import { join, normalize, extname } from 'node:path';
+
+const root = join(process.cwd(), 'dist');
+const port = Number(process.env.PORT || 4321);
+
+const types = {
+  '.html': 'text/html; charset=utf-8',
+  '.js': 'text/javascript; charset=utf-8',
+  '.mjs': 'text/javascript; charset=utf-8',
+  '.css': 'text/css; charset=utf-8',
+  '.svg': 'image/svg+xml',
+  '.json': 'application/json; charset=utf-8',
+  '.xml': 'application/xml; charset=utf-8',
+  '.txt': 'text/plain; charset=utf-8',
+  '.png': 'image/png',
+  '.jpg': 'image/jpeg',
+  '.jpeg': 'image/jpeg',
+  '.webp': 'image/webp',
+  '.ico': 'image/x-icon',
+  '.woff2': 'font/woff2'
+};
+
+const server = createServer((req, res) => {
+  try {
+    let pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+    if (pathname.endsWith('/')) pathname += 'index.html';
+    let file = normalize(join(root, pathname));
+    if (file !== root && !file.startsWith(root + '\\') && !file.startsWith(root + '/')) {
+      res.writeHead(403);
+      res.end('Forbidden');
+      return;
+    }
+    let status = 200;
+    if (!existsSync(file) || statSync(file).isDirectory()) {
+      if (existsSync(file) && statSync(file).isDirectory()) file = join(file, 'index.html');
+      if (!existsSync(file)) {
+        file = join(root, '404.html');
+        status = 404;
+      }
+    }
+    const ext = extname(file).toLowerCase();
+    res.writeHead(status, { 'Content-Type': types[ext] || 'application/octet-stream' });
+    res.end(readFileSync(file));
+  } catch (e) {
+    res.writeHead(500);
+    res.end(String(e));
+  }
+});
+
+server.listen(port, '127.0.0.1', () => {
+  console.log(`Serving dist/ at http://127.0.0.1:${port}`);
+});

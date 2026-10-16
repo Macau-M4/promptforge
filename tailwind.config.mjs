@@ -1,1 +1,37 @@
-LyoqIEB0eXBlIHtpbXBvcnQoJ3RhaWx3aW5kY3NzJykuQ29uZmlnfSAqLwpleHBvcnQgZGVmYXVsdCB7CiAgY29udGVudDogWycuL3NyYy8qKi8qLnthc3RybyxodG1sLGpzLHRzLGpzeCx0c3gsbWQsbWR4fSddLAogIHRoZW1lOiB7CiAgICBleHRlbmQ6IHsKICAgICAgY29sb3JzOiB7CiAgICAgICAgYnJhbmQ6IHsKICAgICAgICAgIDUwOiAnI2VlZjJmZicsCiAgICAgICAgICAxMDA6ICcjZTBlN2ZmJywKICAgICAgICAgIDIwMDogJyNjN2QyZmUnLAogICAgICAgICAgMzAwOiAnI2E1YjRmYycsCiAgICAgICAgICA0MDA6ICcjODE4Y2Y4JywKICAgICAgICAgIDUwMDogJyM2MzY2ZjEnLAogICAgICAgICAgNjAwOiAnIzRmNDZlNScsCiAgICAgICAgICA3MDA6ICcjNDMzOGNhJywKICAgICAgICAgIDgwMDogJyMzNzMwYTMnLAogICAgICAgICAgOTAwOiAnIzMxMmU4MScKICAgICAgICB9CiAgICAgIH0sCiAgICAgIGZvbnRGYW1pbHk6IHsKICAgICAgICBzYW5zOiBbJ0ludGVyJywgJ3VpLXNhbnMtc2VyaWYnLCAnc3lzdGVtLXVpJywgJ3NhbnMtc2VyaWYnXSwKICAgICAgICBtb25vOiBbJ3VpLW1vbm9zcGFjZScsICdTRk1vbm8tUmVndWxhcicsICdNZW5sbycsICdtb25vc3BhY2UnXQogICAgICB9LAogICAgICBhbmltYXRpb246IHsKICAgICAgICAnZmFkZS1pbic6ICdmYWRlSW4gMC4yNXMgZWFzZS1vdXQnLAogICAgICAgICdwdWxzZS1zbG93JzogJ3B1bHNlIDIuNXMgY3ViaWMtYmV6aWVyKDAuNCwgMCwgMC42LCAxKSBpbmZpbml0ZScKICAgICAgfSwKICAgICAga2V5ZnJhbWVzOiB7CiAgICAgICAgZmFkZUluOiB7CiAgICAgICAgICAnMCUnOiB7IG9wYWNpdHk6ICcwJywgdHJhbnNmb3JtOiAndHJhbnNsYXRlWSg0cHgpJyB9LAogICAgICAgICAgJzEwMCUnOiB7IG9wYWNpdHk6ICcxJywgdHJhbnNmb3JtOiAndHJhbnNsYXRlWSgwKScgfQogICAgICAgIH0KICAgICAgfQogICAgfQogIH0sCiAgcGx1Z2luczogW10KfTsK
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ['./src/**/*.{astro,html,js,ts,jsx,tsx,md,mdx}'],
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          50: '#eef2ff',
+          100: '#e0e7ff',
+          200: '#c7d2fe',
+          300: '#a5b4fc',
+          400: '#818cf8',
+          500: '#6366f1',
+          600: '#4f46e5',
+          700: '#4338ca',
+          800: '#3730a3',
+          900: '#312e81'
+        }
+      },
+      fontFamily: {
+        sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        mono: ['ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace']
+      },
+      animation: {
+        'fade-in': 'fadeIn 0.25s ease-out',
+        'pulse-slow': 'pulse 2.5s cubic-bezier(0.4, 0, 0.6, 1) infinite'
+      },
+      keyframes: {
+        fadeIn: {
+          '0%': { opacity: '0', transform: 'translateY(4px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' }
+        }
+      }
+    }
+  },
+  plugins: []
+};

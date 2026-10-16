@@ -1,1 +1,23 @@
-Ly8gTWFya2Rvd24gaGVscGVycyBzaGFyZWQgYnkgcGFnZXMgYW5kIHNjcmlwdHMuCgovKiogRXh0cmFjdCB0aGUgZmlyc3QgZmVuY2VkIGNvZGUgYmxvY2sgKHRoZSBjb3B5YWJsZSAicHJvbXB0IikuICovCmV4cG9ydCBmdW5jdGlvbiBleHRyYWN0UHJvbXB0QmxvY2sobWQ6IHN0cmluZyk6IHN0cmluZyB7CiAgY29uc3QgbSA9IG1kLm1hdGNoKC9gYGBbXlxuXSpcbihbXHNcU10qPylcbj9gYGAvKTsKICByZXR1cm4gbSA/IG1bMV0udHJpbSgpIDogbWQudHJpbSgpOwp9CgovKiogRmluZCBhbGwge3t2YXJpYWJsZX19IHBsYWNlaG9sZGVycyBpbiBhIHByb21wdC4gKi8KZXhwb3J0IGZ1bmN0aW9uIGV4dHJhY3RWYXJpYWJsZXModGV4dDogc3RyaW5nKTogc3RyaW5nW10gewogIGNvbnN0IHNldCA9IG5ldyBTZXQ8c3RyaW5nPigpOwogIGNvbnN0IHJlID0gL1x7XHtccyooW2EtekEtWjAtOV9dKylccypcfVx9L2c7CiAgbGV0IG06IFJlZ0V4cEV4ZWNBcnJheSB8IG51bGw7CiAgd2hpbGUgKChtID0gcmUuZXhlYyh0ZXh0KSkpIHNldC5hZGQobVsxXSk7CiAgcmV0dXJuIFsuLi5zZXRdOwp9CgovKiogU3Vic3RpdHV0ZSB7e3ZhcmlhYmxlc319IHdpdGggdmFsdWVzLiAqLwpleHBvcnQgZnVuY3Rpb24gZmlsbFZhcmlhYmxlcyh0ZXh0OiBzdHJpbmcsIHZhbHVlczogUmVjb3JkPHN0cmluZywgc3RyaW5nPik6IHN0cmluZyB7CiAgcmV0dXJuIHRleHQucmVwbGFjZSgvXHtce1xzKihbYS16QS1aMC05X10rKVxzKlx9XH0vZywgKF8sIGs6IHN0cmluZykgPT4KICAgIHZhbHVlc1trXSAhPT0gdW5kZWZpbmVkICYmIHZhbHVlc1trXSAhPT0gJycgPyB2YWx1ZXNba10gOiBge3ske2t9fX1gCiAgKTsKfQo=
+// Markdown helpers shared by pages and scripts.
+
+/** Extract the first fenced code block (the copyable "prompt"). */
+export function extractPromptBlock(md: string): string {
+  const m = md.match(/```[^\n]*\n([\s\S]*?)\n?```/);
+  return m ? m[1].trim() : md.trim();
+}
+
+/** Find all {{variable}} placeholders in a prompt. */
+export function extractVariables(text: string): string[] {
+  const set = new Set<string>();
+  const re = /\{\{\s*([a-zA-Z0-9_]+)\s*\}\}/g;
+  let m: RegExpExecArray | null;
+  while ((m = re.exec(text))) set.add(m[1]);
+  return [...set];
+}
+
+/** Substitute {{variables}} with values. */
+export function fillVariables(text: string, values: Record<string, string>): string {
+  return text.replace(/\{\{\s*([a-zA-Z0-9_]+)\s*\}\}/g, (_, k: string) =>
+    values[k] !== undefined && values[k] !== '' ? values[k] : `{{${k}}}`
+  );
+}

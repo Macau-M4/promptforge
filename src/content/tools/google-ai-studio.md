@@ -1,1 +1,31 @@
-LS0tCnRpdGxlOiAiR29vZ2xlIEFJIFN0dWRpbyAoR2VtaW5pKSIKZGVzY3JpcHRpb246ICJGcmVlIHRpZXIgZm9yIHRoZSBHZW1pbmkgQVBJIOKAlCBncmFiIGEga2V5IGluIG9uZSBjbGljaywgbm8gY3JlZGl0IGNhcmQgcmVxdWlyZWQuIgpjYXRlZ29yeTogImNvZGluZyIKa2luZDogImZyZWUtYXBpIgp1cmw6ICJodHRwczovL2Fpc3R1ZGlvLmdvb2dsZS5jb20vIgpmcmVlOiB0cnVlCi0tLQoKIyBHb29nbGUgQUkgU3R1ZGlvIOKAlCBHZW1pbmkgQVBJCgpUaGUgZmFzdGVzdCB3YXkgdG8gYSByZWFsLCBmcmVlIExMTSBBUEkga2V5LiBUaGUgZnJlZSB0aWVyIGlzIGdlbmVyb3VzIGFuZCAqKmRvZXMgbm90CnJlcXVpcmUgYSBjcmVkaXQgY2FyZCoqLgoKIyMgR2V0IGEga2V5ICgyIG1pbnV0ZXMpCgoxLiBHbyB0byBbYWlzdHVkaW8uZ29vZ2xlLmNvbV0oaHR0cHM6Ly9haXN0dWRpby5nb29nbGUuY29tLykgYW5kIHNpZ24gaW4gd2l0aCBhIEdvb2dsZSBhY2NvdW50LgoyLiBDbGljayAqKiJHZXQgQVBJIGtleSIqKiDihpIgKioiQ3JlYXRlIEFQSSBrZXkiKiouCjMuIENvcHkgdGhlIGtleSBhbmQgcGFzdGUgaXQgaW50byBQcm9tcHRGb3JnZSdzICoqUnVuKiogcGFnZSAoaXQncyBzdG9yZWQgb25seSBpbiB5b3VyIGJyb3dzZXIpLgoKIyMgRnJlZSBtb2RlbHMKCi0gYGdlbWluaS0yLjAtZmxhc2hgIOKAlCBmYXN0LCBncmVhdCBnZW5lcmFsIHB1cnBvc2UuCi0gYGdlbWluaS0xLjUtZmxhc2hgIOKAlCBoaWdoIHNwZWVkLCBsb3cgbGF0ZW5jeS4KLSBgZ2VtaW5pLTIuNS1mbGFzaGAg4oCUIHN0cm9uZyByZWFzb25pbmcgKGZyZWUgdGllciBzdWJqZWN0IHRvIGxpbWl0cykuCgojIyBIb3cgUHJvbXB0Rm9yZ2UgdXNlcyBpdAoKVGhlIFJ1biBwYWdlIGNhbGxzIGBQT1NUIGh0dHBzOi8vZ2VuZXJhdGl2ZWxhbmd1YWdlLmdvb2dsZWFwaXMuY29tL3YxYmV0YS9tb2RlbHMve21vZGVsfTpnZW5lcmF0ZUNvbnRlbnRgCmRpcmVjdGx5IGZyb20geW91ciBicm93c2VyIHdpdGggeW91ciBrZXkuIFlvdXIga2V5IG5ldmVyIHRvdWNoZXMgYSBQcm9tcHRGb3JnZSBzZXJ2ZXIg4oCUClByb21wdEZvcmdlIGlzIGEgc3RhdGljIHNpdGUgd2l0aCBubyBiYWNrZW5kLgo=
+---
+title: "Google AI Studio (Gemini)"
+description: "Free tier for the Gemini API — grab a key in one click, no credit card required."
+category: "coding"
+kind: "free-api"
+url: "https://aistudio.google.com/"
+free: true
+---
+
+# Google AI Studio — Gemini API
+
+The fastest way to a real, free LLM API key. The free tier is generous and **does not
+require a credit card**.
+
+## Get a key (2 minutes)
+
+1. Go to [aistudio.google.com](https://aistudio.google.com/) and sign in with a Google account.
+2. Click **"Get API key"** → **"Create API key"**.
+3. Copy the key and paste it into PromptForge's **Run** page (it's stored only in your browser).
+
+## Free models
+
+- `gemini-2.0-flash` — fast, great general purpose.
+- `gemini-1.5-flash` — high speed, low latency.
+- `gemini-2.5-flash` — strong reasoning (free tier subject to limits).
+
+## How PromptForge uses it
+
+The Run page calls `POST https://generativelanguage.googleapis.com/v1beta/models/{model}:generateContent`
+directly from your browser with your key. Your key never touches a PromptForge server —
+PromptForge is a static site with no backend.

@@ -1,1 +1,110 @@
-IyBDb250cmlidXRpbmcgdG8gUHJvbXB0Rm9yZ2UKClByb21wdEZvcmdlIGlzIGEgZ2l0IHJlcG8gYXMgaXRzIG93biBkYXRhYmFzZS4gQWRkaW5nIGEgcHJvbXB0ID0gYWRkaW5nIG9uZSBtYXJrZG93bgpmaWxlICsgb3BlbmluZyBhIHB1bGwgcmVxdWVzdC4gTm8gZm9ybXMsIG5vIGFjY291bnRzIGJleW9uZCBHaXRIdWIsIG5vIHBhaWQgdG9vbHMuCgojIyBBZGRpbmcgYSBwcm9tcHQKCjEuIEZvcmsgdGhlIHJlcG9zaXRvcnkuCjIuIENyZWF0ZSBhIG5ldyBmaWxlIGF0IGBzcmMvY29udGVudC9wcm9tcHRzLzxzbHVnPi5tZGAgKHNsdWcgPSBrZWJhYi1jYXNlLCBlLmcuCiAgIGBjb2RlLXJldmlldy1leHBlcnQubWRgKS4KMy4gQ29weSB0aGUgdGVtcGxhdGUgYmVsb3cgYW5kIGZpbGwgaXQgaW4uCjQuIFJ1biBgcG5wbSBydW4gdmFsaWRhdGVgIOKAlCBpdCBtdXN0IHBhc3MuCjUuIENvbW1pdCBhbmQgb3BlbiBhIHB1bGwgcmVxdWVzdC4KCiMjIyBUZW1wbGF0ZQoKYGBgYG1hcmtkb3duCi0tLQp0aXRsZTogIk15IGFtYXppbmcgcHJvbXB0IgpkZXNjcmlwdGlvbjogIk9uZSBzZW50ZW5jZSBkZXNjcmliaW5nIHdoYXQgaXQgZG9lcyAoMTDigJMzMjAgY2hhcnMpLiIKY2F0ZWdvcnk6ICJjb2RpbmciICAgICAgICAgICAjIHNlZSBjYXRlZ29yaWVzIGJlbG93CnRhZ3M6IFsiY29kaW5nIiwgInJldmlldyJdCmRpZmZpY3VsdHk6ICJpbnRlcm1lZGlhdGUiICAgIyBiZWdpbm5lciB8IGludGVybWVkaWF0ZSB8IGFkdmFuY2VkCm1vZGVsOiAiYW55IgphdXRob3I6ICJ5b3VyLWdpdGh1Yi1oYW5kbGUiCmNyZWF0ZWQ6ICIyMDI1LTA0LTAxIgp1cGRhdGVkOiAiMjAyNS0wNC0wMSIKdXB2b3RlczogMApkb3dudm90ZXM6IDAKdmVyc2lvbjogMQotLS0KCiMjIFRoZSBwcm9tcHQKCmBgYHRleHQKWW91ciBwcm9tcHQgaGVyZS4gVXNlIHt7dmFyaWFibGV9fSBwbGFjZWhvbGRlcnMgZm9yIGlucHV0cyB0aGUgdXNlciBmaWxscyBpbi4KYGBgCgojIyBXaGVuIHRvIHVzZSBpdAoKRXhwbGFpbiB3aGVuIHRoaXMgcHJvbXB0IGlzIHVzZWZ1bCBhbmQgaG93IHRvIGdldCB0aGUgbW9zdCBvdXQgb2YgaXQuCmBgYGAKCj4g4pqg77iPIEtlZXAgdGhlIGZpcnN0IGZlbmNlZCBjb2RlIGJsb2NrIGFzIHRoZSBjb3B5YWJsZS9ydW5uYWJsZSBwcm9tcHQuIERvICoqbm90KiogbmVzdAo+IGNvZGUgZmVuY2VzIGluc2lkZSBpdCDigJQgdGhlIFJ1biBmZWF0dXJlIGV4dHJhY3RzIHRoZSBmaXJzdCBmZW5jZSB2ZXJiYXRpbS4KCiMjIyBDYXRlZ29yaWVzCgpgd3JpdGluZ2AgwrcgYGNvZGluZ2AgwrcgYHByb2R1Y3Rpdml0eWAgwrcgYGFuYWx5c2lzYCDCtyBgY3JlYXRpdmVgIMK3IGBsZWFybmluZ2AgwrcKYG1hcmtldGluZ2AgwrcgYGF1dG9tYXRpb25gCgojIyMgUnVsZXMKCi0gYHRpdGxlYCAz4oCTMTQwIGNoYXJzLCBgZGVzY3JpcHRpb25gIDEw4oCTMzIwIGNoYXJzLgotIGB0YWdzYCAx4oCTOCBpdGVtcywgZWFjaCAy4oCTNDAgY2hhcnMuCi0gRGF0ZXMgbXVzdCBiZSBgWVlZWS1NTS1ERGAgYW5kIGBjcmVhdGVkIDw9IHVwZGF0ZWRgLgotIGB1cHZvdGVzYC9gZG93bnZvdGVzYCBzdGFydCBhdCAwIGZvciBuZXcgc3VibWlzc2lvbnMgKG5ldmVyIHNlbGYtYnVtcCkuCgojIyBXaGF0IENJIGRvZXMgZm9yIHlvdQoKMS4gKipWYWxpZGF0ZSoqIOKAlCBgLmdpdGh1Yi93b3JrZmxvd3MvdmFsaWRhdGUueW1sYCBjaGVja3MgeW91ciBmcm9udG1hdHRlciBhZ2FpbnN0IHRoZQogICBab2Qgc2NoZW1hIGFuZCBidWlsZHMgdGhlIHNpdGUuCjIuICoqQXV0by10YWcqKiDigJQgYC5naXRodWIvd29ya2Zsb3dzL2F1dG8tdGFnLnltbGAgaW5mZXJzIGEgY2F0ZWdvcnkgZnJvbSB5b3VyCiAgIHRpdGxlL2Rlc2NyaXB0aW9uL2JvZHkgYW5kIHBvc3RzIGEgY29tbWVudCArIGEgYGNhdGVnb3J5OipgIGxhYmVsLiBZb3UgY2FuIG92ZXJyaWRlCiAgIGl0IGJ5IHNldHRpbmcgYGNhdGVnb3J5YCBleHBsaWNpdGx5LgoKIyMgUnVubmluZyBsb2NhbGx5CgpgYGBiYXNoCnBucG0gaW5zdGFsbApwbnBtIGRldiAgICAgICAgICAgICMgaHR0cDovL2xvY2FsaG9zdDo0MzIxCnBucG0gcnVuIHZhbGlkYXRlICAgIyBab2Qgc2NoZW1hIGNoZWNrIG9uIGFsbCBjb250ZW50CnBucG0gdGVzdCAgICAgICAgICAgIyBjb3JlLWxvZ2ljIHRlc3RzICh0cmVuZGluZywgbWFya2Rvd24sIGF1dG8tdGFnKQpwbnBtIGJ1aWxkICAgICAgICAgICMgcHJvZHVjdGlvbiBidWlsZApgYGAKCiMjIEFkZGluZyBhIGxlYXJuaW5nIHBhdGgKCkFkZCBgc3JjL2NvbnRlbnQvcGF0aHMvPHNsdWc+Lm1kYCB3aXRoIGZyb250bWF0dGVyOgoKYGBgeWFtbAotLS0KdGl0bGU6ICJZb3VyIHBhdGgiCmRlc2NyaXB0aW9uOiAiV2hhdCB0aGlzIHRyYWNrIHRlYWNoZXMuIgpsZXZlbDogInN0YXJ0IiAgICAgICMgc3RhcnQgfCBhZHZhbmNlIHwgbWFzdGVyCm9yZGVyOiAyCnByb21wdHM6ICAgICAgICAgICAgIyBsaXN0IG9mIHByb21wdCBzbHVncyAoZmlsZW5hbWVzIHdpdGhvdXQgLm1kKQogIC0gZXhwbGFpbi1saWtlLWltLTEyCiAgLSBzb2NyYXRpYy10dXRvcgotLS0KYGBgCgojIyBBZGRpbmcgYSB0b29sCgpBZGQgYHNyYy9jb250ZW50L3Rvb2xzLzxzbHVnPi5tZGA6CgpgYGB5YW1sCi0tLQp0aXRsZTogIlByb3ZpZGVyIG5hbWUiCmRlc2NyaXB0aW9uOiAiV2hhdCBpdCBpcy4iCmNhdGVnb3J5OiAiY29kaW5nIgpraW5kOiAiZnJlZS1hcGkiICAgICMgZnJlZS1hcGkgfCBsb2NhbCB8IHBsYXRmb3JtIHwgdXRpbGl0eQp1cmw6ICJodHRwczovL2V4YW1wbGUuY29tIgpmcmVlOiB0cnVlCi0tLQpgYGAKCiMjIENvZGUgb2YgY29uZHVjdAoKQmUga2luZCwgYXR0cmlidXRlIHdoYXQgeW91IGJvcnJvdywgYW5kIGtlZXAgZXZlcnl0aGluZyBmcmVlLiDwn46JCg==
+# Contributing to PromptForge
+
+PromptForge is a git repo as its own database. Adding a prompt = adding one markdown
+file + opening a pull request. No forms, no accounts beyond GitHub, no paid tools.
+
+## Adding a prompt
+
+1. Fork the repository.
+2. Create a new file at `src/content/prompts/<slug>.md` (slug = kebab-case, e.g.
+   `code-review-expert.md`).
+3. Copy the template below and fill it in.
+4. Run `pnpm run validate` — it must pass.
+5. Commit and open a pull request.
+
+### Template
+
+````markdown
+---
+title: "My amazing prompt"
+description: "One sentence describing what it does (10–320 chars)."
+category: "coding"           # see categories below
+tags: ["coding", "review"]
+difficulty: "intermediate"   # beginner | intermediate | advanced
+model: "any"
+author: "your-github-handle"
+created: "2025-04-01"
+updated: "2025-04-01"
+upvotes: 0
+downvotes: 0
+version: 1
+---
+
+## The prompt
+
+```text
+Your prompt here. Use {{variable}} placeholders for inputs the user fills in.
+```
+
+## When to use it
+
+Explain when this prompt is useful and how to get the most out of it.
+````
+
+> ⚠️ Keep the first fenced code block as the copyable/runnable prompt. Do **not** nest
+> code fences inside it — the Run feature extracts the first fence verbatim.
+
+### Categories
+
+`writing` · `coding` · `productivity` · `analysis` · `creative` · `learning` ·
+`marketing` · `automation`
+
+### Rules
+
+- `title` 3–140 chars, `description` 10–320 chars.
+- `tags` 1–8 items, each 2–40 chars.
+- Dates must be `YYYY-MM-DD` and `created <= updated`.
+- `upvotes`/`downvotes` start at 0 for new submissions (never self-bump).
+
+## What CI does for you
+
+1. **Validate** — `.github/workflows/validate.yml` checks your frontmatter against the
+   Zod schema and builds the site.
+2. **Auto-tag** — `.github/workflows/auto-tag.yml` infers a category from your
+   title/description/body and posts a comment + a `category:*` label. You can override
+   it by setting `category` explicitly.
+
+## Running locally
+
+```bash
+pnpm install
+pnpm dev            # http://localhost:4321
+pnpm run validate   # Zod schema check on all content
+pnpm test           # core-logic tests (trending, markdown, auto-tag)
+pnpm build          # production build
+```
+
+## Adding a learning path
+
+Add `src/content/paths/<slug>.md` with frontmatter:
+
+```yaml
+---
+title: "Your path"
+description: "What this track teaches."
+level: "start"      # start | advance | master
+order: 2
+prompts:            # list of prompt slugs (filenames without .md)
+  - explain-like-im-12
+  - socratic-tutor
+---
+```
+
+## Adding a tool
+
+Add `src/content/tools/<slug>.md`:
+
+```yaml
+---
+title: "Provider name"
+description: "What it is."
+category: "coding"
+kind: "free-api"    # free-api | local | platform | utility
+url: "https://example.com"
+free: true
+---
+```
+
+## Code of conduct
+
+Be kind, attribute what you borrow, and keep everything free. 🎉

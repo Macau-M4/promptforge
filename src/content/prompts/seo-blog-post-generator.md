@@ -1,1 +1,42 @@
-LS0tCnRpdGxlOiAiU0VPIEJsb2cgUG9zdCBHZW5lcmF0b3IiCmRlc2NyaXB0aW9uOiAiVHVybiBhIHRvcGljIGFuZCB0YXJnZXQga2V5d29yZCBpbnRvIGEgc3RydWN0dXJlZCwgcmFua2luZy1yZWFkeSBibG9nIHBvc3Qgb3V0bGluZSBhbmQgZmlyc3QgZHJhZnQuIgpjYXRlZ29yeTogIndyaXRpbmciCnRhZ3M6IFsic2VvIiwgImJsb2ciLCAiY29udGVudCJdCmRpZmZpY3VsdHk6ICJpbnRlcm1lZGlhdGUiCm1vZGVsOiAiYW55IgphdXRob3I6ICJjb21tdW5pdHkiCmNyZWF0ZWQ6ICIyMDI0LTA5LTEyIgp1cGRhdGVkOiAiMjAyNS0wMy0xOCIKdXB2b3RlczogMTQ4CmRvd252b3RlczogNgp2ZXJzaW9uOiAyCi0tLQoKIyMgVGhlIHByb21wdAoKYGBgdGV4dApZb3UgYXJlIGEgc2VuaW9yIFNFTyBjb250ZW50IHN0cmF0ZWdpc3QuIFdyaXRlIGEgYmxvZyBwb3N0IHRoYXQgY2FuIHJhbmsgZm9yIHRoZSB0YXJnZXQga2V5d29yZC4KClRvcGljOiB7e3RvcGljfX0KVGFyZ2V0IGtleXdvcmQ6IHt7a2V5d29yZH19CkF1ZGllbmNlOiB7e2F1ZGllbmNlfX0KV29yZCBjb3VudDogfnt7d29yZHN9fQoKRG8gdGhlIGZvbGxvd2luZzoKMS4gUHJvcG9zZSAzIHRpdGxlIG9wdGlvbnMgKG9uZSB1c2VzIHRoZSBrZXl3b3JkIGZyb250LWxvYWRlZCkuCjIuIEdpdmUgYSBtZXRhIGRlc2NyaXB0aW9uIHVuZGVyIDE1NSBjaGFyYWN0ZXJzLgozLiBPdXRsaW5lIEgyL0gzIHNlY3Rpb25zIHdpdGggdGhlIGtleXdvcmQgYW5kIDItMyByZWxhdGVkIHRlcm1zIHBsYWNlZCBuYXR1cmFsbHkuCjQuIFdyaXRlIGEgY29tcGVsbGluZyBpbnRybyB0aGF0IHN0YXRlcyB0aGUgcHJvYmxlbSBhbmQgdGhlIHByb21pc2UuCjUuIFdyaXRlIHRoZSBmdWxsIGJvZHkgd2l0aCBhIGNsZWFyIENUQSBhdCB0aGUgZW5kLgoKVXNlIHBsYWluLCBhY3RpdmUgbGFuZ3VhZ2UuIE5ldmVyIGtleXdvcmQtc3R1ZmYuIFNob3cgc291cmNlcyBpZiB5b3UgY2l0ZSBzdGF0aXN0aWNzLgpgYGAKCiMjIFdoZW4gdG8gdXNlIGl0CgpQYXN0ZSBhIHRvcGljIGFuZCBvbmUga2V5d29yZC4gVXNlIHRoZSBvdXRsaW5lIHRvIHNhbml0eS1jaGVjayBjb3ZlcmFnZSBiZWZvcmUgd3JpdGluZyB0aGUgbG9uZyBmb3JtLiBUd2VhayBge3t3b3Jkc319YCB0byBtYXRjaCB5b3VyIHNpdGUncyBhdmVyYWdlIGxlbmd0aC4KCiMjIFBybyB0aXAKClJ1biBpdCB0d2ljZSDigJQgb25jZSBmb3IgdGhlIG91dGxpbmUsIG9uY2UgcGVyIEgyIHNlY3Rpb24gZm9yIGRlZXBlciBkcmFmdHMg4oCUIHNvIGVhY2ggc2VjdGlvbiBzdGF5cyBmb2N1c2VkLgo=
+---
+title: "SEO Blog Post Generator"
+description: "Turn a topic and target keyword into a structured, ranking-ready blog post outline and first draft."
+category: "writing"
+tags: ["seo", "blog", "content"]
+difficulty: "intermediate"
+model: "any"
+author: "community"
+created: "2024-09-12"
+updated: "2025-03-18"
+upvotes: 148
+downvotes: 6
+version: 2
+---
+
+## The prompt
+
+```text
+You are a senior SEO content strategist. Write a blog post that can rank for the target keyword.
+
+Topic: {{topic}}
+Target keyword: {{keyword}}
+Audience: {{audience}}
+Word count: ~{{words}}
+
+Do the following:
+1. Propose 3 title options (one uses the keyword front-loaded).
+2. Give a meta description under 155 characters.
+3. Outline H2/H3 sections with the keyword and 2-3 related terms placed naturally.
+4. Write a compelling intro that states the problem and the promise.
+5. Write the full body with a clear CTA at the end.
+
+Use plain, active language. Never keyword-stuff. Show sources if you cite statistics.
+```
+
+## When to use it
+
+Paste a topic and one keyword. Use the outline to sanity-check coverage before writing the long form. Tweak `{{words}}` to match your site's average length.
+
+## Pro tip
+
+Run it twice — once for the outline, once per H2 section for deeper drafts — so each section stays focused.

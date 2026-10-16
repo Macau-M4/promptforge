@@ -1,1 +1,87 @@
-Ly8gQXV0by10YWdnZXI6IGluZmVyIGEgY2F0ZWdvcnkgZm9yIG5ldy9lZGl0ZWQgcHJvbXB0IHN1Ym1pc3Npb25zIGZyb20gdGhlaXIKLy8gdGl0bGUsIGRlc2NyaXB0aW9uLCB0YWdzIGFuZCBib2R5IHVzaW5nIGZyZWUga2V5d29yZCBzY29yaW5nIChubyBMTE0gcmVxdWlyZWQpLgovLwovLyBBcyBhIENMSTogICBub2RlIHNjcmlwdHMvYXV0by10YWcubWpzIDxmaWxlMT4gW2ZpbGUyIC4uLl0KLy8gQXMgYSBtb2R1bGU6IGltcG9ydCB7IGluZmVyQ2F0ZWdvcnksIENBVEVHT1JJRVMgfSBmcm9tICcuL2F1dG8tdGFnLm1qcycKCmltcG9ydCB7IHJlYWRGaWxlU3luYyB9IGZyb20gJ25vZGU6ZnMnOwppbXBvcnQgeyBwYXRoVG9GaWxlVVJMIH0gZnJvbSAnbm9kZTp1cmwnOwppbXBvcnQgbWF0dGVyIGZyb20gJ2dyYXktbWF0dGVyJzsKCmV4cG9ydCBjb25zdCBDQVRFR09SSUVTID0gWwogICd3cml0aW5nJywKICAnY29kaW5nJywKICAncHJvZHVjdGl2aXR5JywKICAnYW5hbHlzaXMnLAogICdjcmVhdGl2ZScsCiAgJ2xlYXJuaW5nJywKICAnbWFya2V0aW5nJywKICAnYXV0b21hdGlvbicKXTsKCi8vIE9yZGVyZWQga2V5d29yZCDihpIgY2F0ZWdvcnkgbWFwLgpjb25zdCBLRVlXT1JEUyA9IFsKICBbJ2NvZGluZycsIFsnY29kZScsICdkZWJ1ZycsICdyZWZhY3RvcicsICdmdW5jdGlvbicsICdwcm9ncmFtbWluZycsICdweXRob24nLCAnamF2YXNjcmlwdCcsICd0eXBlc2NyaXB0JywgJ2FwaScsICdyZWdleCcsICd0ZXJtaW5hbCcsICdzaGVsbCcsICdjbGknLCAnc3FsJywgJ3JlYWN0JywgJ2dpdCcsICd1bml0IHRlc3QnLCAndGVzdGluZyddXSwKICBbJ2F1dG9tYXRpb24nLCBbJ2F1dG9tYXRlJywgJ2F1dG9tYXRpb24nLCAnYm90JywgJ3BpcGVsaW5lJywgJ2Nyb24nLCAnd29ya2Zsb3cnLCAnc2NyaXB0JywgJ2ludGVncmF0aW9uJywgJ3NjYWZmb2xkJ11dLAogIFsnYW5hbHlzaXMnLCBbJ2RhdGEnLCAnYW5hbHl6JywgJ2FuYWx5c2UnLCAncmVzZWFyY2gnLCAnc3VtbWFyaXonLCAnaW5zaWdodCcsICdzd290JywgJ3JlcG9ydCcsICdzdGF0aXN0aWNzJywgJ2NzdicsICdzdXJ2ZXknLCAnc3ludGhlcyddXSwKICBbJ2xlYXJuaW5nJywgWydsZWFybicsICd0ZWFjaCcsICd0dXRvcicsICdleHBsYWluJywgJ3F1aXonLCAnZmxhc2hjYXJkJywgJ3N0dWR5JywgJ2VkdWNhdGlvbicsICdjb25jZXB0JywgJ3NvY3JhdGljJ11dLAogIFsnbWFya2V0aW5nJywgWydtYXJrZXQnLCAnc29jaWFsJywgJ3Bvc3QnLCAnbGFuZGluZycsICdlbWFpbCcsICdjYW1wYWlnbicsICdzZW8nLCAnYnJhbmQnLCAnYXVkaWVuY2UnLCAnY29udmVyc2lvbicsICdjb3B5d3JpdCcsICdhZHZlcnQnXV0sCiAgWyd3cml0aW5nJywgWyd3cml0ZScsICd3cml0JywgJ2Jsb2cnLCAnZXNzYXknLCAnYXJ0aWNsZScsICdlZGl0JywgJ3Byb29mcmVhZCcsICdncmFtbWFyJywgJ3Jld3JpdGUnLCAnY29weScsICd0b25lJywgJ3N0b3J5JywgJ2ZpY3Rpb24nLCAnd29ybGRidWlsZCcsICdoZWFkbGluZSddXSwKICBbJ2NyZWF0aXZlJywgWydjcmVhdGl2ZScsICdhcnQnLCAnaW1hZ2UnLCAnY2hhcmFjdGVyJywgJ2Rlc2lnbicsICdwb2VtJywgJ211c2ljJywgJ3N0eWxlJ11dLAogIFsncHJvZHVjdGl2aXR5JywgWyd0YXNrJywgJ3RvZG8nLCAncGxhbicsICdzY2hlZHVsZScsICdtZWV0aW5nJywgJ25vdGVzJywgJ3ByaW9yaXRpeicsICdkZWNpc2lvbicsICdwcm9kdWN0aXZpdHknLCAndGltZScsICdlaXNlbmhvd2VyJ11dCl07CgpmdW5jdGlvbiBzY29yZSh0ZXh0KSB7CiAgY29uc3QgdCA9ICcgJyArIHRleHQudG9Mb3dlckNhc2UoKSArICcgJzsKICBjb25zdCBzY29yZXMgPSBPYmplY3QuZnJvbUVudHJpZXMoQ0FURUdPUklFUy5tYXAoKGMpID0+IFtjLCAwXSkpOwogIGZvciAoY29uc3QgW2NhdCwgd29yZHNdIG9mIEtFWVdPUkRTKSB7CiAgICBmb3IgKGNvbnN0IHcgb2Ygd29yZHMpIHsKICAgICAgaWYgKHQuaW5jbHVkZXModykpIHNjb3Jlc1tjYXRdICs9IDE7CiAgICB9CiAgfQogIHJldHVybiBzY29yZXM7Cn0KCmV4cG9ydCBmdW5jdGlvbiBpbmZlckNhdGVnb3J5KHRleHQsIGV4aXN0aW5nKSB7CiAgaWYgKENBVEVHT1JJRVMuaW5jbHVkZXMoZXhpc3RpbmcpKSByZXR1cm4geyBjYXRlZ29yeTogZXhpc3RpbmcsIGluZmVycmVkOiBmYWxzZSB9OwogIGNvbnN0IHNjb3JlcyA9IHNjb3JlKHRleHQpOwogIGNvbnN0IHJhbmtlZCA9IE9iamVjdC5lbnRyaWVzKHNjb3Jlcykuc29ydCgoYSwgYikgPT4gYlsxXSAtIGFbMV0pOwogIGNvbnN0IGJlc3QgPSByYW5rZWRbMF07CiAgaWYgKGJlc3RbMV0gPT09IDApIHJldHVybiB7IGNhdGVnb3J5OiBudWxsLCBpbmZlcnJlZDogZmFsc2UgfTsKICBjb25zdCBydW5uZXJVcCA9IHJhbmtlZFsxXT8uWzFdID8/IDA7CiAgY29uc3QgY29uZmlkZW50ID0gYmVzdFsxXSA+PSAyIHx8IGJlc3RbMV0gPiBydW5uZXJVcDsKICByZXR1cm4geyBjYXRlZ29yeTogY29uZmlkZW50ID8gYmVzdFswXSA6IG51bGwsIGluZmVycmVkOiBjb25maWRlbnQsIHNjb3JlcyB9Owp9CgpmdW5jdGlvbiBtYWluKCkgewogIGNvbnN0IGZpbGVzID0gcHJvY2Vzcy5hcmd2LnNsaWNlKDIpOwogIGlmIChmaWxlcy5sZW5ndGggPT09IDApIHsKICAgIGNvbnNvbGUuZXJyb3IoJ1VzYWdlOiBub2RlIHNjcmlwdHMvYXV0by10YWcubWpzIDxmaWxlMT4gW2ZpbGUyIC4uLl0nKTsKICAgIHByb2Nlc3MuZXhpdCgxKTsKICB9CiAgY29uc3QgcmVzdWx0cyA9IFtdOwogIGZvciAoY29uc3QgZmlsZSBvZiBmaWxlcykgewogICAgbGV0IHJhdzsKICAgIHRyeSB7CiAgICAgIHJhdyA9IHJlYWRGaWxlU3luYyhmaWxlLCAndXRmOCcpOwogICAgfSBjYXRjaCB7CiAgICAgIGNvbnNvbGUuZXJyb3IoYCAg4pqg77iPICBjYW5ub3QgcmVhZCAke2ZpbGV9YCk7CiAgICAgIGNvbnRpbnVlOwogICAgfQogICAgY29uc3QgeyBkYXRhLCBjb250ZW50IH0gPSBtYXR0ZXIocmF3KTsKICAgIGNvbnN0IHRleHQgPSBbZGF0YS50aXRsZSwgZGF0YS5kZXNjcmlwdGlvbiwgKGRhdGEudGFncyB8fCBbXSkuam9pbignICcpLCBjb250ZW50XS5qb2luKCcgJyk7CiAgICBjb25zdCByID0gaW5mZXJDYXRlZ29yeSh0ZXh0LCBkYXRhLmNhdGVnb3J5KTsKICAgIHJlc3VsdHMucHVzaCh7IGZpbGUsIC4uLnIgfSk7CiAgfQoKICBpZiAocHJvY2Vzcy5lbnYuR0lUSFVCX0FDVElPTlMpIHsKICAgIGNvbnNvbGUubG9nKEpTT04uc3RyaW5naWZ5KHJlc3VsdHMsIG51bGwsIDIpKTsKICB9IGVsc2UgewogICAgZm9yIChjb25zdCByIG9mIHJlc3VsdHMpIHsKICAgICAgY29uc29sZS5sb2coYCR7ci5maWxlfSDihpIgJHtyLmNhdGVnb3J5ID8/ICd1bmNsYXNzaWZpZWQnfSR7ci5pbmZlcnJlZCA/ICcgKGF1dG8taW5mZXJyZWQpJyA6ICcnfWApOwogICAgfQogIH0KfQoKY29uc3QgaXNNYWluID0gcHJvY2Vzcy5hcmd2WzFdICYmIGltcG9ydC5tZXRhLnVybCA9PT0gcGF0aFRvRmlsZVVSTChwcm9jZXNzLmFyZ3ZbMV0pLmhyZWY7CmlmIChpc01haW4pIG1haW4oKTsK
+// Auto-tagger: infer a category for new/edited prompt submissions from their
+// title, description, tags and body using free keyword scoring (no LLM required).
+//
+// As a CLI:   node scripts/auto-tag.mjs <file1> [file2 ...]
+// As a module: import { inferCategory, CATEGORIES } from './auto-tag.mjs'
+
+import { readFileSync } from 'node:fs';
+import { pathToFileURL } from 'node:url';
+import matter from 'gray-matter';
+
+export const CATEGORIES = [
+  'writing',
+  'coding',
+  'productivity',
+  'analysis',
+  'creative',
+  'learning',
+  'marketing',
+  'automation'
+];
+
+// Ordered keyword → category map.
+const KEYWORDS = [
+  ['coding', ['code', 'debug', 'refactor', 'function', 'programming', 'python', 'javascript', 'typescript', 'api', 'regex', 'terminal', 'shell', 'cli', 'sql', 'react', 'git', 'unit test', 'testing']],
+  ['automation', ['automate', 'automation', 'bot', 'pipeline', 'cron', 'workflow', 'script', 'integration', 'scaffold']],
+  ['analysis', ['data', 'analyz', 'analyse', 'research', 'summariz', 'insight', 'swot', 'report', 'statistics', 'csv', 'survey', 'synthes']],
+  ['learning', ['learn', 'teach', 'tutor', 'explain', 'quiz', 'flashcard', 'study', 'education', 'concept', 'socratic']],
+  ['marketing', ['market', 'social', 'post', 'landing', 'email', 'campaign', 'seo', 'brand', 'audience', 'conversion', 'copywrit', 'advert']],
+  ['writing', ['write', 'writ', 'blog', 'essay', 'article', 'edit', 'proofread', 'grammar', 'rewrite', 'copy', 'tone', 'story', 'fiction', 'worldbuild', 'headline']],
+  ['creative', ['creative', 'art', 'image', 'character', 'design', 'poem', 'music', 'style']],
+  ['productivity', ['task', 'todo', 'plan', 'schedule', 'meeting', 'notes', 'prioritiz', 'decision', 'productivity', 'time', 'eisenhower']]
+];
+
+function score(text) {
+  const t = ' ' + text.toLowerCase() + ' ';
+  const scores = Object.fromEntries(CATEGORIES.map((c) => [c, 0]));
+  for (const [cat, words] of KEYWORDS) {
+    for (const w of words) {
+      if (t.includes(w)) scores[cat] += 1;
+    }
+  }
+  return scores;
+}
+
+export function inferCategory(text, existing) {
+  if (CATEGORIES.includes(existing)) return { category: existing, inferred: false };
+  const scores = score(text);
+  const ranked = Object.entries(scores).sort((a, b) => b[1] - a[1]);
+  const best = ranked[0];
+  if (best[1] === 0) return { category: null, inferred: false };
+  const runnerUp = ranked[1]?.[1] ?? 0;
+  const confident = best[1] >= 2 || best[1] > runnerUp;
+  return { category: confident ? best[0] : null, inferred: confident, scores };
+}
+
+function main() {
+  const files = process.argv.slice(2);
+  if (files.length === 0) {
+    console.error('Usage: node scripts/auto-tag.mjs <file1> [file2 ...]');
+    process.exit(1);
+  }
+  const results = [];
+  for (const file of files) {
+    let raw;
+    try {
+      raw = readFileSync(file, 'utf8');
+    } catch {
+      console.error(`  ⚠️  cannot read ${file}`);
+      continue;
+    }
+    const { data, content } = matter(raw);
+    const text = [data.title, data.description, (data.tags || []).join(' '), content].join(' ');
+    const r = inferCategory(text, data.category);
+    results.push({ file, ...r });
+  }
+
+  if (process.env.GITHUB_ACTIONS) {
+    console.log(JSON.stringify(results, null, 2));
+  } else {
+    for (const r of results) {
+      console.log(`${r.file} → ${r.category ?? 'unclassified'}${r.inferred ? ' (auto-inferred)' : ''}`);
+    }
+  }
+}
+
+const isMain = process.argv[1] && import.meta.url === pathToFileURL(process.argv[1]).href;
+if (isMain) main();

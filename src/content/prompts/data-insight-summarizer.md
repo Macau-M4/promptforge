@@ -1,1 +1,44 @@
-LS0tCnRpdGxlOiAiRGF0YSBJbnNpZ2h0IFN1bW1hcml6ZXIiCmRlc2NyaXB0aW9uOiAiVHVybiBhIHJhdyB0YWJsZSwgQ1NWLCBvciBudW1iZXJzIGR1bXAgaW50byBwbGFpbi1sYW5ndWFnZSBpbnNpZ2h0cyBhbmQgYSByZWNvbW1lbmRlZCBuZXh0IHN0ZXAuIgpjYXRlZ29yeTogImFuYWx5c2lzIgp0YWdzOiBbImRhdGEiLCAiaW5zaWdodHMiLCAic3VtbWFyaXphdGlvbiJdCmRpZmZpY3VsdHk6ICJpbnRlcm1lZGlhdGUiCm1vZGVsOiAiYW55IgphdXRob3I6ICJjb21tdW5pdHkiCmNyZWF0ZWQ6ICIyMDI0LTA4LTIxIgp1cGRhdGVkOiAiMjAyNS0wMy0xMCIKdXB2b3RlczogNzkKZG93bnZvdGVzOiA0CnZlcnNpb246IDEKLS0tCgojIyBUaGUgcHJvbXB0CgpgYGB0ZXh0CkFuYWx5emUgdGhpcyBkYXRhc2V0IGFuZCBzdXJmYWNlIGluc2lnaHRzIGZvciBhIG5vbi10ZWNobmljYWwgYXVkaWVuY2UuCgpEYXRhOgoiIiIKe3tkYXRhfX0KIiIiCgpDb250ZXh0ICh3aGF0IHRoaXMgZGF0YSBpcywgYW5kIHdoYXQgZGVjaXNpb24gSSdtIHRyeWluZyB0byBtYWtlKToKe3tjb250ZXh0fX0KCk91dHB1dDoKMS4gSEVBRExJTkUg4oCUIHRoZSBzaW5nbGUgbW9zdCBpbXBvcnRhbnQgdGFrZWF3YXkgaW4gb25lIHNlbnRlbmNlLgoyLiBLRVkgRklORElOR1Mg4oCUIDMtNSBidWxsZXQgcG9pbnRzLCBlYWNoIHdpdGggdGhlIG51bWJlciBhbmQgd2hhdCBpdCBtZWFucyBpbiBwbGFpbiBFbmdsaXNoLgozLiBTVVJQUklTRVMg4oCUIGFueXRoaW5nIHVudXN1YWwsIG1pc3NpbmcsIG9yIHdvcnRoIGRvdWJsZS1jaGVja2luZy4KNC4gUkVDT01NRU5EQVRJT04g4oCUIG9uZSBjbGVhciBuZXh0IHN0ZXAsIGFuZCBvbmUgcXVlc3Rpb24geW91J2QgbmVlZCBhbnN3ZXJlZCB0byBnbyBmdXJ0aGVyLgoKRG8gbm90IG92ZXJzdGF0ZSBjb25maWRlbmNlLiBJZiBhIGNvbmNsdXNpb24gaXMgd2VhayBnaXZlbiB0aGUgZGF0YSwgc2F5IHNvLgpgYGAKCiMjIFdoZW4gdG8gdXNlIGl0CgpQYXN0ZSBhIENTViBvciBhIHBhc3RlZCBzcHJlYWRzaGVldCByYW5nZSBwbHVzIGEgc2VudGVuY2UgYWJvdXQgd2hhdCBkZWNpc2lvbiB5b3UncmUgbWFraW5nLiBJdCB0dXJucyAiaGVyZSBhcmUgbnVtYmVycyIgaW50byAiaGVyZSBpcyB3aGF0IHRvIGRvIi4KCiMjIFBybyB0aXAKCkZvciBsYXJnZSBkYXRhc2V0cywgcGFzdGUgdGhlIHN1bW1hcnkgc3RhdGlzdGljcyAodG90YWxzLCBhdmVyYWdlcywgdG9wIHJvd3MpIHJhdGhlciB0aGFuIHRob3VzYW5kcyBvZiByb3dzIOKAlCB0aGUgbW9kZWwgcmVhc29ucyBiZXR0ZXIgd2l0aCBhIGNsZWFuIHNsaWNlLgo=
+---
+title: "Data Insight Summarizer"
+description: "Turn a raw table, CSV, or numbers dump into plain-language insights and a recommended next step."
+category: "analysis"
+tags: ["data", "insights", "summarization"]
+difficulty: "intermediate"
+model: "any"
+author: "community"
+created: "2024-08-21"
+updated: "2025-03-10"
+upvotes: 79
+downvotes: 4
+version: 1
+---
+
+## The prompt
+
+```text
+Analyze this dataset and surface insights for a non-technical audience.
+
+Data:
+"""
+{{data}}
+"""
+
+Context (what this data is, and what decision I'm trying to make):
+{{context}}
+
+Output:
+1. HEADLINE — the single most important takeaway in one sentence.
+2. KEY FINDINGS — 3-5 bullet points, each with the number and what it means in plain English.
+3. SURPRISES — anything unusual, missing, or worth double-checking.
+4. RECOMMENDATION — one clear next step, and one question you'd need answered to go further.
+
+Do not overstate confidence. If a conclusion is weak given the data, say so.
+```
+
+## When to use it
+
+Paste a CSV or a pasted spreadsheet range plus a sentence about what decision you're making. It turns "here are numbers" into "here is what to do".
+
+## Pro tip
+
+For large datasets, paste the summary statistics (totals, averages, top rows) rather than thousands of rows — the model reasons better with a clean slice.

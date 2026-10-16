@@ -1,1 +1,32 @@
-LS0tCnRpdGxlOiAiR3JvcSAoZnJlZSB0aWVyKSIKZGVzY3JpcHRpb246ICJCbGF6aW5nLWZhc3Qgb3Blbi1tb2RlbCBpbmZlcmVuY2Ugd2l0aCBhIGZyZWUgdGllciBhbmQgbm8gY3JlZGl0IGNhcmQuIgpjYXRlZ29yeTogImNvZGluZyIKa2luZDogImZyZWUtYXBpIgp1cmw6ICJodHRwczovL2NvbnNvbGUuZ3JvcS5jb20vIgpmcmVlOiB0cnVlCi0tLQoKIyBHcm9xIOKAlCBmcmVlIGZhc3QgaW5mZXJlbmNlCgpHcm9xIHNlcnZlcyBvcGVuIG1vZGVscyAoTGxhbWEsIE1peHRyYWwsIEdlbW1hKSBhdCBleHRyZW1lbHkgaGlnaCBzcGVlZC4gVGhlIGZyZWUKdGllciBuZWVkcyAqKm5vIGNyZWRpdCBjYXJkKiouCgojIyBHZXQgYSBrZXkKCjEuIFNpZ24gaW4gYXQgW2NvbnNvbGUuZ3JvcS5jb21dKGh0dHBzOi8vY29uc29sZS5ncm9xLmNvbS8pIChHaXRIdWIgb3IgR29vZ2xlIGxvZ2luKS4KMi4gR28gdG8gKipBUEkgS2V5cyoqIOKGkiAqKkNyZWF0ZSBBUEkgS2V5KiouCjMuIFBhc3RlIGl0IGludG8gdGhlIFByb21wdEZvcmdlICoqUnVuKiogcGFnZS4KCiMjIEZyZWUgbW9kZWxzCgotIGBsbGFtYS0zLjMtNzBiLXZlcnNhdGlsZWAKLSBgbGxhbWEtMy4xLThiLWluc3RhbnRgCi0gYG1peHRyYWwtOHg3Yi0zMjc2OGAKLSBgZ2VtbWEyLTliLWl0YAoKIyMgSG93IFByb21wdEZvcmdlIHVzZXMgaXQKClRoZSBSdW4gcGFnZSBjYWxscyB0aGUgT3BlbkFJLWNvbXBhdGlibGUgZW5kcG9pbnQKYFBPU1QgaHR0cHM6Ly9hcGkuZ3JvcS5jb20vb3BlbmFpL3YxL2NoYXQvY29tcGxldGlvbnNgIHdpdGggYEF1dGhvcml6YXRpb246IEJlYXJlciA8a2V5PmAsCmRpcmVjdGx5IGZyb20geW91ciBicm93c2VyLiBUaGUga2V5IGlzIHN0b3JlZCBvbmx5IGluIHlvdXIgYnJvd3NlcidzIGxvY2FsU3RvcmFnZS4K
+---
+title: "Groq (free tier)"
+description: "Blazing-fast open-model inference with a free tier and no credit card."
+category: "coding"
+kind: "free-api"
+url: "https://console.groq.com/"
+free: true
+---
+
+# Groq — free fast inference
+
+Groq serves open models (Llama, Mixtral, Gemma) at extremely high speed. The free
+tier needs **no credit card**.
+
+## Get a key
+
+1. Sign in at [console.groq.com](https://console.groq.com/) (GitHub or Google login).
+2. Go to **API Keys** → **Create API Key**.
+3. Paste it into the PromptForge **Run** page.
+
+## Free models
+
+- `llama-3.3-70b-versatile`
+- `llama-3.1-8b-instant`
+- `mixtral-8x7b-32768`
+- `gemma2-9b-it`
+
+## How PromptForge uses it
+
+The Run page calls the OpenAI-compatible endpoint
+`POST https://api.groq.com/openai/v1/chat/completions` with `Authorization: Bearer <key>`,
+directly from your browser. The key is stored only in your browser's localStorage.

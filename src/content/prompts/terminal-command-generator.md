@@ -1,1 +1,42 @@
-LS0tCnRpdGxlOiAiVGVybWluYWwgQ29tbWFuZCBHZW5lcmF0b3IiCmRlc2NyaXB0aW9uOiAiRGVzY3JpYmUgd2hhdCB5b3Ugd2FudCBpbiBwbGFpbiBFbmdsaXNoIGFuZCBnZXQgYSBzYWZlLCBleHBsYWluZWQgc2hlbGwgY29tbWFuZC4iCmNhdGVnb3J5OiAiYXV0b21hdGlvbiIKdGFnczogWyJ0ZXJtaW5hbCIsICJzaGVsbCIsICJjbGkiXQpkaWZmaWN1bHR5OiAiaW50ZXJtZWRpYXRlIgptb2RlbDogImFueSIKYXV0aG9yOiAiY29tbXVuaXR5IgpjcmVhdGVkOiAiMjAyNC0wOS0wNSIKdXBkYXRlZDogIjIwMjUtMDMtMjAiCnVwdm90ZXM6IDgxCmRvd252b3RlczogNAp2ZXJzaW9uOiAxCi0tLQoKIyMgVGhlIHByb21wdAoKYGBgdGV4dApHZW5lcmF0ZSBhIHNoZWxsIGNvbW1hbmQgZm9yIHRoaXMgdGFzay4KClRhc2s6IHt7dGFza319ClNoZWxsIC8gT1M6IHt7c2hlbGx9fQoKT3V0cHV0OgoxLiBDT01NQU5EIOKAlCB0aGUgZXhhY3QgY29tbWFuZCBpbiBhIGNvZGUgYmxvY2suCjIuIEVYUExBTkFUSU9OIOKAlCB3aGF0IGVhY2ggZmxhZy9wYXJ0IGRvZXMsIGluIG9uZSBsaW5lIGVhY2guCjMuIFNBRkVUWSDigJQgd2hhdCBjb3VsZCBnbyB3cm9uZywgYW5kIHdoZXRoZXIgaXQncyBkZXN0cnVjdGl2ZSBvciByZXZlcnNpYmxlLgo0LiBWRVJJRlkg4oCUIGEgcmVhZC1vbmx5IGNvbW1hbmQgdG8gY29uZmlybSBpdCB3b3JrZWQuCgpSdWxlczoKLSBQcmVmZXIgYnVpbHQtaW4gdG9vbHMgb3ZlciBleHRyYSBkZXBlbmRlbmNpZXMuCi0gSWYgdGhlIHRhc2sgaXMgZGVzdHJ1Y3RpdmUgKHJtLCBmb3JjZSBwdXNoLCBldGMuKSwgc2F5IHNvIGxvdWRseSBhbmQgYWRkIGEgc2FmZSBhbHRlcm5hdGl2ZS4KLSBOZXZlciBhc3N1bWUgZmlsZSBwYXRocyBJIGRpZG4ndCBnaXZlIHlvdS4KYGBgCgojIyBXaGVuIHRvIHVzZSBpdAoKVXNlIGl0IGluc3RlYWQgb2YgZ3Vlc3NpbmcgYXQgZmxhZ3MuIFRoZSBFWFBMQU5BVElPTiBzZWN0aW9uIGlzIHRoZSBkaWZmZXJlbmNlIGJldHdlZW4gY29weS1wYXN0aW5nIGFuZCBhY3R1YWxseSBsZWFybmluZyB0aGUgQ0xJLgoKIyMgUHJvIHRpcAoKQWRkIGB7e3NoZWxsfX1gIGV4cGxpY2l0bHkgKGJhc2gvenNoL2Zpc2gvUG93ZXJTaGVsbCkg4oCUIGZsYWcgc3ludGF4IGFuZCBxdW90aW5nIGRpZmZlciBlbm91Z2ggdG8gbWF0dGVyLgo=
+---
+title: "Terminal Command Generator"
+description: "Describe what you want in plain English and get a safe, explained shell command."
+category: "automation"
+tags: ["terminal", "shell", "cli"]
+difficulty: "intermediate"
+model: "any"
+author: "community"
+created: "2024-09-05"
+updated: "2025-03-20"
+upvotes: 81
+downvotes: 4
+version: 1
+---
+
+## The prompt
+
+```text
+Generate a shell command for this task.
+
+Task: {{task}}
+Shell / OS: {{shell}}
+
+Output:
+1. COMMAND — the exact command in a code block.
+2. EXPLANATION — what each flag/part does, in one line each.
+3. SAFETY — what could go wrong, and whether it's destructive or reversible.
+4. VERIFY — a read-only command to confirm it worked.
+
+Rules:
+- Prefer built-in tools over extra dependencies.
+- If the task is destructive (rm, force push, etc.), say so loudly and add a safe alternative.
+- Never assume file paths I didn't give you.
+```
+
+## When to use it
+
+Use it instead of guessing at flags. The EXPLANATION section is the difference between copy-pasting and actually learning the CLI.
+
+## Pro tip
+
+Add `{{shell}}` explicitly (bash/zsh/fish/PowerShell) — flag syntax and quoting differ enough to matter.

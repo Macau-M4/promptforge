@@ -1,1 +1,18 @@
-Ly8vIDxyZWZlcmVuY2UgdHlwZXM9ImFzdHJvL2NsaWVudCIgLz4KCmludGVyZmFjZSBJbXBvcnRNZXRhRW52IHsKICByZWFkb25seSBQVUJMSUNfU0lURT86IHN0cmluZzsKICByZWFkb25seSBQVUJMSUNfQkFTRT86IHN0cmluZzsKICAvKiogR2l0SHViIE9BdXRoIEFwcCBjbGllbnQgaWQgKHB1YmxpYykg4oCUIGVuYWJsZXMgb25lLWNsaWNrIGxvZ2luLiAqLwogIHJlYWRvbmx5IFBVQkxJQ19HSVRIVUJfQ0xJRU5UX0lEPzogc3RyaW5nOwogIC8qKiBHaXRIdWIgcmVwbyBpbiAib3duZXIvbmFtZSIgZm9ybSwgdXNlZCB0byBidWlsZCBjb250cmlidXRpb24gbGlua3MuICovCiAgcmVhZG9ubHkgUFVCTElDX1JFUE8/OiBzdHJpbmc7Cn0KCmludGVyZmFjZSBJbXBvcnRNZXRhIHsKICByZWFkb25seSBlbnY6IEltcG9ydE1ldGFFbnY7Cn0KCmludGVyZmFjZSBXaW5kb3cgewogIF9fUFJPTVBUU19fOiBhbnlbXTsKfQo=
+/// <reference types="astro/client" />
+
+interface ImportMetaEnv {
+  readonly PUBLIC_SITE?: string;
+  readonly PUBLIC_BASE?: string;
+  /** GitHub OAuth App client id (public) — enables one-click login. */
+  readonly PUBLIC_GITHUB_CLIENT_ID?: string;
+  /** GitHub repo in "owner/name" form, used to build contribution links. */
+  readonly PUBLIC_REPO?: string;
+}
+
+interface ImportMeta {
+  readonly env: ImportMetaEnv;
+}
+
+interface Window {
+  __PROMPTS__: any[];
+}

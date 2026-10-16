@@ -1,1 +1,42 @@
-LS0tCnRpdGxlOiAiUHl0aG9uIFNjcmlwdCBTY2FmZm9sZGVyIgpkZXNjcmlwdGlvbjogIkdlbmVyYXRlIGEgY29tcGxldGUsIHJ1bm5hYmxlIFB5dGhvbiBzY3JpcHQgd2l0aCBlcnJvciBoYW5kbGluZyBhbmQgYSBDTEkgaW50ZXJmYWNlLiIKY2F0ZWdvcnk6ICJhdXRvbWF0aW9uIgp0YWdzOiBbInB5dGhvbiIsICJzY3JpcHRpbmciLCAiY2xpIl0KZGlmZmljdWx0eTogImFkdmFuY2VkIgptb2RlbDogImFueSIKYXV0aG9yOiAiY29tbXVuaXR5IgpjcmVhdGVkOiAiMjAyNC0xMC0yOCIKdXBkYXRlZDogIjIwMjUtMDMtMTIiCnVwdm90ZXM6IDQ0CmRvd252b3RlczogNQp2ZXJzaW9uOiAxCi0tLQoKIyMgVGhlIHByb21wdAoKYGBgdGV4dApXcml0ZSBhIGNvbXBsZXRlLCBydW5uYWJsZSBQeXRob24gc2NyaXB0IGZvciB0aGlzIHRhc2suCgpUYXNrOiB7e3Rhc2t9fQpJbnB1dHM6IHt7aW5wdXRzfX0KT3V0cHV0czoge3tvdXRwdXRzfX0KClJlcXVpcmVtZW50czoKLSBVc2Ugb25seSB0aGUgUHl0aG9uIHN0YW5kYXJkIGxpYnJhcnkgdW5sZXNzIEkgc2F5IG90aGVyd2lzZS4KLSBJbmNsdWRlIGEgYG1haW4oKWAgZnVuY3Rpb24gYW5kIGEgYGlmIF9fbmFtZV9fID09ICJfX21haW5fXyI6YCBndWFyZC4KLSBBZGQgYSBgLS1oZWxwYCBhcmd1bWVudCBwYXJzZXIgKGFyZ3BhcnNlKSBmb3IgYWxsIGlucHV0cy4KLSBIYW5kbGUgZXJyb3JzIGdyYWNlZnVsbHkgKGZpbGUgbm90IGZvdW5kLCBiYWQgaW5wdXQpIHdpdGggY2xlYXIgbWVzc2FnZXMuCi0gSW5jbHVkZSBhIHNob3J0IGRvY3N0cmluZyBhbmQgMi0zIGlubGluZSBjb21tZW50cyBvbiBub24tb2J2aW91cyBsaW5lcy4KLSBQcmludCBhIGNsZWFyIHN1Y2Nlc3MvZmFpbHVyZSBzdW1tYXJ5IGF0IHRoZSBlbmQuCgpPdXRwdXQgdGhlIHNjcmlwdCBpbiBvbmUgY29kZSBibG9jaywgdGhlbiBhIG9uZS1saW5lICJob3cgdG8gcnVuIiBleGFtcGxlLgpgYGAKCiMjIFdoZW4gdG8gdXNlIGl0CgpVc2UgaXQgdG8gdHVybiBhIG9uZS1vZmYgbWFudWFsIHRhc2sgaW50byBhIHJldXNhYmxlIHNjcmlwdC4gVGhlIGFyZ3BhcnNlICsgZXJyb3ItaGFuZGxpbmcgYm9pbGVycGxhdGUgaXMgd2hhdCBtYWtlcyBpdCBwcm9kdWN0aW9uLXJlYWR5IGluc3RlYWQgb2YgYSB0b3kuCgojIyBQcm8gdGlwCgpBZnRlciBpdCBydW5zLCBwYXN0ZSB0aGUgc2NyaXB0IGludG8gdGhlICJDb2RlIFJldmlldyBFeHBlcnQiIHByb21wdCB0byBoYXJkZW4gaXQgYmVmb3JlIHlvdSBjb21taXQgaXQuCg==
+---
+title: "Python Script Scaffolder"
+description: "Generate a complete, runnable Python script with error handling and a CLI interface."
+category: "automation"
+tags: ["python", "scripting", "cli"]
+difficulty: "advanced"
+model: "any"
+author: "community"
+created: "2024-10-28"
+updated: "2025-03-12"
+upvotes: 44
+downvotes: 5
+version: 1
+---
+
+## The prompt
+
+```text
+Write a complete, runnable Python script for this task.
+
+Task: {{task}}
+Inputs: {{inputs}}
+Outputs: {{outputs}}
+
+Requirements:
+- Use only the Python standard library unless I say otherwise.
+- Include a `main()` function and a `if __name__ == "__main__":` guard.
+- Add a `--help` argument parser (argparse) for all inputs.
+- Handle errors gracefully (file not found, bad input) with clear messages.
+- Include a short docstring and 2-3 inline comments on non-obvious lines.
+- Print a clear success/failure summary at the end.
+
+Output the script in one code block, then a one-line "how to run" example.
+```
+
+## When to use it
+
+Use it to turn a one-off manual task into a reusable script. The argparse + error-handling boilerplate is what makes it production-ready instead of a toy.
+
+## Pro tip
+
+After it runs, paste the script into the "Code Review Expert" prompt to harden it before you commit it.

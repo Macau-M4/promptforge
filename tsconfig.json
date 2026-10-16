@@ -1,1 +1,7 @@
-ewogICJleHRlbmRzIjogImFzdHJvL3RzY29uZmlncy9iYXNlIiwKICAiY29tcGlsZXJPcHRpb25zIjogewogICAgInN0cmljdCI6IHRydWUsCiAgICAibm9VbmNoZWNrZWRJbmRleGVkQWNjZXNzIjogdHJ1ZQogIH0KfQo=
+{
+  "extends": "astro/tsconfigs/base",
+  "compilerOptions": {
+    "strict": true,
+    "noUncheckedIndexedAccess": true
+  }
+}

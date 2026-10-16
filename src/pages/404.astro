@@ -1,1 +1,13 @@
-LS0tCmltcG9ydCBMYXlvdXQgZnJvbSAnLi4vbGF5b3V0cy9MYXlvdXQuYXN0cm8nOwpjb25zdCBiYXNlID0gaW1wb3J0Lm1ldGEuZW52LkJBU0VfVVJMOwotLS0KCjxMYXlvdXQgdGl0bGU9IlBhZ2Ugbm90IGZvdW5kIiBkZXNjcmlwdGlvbj0iNDA0IOKAlCB0aGlzIHBhZ2UgZG9lcyBub3QgZXhpc3QuIj4KICA8c2VjdGlvbiBjbGFzcz0ibXgtYXV0byBtYXgtdy0yeGwgcHgtNCBzbTpweC02IHB5LTI0IHRleHQtY2VudGVyIj4KICAgIDxkaXYgY2xhc3M9InRleHQtN3hsIGZvbnQtZXh0cmFib2xkIGdyYWQtdGV4dCI+NDA0PC9kaXY+CiAgICA8aDEgY2xhc3M9InRleHQtMnhsIGZvbnQtYm9sZCB0ZXh0LXNsYXRlLTEwMCBtdC00Ij5UaGF0IHBhZ2UgZG9lc24ndCBleGlzdDwvaDE+CiAgICA8cCBjbGFzcz0idGV4dC1zbGF0ZS00MDAgbXQtMiI+VGhlIHByb21wdCB5b3UncmUgbG9va2luZyBmb3IgbWF5IGhhdmUgYmVlbiBtZXJnZWQsIHJlbmFtZWQsIG9yIG5ldmVyIGV4aXN0ZWQuPC9wPgogICAgPGEgaHJlZj17YCR7YmFzZX1gfSBjbGFzcz0iYnRuLXByaW1hcnkgcHgtNiBweS0zIG10LTgiPuKGkCBCYWNrIHRvIGJyb3dzaW5nPC9hPgogIDwvc2VjdGlvbj4KPC9MYXlvdXQ+Cg==
+---
+import Layout from '../layouts/Layout.astro';
+const base = import.meta.env.BASE_URL;
+---
+
+<Layout title="Page not found" description="404 — this page does not exist.">
+  <section class="mx-auto max-w-2xl px-4 sm:px-6 py-24 text-center">
+    <div class="text-7xl font-extrabold grad-text">404</div>
+    <h1 class="text-2xl font-bold text-slate-100 mt-4">That page doesn't exist</h1>
+    <p class="text-slate-400 mt-2">The prompt you're looking for may have been merged, renamed, or never existed.</p>
+    <a href={`${base}`} class="btn-primary px-6 py-3 mt-8">← Back to browsing</a>
+  </section>
+</Layout>

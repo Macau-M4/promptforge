@@ -1,1 +1,42 @@
-LS0tCnRpdGxlOiAiRW1haWwgU2VxdWVuY2UgV3JpdGVyIgpkZXNjcmlwdGlvbjogIkRyYWZ0IGEgbXVsdGktZW1haWwgbnVydHVyZSBzZXF1ZW5jZSB3aXRoIGEgY2xlYXIgYXJjIGZyb20gd2VsY29tZSB0byBjb252ZXJzaW9uLiIKY2F0ZWdvcnk6ICJtYXJrZXRpbmciCnRhZ3M6IFsiZW1haWwiLCAibnVydHVyZSIsICJzZXF1ZW5jZSJdCmRpZmZpY3VsdHk6ICJhZHZhbmNlZCIKbW9kZWw6ICJhbnkiCmF1dGhvcjogImNvbW11bml0eSIKY3JlYXRlZDogIjIwMjQtMTItMTUiCnVwZGF0ZWQ6ICIyMDI1LTAzLTE1Igp1cHZvdGVzOiAzNwpkb3dudm90ZXM6IDQKdmVyc2lvbjogMQotLS0KCiMjIFRoZSBwcm9tcHQKCmBgYHRleHQKV3JpdGUgYSB7e2NvdW50fX0tZW1haWwgc2VxdWVuY2UgZm9yIHRoaXMgc2NlbmFyaW8uCgpBdWRpZW5jZToge3thdWRpZW5jZX19Ck9mZmVyOiB7e29mZmVyfX0KU2VxdWVuY2UgZ29hbDoge3tnb2FsfX0KVm9pY2U6IHt7dm9pY2V9fQoKRm9yIGVhY2ggZW1haWwsIHByb3ZpZGU6Ci0gU1VCSkVDVCBMSU5FIOKAlCAyIG9wdGlvbnMuCi0gR09BTCDigJQgd2hhdCB0aGlzIGVtYWlsIHNob3VsZCBhY2hpZXZlLgotIEJPRFkg4oCUIHRoZSBkcmFmdCAoc2hvcnQsIHNraW1tYWJsZSwgb25lIG1haW4gaWRlYSkuCi0gQ1RBIOKAlCB0aGUgc2luZ2xlIGFjdGlvbiB0byB0YWtlLgotIFNFTkQgVElNSU5HIOKAlCBzdWdnZXN0ZWQgZGVsYXkgZnJvbSB0aGUgcHJldmlvdXMgZW1haWwuCgpTdHJ1Y3R1cmUgdGhlIG92ZXJhbGwgYXJjOiBob29rIOKGkiB2YWx1ZSDihpIgdmFsdWUg4oaSIHNvY2lhbCBwcm9vZiDihpIgb2JqZWN0aW9uIGhhbmRsaW5nIOKGkiBmaW5hbCBDVEEuIEFkZCBhIFAuUy4gbGluZSB0byBhdCBsZWFzdCB0d28gZW1haWxzLiBOb3RlIHdoZXJlIHBlcnNvbmFsaXphdGlvbiBmaWVsZHMgbGlrZSB7e2ZpcnN0X25hbWV9fSBzaG91bGQgZ28uCmBgYAoKIyMgV2hlbiB0byB1c2UgaXQKClVzZSBpdCB0byBnbyBmcm9tICJJIHNob3VsZCBlbWFpbCBteSBsaXN0IiB0byBhIGZ1bGwgZHJhZnQgaW4gbWludXRlcy4gVHJlYXQgdGhlIG91dHB1dCBhcyBhIGZpcnN0IGRyYWZ0IOKAlCBhbHdheXMgZWRpdCB0aGUgdm9pY2UgdG8gbWF0Y2ggeW91ciBvd24uCgojIyBQcm8gdGlwCgpHZW5lcmF0ZSBzdWJqZWN0IGxpbmVzIHNlcGFyYXRlbHkgaW4gYnVsayAoMjArIG9wdGlvbnMpIGFuZCBBL0IgdGVzdCB0aGUgdG9wIHR3byDigJQgdGhlIHN1YmplY3QgaXMgdGhlIGhpZ2hlc3QtbGV2ZXJhZ2UgbGluZSBpbiB0aGUgd2hvbGUgc2VxdWVuY2UuCg==
+---
+title: "Email Sequence Writer"
+description: "Draft a multi-email nurture sequence with a clear arc from welcome to conversion."
+category: "marketing"
+tags: ["email", "nurture", "sequence"]
+difficulty: "advanced"
+model: "any"
+author: "community"
+created: "2024-12-15"
+updated: "2025-03-15"
+upvotes: 37
+downvotes: 4
+version: 1
+---
+
+## The prompt
+
+```text
+Write a {{count}}-email sequence for this scenario.
+
+Audience: {{audience}}
+Offer: {{offer}}
+Sequence goal: {{goal}}
+Voice: {{voice}}
+
+For each email, provide:
+- SUBJECT LINE — 2 options.
+- GOAL — what this email should achieve.
+- BODY — the draft (short, skimmable, one main idea).
+- CTA — the single action to take.
+- SEND TIMING — suggested delay from the previous email.
+
+Structure the overall arc: hook → value → value → social proof → objection handling → final CTA. Add a P.S. line to at least two emails. Note where personalization fields like {{first_name}} should go.
+```
+
+## When to use it
+
+Use it to go from "I should email my list" to a full draft in minutes. Treat the output as a first draft — always edit the voice to match your own.
+
+## Pro tip
+
+Generate subject lines separately in bulk (20+ options) and A/B test the top two — the subject is the highest-leverage line in the whole sequence.

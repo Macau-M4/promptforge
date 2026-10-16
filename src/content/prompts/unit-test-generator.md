@@ -1,1 +1,39 @@
-LS0tCnRpdGxlOiAiVW5pdCBUZXN0IEdlbmVyYXRvciIKZGVzY3JpcHRpb246ICJHZW5lcmF0ZSBhIGZvY3VzZWQsIGVkZ2UtY2FzZS1hd2FyZSB1bml0IHRlc3Qgc3VpdGUgZm9yIGEgZnVuY3Rpb24sIGluIHlvdXIgZnJhbWV3b3JrIG9mIGNob2ljZS4iCmNhdGVnb3J5OiAiY29kaW5nIgp0YWdzOiBbInRlc3RpbmciLCAidGRkIiwgInF1YWxpdHkiXQpkaWZmaWN1bHR5OiAiYWR2YW5jZWQiCm1vZGVsOiAiYW55IgphdXRob3I6ICJjb21tdW5pdHkiCmNyZWF0ZWQ6ICIyMDI0LTExLTA1Igp1cGRhdGVkOiAiMjAyNS0wMy0yNyIKdXB2b3RlczogNzQKZG93bnZvdGVzOiAzCnZlcnNpb246IDEKLS0tCgojIyBUaGUgcHJvbXB0CgpgYGB0ZXh0CldyaXRlIGEgdW5pdCB0ZXN0IHN1aXRlIGZvciB0aGUgZnVuY3Rpb24gYmVsb3cgdXNpbmcge3tmcmFtZXdvcmt9fS4KClJlcXVpcmVtZW50czoKLSBDb3ZlciB0aGUgaGFwcHkgcGF0aCBBTkQgZWRnZSBjYXNlcyAoZW1wdHkgaW5wdXQsIG51bGwvdW5kZWZpbmVkLCBib3VuZGFyeSB2YWx1ZXMsIGVycm9yIHBhdGhzKS4KLSBVc2UgYSBjbGVhciBBQUEgKEFycmFuZ2UvQWN0L0Fzc2VydCkgc3RydWN0dXJlLgotIE1vY2sgZXh0ZXJuYWwgZGVwZW5kZW5jaWVzIGlmIHByZXNlbnQuCi0gSW5jbHVkZSBvbmUgdGVzdCB0aGF0IGRvY3VtZW50cyBhIHRyaWNreSBlZGdlIGNhc2UsIHdpdGggYSBjb21tZW50IGV4cGxhaW5pbmcgdGhlIGFzc3VtcHRpb24uCgpGdW5jdGlvbiAoe3tsYW5ndWFnZX19KToKe3tjb2RlfX0KCk91dHB1dCBvbmx5IHRoZSB0ZXN0IGNvZGUsIHRoZW4gYSBzaG9ydCBsaXN0IG9mIGVkZ2UgY2FzZXMgeW91IGNvdmVyZWQuCmBgYAoKIyMgV2hlbiB0byB1c2UgaXQKClBhc3RlIGEgc2luZ2xlIHB1cmUgZnVuY3Rpb24gb3IgYSBzbWFsbCBjbGFzcyBtZXRob2QgaW50byBge3tjb2RlfX1gLiBGb3Igd2hvbGUgbW9kdWxlcywgcnVuIGl0IG9uZSBmdW5jdGlvbiBhdCBhIHRpbWUgdG8ga2VlcCBjb3ZlcmFnZSB0YXJnZXRlZC4KCiMjIFBybyB0aXAKCkFmdGVyIGdlbmVyYXRpbmcsIHJlYWQgZWFjaCBhc3NlcnRpb24gYW5kIGNvbmZpcm0gdGhlIGV4cGVjdGVkIHZhbHVlIGlzIGFjdHVhbGx5IHdoYXQgeW91IHdhbnQg4oCUIHRoZSBtb2RlbCBjYW4gYXNzZXJ0IHRoZSBidWdneSBiZWhhdmlvciBpZiB0aGUgZnVuY3Rpb24gaXMgd3JvbmcuCg==
+---
+title: "Unit Test Generator"
+description: "Generate a focused, edge-case-aware unit test suite for a function, in your framework of choice."
+category: "coding"
+tags: ["testing", "tdd", "quality"]
+difficulty: "advanced"
+model: "any"
+author: "community"
+created: "2024-11-05"
+updated: "2025-03-27"
+upvotes: 74
+downvotes: 3
+version: 1
+---
+
+## The prompt
+
+```text
+Write a unit test suite for the function below using {{framework}}.
+
+Requirements:
+- Cover the happy path AND edge cases (empty input, null/undefined, boundary values, error paths).
+- Use a clear AAA (Arrange/Act/Assert) structure.
+- Mock external dependencies if present.
+- Include one test that documents a tricky edge case, with a comment explaining the assumption.
+
+Function ({{language}}):
+{{code}}
+
+Output only the test code, then a short list of edge cases you covered.
+```
+
+## When to use it
+
+Paste a single pure function or a small class method into `{{code}}`. For whole modules, run it one function at a time to keep coverage targeted.
+
+## Pro tip
+
+After generating, read each assertion and confirm the expected value is actually what you want — the model can assert the buggy behavior if the function is wrong.

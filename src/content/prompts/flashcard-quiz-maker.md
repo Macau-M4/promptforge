@@ -1,1 +1,40 @@
-LS0tCnRpdGxlOiAiRmxhc2hjYXJkICYgUXVpeiBNYWtlciIKZGVzY3JpcHRpb246ICJHZW5lcmF0ZSBzcGFjZWQtcmVwZXRpdGlvbiBmbGFzaGNhcmRzIGFuZCBhIHNob3J0IHF1aXogZnJvbSBhbnkgc3R1ZHkgbWF0ZXJpYWwuIgpjYXRlZ29yeTogImxlYXJuaW5nIgp0YWdzOiBbImZsYXNoY2FyZHMiLCAicXVpeiIsICJzdHVkeWluZyJdCmRpZmZpY3VsdHk6ICJpbnRlcm1lZGlhdGUiCm1vZGVsOiAiYW55IgphdXRob3I6ICJjb21tdW5pdHkiCmNyZWF0ZWQ6ICIyMDI0LTA3LTA3Igp1cGRhdGVkOiAiMjAyNS0wMi0xOCIKdXB2b3RlczogNDgKZG93bnZvdGVzOiAyCnZlcnNpb246IDEKLS0tCgojIyBUaGUgcHJvbXB0CgpgYGB0ZXh0ClR1cm4gdGhpcyBzdHVkeSBtYXRlcmlhbCBpbnRvIGZsYXNoY2FyZHMgYW5kIGEgcXVpei4KCk1hdGVyaWFsOgoiIiIKe3ttYXRlcmlhbH19CiIiIgoKT3V0cHV0OgoxLiBGTEFTSENBUkRTIOKAlCB7e2NvdW50fX0gY2FyZHMgaW4gUSZBIGZvcm1hdCwgb3JkZXJlZCBmcm9tIGZ1bmRhbWVudGFscyB0byBoYXJkZXN0LiBQaHJhc2UgYW5zd2VycyBzbyB0aGV5IHRlc3QgdW5kZXJzdGFuZGluZywgbm90IGp1c3QgcmVjYWxsLgoyLiBRVUlaIOKAlCA1IG11bHRpcGxlLWNob2ljZSBxdWVzdGlvbnMgd2l0aCA0IG9wdGlvbnMgZWFjaCBhbmQgdGhlIGNvcnJlY3QgYW5zd2VyIG1hcmtlZC4KMy4gQU5TV0VSIEtFWSDigJQgYnJpZWYgZXhwbGFuYXRpb25zIGZvciBlYWNoIHF1aXogYW5zd2VyLgoKSW1wb3J0IGZvcm1hdDogb3V0cHV0IGZsYXNoY2FyZHMgYXMgYSBDU1YtcmVhZHkgbGlzdCAocXVlc3Rpb24gfCBhbnN3ZXIpIHNvIEkgY2FuIHBhc3RlIHRoZW0gaW50byBBbmtpIG9yIFF1aXpsZXQuCmBgYAoKIyMgV2hlbiB0byB1c2UgaXQKClBhc3RlIGEgY2hhcHRlciwgbGVjdHVyZSBub3Rlcywgb3IgYSBzcGVjIHlvdSBuZWVkIHRvIGxlYXJuLiBUaGUgQ1NWLXJlYWR5IGZvcm1hdCBzYXZlcyB5b3UgdGhlIG1hbnVhbCBjYXJkLW1ha2luZyBzdGVwLgoKIyMgUHJvIHRpcAoKRm9yIHRlY2huaWNhbCBtYXRlcmlhbCwgYXNrIGZvciAiY2xvemUgZGVsZXRpb24iIGNhcmRzIChmaWxsLWluLXRoZS1ibGFuaykg4oCUIHRoZXkncmUgc3Ryb25nZXIgZm9yIG1lbW9yeSB0aGFuIHBsYWluIFEmQS4K
+---
+title: "Flashcard & Quiz Maker"
+description: "Generate spaced-repetition flashcards and a short quiz from any study material."
+category: "learning"
+tags: ["flashcards", "quiz", "studying"]
+difficulty: "intermediate"
+model: "any"
+author: "community"
+created: "2024-07-07"
+updated: "2025-02-18"
+upvotes: 48
+downvotes: 2
+version: 1
+---
+
+## The prompt
+
+```text
+Turn this study material into flashcards and a quiz.
+
+Material:
+"""
+{{material}}
+"""
+
+Output:
+1. FLASHCARDS — {{count}} cards in Q&A format, ordered from fundamentals to hardest. Phrase answers so they test understanding, not just recall.
+2. QUIZ — 5 multiple-choice questions with 4 options each and the correct answer marked.
+3. ANSWER KEY — brief explanations for each quiz answer.
+
+Import format: output flashcards as a CSV-ready list (question | answer) so I can paste them into Anki or Quizlet.
+```
+
+## When to use it
+
+Paste a chapter, lecture notes, or a spec you need to learn. The CSV-ready format saves you the manual card-making step.
+
+## Pro tip
+
+For technical material, ask for "cloze deletion" cards (fill-in-the-blank) — they're stronger for memory than plain Q&A.

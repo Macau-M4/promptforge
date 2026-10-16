@@ -1,1 +1,45 @@
-LS0tCnRpdGxlOiAiU1dPVCBBbmFseXNpcyBHZW5lcmF0b3IiCmRlc2NyaXB0aW9uOiAiQnVpbGQgYSBzdHJ1Y3R1cmVkIFNXT1QgZm9yIGEgcHJvZHVjdCwgaWRlYSwgb3IgY29tcGFueSwgd2l0aCBhbiBhY3Rpb24gcGxhbiBmb3IgZWFjaCBxdWFkcmFudC4iCmNhdGVnb3J5OiAiYW5hbHlzaXMiCnRhZ3M6IFsic3RyYXRlZ3kiLCAic3dvdCIsICJwbGFubmluZyJdCmRpZmZpY3VsdHk6ICJiZWdpbm5lciIKbW9kZWw6ICJhbnkiCmF1dGhvcjogImNvbW11bml0eSIKY3JlYXRlZDogIjIwMjQtMDMtMTQiCnVwZGF0ZWQ6ICIyMDI1LTAxLTMwIgp1cHZvdGVzOiA0Nwpkb3dudm90ZXM6IDIKdmVyc2lvbjogMQotLS0KCiMjIFRoZSBwcm9tcHQKCmBgYHRleHQKUnVuIGEgU1dPVCBhbmFseXNpcyBmb3IgdGhlIGZvbGxvd2luZyBzdWJqZWN0LgoKU3ViamVjdDoKe3tzdWJqZWN0fX0KCkNvbnRleHQgLyBtYXJrZXQ6Cnt7Y29udGV4dH19CgpPdXRwdXQgZm91ciBxdWFkcmFudHM6Ci0gU1RSRU5HVEhTIOKAlCBpbnRlcm5hbCBhZHZhbnRhZ2VzICh3aGF0IHdlIGNvbnRyb2wpLgotIFdFQUtORVNTRVMg4oCUIGludGVybmFsIGdhcHMuCi0gT1BQT1JUVU5JVElFUyDigJQgZXh0ZXJuYWwgdGFpbHdpbmRzLgotIFRIUkVBVFMg4oCUIGV4dGVybmFsIHJpc2tzLgoKRm9yIGVhY2ggcXVhZHJhbnQsIGdpdmUgMy01IHNwZWNpZmljLCBub24tZ2VuZXJpYyBwb2ludHMuIFRoZW4gYWRkOgotIFRPV1MgQUNUSU9OUyDigJQgb25lIGNvbmNyZXRlIG1vdmUgcGVyIHBhaXJpbmc6IFPDl08sIFfDl08sIFPDl1QsIFfDl1QuCgpBdm9pZCB2YWd1ZSBmaWxsZXIgbGlrZSAic3Ryb25nIGJyYW5kIiB3aXRob3V0IGV2aWRlbmNlLgpgYGAKCiMjIFdoZW4gdG8gdXNlIGl0CgpVc2UgaXQgYXQgdGhlIHN0YXJ0IG9mIGEgcHJvamVjdCBvciB3aGVuIGV2YWx1YXRpbmcgYSBuZXcgaWRlYS4gVGhlIFRPV1MgY3Jvc3MtcGFpcmluZ3MgYXJlIHRoZSBwYXJ0IHRoYXQgYWN0dWFsbHkgdHVybnMgYW5hbHlzaXMgaW50byBhY3Rpb24uCgojIyBQcm8gdGlwCgpQcm92aWRlIHJlYWwgY29udGV4dCBpbiBge3tjb250ZXh0fX1gIOKAlCBhIFNXT1Qgd2l0aG91dCBjb250ZXh0IHByb2R1Y2VzIGdlbmVyaWMgYnVzaW5lc3Mtc2Nob29sIGZsdWZmLgo=
+---
+title: "SWOT Analysis Generator"
+description: "Build a structured SWOT for a product, idea, or company, with an action plan for each quadrant."
+category: "analysis"
+tags: ["strategy", "swot", "planning"]
+difficulty: "beginner"
+model: "any"
+author: "community"
+created: "2024-03-14"
+updated: "2025-01-30"
+upvotes: 47
+downvotes: 2
+version: 1
+---
+
+## The prompt
+
+```text
+Run a SWOT analysis for the following subject.
+
+Subject:
+{{subject}}
+
+Context / market:
+{{context}}
+
+Output four quadrants:
+- STRENGTHS — internal advantages (what we control).
+- WEAKNESSES — internal gaps.
+- OPPORTUNITIES — external tailwinds.
+- THREATS — external risks.
+
+For each quadrant, give 3-5 specific, non-generic points. Then add:
+- TOWS ACTIONS — one concrete move per pairing: S×O, W×O, S×T, W×T.
+
+Avoid vague filler like "strong brand" without evidence.
+```
+
+## When to use it
+
+Use it at the start of a project or when evaluating a new idea. The TOWS cross-pairings are the part that actually turns analysis into action.
+
+## Pro tip
+
+Provide real context in `{{context}}` — a SWOT without context produces generic business-school fluff.
