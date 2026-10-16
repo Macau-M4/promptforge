@@ -1,1 +1,20 @@
-bmFtZTogVmFsaWRhdGUgY29udGVudAoKb246CiAgcHVsbF9yZXF1ZXN0OgogIHB1c2g6CiAgICBicmFuY2hlczogW21haW5dCgpqb2JzOgogIHZhbGlkYXRlOgogICAgcnVucy1vbjogdWJ1bnR1LWxhdGVzdAogICAgc3RlcHM6CiAgICAgIC0gdXNlczogYWN0aW9ucy9jaGVja291dEB2NAoKICAgICAgLSB1c2VzOiBhY3Rpb25zL3NldHVwLW5vZGVAdjQKICAgICAgICB3aXRoOgogICAgICAgICAgbm9kZS12ZXJzaW9uOiAyMAoKICAgICAgLSBydW46IG5wbSBpbnN0YWxsCgogICAgICAtIG5hbWU6IFZhbGlkYXRlIGNvbnRlbnQgYWdhaW5zdCBab2Qgc2NoZW1hCiAgICAgICAgcnVuOiBucG0gcnVuIHZhbGlkYXRlCgogICAgICAtIG5hbWU6IEJ1aWxkIHNpdGUgKHZhbGlkYXRlcyBBc3RybyBjb250ZW50IGNvbGxlY3Rpb25zIHRvbykKICAgICAgICBydW46IG5wbSBydW4gYnVpbGQK
+name: Validate content
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - name: Validate content against Zod schema
+        run: npm run validate
+      - name: Build site
+        run: npm run build
