@@ -454,7 +454,7 @@
     -webkit-mask-composite: xor;
     mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
-    animation: borderBeam 4s linear infinite;
+    animation: borderBeam 4s linear infinite, beamPulse 3.5s ease-in-out infinite;
     pointer-events: none;
   }
   .border-beam > * {
@@ -513,6 +513,16 @@
   }
   @keyframes borderBeam {
     to { --beam-angle: 360deg; }
+  }
+  /* Fallback motion when @property/--beam-angle animation isn't supported:
+     the travelling beam stays static, but a slow opacity pulse keeps it alive. */
+  @keyframes beamPulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .border-beam::before { animation: none; }
+    .arch-particle { display: none; }
   }
 
   /* Light sweep (ambient, monochrome) */

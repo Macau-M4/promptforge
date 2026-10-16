@@ -79,19 +79,21 @@ function showToast(message: string) {
   (toast as any)._t = setTimeout(() => toast.classList.remove('show'), 2200);
 }
 
-// Typewriter streaming for the LLM output (ease-out, capped for long text).
+// Typewriter streaming for the LLM output. Reveals more characters per frame for
+// long text (code/scripts), so streaming is always capped around ~1.5s and never
+// makes the user wait too long.
 async function typeOut(el: HTMLElement, text: string) {
   el.textContent = '';
   if (!text) return;
   const total = text.length;
-  const duration = Math.min(1800, Math.max(400, total * 4));
-  const t0 = performance.now();
+  const chunk = Math.max(2, Math.ceil(total / 90));
+  let i = 0;
   await new Promise<void>((resolve) => {
-    const tick = (now: number) => {
-      const p = Math.min((now - t0) / duration, 1);
-      el.textContent = text.slice(0, Math.floor(total * (1 - Math.pow(1 - p, 3))));
-      if (p < 1) requestAnimationFrame(tick);
-      else { el.textContent = text; resolve(); }
+    const tick = () => {
+      i = Math.min(i + chunk, total);
+      el.textContent = text.slice(0, i);
+      if (i < total) requestAnimationFrame(tick);
+      else resolve();
     };
     requestAnimationFrame(tick);
   });
