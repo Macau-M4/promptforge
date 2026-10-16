@@ -56,7 +56,7 @@ async function startDeviceFlow(clientId: string, el: HTMLElement) {
     codeEl.innerHTML = `
       <div class="flex flex-col gap-2 text-sm">
         <div class="font-semibold text-zinc-100">Enter code <span class="font-mono text-zinc-300 text-base">${esc(data.user_code)}</span></div>
-        <a href="${esc(data.verification_uri)}" target="_blank" rel="noopener" class="btn-primary">Open GitHub โ’</a>
+        <a href="${esc(data.verification_uri)}" target="_blank" rel="noopener" class="btn-primary">Open GitHub →</a>
         <div class="text-xs text-zinc-400">Waiting for authorization…</div>
       </div>`;
     el.appendChild(codeEl);
@@ -141,7 +141,7 @@ function render() {
           <div class="panel p-3 text-xs text-zinc-300 max-w-xs">
             <p class="font-semibold text-zinc-100 mb-1">Login isn't configured yet</p>
             <p class="leading-relaxed">Set <code class="bg-white/10 px-1 rounded">PUBLIC_GITHUB_CLIENT_ID</code> (a free GitHub OAuth App Client ID with Device Flow enabled).</p>
-            <a href="https://github.com/settings/developers" target="_blank" rel="noopener" class="text-zinc-300 underline">Create one โ’</a>
+            <a href="https://github.com/settings/developers" target="_blank" rel="noopener" class="text-zinc-300 underline">Create one →</a>
           </div>`;
       });
     } else {

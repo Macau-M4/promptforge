@@ -40,9 +40,14 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+Thai:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
+    <noscript>
+      <style>
+        [data-reveal], .kinetic-line > span { opacity: 1 !important; transform: none !important; }
+      </style>
+    </noscript>
   </head>
   <body class="min-h-screen flex flex-col bg-[#0a0a0b]">
     <div id="scroll-progress" class="fixed top-0 left-0 z-50 h-[2px] w-0 bg-zinc-100" aria-hidden="true"></div>
@@ -100,7 +105,7 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
       <div class="mx-auto max-w-6xl px-5 sm:px-6 py-12 grid gap-10 sm:grid-cols-3 text-sm text-zinc-500">
         <div>
           <p class="font-display font-semibold text-zinc-200 mb-3">PromptForge</p>
-          <p class="leading-relaxed max-w-xs">A free, open-source library of AI prompts, commands, tools and workflows — built and maintained by the community.</p>
+          <p class="leading-relaxed max-w-xs">คลัง Prompt, คำสั่ง และ Workflow แบบ open-source ฟรี — สร้างและดูแลโดย community</p>
         </div>
         <div>
           <p class="mono-label mb-3">Explore</p>
@@ -114,10 +119,10 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
         <div>
           <p class="mono-label mb-3">Principles</p>
           <ul class="space-y-2">
-            <li>Static site · no server costs</li>
-            <li>Keyless LLM via Pollinations</li>
-            <li>GitHub OAuth login</li>
-            <li>MIT-licensed content</li>
+            <li>Static site · ไม่มีค่า server</li>
+            <li>Keyless LLM ผ่าน Pollinations</li>
+            <li>Login ผ่าน GitHub OAuth</li>
+            <li>เนื้อหา MIT license</li>
           </ul>
         </div>
       </div>
@@ -171,6 +176,10 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
       };
       initReveal();
       document.addEventListener('pf:reveal', reveal);
+      // Safety net: never leave reveal targets invisible if IO/JS misbehaves.
+      setTimeout(() => {
+        document.querySelectorAll('[data-reveal]:not(.is-visible)').forEach((el) => el.classList.add('is-visible'));
+      }, 3000);
     </script>
   </body>
 </html>

@@ -31,14 +31,14 @@ export function initHero() {
   interface P { x: number; y: number; z: number; vx: number; vy: number; s: number; }
   let particles: P[] = [];
   function seed() {
-    const count = W < 640 ? 50 : 90;
+    const count = W < 640 ? 70 : 130;
     particles = Array.from({ length: count }, () => ({
       x: Math.random() * W,
       y: Math.random() * H,
       z: Math.random(),
-      vx: (Math.random() - 0.5) * 0.12,
-      vy: (Math.random() - 0.5) * 0.12,
-      s: 0.5 + Math.random() * 1.4
+      vx: (Math.random() - 0.5) * 0.16,
+      vy: (Math.random() - 0.5) * 0.16,
+      s: 0.6 + Math.random() * 1.6
     }));
   }
 
@@ -128,7 +128,7 @@ export function initHero() {
       const y = p.y + Math.sin(t * 0.4 + p.z * 6) * 3 * depth;
       ctx.beginPath();
       ctx.arc(x, y, p.s * depth, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(228,228,232,${0.14 * depth + 0.05})`;
+      ctx.fillStyle = `rgba(232,232,238,${0.24 * depth + 0.08})`;
       ctx.fill();
     }
   }

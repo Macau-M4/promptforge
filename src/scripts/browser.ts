@@ -1,4 +1,4 @@
-﻿import { trending, score } from '../lib/trending';
+import { trending, score } from '../lib/trending';
 import { extractVariables } from '../lib/markdown';
 
 interface Prompt {
@@ -69,8 +69,8 @@ export function initBrowser() {
     <div class="space-y-8">
       <div class="flex flex-col lg:flex-row gap-3 lg:items-center">
         <div class="relative flex-1">
-          <span class="absolute left-3 top-1/2 -tranzinc-y-1/2 text-zinc-600">/</span>
-          <input id="search" type="search" placeholder="Search prompts, tags, categories…"
+          <span class="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-600">/</span>
+          <input id="search" type="search" placeholder="ค้นหา prompt, tag, หมวดหมู่…"
             class="w-full pl-9 pr-3 py-3 rounded-md bg-[#0f0f11] border border-[#26262b] text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-zinc-500 font-mono text-sm" />
         </div>
         <div class="flex items-center gap-2">
@@ -80,10 +80,10 @@ export function initBrowser() {
             <option value="newest">Newest</option>
           </select>
           <select id="difficulty" class="py-3 px-3 rounded-md bg-[#0f0f11] border border-[#26262b] text-zinc-200 text-sm focus:outline-none focus:border-zinc-500">
-            <option value="all">All levels</option>
-            <option value="beginner">Beginner</option>
-            <option value="intermediate">Intermediate</option>
-            <option value="advanced">Advanced</option>
+            <option value="all">ทุกระดับ</option>
+            <option value="beginner">เริ่มต้น</option>
+            <option value="intermediate">ระดับกลาง</option>
+            <option value="advanced">ขั้นสูง</option>
           </select>
         </div>
       </div>
@@ -92,7 +92,7 @@ export function initBrowser() {
         <span id="count"></span>
       </div>
       <div id="grid" class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"></div>
-      <div id="empty" class="hidden panel p-10 text-center text-zinc-500">No prompts match. Try a different search or clear filters.</div>
+      <div id="empty" class="hidden panel p-10 text-center text-zinc-500">ไม่พบ Prompt ที่ตรง — ลองเปลี่ยนคำค้นหรือล้างตัวกรอง</div>
     </div>`;
 
   const searchEl = root.querySelector('#search') as HTMLInputElement;
@@ -175,7 +175,7 @@ export function initBrowser() {
         </div>
         <div class="mt-auto flex items-center gap-2 pt-3 border-t border-[#1c1c20] text-xs">
           <button data-copy="${p.id}" class="btn-ghost px-2.5 py-1.5 text-xs">Copy</button>
-          <a href="${base}run?prompt=${p.id}" class="btn-ghost px-2.5 py-1.5 text-xs">Run โ—</a>
+          <a href="${base}run?prompt=${p.id}" class="btn-ghost px-2.5 py-1.5 text-xs">Run โ—</a>
           ${vars > 0 ? `<span class="text-zinc-600 ml-auto font-mono">${vars} var</span>` : `<span class="text-zinc-600 ml-auto font-mono">${esc(p.model)}</span>`}
         </div>
       </article>`;
@@ -211,7 +211,7 @@ export function initBrowser() {
         if (!p) return;
         try {
           await navigator.clipboard.writeText(p.prompt);
-          b.textContent = 'Copied โ“';
+          b.textContent = 'Copied โ“';
           setTimeout(() => (b.textContent = 'Copy'), 1500);
         } catch {
           b.textContent = 'Copy failed';

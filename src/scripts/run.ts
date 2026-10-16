@@ -200,7 +200,7 @@ export function initRun() {
             <label class="text-sm text-zinc-300">${esc(prov.keyLabel || 'API key')}</label>
             <input id="key-input" type="password" placeholder="Paste your key (stored locally)" value="${esc(getKey(providerId))}"
               class="w-full mt-1 py-2.5 px-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-zinc-200 text-sm placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-500/50" />
-            ${prov.keyUrl ? `<a href="${esc(prov.keyUrl)}" target="_blank" rel="noopener" class="text-xs text-zinc-300 underline">Get a free key โ’</a>` : ''}
+            ${prov.keyUrl ? `<a href="${esc(prov.keyUrl)}" target="_blank" rel="noopener" class="text-xs text-zinc-300 underline">Get a free key →</a>` : ''}
           </div>
           <button id="run-btn" class="btn-primary w-full py-3">โ–ถ Run prompt</button>
           <div id="status" class="text-sm text-zinc-400"></div>
@@ -262,14 +262,14 @@ export function initRun() {
 
       running = true;
       runBtn.disabled = true;
-      runBtn.textContent = 'โณ Running…';
+      runBtn.textContent = 'Running…';
       status.innerHTML = '<span class="text-zinc-400">Generating with ' + esc(provider().label) + ' (' + esc(modelSel.value) + ')…</span>';
       output.classList.add('hidden');
       try {
         const text = await runPrompt(provider(), modelSel.value, finalPrompt);
         output.textContent = text;
         output.classList.remove('hidden');
-        status.innerHTML = '<span class="text-zinc-300">Done โ“</span>';
+        status.innerHTML = '<span class="text-zinc-300">Done โ“</span>';
       } catch (e: any) {
         status.innerHTML = `<span class="text-zinc-300">Error: ${esc(String(e?.message || e))}. If a keyed provider fails, it may be a CORS or key issue — try Pollinations (no key).</span>`;
       } finally {

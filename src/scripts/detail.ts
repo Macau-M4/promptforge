@@ -53,10 +53,10 @@ export function initDetail() {
     app.querySelector('[data-copy]')?.addEventListener('click', async (e) => {
       try {
         await navigator.clipboard.writeText(d.prompt);
-        (e.currentTarget as HTMLElement).textContent = 'โ… Copied';
+        (e.currentTarget as HTMLElement).textContent = ' Copied';
         setTimeout(() => ((e.currentTarget as HTMLElement).textContent = '๐“ Copy prompt'), 1500);
       } catch {
-        (e.currentTarget as HTMLElement).textContent = 'โ  Copy failed';
+        (e.currentTarget as HTMLElement).textContent = 'Copy failed';
       }
     });
   }

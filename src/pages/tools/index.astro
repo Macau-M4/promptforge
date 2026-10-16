@@ -1,4 +1,4 @@
-﻿---
+---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
@@ -17,8 +17,7 @@ const kindLabel = {
   <section class="mx-auto max-w-5xl px-4 sm:px-6 py-12">
     <h1 class="text-4xl font-extrabold tracking-tight">Free <span class="silver-text">tools & providers</span></h1>
     <p class="mt-3 text-lg text-zinc-400 max-w-2xl">
-      Every backend PromptForge works with is free — no credit card, no trial that converts.
-      Pick one to learn how to get a key (or skip the key entirely).
+      ทุก backend ที่ PromptForge รองรับใช้งานฟรี — ไม่ต้องใช้บัตรเครดิต เลือกดูวิธีขอ key หรือข้ามไปเลยก็ได้
     </p>
 
     <div class="mt-10 grid gap-5 sm:grid-cols-2">
@@ -32,7 +31,7 @@ const kindLabel = {
             </div>
             <h2 class="text-xl font-bold text-zinc-100 group-hover:text-zinc-200">{t.data.title}</h2>
             <p class="text-sm text-zinc-400 mt-2">{t.data.description}</p>
-            <div class="mt-3 text-sm font-semibold text-zinc-300 group-hover:text-zinc-200">Read more โ’</div>
+            <div class="mt-3 text-sm font-semibold text-zinc-300 group-hover:text-zinc-200">Read more →</div>
           </a>
         );
       })}

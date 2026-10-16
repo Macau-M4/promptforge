@@ -1,4 +1,4 @@
-﻿---
+---
 import Layout from '../layouts/Layout.astro';
 const base = import.meta.env.BASE_URL;
 ---
@@ -6,15 +6,14 @@ const base = import.meta.env.BASE_URL;
 <Layout title="About" description="Why PromptForge exists and how it stays 100% free forever.">
   <section class="mx-auto max-w-3xl px-4 sm:px-6 py-12">
     <h1 class="text-4xl font-extrabold tracking-tight">About <span class="silver-text">PromptForge</span></h1>
-    <div class="pzinc-pf mt-6">
+    <div class="prose-pf mt-6">
 
-      <p>PromptForge is a public library of AI prompts, special commands, tools and
-      workflows — plus the guides that teach you how to use them. It exists because most
-      "prompt databases" are locked behind signups, newsletters, or paywalls. Ours isn't.</p>
+      <p>PromptForge คือคลังสาธารณะของ AI prompts, คำสั่ง, tools และ workflows —
+      พร้อมคู่มือสอนวิธีใช้งาน สาเหตุที่สร้างเพราะ "คลัง prompt" ส่วนใหญ่ล็อกหลังการสมัคร
+      newsletter หรือ paywall — แต่ของเราไม่เป็นแบบนั้น</p>
 
       <h2>The promise: 100% free, forever</h2>
-      <p>Every design decision follows one rule: <strong>zero recurring cost, zero credit card,
-      zero paid service</strong>. Concretely:</p>
+      <p>ทุกการตัดสินใจยึดกฎเดียว: <strong>ค่าบริการต่อเดือนเป็นศูนย์ ไม่ต้องใช้บัตรเครดิต ไม่มี paid service</strong>:</p>
       <ul>
         <li><strong>Hosting</strong> — static site on GitHub Pages (or Cloudflare/Vercel/Netlify free tiers). No server bill.</li>
         <li><strong>Database</strong> — the git repo itself. Prompts are markdown files; votes are stored locally in your browser.</li>
@@ -24,14 +23,13 @@ const base = import.meta.env.BASE_URL;
       </ul>
 
       <h2>How it works</h2>
-      <p>The site is fully static. Content lives in <code>/src/content/</code> as markdown with a
-      Zod-validated schema. A GitHub Action validates every contribution and auto-tags new
-      submissions. The Run feature calls free LLM APIs directly from your browser — your key
-      (if any) never leaves your device.</p>
+      <p>เว็บเป็น static ทั้งหมด เนื้อหาอยู่ใน <code>/src/content/</code> เป็น markdown ที่ผ่าน
+      Zod schema — GitHub Action ตรวจทุก contribution และ auto-tag ให้ ส่วน Run feature เรียก
+      free LLM API จากเบราว์เซอร์โดยตรง (key อยู่แค่ในเครื่องของคุณ)</p>
 
       <h2>Contribute</h2>
-      <p>PromptForge is only as good as the community's prompts. Fork the repo, add a markdown
-      file, and open a PR — CI does the rest. See the <a href={`${base}contribute`}>Contribute</a> page for the full flow.</p>
+      <p>PromptForge ดีได้เพราะ community — fork repo เพิ่มไฟล์ markdown แล้วเปิด PR
+      ที่เหลือ CI จัดการให้ ดูขั้นตอนเต็ม ๆ ได้ที่หน้า <a href={`${base}contribute`}>Contribute</a></p>
 
     </div>
   </section>

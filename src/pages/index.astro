@@ -32,20 +32,22 @@ const base = import.meta.env.BASE_URL;
   <!-- HERO -->
   <section id="hero" class="relative min-h-[92vh] flex items-center overflow-hidden">
     <canvas id="hero-canvas" class="absolute inset-0 w-full h-full" aria-hidden="true"></canvas>
+    <div class="light-sweep" aria-hidden="true"></div>
     <div class="relative z-10 mx-auto max-w-6xl px-5 sm:px-6 w-full py-24">
       <p class="mono-label mb-7" data-reveal>Creative developer library — free, forever</p>
       <h1 class="display text-[clamp(2.9rem,11vw,8.5rem)] text-zinc-100 leading-[0.9]">
         <span class="kinetic-line"><span style="animation-delay:.05s">Prompts,</span></span>
-        <span class="kinetic-line"><span style="animation-delay:.2s"><span class="silver-text">Forged.</span></span></span>
+        <span class="kinetic-line"><span style="animation-delay:.18s"><span class="silver-text">Forged.</span></span></span>
       </h1>
-      <p class="mt-8 text-lg sm:text-xl text-zinc-400 max-w-md leading-relaxed" data-reveal data-reveal-delay="300">
-        Discover. Remix. Create. A living library of AI prompts, commands and workflows — built and maintained by the community.
+      <p class="mt-8 font-display text-xl sm:text-2xl text-zinc-100" data-reveal data-reveal-delay="320">Discover. Remix. Create.</p>
+      <p class="mt-3 text-base sm:text-lg text-zinc-400 max-w-lg leading-relaxed" data-reveal data-reveal-delay="380">
+        คลัง Prompt, คำสั่ง และ Workflow แบบ open-source — ค้นหา โหวต และรันได้ทันทีในเบราว์เซอร์
       </p>
-      <div class="mt-10 flex flex-wrap gap-4" data-reveal data-reveal-delay="400">
+      <div class="mt-10 flex flex-wrap gap-4" data-reveal data-reveal-delay="460">
         <a href="#browse" class="btn-primary">Explore Prompts</a>
         <a href={`${base}run`} class="btn-ghost">Enter Playground</a>
       </div>
-      <div class="mt-20 flex items-center gap-4" data-reveal data-reveal-delay="500">
+      <div class="mt-20 flex items-center gap-4" data-reveal data-reveal-delay="560">
         <span class="inline-block w-px h-12 bg-zinc-700"></span>
         <span class="mono-label">Scroll to explore</span>
       </div>
@@ -80,6 +82,7 @@ const base = import.meta.env.BASE_URL;
       <div>
         <p class="mono-label mb-3">01 — Browse</p>
         <h2 class="display text-3xl sm:text-5xl text-zinc-100">The Library</h2>
+        <p class="mt-3 text-zinc-400 max-w-xl">ค้นหา กรอง และโหวต Prompt ที่ใช่ — หรือส่ง Prompt ของคุณเข้ามาร่วม</p>
       </div>
       <a href={`${base}contribute`} class="mono-label hover:text-zinc-200 transition-colors hidden sm:block">Submit ↗</a>
     </div>

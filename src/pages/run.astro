@@ -1,4 +1,4 @@
-﻿---
+---
 import Layout from '../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 import { extractPromptBlock } from '../lib/markdown';
@@ -19,16 +19,15 @@ const data = prompts.map((p) => ({
   <section class="mx-auto max-w-6xl px-4 sm:px-6 py-12">
     <h1 class="text-4xl font-extrabold tracking-tight">Run a prompt <span class="silver-text">in-page</span></h1>
     <p class="mt-3 text-lg text-zinc-400 max-w-3xl">
-      Pick a prompt, fill its <code class="bg-white/10 px-1.5 py-0.5 rounded text-zinc-200 font-mono text-sm">{"{{variables}}"}</code>,
-      choose a provider, and run. <strong class="text-zinc-200">Pollinations needs no key</strong> —
-      it works instantly, for free. Other providers accept a free key you paste here
-      (stored only in your browser's localStorage, never sent to a server).
+      เลือก Prompt เติมค่าใน <code class="bg-white/10 px-1.5 py-0.5 rounded text-zinc-200 font-mono text-sm">{"{{variables}}"}</code>
+      แล้วกดรัน — <strong class="text-zinc-200">Pollinations ไม่ต้องใช้ key</strong> ใช้งานได้ทันทีฟรี
+      ส่วน provider อื่นใส่ free key ที่นี่ได้ (เก็บไว้ใน localStorage ของเบราว์เซอร์เท่านั้น)
     </p>
 
     <div class="mt-6 panel p-4 text-sm text-zinc-400 flex flex-wrap gap-x-6 gap-y-2">
-      <span>โ… No account needed</span>
-      <span>๐”’ Keys stay in your browser</span>
-      <span>๐’ธ $0 — no credit card, ever</span>
+      <span>ไม่ต้องสมัครบัญชี</span>
+      <span>Key เก็บไว้ในเบราว์เซอร์เท่านั้น</span>
+      <span>$0 — ไม่ต้องใช้บัตรเครดิต</span>
     </div>
 
     <div id="run-app" class="mt-8"></div>
