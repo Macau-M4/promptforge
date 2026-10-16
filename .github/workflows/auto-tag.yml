@@ -1,1 +1,24 @@
-bmFtZTogQXV0by10YWcgbmV3IHByb21wdHMKCm9uOgogIHB1bGxfcmVxdWVzdDoKCnBlcm1pc3Npb25zOgogIGNvbnRlbnRzOiByZWFkCiAgcHVsbC1yZXF1ZXN0czogd3JpdGUKCmpvYnM6CiAgYXV0by10YWc6CiAgICBydW5zLW9uOiB1YnVudHUtbGF0ZXN0CiAgICBzdGVwczoKICAgICAgLSB1c2VzOiBhY3Rpb25zL2NoZWNrb3V0QHY0CiAgICAgICAgd2l0aDoKICAgICAgICAgIGZldGNoLWRlcHRoOiAwCgogICAgICAtIHVzZXM6IGFjdGlvbnMvc2V0dXAtbm9kZUB2NAogICAgICAgIHdpdGg6CiAgICAgICAgICBub2RlLXZlcnNpb246IDIwCgogICAgICAtIHJ1bjogbnBtIGluc3RhbGwKCiAgICAgIC0gbmFtZTogUnVuIGF1dG8tdGFnZ2VyIGFuZCBhbm5vdGF0ZSB0aGUgUFIKICAgICAgICBydW46IG5vZGUgc2NyaXB0cy9jaS1hbm5vdGF0ZS5tanMKICAgICAgICBlbnY6CiAgICAgICAgICBHSVRIVUJfVE9LRU46ICR7eyBzZWNyZXRzLkdJVEhVQl9UT0tFTiB9fQo=
+name: Auto-tag new prompts
+
+on:
+  pull_request:
+
+permissions:
+  contents: read
+  pull-requests: write
+
+jobs:
+  auto-tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install
+      - name: Run auto-tagger and annotate the PR
+        run: node scripts/ci-annotate.mjs
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
