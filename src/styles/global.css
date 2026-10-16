@@ -45,7 +45,6 @@
 
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
   }
 }
 
@@ -105,7 +104,9 @@
     transform: none;
   }
   @media (prefers-reduced-motion: reduce) {
-    [data-reveal] { opacity: 1; transform: none; transition: none; }
+    /* Keep the one-time entrance reveal (fade only, no movement) so content is
+       never shown frozen/hidden, while still honoring the reduced-motion intent. */
+    [data-reveal] { transform: none; }
   }
 
   /* Kinetic text (hero) — staggered word reveal */
@@ -122,7 +123,9 @@
     will-change: transform;
   }
   @media (prefers-reduced-motion: reduce) {
-    .kinetic-line > span { transform: none; animation: none; }
+    /* Keep the essential one-time headline entrance (the single most important
+       animation); only the continuous/decorative loops are disabled below. */
+    .kinetic-line > span { animation-duration: 0.7s; }
   }
 
   /* Light sweep (ambient, monochrome) */
@@ -130,7 +133,7 @@
     position: absolute;
     inset: -60% -30%;
     pointer-events: none;
-    background: linear-gradient(115deg, transparent 42%, rgba(255,255,255,0.055) 50%, transparent 58%);
+    background: linear-gradient(115deg, transparent 42%, rgba(255,255,255,0.10) 50%, transparent 58%);
     animation: sweep 9s ease-in-out infinite;
   }
   @media (prefers-reduced-motion: reduce) {
