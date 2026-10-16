@@ -57,6 +57,15 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
         <span class="preloader-bar"><span class="preloader-bar-fill"></span></span>
       </div>
     </div>
+    <div id="page-transition" aria-hidden="true">
+      <div class="pt-circle"></div>
+      <div class="pt-brand">
+        <div class="pt-inner">
+          <span class="pt-mark">P</span>
+          <span class="pt-bar"><span class="pt-bar-fill"></span></span>
+        </div>
+      </div>
+    </div>
     <div id="scroll-progress" class="fixed top-0 left-0 z-50 h-[2px] w-0 bg-zinc-100" aria-hidden="true"></div>
     <div id="cursor-glow" aria-hidden="true"></div>
 
@@ -209,9 +218,52 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
           document.querySelectorAll('[data-reveal]:not(.is-visible)').forEach((el) => el.classList.add('is-visible'));
         }, 3000);
       };
-      if (reduceMotion) boot();
-      else setTimeout(boot, 950);
-      setTimeout(boot, 4000); // hard fallback if the timed boot is interrupted
+      const PT_KEY = 'pf.transition';
+      const transitioning = sessionStorage.getItem(PT_KEY) === '1';
+      if (transitioning) sessionStorage.removeItem(PT_KEY);
+      const ptOverlay = document.getElementById('page-transition');
+
+      if (transitioning && ptOverlay) {
+        // Arriving after an in-site navigation: skip the preloader and reveal via
+        // the transition overlay (logo → fade out → entrance).
+        const pre = document.getElementById('preloader');
+        if (pre) pre.remove();
+        ptOverlay.classList.add('revealing');
+        setTimeout(() => {
+          ptOverlay.classList.add('closing');
+          boot();
+          setTimeout(() => ptOverlay.remove(), 700);
+        }, 800);
+      } else {
+        if (reduceMotion) boot();
+        else setTimeout(boot, 950);
+        setTimeout(boot, 4000); // hard fallback if the timed boot is interrupted
+      }
+
+      // Page-transition departure: circle expands from the click point, then navigate.
+      if (ptOverlay && !reduceMotion) {
+        document.addEventListener('click', (e) => {
+          const a = (e.target as HTMLElement).closest?.('a');
+          if (!a) return;
+          if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+          if (a.target === '_blank') return;
+          const raw = a.getAttribute('href') || '';
+          if (!raw || raw.startsWith('#')) return;
+          try {
+            if (new URL(a.href).origin !== location.origin) return;
+          } catch {
+            return;
+          }
+          e.preventDefault();
+          ptOverlay.style.setProperty('--ptx', e.clientX + 'px');
+          ptOverlay.style.setProperty('--pty', e.clientY + 'px');
+          ptOverlay.classList.add('expanding');
+          setTimeout(() => {
+            sessionStorage.setItem(PT_KEY, '1');
+            location.href = a.href;
+          }, 660);
+        });
+      }
 
       // Cursor spotlight + magnetic buttons (fine-pointer, non-reduced-motion).
       const glow = document.getElementById('cursor-glow');

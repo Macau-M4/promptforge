@@ -292,6 +292,107 @@
     to { transform: rotate(360deg); }
   }
 
+  /* Page transition: circle expands from the click, then a logo loader, then reveal */
+  #page-transition {
+    position: fixed;
+    inset: 0;
+    z-index: 200;
+    pointer-events: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .pt-circle {
+    position: fixed;
+    left: var(--ptx, 50vw);
+    top: var(--pty, 50vh);
+    width: 250vmax;
+    height: 250vmax;
+    border-radius: 50%;
+    background: #0a0a0b;
+    transform: translate(-50%, -50%) scale(0);
+    will-change: transform;
+  }
+  .pt-brand {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    opacity: 0;
+  }
+  .pt-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .pt-mark {
+    font-family: 'Space Grotesk', 'Inter', 'Noto Sans Thai', ui-sans-serif, system-ui, sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    line-height: 1;
+    color: transparent;
+    -webkit-text-stroke: 1px #e4e4e7;
+    animation: ptPulse 0.7s ease-in-out infinite;
+  }
+  .pt-bar {
+    display: block;
+    width: 160px;
+    height: 1px;
+    background: #26262b;
+    margin-top: 18px;
+    overflow: hidden;
+  }
+  .pt-bar-fill {
+    display: block;
+    height: 100%;
+    background: #f4f4f5;
+    transform: translateX(-100%);
+    animation: ptBar 1s linear infinite;
+  }
+  @keyframes ptPulse {
+    0%, 100% { opacity: 0.45; }
+    50% { opacity: 1; }
+  }
+  @keyframes ptBar {
+    to { transform: translateX(100%); }
+  }
+
+  /* Expand phase (departing page) */
+  #page-transition.expanding {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
+  #page-transition.expanding .pt-circle {
+    animation: ptExpand 0.65s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  #page-transition.expanding .pt-brand {
+    animation: ptBrandIn 0.3s ease 0.4s forwards;
+  }
+  @keyframes ptExpand {
+    to { transform: translate(-50%, -50%) scale(1); }
+  }
+  @keyframes ptBrandIn {
+    to { opacity: 1; }
+  }
+
+  /* Reveal phase (arriving page): already covering, then fades out */
+  #page-transition.revealing {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    transition: opacity 0.55s ease, visibility 0.55s ease;
+  }
+  #page-transition.revealing .pt-circle {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  #page-transition.revealing .pt-brand {
+    opacity: 1;
+  }
+  #page-transition.revealing.closing {
+    opacity: 0;
+    visibility: hidden;
+  }
+
   /* Light sweep (ambient, monochrome) */
   .light-sweep {
     position: absolute;
