@@ -1,7 +1,0 @@
-name: test-g-pr-array
-on: [push, pull_request]
-jobs:
-  hi:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo ok-g
