@@ -104,6 +104,7 @@ export function initBrowser() {
   const emptyEl = root.querySelector('#empty') as HTMLDivElement;
 
   let activeCat = 'all';
+  let firstRender = true;
 
   const categories = ['all', ...Array.from(new Set(prompts.map((p) => p.category)))];
   catsEl.innerHTML = categories
@@ -147,12 +148,13 @@ export function initBrowser() {
     return items.sort((a, b) => trending(b) - trending(a) || score(b) - score(a));
   }
 
-  function card(p: Prompt): string {
+  function card(p: Prompt, i: number): string {
     const v = votes[p.id] || 0;
     const { up, down } = adjusted(p, v);
     const vars = extractVariables(p.prompt).length;
+    const reveal = firstRender ? `data-reveal data-reveal-delay="${Math.min(i * 45, 300)}"` : '';
     return `
-      <article class="panel p-5 flex flex-col gap-3 animate-fade-in">
+      <article class="panel card-lift p-5 flex flex-col gap-3" ${reveal}>
         <div class="flex items-start gap-3">
           <div class="flex flex-col items-center gap-1 shrink-0">
             <button data-vote="${p.id}" data-dir="1" class="vote-btn grid place-items-center w-9 h-9 rounded-lg border ${v === 1 ? 'bg-indigo-500/20 border-indigo-500/50 text-indigo-200' : 'bg-white/5 border-white/10 text-slate-400 hover:text-indigo-300 hover:border-indigo-500/40'} transition-colors" aria-label="upvote">▲</button>
@@ -181,10 +183,14 @@ export function initBrowser() {
 
   function render() {
     const list = sorted(filtered());
-    gridEl.innerHTML = list.map(card).join('');
+    gridEl.innerHTML = list.map((p, i) => card(p, i)).join('');
     countEl.textContent = `${list.length} prompt${list.length === 1 ? '' : 's'}`;
     emptyEl.classList.toggle('hidden', list.length > 0);
     bindGrid();
+    if (firstRender) {
+      firstRender = false;
+      document.dispatchEvent(new CustomEvent('pf:reveal'));
+    }
   }
 
   function bindGrid() {

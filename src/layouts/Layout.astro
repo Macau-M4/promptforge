@@ -33,9 +33,15 @@ const logo = `${base}#`;
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#0a0a10" />
+    <meta name="theme-color" content="#08080e" />
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <link rel="sitemap" href={`${base}sitemap.xml`} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="min-h-screen flex flex-col">
     <header class="sticky top-0 z-40 border-b border-white/10 bg-[#0a0a10]/80 backdrop-blur">
@@ -106,6 +112,46 @@ const logo = `${base}#`;
     <script>
       import { initAuth } from '../scripts/auth';
       initAuth();
+    </script>
+    <script>
+      // Global scroll-reveal + header shadow (no library).
+      const reveal = () => {
+        const els = document.querySelectorAll('[data-reveal]:not(.is-visible)');
+        if (!('IntersectionObserver' in window)) {
+          els.forEach((el) => el.classList.add('is-visible'));
+          return;
+        }
+        const io = new IntersectionObserver(
+          (entries) => {
+            for (const e of entries) {
+              if (e.isIntersecting) {
+                const el = e.target as HTMLElement;
+                const d = Number(el.dataset.revealDelay || 0);
+                if (d) setTimeout(() => el.classList.add('is-visible'), d);
+                else el.classList.add('is-visible');
+                io.unobserve(el);
+              }
+            }
+          },
+          { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+        );
+        els.forEach((el) => io.observe(el));
+      };
+      const headerShadow = () => {
+        const h = document.querySelector('header');
+        if (!h) return;
+        const onScroll = () => h.classList.toggle('shadow-[0_8px_30px_-12px_rgba(0,0,0,0.8)]', window.scrollY > 8);
+        onScroll();
+        addEventListener('scroll', onScroll, { passive: true });
+      };
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', () => { reveal(); headerShadow(); });
+      } else {
+        reveal();
+        headerShadow();
+      }
+      // Re-run reveal when client-rendered grids inject new nodes.
+      document.addEventListener('pf:reveal', reveal);
     </script>
   </body>
 </html>

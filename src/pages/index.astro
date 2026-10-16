@@ -29,43 +29,44 @@ const base = import.meta.env.BASE_URL;
 ---
 
 <Layout>
-  <section class="mx-auto max-w-6xl px-4 sm:px-6 pt-14 pb-10 text-center">
-    <span class="chip bg-indigo-500/10 border border-indigo-500/30 text-indigo-200 mb-4">100% free · open source · no card required</span>
-    <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
+  <section class="relative mx-auto max-w-6xl px-4 sm:px-6 pt-16 pb-12 text-center">
+    <div class="absolute inset-x-0 -top-10 -z-10 mx-auto h-72 max-w-3xl rounded-full bg-indigo-500/20 blur-[110px]" aria-hidden="true"></div>
+    <span data-reveal class="chip bg-indigo-500/10 border border-indigo-500/30 text-indigo-200 mb-4">100% free · open source · no card required</span>
+    <h1 data-reveal data-reveal-delay="60" class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
       The community library of<br class="hidden sm:block" />
-      <span class="grad-text">AI prompts, commands & workflows</span>
+      <span class="grad-text-animated">AI prompts, commands & workflows</span>
     </h1>
-    <p class="mx-auto mt-5 max-w-2xl text-lg text-slate-400">
+    <p data-reveal data-reveal-delay="120" class="mx-auto mt-5 max-w-2xl text-lg text-slate-400">
       Browse battle-tested prompts, upvote the best, follow learning paths, and run any
       prompt against a free LLM — right in your browser. Contribute your own via GitHub.
     </p>
-    <div class="mt-8 flex flex-wrap justify-center gap-3">
+    <div data-reveal data-reveal-delay="180" class="mt-8 flex flex-wrap justify-center gap-3">
       <a href="#browser" class="btn-primary px-6 py-3 text-base">Browse prompts</a>
       <a href={`${base}paths`} class="btn-ghost px-6 py-3 text-base">Start learning</a>
       <a href={`${base}run`} class="btn-ghost px-6 py-3 text-base">▶ Run a prompt</a>
     </div>
 
-    <div class="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
-      <div class="panel p-4">
+    <div data-reveal data-reveal-delay="240" class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-3 max-w-3xl mx-auto">
+      <div class="panel card-lift p-4">
         <div class="text-3xl font-bold grad-text">{data.length}</div>
         <div class="text-xs text-slate-400 mt-1">prompts</div>
       </div>
-      <div class="panel p-4">
+      <div class="panel card-lift p-4">
         <div class="text-3xl font-bold grad-text">{catCount}</div>
         <div class="text-xs text-slate-400 mt-1">categories</div>
       </div>
-      <div class="panel p-4">
+      <div class="panel card-lift p-4">
         <div class="text-3xl font-bold grad-text">{paths.length}</div>
         <div class="text-xs text-slate-400 mt-1">learning paths</div>
       </div>
-      <div class="panel p-4">
+      <div class="panel card-lift p-4">
         <div class="text-3xl font-bold grad-text">{totalVotes}</div>
         <div class="text-xs text-slate-400 mt-1">net votes</div>
       </div>
     </div>
   </section>
 
-  <section id="browser" class="mx-auto max-w-6xl px-4 sm:px-6 pb-20 scroll-mt-20">
+  <section id="browser" class="mx-auto max-w-6xl px-4 sm:px-6 pb-24 scroll-mt-20">
     <div id="browser"></div>
   </section>
 

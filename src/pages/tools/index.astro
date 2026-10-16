@@ -25,7 +25,7 @@ const kindLabel = {
       {tools.map((t) => {
         const k = kindLabel[t.data.kind] ?? kindLabel.utility;
         return (
-          <a href={`${base}tools/${t.id}`} class="panel p-5 hover:border-indigo-500/40 transition-colors group">
+          <a href={`${base}tools/${t.id}`} class="panel card-lift p-5 group">
             <div class="flex items-center gap-2 mb-2">
               <span class="chip bg-white/5 border border-white/10 text-slate-300">{k.emoji} {k.label}</span>
               <span class="chip bg-emerald-500/10 border border-emerald-500/30 text-emerald-200">free</span>

@@ -30,7 +30,7 @@ const base = import.meta.env.BASE_URL;
           .map((id) => promptById.get(id))
           .filter(Boolean) as typeof prompts;
         return (
-          <div class="panel p-6">
+          <div class="panel card-lift p-6" data-reveal>
             <div class="flex items-center gap-3 mb-2">
               <span class={`chip border ${lm.color}`}>{lm.emoji} {lm.label}</span>
               <span class="text-xs text-slate-500">Track {path.data.order} of {ordered.length}</span>
