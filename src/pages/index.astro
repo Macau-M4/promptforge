@@ -31,8 +31,11 @@ const base = import.meta.env.BASE_URL;
 <Layout>
   <!-- HERO -->
   <section id="hero" class="relative min-h-[92vh] flex items-center overflow-hidden">
+    <div class="hero-beam" aria-hidden="true"></div>
     <div class="aurora-blob aurora-a w-[70vw] h-[70vw] max-w-[760px] max-h-[760px] -top-[25%] -left-[20%] bg-zinc-300/30" aria-hidden="true"></div>
     <div class="aurora-blob aurora-b w-[60vw] h-[60vw] max-w-[640px] max-h-[640px] top-[28%] -right-[18%] bg-zinc-500/25" aria-hidden="true"></div>
+    <div class="float-shape float-ring w-[30vw] h-[30vw] max-w-[380px] max-h-[380px] top-[6%] right-[9%]" aria-hidden="true"></div>
+    <div class="float-shape float-square w-[17vw] h-[17vw] max-w-[220px] max-h-[220px] bottom-[9%] left-[6%]" aria-hidden="true"></div>
     <canvas id="hero-canvas" class="absolute inset-0 w-full h-full" aria-hidden="true"></canvas>
     <div class="light-sweep" aria-hidden="true"></div>
     <div class="relative z-10 mx-auto max-w-6xl px-5 sm:px-6 w-full py-24">

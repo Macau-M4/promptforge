@@ -238,6 +238,60 @@
     to { transform: scaleX(1); }
   }
 
+  /* Floating geometric outlines (hero backdrop) */
+  .float-shape {
+    position: absolute;
+    pointer-events: none;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+  }
+  .float-ring {
+    border-radius: 9999px;
+    animation: floatRing 26s ease-in-out infinite;
+  }
+  .float-square {
+    animation: floatSquare 32s ease-in-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .float-ring, .float-square { animation: none; }
+  }
+
+  /* Rotating conic light beam (hero backdrop) */
+  .hero-beam {
+    position: absolute;
+    inset: -50%;
+    pointer-events: none;
+    background: conic-gradient(from 0deg, transparent 0deg, rgba(255, 255, 255, 0.08) 18deg, transparent 44deg, transparent 160deg, rgba(255, 255, 255, 0.05) 192deg, transparent 224deg, transparent 360deg);
+    animation: beamSpin 26s linear infinite;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .hero-beam { animation: none; }
+  }
+
+  /* Nav sliding indicator (moves between links) */
+  #nav-indicator {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.06);
+    transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), width 0.35s cubic-bezier(0.22, 1, 0.36, 1);
+    pointer-events: none;
+  }
+  @keyframes floatRing {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    50% { transform: translate(6%, -9%) rotate(180deg) scale(1.08); }
+  }
+  @keyframes floatSquare {
+    0%, 100% { transform: translate(0, 0) rotate(0deg) scale(1); }
+    50% { transform: translate(-9%, 7%) rotate(-180deg) scale(0.92); }
+  }
+  @keyframes beamSpin {
+    to { transform: rotate(360deg); }
+  }
+
   /* Light sweep (ambient, monochrome) */
   .light-sweep {
     position: absolute;

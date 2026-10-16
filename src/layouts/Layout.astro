@@ -67,13 +67,14 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
           <span class="font-display font-semibold text-lg tracking-tight text-zinc-100">Prompt<span class="silver-text">Forge</span></span>
         </a>
 
-        <nav class="hidden md:flex items-center gap-1 text-sm text-zinc-400">
+        <nav id="main-nav" class="hidden md:flex items-center gap-1 text-sm text-zinc-400 relative">
+          <span id="nav-indicator" aria-hidden="true"></span>
           {nav.map((n) => {
             const current = Astro.url.pathname.replace(base, '') === n.href || (n.href === '' && Astro.url.pathname.replace(base, '') === '');
             return (
               <a
                 href={`${base}${n.href}`}
-                class={`px-3 py-2 transition-colors ${current ? 'text-zinc-100' : 'hover:text-zinc-100'}`}
+                class={`px-3 py-2 transition-colors relative z-10 ${current ? 'text-zinc-100' : 'hover:text-zinc-100'}`}
                 aria-current={current ? 'page' : undefined}
               >
                 {n.label}
@@ -292,6 +293,25 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
         addEventListener('scroll', () => {
           if (!running) { current = target = window.scrollY; }
         }, { passive: true });
+      }
+
+      // Nav sliding indicator (glides between active + hovered links).
+      const navEl = document.getElementById('main-nav');
+      const navIndicator = document.getElementById('nav-indicator');
+      if (navEl && navIndicator) {
+        const navLinks = Array.from(navEl.querySelectorAll<HTMLElement>('a'));
+        const setTo = (link: HTMLElement) => {
+          navIndicator.style.width = link.offsetWidth + 'px';
+          navIndicator.style.transform = `translateX(${link.offsetLeft}px)`;
+        };
+        const activeLink = navLinks.find((l) => l.getAttribute('aria-current') === 'page') || navLinks[0];
+        if (activeLink) setTo(activeLink);
+        navLinks.forEach((l) => l.addEventListener('pointerenter', () => setTo(l)));
+        navEl.addEventListener('pointerleave', () => { if (activeLink) setTo(activeLink); });
+        addEventListener('resize', () => { if (activeLink) setTo(activeLink); });
+        if (document.fonts && document.fonts.ready) {
+          document.fonts.ready.then(() => { if (activeLink) setTo(activeLink); });
+        }
       }
     </script>
   </body>
