@@ -234,7 +234,7 @@ export function initBrowser() {
           const py = (e.clientY - r.top) / r.height - 0.5;
           card.style.setProperty('--gx', (e.clientX - r.left) + 'px');
           card.style.setProperty('--gy', (e.clientY - r.top) + 'px');
-          card.style.transform = `perspective(900px) rotateX(${(-py * 4).toFixed(2)}deg) rotateY(${(px * 5).toFixed(2)}deg) translateY(-3px)`;
+          card.style.transform = `perspective(800px) rotateX(${(-py * 9).toFixed(2)}deg) rotateY(${(px * 11).toFixed(2)}deg) translateY(-4px) scale3d(1.03, 1.03, 1.03)`;
         });
         card.addEventListener('pointerleave', () => {
           card.style.transition = ''; // restore .card-lift transition for a smooth reset

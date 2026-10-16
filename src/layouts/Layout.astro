@@ -46,10 +46,17 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
     <noscript>
       <style>
         [data-reveal], .kinetic-line > span { opacity: 1 !important; transform: none !important; }
+        #preloader { display: none !important; }
       </style>
     </noscript>
   </head>
   <body class="min-h-screen flex flex-col bg-[#0a0a0b]">
+    <div id="preloader" aria-hidden="true">
+      <div class="preloader-inner">
+        <span class="preloader-mark">P</span>
+        <span class="preloader-bar"><span class="preloader-bar-fill"></span></span>
+      </div>
+    </div>
     <div id="scroll-progress" class="fixed top-0 left-0 z-50 h-[2px] w-0 bg-zinc-100" aria-hidden="true"></div>
     <div id="cursor-glow" aria-hidden="true"></div>
 
@@ -149,6 +156,9 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
       addEventListener('scroll', onScroll, { passive: true });
       onScroll();
 
+      const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
       let revealedByIO = false;
       const reveal = () => {
         const els = document.querySelectorAll('[data-reveal]:not(.is-visible)');
@@ -173,24 +183,36 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
         );
         els.forEach((el) => io.observe(el));
       };
-      const initReveal = () => {
+      const startReveal = () => {
         if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', reveal);
         else reveal();
       };
-      initReveal();
       document.addEventListener('pf:reveal', reveal);
-      // Safety net: if IntersectionObserver never revealed anything within 3s
-      // (broken/missing), reveal everything so no content stays hidden. When IO
-      // works it reveals the first above-fold element immediately, so this guard
-      // leaves below-fold scroll reveals intact.
-      setTimeout(() => {
-        if (revealedByIO) return;
-        document.querySelectorAll('[data-reveal]:not(.is-visible)').forEach((el) => el.classList.add('is-visible'));
-      }, 3000);
+
+      // Boot: close the preloader, then start the entrance animations.
+      const boot = () => {
+        if (document.body.classList.contains('loaded')) return;
+        document.body.classList.add('loaded');
+        const pre = document.getElementById('preloader');
+        if (pre) {
+          pre.classList.add('done');
+          setTimeout(() => pre.remove(), 700);
+        }
+        startReveal();
+        // Safety net: if IntersectionObserver never revealed anything within 3s
+        // (broken/missing), reveal everything so no content stays hidden. When IO
+        // works it reveals the first above-fold element immediately, so this guard
+        // leaves below-fold scroll reveals intact.
+        setTimeout(() => {
+          if (revealedByIO) return;
+          document.querySelectorAll('[data-reveal]:not(.is-visible)').forEach((el) => el.classList.add('is-visible'));
+        }, 3000);
+      };
+      if (reduceMotion) boot();
+      else setTimeout(boot, 950);
+      setTimeout(boot, 4000); // hard fallback if the timed boot is interrupted
 
       // Cursor spotlight + magnetic buttons (fine-pointer, non-reduced-motion).
-      const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
-      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
       const glow = document.getElementById('cursor-glow');
       if (glow && finePointer && !reduceMotion) {
         document.body.classList.add('cursor-active');
@@ -218,6 +240,58 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
           btn.addEventListener('pointerleave', () => { btn.style.transform = ''; });
         };
         document.querySelectorAll<HTMLElement>('.btn-primary, .btn-ghost').forEach((b) => magnetize(b));
+      }
+
+      // Lenis-style inertial smooth scroll (vanilla, no dependency). Wheel-only
+      // glide; scrollbar drag, keyboard and anchor links stay native.
+      if (finePointer && !reduceMotion) {
+        const doc = document.documentElement;
+        const maxScroll = () => Math.max(0, doc.scrollHeight - window.innerHeight);
+        let target = window.scrollY;
+        let current = window.scrollY;
+        let raf = 0;
+        let running = false;
+
+        const tick = () => {
+          current += (target - current) * 0.085;
+          if (Math.abs(target - current) < 0.5) current = target;
+          window.scrollTo({ top: current, behavior: 'instant' as ScrollBehavior });
+          if (Math.abs(target - current) > 0.5) {
+            raf = requestAnimationFrame(tick);
+          } else {
+            running = false;
+            raf = 0;
+          }
+        };
+
+        const glide = (delta: number) => {
+          target = Math.max(0, Math.min(maxScroll(), target + delta));
+          if (!running) {
+            running = true;
+            raf = requestAnimationFrame(tick);
+          }
+        };
+
+        const inScrollable = (el: Element | null): boolean => {
+          for (let n = el; n && n !== document.body; n = n.parentElement) {
+            const s = getComputedStyle(n);
+            const scrollsY = /(auto|scroll|overlay)/.test(s.overflowY) && n.scrollHeight > n.clientHeight;
+            const scrollsX = /(auto|scroll|overlay)/.test(s.overflowX) && n.scrollWidth > n.clientWidth;
+            if (scrollsY || scrollsX) return true;
+          }
+          return false;
+        };
+
+        addEventListener('wheel', (e) => {
+          if (e.ctrlKey || e.metaKey) return; // keep pinch-to-zoom
+          if (inScrollable(e.target as Element)) return; // let native sub-scrolls work
+          e.preventDefault();
+          glide(e.deltaY);
+        }, { passive: false });
+
+        addEventListener('scroll', () => {
+          if (!running) { current = target = window.scrollY; }
+        }, { passive: true });
       }
     </script>
   </body>
