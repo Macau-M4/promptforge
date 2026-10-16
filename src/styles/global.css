@@ -89,10 +89,12 @@
     transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), background 0.25s var(--ease);
     will-change: transform;
   }
-  .card-lift:hover {
+  .card-lift:hover,
+  [data-reveal].card-lift:hover {
     transform: translateY(-3px);
     border-color: #3f3f46;
     background: #16161a;
+    transition: transform 0.25s var(--ease), border-color 0.25s var(--ease), background 0.25s var(--ease);
   }
 
   /* Scroll reveal — blur + lift + scale for a cinematic entrance */

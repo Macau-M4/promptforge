@@ -19,6 +19,9 @@ const nav = [
   { href: 'run', label: 'Playground' },
   { href: 'contribute', label: 'Contribute' }
 ];
+// Normalized current path (strip base + any trailing slash) so nav highlighting
+// works on `/paths/`, `/tools/`, `/run/`, `/contribute/` and not just `/`.
+const currentPath = (Astro.url.pathname.replace(base, '') || '').replace(/\/+$/, '');
 const fullTitle = title === 'PromptForge' ? title : `${title} · PromptForge`;
 const logo = `${base}#`;
 const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE'];
@@ -79,7 +82,7 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
         <nav id="main-nav" class="hidden md:flex items-center gap-1 text-sm text-zinc-400 relative">
           <span id="nav-indicator" aria-hidden="true"></span>
           {nav.map((n) => {
-            const current = Astro.url.pathname.replace(base, '') === n.href || (n.href === '' && Astro.url.pathname.replace(base, '') === '');
+            const current = currentPath === n.href || (n.href === '' && currentPath === '');
             return (
               <a
                 href={`${base}${n.href}`}
