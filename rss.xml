@@ -1,1 +1,176 @@
-PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHJzcyB2ZXJzaW9uPSIyLjAiPgogIDxjaGFubmVsPgogICAgPHRpdGxlPlByb21wdEZvcmdlPC90aXRsZT4KICAgIDxsaW5rPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlLzwvbGluaz4KICAgIDxkZXNjcmlwdGlvbj5UaGUgZnJlZSwgb3Blbi1zb3VyY2UgbGlicmFyeSBvZiBBSSBwcm9tcHRzLCBjb21tYW5kcywgdG9vbHMgYW5kIHdvcmtmbG93cy48L2Rlc2NyaXB0aW9uPgogIDxpdGVtPgogICAgPHRpdGxlPlVuaXQgVGVzdCBHZW5lcmF0b3I8L3RpdGxlPgogICAgPGxpbms+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy91bml0LXRlc3QtZ2VuZXJhdG9yPC9saW5rPgogICAgPGd1aWQ+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy91bml0LXRlc3QtZ2VuZXJhdG9yPC9ndWlkPgogICAgPHB1YkRhdGU+VGh1LCAyNyBNYXIgMjAyNSAwMDowMDowMCBHTVQ8L3B1YkRhdGU+CiAgICA8ZGVzY3JpcHRpb24+R2VuZXJhdGUgYSBmb2N1c2VkLCBlZGdlLWNhc2UtYXdhcmUgdW5pdCB0ZXN0IHN1aXRlIGZvciBhIGZ1bmN0aW9uLCBpbiB5b3VyIGZyYW1ld29yayBvZiBjaG9pY2UuPC9kZXNjcmlwdGlvbj4KICA8L2l0ZW0+CiAgPGl0ZW0+CiAgICA8dGl0bGU+UmVzZWFyY2ggU3ludGhlc2l6ZXI8L3RpdGxlPgogICAgPGxpbms+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy9yZXNlYXJjaC1zeW50aGVzaXplcjwvbGluaz4KICAgIDxndWlkPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvcmVzZWFyY2gtc3ludGhlc2l6ZXI8L2d1aWQ+CiAgICA8cHViRGF0ZT5UdWUsIDI1IE1hciAyMDI1IDAwOjAwOjAwIEdNVDwvcHViRGF0ZT4KICAgIDxkZXNjcmlwdGlvbj5NZXJnZSBtdWx0aXBsZSBzb3VyY2VzIGludG8gYSBjaXRlZCwgYmFsYW5jZWQgYnJpZWYgdGhhdCBoaWdobGlnaHRzIGFncmVlbWVudHMgYW5kIGNvbmZsaWN0cy48L2Rlc2NyaXB0aW9uPgogIDwvaXRlbT4KICA8aXRlbT4KICAgIDx0aXRsZT5JbWFnZSBTdHlsZS1UcmFuc2ZlciBQcm9tcHQ8L3RpdGxlPgogICAgPGxpbms+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy9pbWFnZS1zdHlsZS10cmFuc2Zlci1wcm9tcHQ8L2xpbms+CiAgICA8Z3VpZD5odHRwczovL21hY2F1LW00LmdpdGh1Yi5pby9wcm9tcHRmb3JnZS9wcm9tcHRzL2ltYWdlLXN0eWxlLXRyYW5zZmVyLXByb21wdDwvZ3VpZD4KICAgIDxwdWJEYXRlPlNhdCwgMjIgTWFyIDIwMjUgMDA6MDA6MDAgR01UPC9wdWJEYXRlPgogICAgPGRlc2NyaXB0aW9uPkNvbXBvc2UgYSBwcmVjaXNlLCByZXVzYWJsZSBpbWFnZS1nZW5lcmF0aW9uIHByb21wdCB3aXRoIGEgY29uc2lzdGVudCB2aXN1YWwgc3R5bGUgYmxvY2suPC9kZXNjcmlwdGlvbj4KICA8L2l0ZW0+CiAgPGl0ZW0+CiAgICA8dGl0bGU+VGVybWluYWwgQ29tbWFuZCBHZW5lcmF0b3I8L3RpdGxlPgogICAgPGxpbms+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy90ZXJtaW5hbC1jb21tYW5kLWdlbmVyYXRvcjwvbGluaz4KICAgIDxndWlkPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvdGVybWluYWwtY29tbWFuZC1nZW5lcmF0b3I8L2d1aWQ+CiAgICA8cHViRGF0ZT5UaHUsIDIwIE1hciAyMDI1IDAwOjAwOjAwIEdNVDwvcHViRGF0ZT4KICAgIDxkZXNjcmlwdGlvbj5EZXNjcmliZSB3aGF0IHlvdSB3YW50IGluIHBsYWluIEVuZ2xpc2ggYW5kIGdldCBhIHNhZmUsIGV4cGxhaW5lZCBzaGVsbCBjb21tYW5kLjwvZGVzY3JpcHRpb24+CiAgPC9pdGVtPgogIDxpdGVtPgogICAgPHRpdGxlPlNFTyBCbG9nIFBvc3QgR2VuZXJhdG9yPC90aXRsZT4KICAgIDxsaW5rPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvc2VvLWJsb2ctcG9zdC1nZW5lcmF0b3I8L2xpbms+CiAgICA8Z3VpZD5odHRwczovL21hY2F1LW00LmdpdGh1Yi5pby9wcm9tcHRmb3JnZS9wcm9tcHRzL3Nlby1ibG9nLXBvc3QtZ2VuZXJhdG9yPC9ndWlkPgogICAgPHB1YkRhdGU+VHVlLCAxOCBNYXIgMjAyNSAwMDowMDowMCBHTVQ8L3B1YkRhdGU+CiAgICA8ZGVzY3JpcHRpb24+VHVybiBhIHRvcGljIGFuZCB0YXJnZXQga2V5d29yZCBpbnRvIGEgc3RydWN0dXJlZCwgcmFua2luZy1yZWFkeSBibG9nIHBvc3Qgb3V0bGluZSBhbmQgZmlyc3QgZHJhZnQuPC9kZXNjcmlwdGlvbj4KICA8L2l0ZW0+CiAgPGl0ZW0+CiAgICA8dGl0bGU+RW1haWwgU2VxdWVuY2UgV3JpdGVyPC90aXRsZT4KICAgIDxsaW5rPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvZW1haWwtc2VxdWVuY2Utd3JpdGVyPC9saW5rPgogICAgPGd1aWQ+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy9lbWFpbC1zZXF1ZW5jZS13cml0ZXI8L2d1aWQ+CiAgICA8cHViRGF0ZT5TYXQsIDE1IE1hciAyMDI1IDAwOjAwOjAwIEdNVDwvcHViRGF0ZT4KICAgIDxkZXNjcmlwdGlvbj5EcmFmdCBhIG11bHRpLWVtYWlsIG51cnR1cmUgc2VxdWVuY2Ugd2l0aCBhIGNsZWFyIGFyYyBmcm9tIHdlbGNvbWUgdG8gY29udmVyc2lvbi48L2Rlc2NyaXB0aW9uPgogIDwvaXRlbT4KICA8aXRlbT4KICAgIDx0aXRsZT5QeXRob24gU2NyaXB0IFNjYWZmb2xkZXI8L3RpdGxlPgogICAgPGxpbms+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy9weXRob24tc2NyaXB0LXNjYWZmb2xkZXI8L2xpbms+CiAgICA8Z3VpZD5odHRwczovL21hY2F1LW00LmdpdGh1Yi5pby9wcm9tcHRmb3JnZS9wcm9tcHRzL3B5dGhvbi1zY3JpcHQtc2NhZmZvbGRlcjwvZ3VpZD4KICAgIDxwdWJEYXRlPldlZCwgMTIgTWFyIDIwMjUgMDA6MDA6MDAgR01UPC9wdWJEYXRlPgogICAgPGRlc2NyaXB0aW9uPkdlbmVyYXRlIGEgY29tcGxldGUsIHJ1bm5hYmxlIFB5dGhvbiBzY3JpcHQgd2l0aCBlcnJvciBoYW5kbGluZyBhbmQgYSBDTEkgaW50ZXJmYWNlLjwvZGVzY3JpcHRpb24+CiAgPC9pdGVtPgogIDxpdGVtPgogICAgPHRpdGxlPkRhdGEgSW5zaWdodCBTdW1tYXJpemVyPC90aXRsZT4KICAgIDxsaW5rPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvZGF0YS1pbnNpZ2h0LXN1bW1hcml6ZXI8L2xpbms+CiAgICA8Z3VpZD5odHRwczovL21hY2F1LW00LmdpdGh1Yi5pby9wcm9tcHRmb3JnZS9wcm9tcHRzL2RhdGEtaW5zaWdodC1zdW1tYXJpemVyPC9ndWlkPgogICAgPHB1YkRhdGU+TW9uLCAxMCBNYXIgMjAyNSAwMDowMDowMCBHTVQ8L3B1YkRhdGU+CiAgICA8ZGVzY3JpcHRpb24+VHVybiBhIHJhdyB0YWJsZSwgQ1NWLCBvciBudW1iZXJzIGR1bXAgaW50byBwbGFpbi1sYW5ndWFnZSBpbnNpZ2h0cyBhbmQgYSByZWNvbW1lbmRlZCBuZXh0IHN0ZXAuPC9kZXNjcmlwdGlvbj4KICA8L2l0ZW0+CiAgPGl0ZW0+CiAgICA8dGl0bGU+TGFuZGluZyBQYWdlIENvcHl3cml0ZXI8L3RpdGxlPgogICAgPGxpbms+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy9sYW5kaW5nLXBhZ2UtY29weXdyaXRlcjwvbGluaz4KICAgIDxndWlkPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvbGFuZGluZy1wYWdlLWNvcHl3cml0ZXI8L2d1aWQ+CiAgICA8cHViRGF0ZT5UaHUsIDA2IE1hciAyMDI1IDAwOjAwOjAwIEdNVDwvcHViRGF0ZT4KICAgIDxkZXNjcmlwdGlvbj5Xcml0ZSBjb252ZXJzaW9uLWZvY3VzZWQgbGFuZGluZyBwYWdlIGNvcHk6IGhlYWRsaW5lLCBzdWJoZWFkLCBiZW5lZml0cywgYW5kIENUQS48L2Rlc2NyaXB0aW9uPgogIDwvaXRlbT4KICA8aXRlbT4KICAgIDx0aXRsZT5Db2RlIFJldmlldyBFeHBlcnQ8L3RpdGxlPgogICAgPGxpbms+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy9jb2RlLXJldmlldy1leHBlcnQ8L2xpbms+CiAgICA8Z3VpZD5odHRwczovL21hY2F1LW00LmdpdGh1Yi5pby9wcm9tcHRmb3JnZS9wcm9tcHRzL2NvZGUtcmV2aWV3LWV4cGVydDwvZ3VpZD4KICAgIDxwdWJEYXRlPlN1biwgMDIgTWFyIDIwMjUgMDA6MDA6MDAgR01UPC9wdWJEYXRlPgogICAgPGRlc2NyaXB0aW9uPkdldCBhIHN0cnVjdHVyZWQsIHNldmVyaXR5LXJhbmtlZCBjb2RlIHJldmlldyB0aGF0IGNhdGNoZXMgYnVncywgc2VjdXJpdHkgaXNzdWVzIGFuZCBzbWVsbHMuPC9kZXNjcmlwdGlvbj4KICA8L2l0ZW0+CiAgPGl0ZW0+CiAgICA8dGl0bGU+RGVjaXNpb24gTWF0cml4IEhlbHBlcjwvdGl0bGU+CiAgICA8bGluaz5odHRwczovL21hY2F1LW00LmdpdGh1Yi5pby9wcm9tcHRmb3JnZS9wcm9tcHRzL2RlY2lzaW9uLW1hdHJpeC1oZWxwZXI8L2xpbms+CiAgICA8Z3VpZD5odHRwczovL21hY2F1LW00LmdpdGh1Yi5pby9wcm9tcHRmb3JnZS9wcm9tcHRzL2RlY2lzaW9uLW1hdHJpeC1oZWxwZXI8L2d1aWQ+CiAgICA8cHViRGF0ZT5GcmksIDI4IEZlYiAyMDI1IDAwOjAwOjAwIEdNVDwvcHViRGF0ZT4KICAgIDxkZXNjcmlwdGlvbj5TY29yZSBjb21wZXRpbmcgb3B0aW9ucyBhZ2FpbnN0IHdlaWdodGVkIGNyaXRlcmlhIHRvIG1ha2UgYSBkZWZlbnNpYmxlIGNob2ljZSBmYXN0LjwvZGVzY3JpcHRpb24+CiAgPC9pdGVtPgogIDxpdGVtPgogICAgPHRpdGxlPlByaW9yaXRpemUgTXkgVGFzayBMaXN0PC90aXRsZT4KICAgIDxsaW5rPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvcHJpb3JpdGl6ZS10YXNrLWxpc3Q8L2xpbms+CiAgICA8Z3VpZD5odHRwczovL21hY2F1LW00LmdpdGh1Yi5pby9wcm9tcHRmb3JnZS9wcm9tcHRzL3ByaW9yaXRpemUtdGFzay1saXN0PC9ndWlkPgogICAgPHB1YkRhdGU+VGh1LCAyMCBGZWIgMjAyNSAwMDowMDowMCBHTVQ8L3B1YkRhdGU+CiAgICA8ZGVzY3JpcHRpb24+U29ydCBhIGJhY2tsb2cgaW50byBhbiBFaXNlbmhvd2VyIG1hdHJpeCBhbmQgdGVsbCB5b3UgZXhhY3RseSB3aGF0IHRvIGRvIGZpcnN0LjwvZGVzY3JpcHRpb24+CiAgPC9pdGVtPgogIDxpdGVtPgogICAgPHRpdGxlPkZsYXNoY2FyZCAmIFF1aXogTWFrZXI8L3RpdGxlPgogICAgPGxpbms+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy9mbGFzaGNhcmQtcXVpei1tYWtlcjwvbGluaz4KICAgIDxndWlkPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvZmxhc2hjYXJkLXF1aXotbWFrZXI8L2d1aWQ+CiAgICA8cHViRGF0ZT5UdWUsIDE4IEZlYiAyMDI1IDAwOjAwOjAwIEdNVDwvcHViRGF0ZT4KICAgIDxkZXNjcmlwdGlvbj5HZW5lcmF0ZSBzcGFjZWQtcmVwZXRpdGlvbiBmbGFzaGNhcmRzIGFuZCBhIHNob3J0IHF1aXogZnJvbSBhbnkgc3R1ZHkgbWF0ZXJpYWwuPC9kZXNjcmlwdGlvbj4KICA8L2l0ZW0+CiAgPGl0ZW0+CiAgICA8dGl0bGU+V29ybGRidWlsZGluZyBBcmNoaXRlY3Q8L3RpdGxlPgogICAgPGxpbms+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy93b3JsZGJ1aWxkaW5nLWFyY2hpdGVjdDwvbGluaz4KICAgIDxndWlkPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvd29ybGRidWlsZGluZy1hcmNoaXRlY3Q8L2d1aWQ+CiAgICA8cHViRGF0ZT5GcmksIDE0IEZlYiAyMDI1IDAwOjAwOjAwIEdNVDwvcHViRGF0ZT4KICAgIDxkZXNjcmlwdGlvbj5EZXNpZ24gYSBjb2hlcmVudCBmaWN0aW9uYWwgd29ybGQg4oCUIGdlb2dyYXBoeSwgcG9saXRpY3MsIG1hZ2ljL3RlY2ggcnVsZXMsIGFuZCBjb25mbGljdHMuPC9kZXNjcmlwdGlvbj4KICA8L2l0ZW0+CiAgPGl0ZW0+CiAgICA8dGl0bGU+UmVmYWN0b3IgJiBFeHBsYWluIENvZGU8L3RpdGxlPgogICAgPGxpbms+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy9yZWZhY3Rvci1leHBsYWluLWNvZGU8L2xpbms+CiAgICA8Z3VpZD5odHRwczovL21hY2F1LW00LmdpdGh1Yi5pby9wcm9tcHRmb3JnZS9wcm9tcHRzL3JlZmFjdG9yLWV4cGxhaW4tY29kZTwvZ3VpZD4KICAgIDxwdWJEYXRlPlR1ZSwgMTEgRmViIDIwMjUgMDA6MDA6MDAgR01UPC9wdWJEYXRlPgogICAgPGRlc2NyaXB0aW9uPlJld3JpdGUgbWVzc3kgY29kZSB0byBiZSBjbGVhbmVyIGFuZCBzaW1wbGVyLCB0aGVuIGV4cGxhaW4gZXZlcnkgY2hhbmdlIGxpbmUgYnkgbGluZS48L2Rlc2NyaXB0aW9uPgogIDwvaXRlbT4KICA8aXRlbT4KICAgIDx0aXRsZT5Ub25lLW9mLVZvaWNlIFJld3JpdGVyPC90aXRsZT4KICAgIDxsaW5rPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvdG9uZS1vZi12b2ljZS1yZXdyaXRlcjwvbGluaz4KICAgIDxndWlkPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvdG9uZS1vZi12b2ljZS1yZXdyaXRlcjwvZ3VpZD4KICAgIDxwdWJEYXRlPldlZCwgMDUgRmViIDIwMjUgMDA6MDA6MDAgR01UPC9wdWJEYXRlPgogICAgPGRlc2NyaXB0aW9uPlJld3JpdGUgYW55IHRleHQgdG8gbWF0Y2ggYSBkZXNjcmliZWQgYnJhbmQgdm9pY2Ugd2hpbGUga2VlcGluZyB0aGUgbWVhbmluZyBpbnRhY3QuPC9kZXNjcmlwdGlvbj4KICA8L2l0ZW0+CiAgPGl0ZW0+CiAgICA8dGl0bGU+U29jaWFsIFBvc3QgSWRlYSBFbmdpbmU8L3RpdGxlPgogICAgPGxpbms+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy9zb2NpYWwtcG9zdC1pZGVhLWVuZ2luZTwvbGluaz4KICAgIDxndWlkPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvc29jaWFsLXBvc3QtaWRlYS1lbmdpbmU8L2d1aWQ+CiAgICA8cHViRGF0ZT5TdW4sIDAyIEZlYiAyMDI1IDAwOjAwOjAwIEdNVDwvcHViRGF0ZT4KICAgIDxkZXNjcmlwdGlvbj5HZW5lcmF0ZSBhIG1vbnRoIG9mIHBsYXRmb3JtLW5hdGl2ZSBwb3N0IGlkZWFzLCBob29rcywgYW5kIENUQXMgZm9yIHlvdXIgbmljaGUuPC9kZXNjcmlwdGlvbj4KICA8L2l0ZW0+CiAgPGl0ZW0+CiAgICA8dGl0bGU+U1dPVCBBbmFseXNpcyBHZW5lcmF0b3I8L3RpdGxlPgogICAgPGxpbms+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy9zd290LWFuYWx5c2lzLWdlbmVyYXRvcjwvbGluaz4KICAgIDxndWlkPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvc3dvdC1hbmFseXNpcy1nZW5lcmF0b3I8L2d1aWQ+CiAgICA8cHViRGF0ZT5UaHUsIDMwIEphbiAyMDI1IDAwOjAwOjAwIEdNVDwvcHViRGF0ZT4KICAgIDxkZXNjcmlwdGlvbj5CdWlsZCBhIHN0cnVjdHVyZWQgU1dPVCBmb3IgYSBwcm9kdWN0LCBpZGVhLCBvciBjb21wYW55LCB3aXRoIGFuIGFjdGlvbiBwbGFuIGZvciBlYWNoIHF1YWRyYW50LjwvZGVzY3JpcHRpb24+CiAgPC9pdGVtPgogIDxpdGVtPgogICAgPHRpdGxlPlJlZ2V4IEJ1aWxkZXIgZnJvbSBEZXNjcmlwdGlvbjwvdGl0bGU+CiAgICA8bGluaz5odHRwczovL21hY2F1LW00LmdpdGh1Yi5pby9wcm9tcHRmb3JnZS9wcm9tcHRzL3JlZ2V4LWJ1aWxkZXItZnJvbS1kZXNjcmlwdGlvbjwvbGluaz4KICAgIDxndWlkPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvcmVnZXgtYnVpbGRlci1mcm9tLWRlc2NyaXB0aW9uPC9ndWlkPgogICAgPHB1YkRhdGU+TW9uLCAyNyBKYW4gMjAyNSAwMDowMDowMCBHTVQ8L3B1YkRhdGU+CiAgICA8ZGVzY3JpcHRpb24+RGVzY3JpYmUgYSB0ZXh0IHBhdHRlcm4gaW4gd29yZHMgYW5kIGdldCBhIHdvcmtpbmcsIGV4cGxhaW5lZCByZWd1bGFyIGV4cHJlc3Npb24uPC9kZXNjcmlwdGlvbj4KICA8L2l0ZW0+CiAgPGl0ZW0+CiAgICA8dGl0bGU+Q29weWVkaXRvciAmIEdyYW1tYXIgUHJvPC90aXRsZT4KICAgIDxsaW5rPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvY29weWVkaXRvci1ncmFtbWFyLXBybzwvbGluaz4KICAgIDxndWlkPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvY29weWVkaXRvci1ncmFtbWFyLXBybzwvZ3VpZD4KICAgIDxwdWJEYXRlPldlZCwgMjIgSmFuIDIwMjUgMDA6MDA6MDAgR01UPC9wdWJEYXRlPgogICAgPGRlc2NyaXB0aW9uPkxpbmUtZWRpdCBhIGRyYWZ0IGZvciBncmFtbWFyLCBjbGFyaXR5LCBhbmQgZmxvdywgd2l0aCBhbiBleHBsYWluLXdoeSBwYXNzIHNvIHlvdSBsZWFybi48L2Rlc2NyaXB0aW9uPgogIDwvaXRlbT4KICA8aXRlbT4KICAgIDx0aXRsZT5Tb2NyYXRpYyBUdXRvcjwvdGl0bGU+CiAgICA8bGluaz5odHRwczovL21hY2F1LW00LmdpdGh1Yi5pby9wcm9tcHRmb3JnZS9wcm9tcHRzL3NvY3JhdGljLXR1dG9yPC9saW5rPgogICAgPGd1aWQ+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy9zb2NyYXRpYy10dXRvcjwvZ3VpZD4KICAgIDxwdWJEYXRlPkZyaSwgMTcgSmFuIDIwMjUgMDA6MDA6MDAgR01UPC9wdWJEYXRlPgogICAgPGRlc2NyaXB0aW9uPkxlYXJuIGJ5IGJlaW5nIHF1ZXN0aW9uZWQsIG5vdCBsZWN0dXJlZCDigJQgdGhlIG1vZGVsIGd1aWRlcyB5b3UgdG8gdGhlIGFuc3dlciBzdGVwIGJ5IHN0ZXAuPC9kZXNjcmlwdGlvbj4KICA8L2l0ZW0+CiAgPGl0ZW0+CiAgICA8dGl0bGU+TWVldGluZyBOb3RlcyDihpIgQWN0aW9uIEl0ZW1zPC90aXRsZT4KICAgIDxsaW5rPmh0dHBzOi8vbWFjYXUtbTQuZ2l0aHViLmlvL3Byb21wdGZvcmdlL3Byb21wdHMvbWVldGluZy1ub3Rlcy1hY3Rpb24taXRlbXM8L2xpbms+CiAgICA8Z3VpZD5odHRwczovL21hY2F1LW00LmdpdGh1Yi5pby9wcm9tcHRmb3JnZS9wcm9tcHRzL21lZXRpbmctbm90ZXMtYWN0aW9uLWl0ZW1zPC9ndWlkPgogICAgPHB1YkRhdGU+VHVlLCAxNCBKYW4gMjAyNSAwMDowMDowMCBHTVQ8L3B1YkRhdGU+CiAgICA8ZGVzY3JpcHRpb24+Q29udmVydCByYXcsIG1lc3N5IG1lZXRpbmcgbm90ZXMgaW50byBhIGNsZWFuIHN1bW1hcnkgd2l0aCBvd25lcnMgYW5kIG5leHQgYWN0aW9ucy48L2Rlc2NyaXB0aW9uPgogIDwvaXRlbT4KICA8aXRlbT4KICAgIDx0aXRsZT5TdG9yeSBJZGVhIEdlbmVyYXRvcjwvdGl0bGU+CiAgICA8bGluaz5odHRwczovL21hY2F1LW00LmdpdGh1Yi5pby9wcm9tcHRmb3JnZS9wcm9tcHRzL3N0b3J5LWlkZWEtZ2VuZXJhdG9yPC9saW5rPgogICAgPGd1aWQ+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy9zdG9yeS1pZGVhLWdlbmVyYXRvcjwvZ3VpZD4KICAgIDxwdWJEYXRlPldlZCwgMDggSmFuIDIwMjUgMDA6MDA6MDAgR01UPC9wdWJEYXRlPgogICAgPGRlc2NyaXB0aW9uPkdlbmVyYXRlIG9yaWdpbmFsIHN0b3J5IHByZW1pc2VzIHdpdGggYSBob29rLCBjb25mbGljdCwgYW5kIHR3aXN0LCBmaWx0ZXJlZCB0byB5b3VyIGdlbnJlLjwvZGVzY3JpcHRpb24+CiAgPC9pdGVtPgogIDxpdGVtPgogICAgPHRpdGxlPkV4cGxhaW4gTGlrZSBJJ20gMTI8L3RpdGxlPgogICAgPGxpbms+aHR0cHM6Ly9tYWNhdS1tNC5naXRodWIuaW8vcHJvbXB0Zm9yZ2UvcHJvbXB0cy9leHBsYWluLWxpa2UtaW0tMTI8L2xpbms+CiAgICA8Z3VpZD5odHRwczovL21hY2F1LW00LmdpdGh1Yi5pby9wcm9tcHRmb3JnZS9wcm9tcHRzL2V4cGxhaW4tbGlrZS1pbS0xMjwvZ3VpZD4KICAgIDxwdWJEYXRlPlN1biwgMDUgSmFuIDIwMjUgMDA6MDA6MDAgR01UPC9wdWJEYXRlPgogICAgPGRlc2NyaXB0aW9uPkJyZWFrIGFueSBoYXJkIGNvbmNlcHQgaW50byBhIHNpbXBsZSBleHBsYW5hdGlvbiB1c2luZyBhbiBhbmFsb2d5IGEgY2hpbGQgd291bGQgZ2V0LjwvZGVzY3JpcHRpb24+CiAgPC9pdGVtPgogIDwvY2hhbm5lbD4KPC9yc3M+
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>PromptForge</title>
+    <link>https://macau-m4.github.io/promptforge/</link>
+    <description>The free, open-source library of AI prompts, commands, tools and workflows.</description>
+  <item>
+    <title>Unit Test Generator</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/unit-test-generator</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/unit-test-generator</guid>
+    <pubDate>Thu, 27 Mar 2025 00:00:00 GMT</pubDate>
+    <description>Generate a focused, edge-case-aware unit test suite for a function, in your framework of choice.</description>
+  </item>
+  <item>
+    <title>Research Synthesizer</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/research-synthesizer</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/research-synthesizer</guid>
+    <pubDate>Tue, 25 Mar 2025 00:00:00 GMT</pubDate>
+    <description>Merge multiple sources into a cited, balanced brief that highlights agreements and conflicts.</description>
+  </item>
+  <item>
+    <title>Image Style-Transfer Prompt</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/image-style-transfer-prompt</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/image-style-transfer-prompt</guid>
+    <pubDate>Sat, 22 Mar 2025 00:00:00 GMT</pubDate>
+    <description>Compose a precise, reusable image-generation prompt with a consistent visual style block.</description>
+  </item>
+  <item>
+    <title>Terminal Command Generator</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/terminal-command-generator</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/terminal-command-generator</guid>
+    <pubDate>Thu, 20 Mar 2025 00:00:00 GMT</pubDate>
+    <description>Describe what you want in plain English and get a safe, explained shell command.</description>
+  </item>
+  <item>
+    <title>SEO Blog Post Generator</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/seo-blog-post-generator</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/seo-blog-post-generator</guid>
+    <pubDate>Tue, 18 Mar 2025 00:00:00 GMT</pubDate>
+    <description>Turn a topic and target keyword into a structured, ranking-ready blog post outline and first draft.</description>
+  </item>
+  <item>
+    <title>Email Sequence Writer</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/email-sequence-writer</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/email-sequence-writer</guid>
+    <pubDate>Sat, 15 Mar 2025 00:00:00 GMT</pubDate>
+    <description>Draft a multi-email nurture sequence with a clear arc from welcome to conversion.</description>
+  </item>
+  <item>
+    <title>Python Script Scaffolder</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/python-script-scaffolder</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/python-script-scaffolder</guid>
+    <pubDate>Wed, 12 Mar 2025 00:00:00 GMT</pubDate>
+    <description>Generate a complete, runnable Python script with error handling and a CLI interface.</description>
+  </item>
+  <item>
+    <title>Data Insight Summarizer</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/data-insight-summarizer</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/data-insight-summarizer</guid>
+    <pubDate>Mon, 10 Mar 2025 00:00:00 GMT</pubDate>
+    <description>Turn a raw table, CSV, or numbers dump into plain-language insights and a recommended next step.</description>
+  </item>
+  <item>
+    <title>Landing Page Copywriter</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/landing-page-copywriter</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/landing-page-copywriter</guid>
+    <pubDate>Thu, 06 Mar 2025 00:00:00 GMT</pubDate>
+    <description>Write conversion-focused landing page copy: headline, subhead, benefits, and CTA.</description>
+  </item>
+  <item>
+    <title>Code Review Expert</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/code-review-expert</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/code-review-expert</guid>
+    <pubDate>Sun, 02 Mar 2025 00:00:00 GMT</pubDate>
+    <description>Get a structured, severity-ranked code review that catches bugs, security issues and smells.</description>
+  </item>
+  <item>
+    <title>Decision Matrix Helper</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/decision-matrix-helper</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/decision-matrix-helper</guid>
+    <pubDate>Fri, 28 Feb 2025 00:00:00 GMT</pubDate>
+    <description>Score competing options against weighted criteria to make a defensible choice fast.</description>
+  </item>
+  <item>
+    <title>Prioritize My Task List</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/prioritize-task-list</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/prioritize-task-list</guid>
+    <pubDate>Thu, 20 Feb 2025 00:00:00 GMT</pubDate>
+    <description>Sort a backlog into an Eisenhower matrix and tell you exactly what to do first.</description>
+  </item>
+  <item>
+    <title>Flashcard & Quiz Maker</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/flashcard-quiz-maker</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/flashcard-quiz-maker</guid>
+    <pubDate>Tue, 18 Feb 2025 00:00:00 GMT</pubDate>
+    <description>Generate spaced-repetition flashcards and a short quiz from any study material.</description>
+  </item>
+  <item>
+    <title>Worldbuilding Architect</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/worldbuilding-architect</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/worldbuilding-architect</guid>
+    <pubDate>Fri, 14 Feb 2025 00:00:00 GMT</pubDate>
+    <description>Design a coherent fictional world — geography, politics, magic/tech rules, and conflicts.</description>
+  </item>
+  <item>
+    <title>Refactor & Explain Code</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/refactor-explain-code</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/refactor-explain-code</guid>
+    <pubDate>Tue, 11 Feb 2025 00:00:00 GMT</pubDate>
+    <description>Rewrite messy code to be cleaner and simpler, then explain every change line by line.</description>
+  </item>
+  <item>
+    <title>Tone-of-Voice Rewriter</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/tone-of-voice-rewriter</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/tone-of-voice-rewriter</guid>
+    <pubDate>Wed, 05 Feb 2025 00:00:00 GMT</pubDate>
+    <description>Rewrite any text to match a described brand voice while keeping the meaning intact.</description>
+  </item>
+  <item>
+    <title>Social Post Idea Engine</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/social-post-idea-engine</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/social-post-idea-engine</guid>
+    <pubDate>Sun, 02 Feb 2025 00:00:00 GMT</pubDate>
+    <description>Generate a month of platform-native post ideas, hooks, and CTAs for your niche.</description>
+  </item>
+  <item>
+    <title>SWOT Analysis Generator</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/swot-analysis-generator</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/swot-analysis-generator</guid>
+    <pubDate>Thu, 30 Jan 2025 00:00:00 GMT</pubDate>
+    <description>Build a structured SWOT for a product, idea, or company, with an action plan for each quadrant.</description>
+  </item>
+  <item>
+    <title>Regex Builder from Description</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/regex-builder-from-description</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/regex-builder-from-description</guid>
+    <pubDate>Mon, 27 Jan 2025 00:00:00 GMT</pubDate>
+    <description>Describe a text pattern in words and get a working, explained regular expression.</description>
+  </item>
+  <item>
+    <title>Copyeditor & Grammar Pro</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/copyeditor-grammar-pro</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/copyeditor-grammar-pro</guid>
+    <pubDate>Wed, 22 Jan 2025 00:00:00 GMT</pubDate>
+    <description>Line-edit a draft for grammar, clarity, and flow, with an explain-why pass so you learn.</description>
+  </item>
+  <item>
+    <title>Socratic Tutor</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/socratic-tutor</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/socratic-tutor</guid>
+    <pubDate>Fri, 17 Jan 2025 00:00:00 GMT</pubDate>
+    <description>Learn by being questioned, not lectured — the model guides you to the answer step by step.</description>
+  </item>
+  <item>
+    <title>Meeting Notes → Action Items</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/meeting-notes-action-items</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/meeting-notes-action-items</guid>
+    <pubDate>Tue, 14 Jan 2025 00:00:00 GMT</pubDate>
+    <description>Convert raw, messy meeting notes into a clean summary with owners and next actions.</description>
+  </item>
+  <item>
+    <title>Story Idea Generator</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/story-idea-generator</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/story-idea-generator</guid>
+    <pubDate>Wed, 08 Jan 2025 00:00:00 GMT</pubDate>
+    <description>Generate original story premises with a hook, conflict, and twist, filtered to your genre.</description>
+  </item>
+  <item>
+    <title>Explain Like I'm 12</title>
+    <link>https://macau-m4.github.io/promptforge/prompts/explain-like-im-12</link>
+    <guid>https://macau-m4.github.io/promptforge/prompts/explain-like-im-12</guid>
+    <pubDate>Sun, 05 Jan 2025 00:00:00 GMT</pubDate>
+    <description>Break any hard concept into a simple explanation using an analogy a child would get.</description>
+  </item>
+  </channel>
+</rss>
