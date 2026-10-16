@@ -157,9 +157,9 @@ export function initBrowser() {
       <article class="panel card-lift p-5 flex flex-col gap-3" ${reveal} data-tilt>
         <div class="flex items-start gap-3">
           <div class="flex flex-col items-center gap-1 shrink-0">
-            <button data-vote="${p.id}" data-dir="1" class="vote-btn grid place-items-center w-9 h-9 rounded border ${v === 1 ? 'bg-zinc-100 border-zinc-100 text-black' : 'border-[#2c2c31] text-zinc-500 hover:text-zinc-100 hover:border-zinc-500'} transition-colors" aria-label="upvote">โ–ฒ</button>
+            <button data-vote="${p.id}" data-dir="1" class="vote-btn grid place-items-center w-9 h-9 rounded border ${v === 1 ? 'bg-zinc-100 border-zinc-100 text-black' : 'border-[#2c2c31] text-zinc-500 hover:text-zinc-100 hover:border-zinc-500'} transition-colors" aria-label="upvote">▲</button>
             <span class="text-sm font-semibold text-zinc-100 tabular-nums" data-score="${p.id}">${up - down}</span>
-            <button data-vote="${p.id}" data-dir="-1" class="vote-btn grid place-items-center w-9 h-9 rounded border ${v === -1 ? 'bg-zinc-700 border-zinc-600 text-zinc-100' : 'border-[#2c2c31] text-zinc-500 hover:text-zinc-100 hover:border-zinc-500'} transition-colors" aria-label="downvote">โ–ผ</button>
+            <button data-vote="${p.id}" data-dir="-1" class="vote-btn grid place-items-center w-9 h-9 rounded border ${v === -1 ? 'bg-zinc-700 border-zinc-600 text-zinc-100' : 'border-[#2c2c31] text-zinc-500 hover:text-zinc-100 hover:border-zinc-500'} transition-colors" aria-label="downvote">▼</button>
           </div>
           <div class="min-w-0 flex-1">
             <div class="flex items-center gap-2 mb-1.5 flex-wrap">
@@ -175,7 +175,7 @@ export function initBrowser() {
         </div>
         <div class="mt-auto flex items-center gap-2 pt-3 border-t border-[#1c1c20] text-xs">
           <button data-copy="${p.id}" class="btn-ghost px-2.5 py-1.5 text-xs">Copy</button>
-          <a href="${base}run?prompt=${p.id}" class="btn-ghost px-2.5 py-1.5 text-xs">Run โ—</a>
+          <a href="${base}run?prompt=${p.id}" class="btn-ghost px-2.5 py-1.5 text-xs">Run →</a>
           ${vars > 0 ? `<span class="text-zinc-600 ml-auto font-mono">${vars} var</span>` : `<span class="text-zinc-600 ml-auto font-mono">${esc(p.model)}</span>`}
         </div>
       </article>`;
@@ -211,7 +211,7 @@ export function initBrowser() {
         if (!p) return;
         try {
           await navigator.clipboard.writeText(p.prompt);
-          b.textContent = 'Copied โ“';
+          b.textContent = 'Copied ✓';
           setTimeout(() => (b.textContent = 'Copy'), 1500);
         } catch {
           b.textContent = 'Copy failed';
@@ -224,15 +224,20 @@ export function initBrowser() {
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     if (fine && !reduce) {
       gridEl.querySelectorAll<HTMLElement>('[data-tilt]').forEach((card) => {
-        const onMove = (e: PointerEvent) => {
+        card.addEventListener('pointerenter', () => {
+          // Fast follow while tracking; the .card-lift 0.25s transition would lag.
+          card.style.transition = 'transform 0.08s ease-out';
+        });
+        card.addEventListener('pointermove', (e) => {
           const r = card.getBoundingClientRect();
           const px = (e.clientX - r.left) / r.width - 0.5;
           const py = (e.clientY - r.top) / r.height - 0.5;
           card.style.transform = `perspective(900px) rotateX(${(-py * 4).toFixed(2)}deg) rotateY(${(px * 5).toFixed(2)}deg) translateY(-3px)`;
-        };
-        const onLeave = () => { card.style.transform = ''; };
-        card.addEventListener('pointermove', onMove);
-        card.addEventListener('pointerleave', onLeave);
+        });
+        card.addEventListener('pointerleave', () => {
+          card.style.transition = ''; // restore .card-lift transition for a smooth reset
+          card.style.transform = '';
+        });
       });
     }
   }

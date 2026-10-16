@@ -9,23 +9,23 @@ importers:
   .:
     dependencies:
       astro:
-        specifier: ^5.7.0
+        specifier: 5.18.2
         version: 5.18.2(jiti@1.21.7)(rollup@4.64.7)(typescript@5.9.3)(yaml@2.9.1)
       gray-matter:
-        specifier: ^4.0.3
+        specifier: 4.0.3
         version: 4.0.3
       zod:
-        specifier: ^3.24.1
+        specifier: 3.25.76
         version: 3.25.76
     devDependencies:
       '@astrojs/tailwind':
-        specifier: ^6.0.0
+        specifier: 6.0.2
         version: 6.0.2(astro@5.18.2(jiti@1.21.7)(rollup@4.64.7)(typescript@5.9.3)(yaml@2.9.1))(tailwindcss@3.4.19(yaml@2.9.1))
       tailwindcss:
-        specifier: ^3.4.17
+        specifier: 3.4.19
         version: 3.4.19(yaml@2.9.1)
       typescript:
-        specifier: ^5.7.2
+        specifier: 5.9.3
         version: 5.9.3
 
 packages:

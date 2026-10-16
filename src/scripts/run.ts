@@ -1,4 +1,4 @@
-﻿import { extractVariables, fillVariables } from '../lib/markdown';
+import { extractVariables, fillVariables } from '../lib/markdown';
 
 interface RunPrompt {
   id: string;
@@ -169,7 +169,7 @@ export function initRun() {
     app.innerHTML = `
       <div class="grid lg:grid-cols-2 gap-6">
         <section class="panel p-5 space-y-4">
-          <h2 class="font-semibold text-zinc-100">1 ยท Pick a prompt</h2>
+          <h2 class="font-semibold text-zinc-100">1 · Pick a prompt</h2>
           <select id="prompt-sel" class="w-full py-2.5 px-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-zinc-500/50">${options}</select>
           <div>
             <div class="flex items-center justify-between mb-2">
@@ -182,7 +182,7 @@ export function initRun() {
         </section>
 
         <section class="panel p-5 space-y-4">
-          <h2 class="font-semibold text-zinc-100">2 ยท Choose a free provider</h2>
+          <h2 class="font-semibold text-zinc-100">2 · Choose a free provider</h2>
           <div>
             <label class="text-sm text-zinc-300">Provider</label>
             <select id="provider-sel" class="w-full mt-1 py-2.5 px-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-zinc-500/50">
@@ -202,7 +202,7 @@ export function initRun() {
               class="w-full mt-1 py-2.5 px-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-zinc-200 text-sm placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-500/50" />
             ${prov.keyUrl ? `<a href="${esc(prov.keyUrl)}" target="_blank" rel="noopener" class="text-xs text-zinc-300 underline">Get a free key →</a>` : ''}
           </div>
-          <button id="run-btn" class="btn-primary w-full py-3">โ–ถ Run prompt</button>
+          <button id="run-btn" class="btn-primary w-full py-3">▶ Run prompt</button>
           <div id="status" class="text-sm text-zinc-400"></div>
           <div id="output" class="hidden panel p-4 whitespace-pre-wrap text-zinc-200 text-sm leading-relaxed max-h-96 overflow-y-auto"></div>
         </section>
@@ -269,13 +269,13 @@ export function initRun() {
         const text = await runPrompt(provider(), modelSel.value, finalPrompt);
         output.textContent = text;
         output.classList.remove('hidden');
-        status.innerHTML = '<span class="text-zinc-300">Done โ“</span>';
+        status.innerHTML = '<span class="text-zinc-300">Done ✓</span>';
       } catch (e: any) {
         status.innerHTML = `<span class="text-zinc-300">Error: ${esc(String(e?.message || e))}. If a keyed provider fails, it may be a CORS or key issue — try Pollinations (no key).</span>`;
       } finally {
         running = false;
         runBtn.disabled = false;
-        runBtn.textContent = 'โ–ถ Run prompt';
+        runBtn.textContent = '▶ Run prompt';
       }
     });
   }

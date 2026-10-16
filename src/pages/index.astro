@@ -58,19 +58,19 @@ const base = import.meta.env.BASE_URL;
   <section class="border-y border-[#1c1c20]">
     <div class="mx-auto max-w-6xl grid grid-cols-2 sm:grid-cols-4">
       <div class="py-10 px-6 border-r border-b sm:border-b-0 border-[#1c1c20]" data-reveal>
-        <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={data.length}>0</div>
+        <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={data.length}>{data.length}</div>
         <div class="mono-label mt-2">Prompts</div>
       </div>
       <div class="py-10 px-6 border-r border-b sm:border-b-0 border-[#1c1c20]" data-reveal data-reveal-delay="80">
-        <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={catCount}>0</div>
+        <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={catCount}>{catCount}</div>
         <div class="mono-label mt-2">Categories</div>
       </div>
       <div class="py-10 px-6 border-r border-b sm:border-b-0 border-[#1c1c20]" data-reveal data-reveal-delay="160">
-        <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={paths.length}>0</div>
+        <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={paths.length}>{paths.length}</div>
         <div class="mono-label mt-2">Learning paths</div>
       </div>
       <div class="py-10 px-6" data-reveal data-reveal-delay="240">
-        <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={totalVotes}>0</div>
+        <div class="display text-4xl sm:text-5xl text-zinc-100" data-count={totalVotes}>{totalVotes}</div>
         <div class="mono-label mt-2">Net votes</div>
       </div>
     </div>
@@ -103,7 +103,7 @@ const base = import.meta.env.BASE_URL;
       const t0 = performance.now();
       const tick = (now: number) => {
         const p = Math.min((now - t0) / dur, 1);
-        el.textContent = String(Math.round(target * (1 - Math.pow(1 - p, 3))));
+        el.textContent = String(p >= 1 ? target : Math.round(target * (1 - Math.pow(1 - p, 3))));
         if (p < 1) requestAnimationFrame(tick);
       };
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) el.textContent = String(target);

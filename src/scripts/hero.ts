@@ -188,7 +188,13 @@ export function initHero() {
   seed();
   start();
 
-  window.addEventListener('resize', () => { resize(); seed(); if (!reduceMotion && running) { /* re-render via loop */ } });
+  window.addEventListener('resize', () => {
+    resize();
+    seed();
+    // Reduced-motion shows a single static frame, so it must be redrawn after the
+    // canvas is resized (resize() clears it). The RAF loop redraws the rest.
+    if (reduceMotion) frame(1000);
+  });
 
   if (finePointer) {
     hero.addEventListener('pointermove', (e) => {

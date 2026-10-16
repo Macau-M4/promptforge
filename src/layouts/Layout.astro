@@ -148,6 +148,7 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
       addEventListener('scroll', onScroll, { passive: true });
       onScroll();
 
+      let revealedByIO = false;
       const reveal = () => {
         const els = document.querySelectorAll('[data-reveal]:not(.is-visible)');
         if (!('IntersectionObserver' in window)) {
@@ -158,6 +159,7 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
           (entries) => {
             for (const e of entries) {
               if (e.isIntersecting) {
+                revealedByIO = true;
                 const el = e.target as HTMLElement;
                 const d = Number(el.dataset.revealDelay || 0);
                 if (d) setTimeout(() => el.classList.add('is-visible'), d);
@@ -176,8 +178,12 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
       };
       initReveal();
       document.addEventListener('pf:reveal', reveal);
-      // Safety net: never leave reveal targets invisible if IO/JS misbehaves.
+      // Safety net: if IntersectionObserver never revealed anything within 3s
+      // (broken/missing), reveal everything so no content stays hidden. When IO
+      // works it reveals the first above-fold element immediately, so this guard
+      // leaves below-fold scroll reveals intact.
       setTimeout(() => {
+        if (revealedByIO) return;
         document.querySelectorAll('[data-reveal]:not(.is-visible)').forEach((el) => el.classList.add('is-visible'));
       }, 3000);
     </script>
