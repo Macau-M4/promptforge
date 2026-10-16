@@ -26,8 +26,8 @@ LLM backends are all free tiers or keyless.
 - **Styling:** [Tailwind CSS](https://tailwindcss.com)
 - **Content:** markdown files in `src/content/{prompts,paths,tools}/`
 - **Schema:** [Zod](https://zod.dev) (validated at build time and in CI)
-- **Hosting:** GitHub Pages (workflow included) — also Cloudflare/Vercel/Netlify free tiers
-- **CI:** GitHub Actions (validate + auto-tag + deploy)
+- **Hosting:** GitHub Pages (branch-based) — also Cloudflare/Vercel/Netlify free tiers
+- **CI:** GitHub Actions (validate schema + auto-tag on PRs)
 - **LLM:** [Pollinations](https://text.pollinations.ai/) (keyless), Google AI Studio, Groq, OpenRouter free models, or local WebLLM
 - **Auth:** GitHub OAuth Device Flow (free)
 
@@ -63,20 +63,24 @@ everything else still works.
 
 ### 3. Deploy to GitHub Pages (free)
 
-1. Push to `main`.
-2. In the repo, go to **Settings → Pages** → set *Source* to **GitHub Actions**.
-3. The included `.github/workflows/deploy.yml` builds and deploys automatically.
+Static hosting on the free `*.github.io` subdomain, served straight from a `gh-pages`
+branch (no server, no paid build service):
 
-Your site is live at `https://<you>.github.io/<repo>/` (or `https://<you>.github.io/`
-if the repo is named `<you>.github.io`).
+```bash
+# 1. Build the site with your project base path
+PUBLIC_BASE=/<repo>/ PUBLIC_SITE=https://<you>.github.io pnpm build
 
-> **One-command alternative:** `scripts/deploy-github.mjs` creates the repo, pushes
-> everything, enables Pages and triggers the deploy workflow via the GitHub REST API —
-> no local git needed. Run it with a classic PAT that has `repo` + `workflow` scope:
->
-> ```bash
-> node scripts/deploy-github.mjs ghp_xxx promptforge
-> ```
+# 2. Publish dist/ to the gh-pages branch and point Pages at it
+GITHUB_TOKEN=ghp_xxx node scripts/deploy-pages-branch.mjs <repo>
+```
+
+The first build goes live in 1–3 minutes at `https://<you>.github.io/<repo>/`
+(or `https://<you>.github.io/` if the repo is named `<you>.github.io`).
+
+> **One-command bootstrap:** `scripts/deploy-github.mjs` creates the repo and pushes
+> all source to `main` (then run the two commands above to publish). Both scripts use
+> the GitHub REST API, so **no local git is required**. Use a classic PAT with
+> `repo` + `workflow` scopes.
 
 #### Alternative free hosts
 
@@ -139,10 +143,11 @@ scripts/
   validate.mjs             # standalone Zod validation (CI)
   auto-tag.mjs             # keyword-based category inference
   ci-annotate.mjs          # PR comment + label glue (CI)
+  deploy-github.mjs        # create repo + push source (REST API, no git)
+  deploy-pages-branch.mjs  # publish dist/ to gh-pages branch
 .github/workflows/
-  validate.yml             # schema validation on PR
+  validate.yml             # schema validation on PR + push
   auto-tag.yml             # auto-tagging on PR
-  deploy.yml               # GitHub Pages deploy
 ```
 
 ## 💸 Cost

@@ -135,33 +135,9 @@ async function main() {
   await gh(`/repos/${owner}/${repoName}/git/refs/heads/main`, 'PATCH', { sha: commitSha, force: true });
   console.log(`Pushed ${tree.length} files to main @ ${commitSha.slice(0, 7)}`);
 
-  // 6. Enable GitHub Pages via the Actions workflow.
-  try {
-    await gh(`/repos/${owner}/${repoName}/pages`, 'POST', { build_type: 'workflow' });
-    console.log('GitHub Pages enabled (build_type: workflow).');
-  } catch (e) {
-    console.warn('Pages setup note:', e.message);
-  }
-
-  // 7. Ensure the deploy workflow runs (the API push usually triggers it; dispatch as fallback).
-  await new Promise((r) => setTimeout(r, 4000));
-  try {
-    const runs = await gh(`/repos/${owner}/${repoName}/actions/runs?branch=main&per_page=10`);
-    const already = (runs.data.workflow_runs || []).some((r) => r.name === 'Deploy to GitHub Pages');
-    if (already) {
-      console.log('Deploy workflow already triggered by the push.');
-    } else {
-      await gh(`/repos/${owner}/${repoName}/actions/workflows/deploy.yml/dispatches`, 'POST', { ref: 'main' });
-      console.log('Triggered deploy workflow via workflow_dispatch.');
-    }
-  } catch (e) {
-    console.warn('Workflow trigger note:', e.message);
-  }
-
   console.log(`\nRepo:      https://github.com/${owner}/${repoName}`);
   console.log(`Actions:   https://github.com/${owner}/${repoName}/actions`);
-  console.log(`Site URL:  https://${owner}.github.io/${repoName}/`);
-  console.log('The deploy workflow takes 1–3 minutes; the site is live once it completes.');
+  console.log(`Next:      node scripts/deploy-pages-branch.mjs ${repoName}  (build dist/ first, then publish)`);
 }
 
 main().catch((e) => {
