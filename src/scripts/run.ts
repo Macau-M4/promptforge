@@ -1,4 +1,4 @@
-import { extractVariables, fillVariables } from '../lib/markdown';
+﻿import { extractVariables, fillVariables } from '../lib/markdown';
 
 interface RunPrompt {
   id: string;
@@ -169,42 +169,42 @@ export function initRun() {
     app.innerHTML = `
       <div class="grid lg:grid-cols-2 gap-6">
         <section class="panel p-5 space-y-4">
-          <h2 class="font-semibold text-slate-100">1 · Pick a prompt</h2>
-          <select id="prompt-sel" class="w-full py-2.5 px-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50">${options}</select>
+          <h2 class="font-semibold text-zinc-100">1 ยท Pick a prompt</h2>
+          <select id="prompt-sel" class="w-full py-2.5 px-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-zinc-500/50">${options}</select>
           <div>
             <div class="flex items-center justify-between mb-2">
-              <label class="text-sm text-slate-300">Prompt text</label>
-              <span id="var-count" class="text-xs text-slate-500"></span>
+              <label class="text-sm text-zinc-300">Prompt text</label>
+              <span id="var-count" class="text-xs text-zinc-500"></span>
             </div>
-            <textarea id="prompt-preview" readonly class="w-full h-48 p-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-slate-300 text-sm font-mono focus:outline-none"></textarea>
+            <textarea id="prompt-preview" readonly class="w-full h-48 p-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-zinc-300 text-sm font-mono focus:outline-none"></textarea>
           </div>
           <div id="vars" class="space-y-2"></div>
         </section>
 
         <section class="panel p-5 space-y-4">
-          <h2 class="font-semibold text-slate-100">2 · Choose a free provider</h2>
+          <h2 class="font-semibold text-zinc-100">2 ยท Choose a free provider</h2>
           <div>
-            <label class="text-sm text-slate-300">Provider</label>
-            <select id="provider-sel" class="w-full mt-1 py-2.5 px-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50">
+            <label class="text-sm text-zinc-300">Provider</label>
+            <select id="provider-sel" class="w-full mt-1 py-2.5 px-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-zinc-500/50">
               ${PROVIDERS.map((p) => `<option value="${p.id}" ${p.id === providerId ? 'selected' : ''}>${esc(p.label)}</option>`).join('')}
             </select>
-            <p class="text-xs text-slate-500 mt-1">${esc(prov.help)}</p>
+            <p class="text-xs text-zinc-500 mt-1">${esc(prov.help)}</p>
           </div>
           <div>
-            <label class="text-sm text-slate-300">Model</label>
-            <select id="model-sel" class="w-full mt-1 py-2.5 px-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50">
+            <label class="text-sm text-zinc-300">Model</label>
+            <select id="model-sel" class="w-full mt-1 py-2.5 px-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-zinc-500/50">
               ${prov.models.map((m) => `<option>${esc(m)}</option>`).join('')}
             </select>
           </div>
           <div id="key-wrap" class="${prov.needsKey ? '' : 'hidden'}">
-            <label class="text-sm text-slate-300">${esc(prov.keyLabel || 'API key')}</label>
+            <label class="text-sm text-zinc-300">${esc(prov.keyLabel || 'API key')}</label>
             <input id="key-input" type="password" placeholder="Paste your key (stored locally)" value="${esc(getKey(providerId))}"
-              class="w-full mt-1 py-2.5 px-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-slate-200 text-sm placeholder:text-slate-600 focus:outline-none focus:ring-2 focus:ring-indigo-500/50" />
-            ${prov.keyUrl ? `<a href="${esc(prov.keyUrl)}" target="_blank" rel="noopener" class="text-xs text-indigo-300 underline">Get a free key →</a>` : ''}
+              class="w-full mt-1 py-2.5 px-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-zinc-200 text-sm placeholder:text-zinc-600 focus:outline-none focus:ring-2 focus:ring-zinc-500/50" />
+            ${prov.keyUrl ? `<a href="${esc(prov.keyUrl)}" target="_blank" rel="noopener" class="text-xs text-zinc-300 underline">Get a free key โ’</a>` : ''}
           </div>
-          <button id="run-btn" class="btn-primary w-full py-3">▶ Run prompt</button>
-          <div id="status" class="text-sm text-slate-400"></div>
-          <div id="output" class="hidden panel p-4 whitespace-pre-wrap text-slate-200 text-sm leading-relaxed max-h-96 overflow-y-auto"></div>
+          <button id="run-btn" class="btn-primary w-full py-3">โ–ถ Run prompt</button>
+          <div id="status" class="text-sm text-zinc-400"></div>
+          <div id="output" class="hidden panel p-4 whitespace-pre-wrap text-zinc-200 text-sm leading-relaxed max-h-96 overflow-y-auto"></div>
         </section>
       </div>`;
 
@@ -230,9 +230,9 @@ export function initRun() {
       .map(
         (v) => `
         <div>
-          <label class="text-xs text-slate-400 font-mono">{{${esc(v)}}}</label>
+          <label class="text-xs text-zinc-400 font-mono">{{${esc(v)}}}</label>
           <input data-var="${esc(v)}" type="text" placeholder="value for ${esc(v)}"
-            class="w-full mt-1 py-2 px-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-slate-200 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-500/50" />
+            class="w-full mt-1 py-2 px-3 rounded-xl bg-[#0b0b12] border border-[#282838] text-zinc-200 text-sm focus:outline-none focus:ring-2 focus:ring-zinc-500/50" />
         </div>`
       )
       .join('');
@@ -252,7 +252,7 @@ export function initRun() {
       if (running) return;
       const key = provider().needsKey && !keyInput?.value ? '' : (keyInput?.value || '');
       if (provider().needsKey && !key) {
-        status.innerHTML = `<span class="text-rose-300">Please paste a free API key for ${esc(provider().label)}.</span>`;
+        status.innerHTML = `<span class="text-zinc-300">Please paste a free API key for ${esc(provider().label)}.</span>`;
         return;
       }
       setKey(providerId, key);
@@ -262,20 +262,20 @@ export function initRun() {
 
       running = true;
       runBtn.disabled = true;
-      runBtn.textContent = '⏳ Running…';
-      status.innerHTML = '<span class="text-slate-400">Generating with ' + esc(provider().label) + ' (' + esc(modelSel.value) + ')…</span>';
+      runBtn.textContent = 'โณ Running…';
+      status.innerHTML = '<span class="text-zinc-400">Generating with ' + esc(provider().label) + ' (' + esc(modelSel.value) + ')…</span>';
       output.classList.add('hidden');
       try {
         const text = await runPrompt(provider(), modelSel.value, finalPrompt);
         output.textContent = text;
         output.classList.remove('hidden');
-        status.innerHTML = '<span class="text-emerald-300">Done ✓</span>';
+        status.innerHTML = '<span class="text-zinc-300">Done โ“</span>';
       } catch (e: any) {
-        status.innerHTML = `<span class="text-rose-300">Error: ${esc(String(e?.message || e))}. If a keyed provider fails, it may be a CORS or key issue — try Pollinations (no key).</span>`;
+        status.innerHTML = `<span class="text-zinc-300">Error: ${esc(String(e?.message || e))}. If a keyed provider fails, it may be a CORS or key issue — try Pollinations (no key).</span>`;
       } finally {
         running = false;
         runBtn.disabled = false;
-        runBtn.textContent = '▶ Run prompt';
+        runBtn.textContent = 'โ–ถ Run prompt';
       }
     });
   }

@@ -15,43 +15,43 @@ const refs = path.data.prompts.map((id) => promptById.get(id)).filter(Boolean) a
 const base = import.meta.env.BASE_URL;
 
 const levelMeta = {
-  start: { label: 'Start here', emoji: '🌱', color: 'bg-emerald-500/10 border-emerald-500/30 text-emerald-200' },
-  advance: { label: 'Advance', emoji: '🚀', color: 'bg-amber-500/10 border-amber-500/30 text-amber-200' },
-  master: { label: 'Master', emoji: '👑', color: 'bg-rose-500/10 border-rose-500/30 text-rose-200' }
+  start: { label: 'Start here', color: 'bg-zinc-500/10 border-zinc-500/30 text-zinc-200' },
+  advance: { label: 'Advance', color: 'bg-zinc-500/10 border-zinc-500/30 text-zinc-200' },
+  master: { label: 'Master', color: 'bg-zinc-500/10 border-zinc-500/30 text-zinc-200' }
 } as const;
 const lm = levelMeta[path.data.level];
 ---
 
 <Layout title={path.data.title} description={path.data.description}>
   <article class="mx-auto max-w-3xl px-4 sm:px-6 py-10">
-    <nav class="text-sm text-slate-500 mb-6">
-      <a href={`${base}paths`} class="hover:text-slate-300">Learning paths</a>
+    <nav class="text-sm text-zinc-500 mb-6">
+      <a href={`${base}paths`} class="hover:text-zinc-300">Learning paths</a>
       <span class="mx-1">/</span>
       <span>{path.data.title}</span>
     </nav>
 
     <header class="mb-6">
-      <span class={`chip border ${lm.color}`}>{lm.emoji} {lm.label}</span>
-      <h1 class="text-3xl font-bold text-slate-100 mt-3 leading-tight">{path.data.title}</h1>
-      <p class="text-slate-400 mt-2">{path.data.description}</p>
+      <span class={`chip border ${lm.color}`}>{lm.label}</span>
+      <h1 class="text-3xl font-bold text-zinc-100 mt-3 leading-tight">{path.data.title}</h1>
+      <p class="text-zinc-400 mt-2">{path.data.description}</p>
     </header>
 
-    <div class="prose-pf panel p-6">
+    <div class="pzinc-pf panel p-6">
       <Content />
     </div>
 
     <section class="mt-10">
-      <h2 class="text-xl font-bold text-slate-100 mb-4">Prompts in this track</h2>
+      <h2 class="text-xl font-bold text-zinc-100 mb-4">Prompts in this track</h2>
       <ol class="space-y-3">
         {refs.map((p, i) => (
           <li>
-            <a href={`${base}prompts/${p.id}`} class="panel p-4 flex items-center gap-4 hover:border-indigo-500/40 transition-colors group">
-              <span class="text-2xl font-bold text-slate-600 group-hover:text-indigo-400 w-8 text-center">{i + 1}</span>
+            <a href={`${base}prompts/${p.id}`} class="panel p-4 flex items-center gap-4 hover:border-zinc-500/40 transition-colors group">
+              <span class="text-2xl font-bold text-zinc-600 group-hover:text-zinc-400 w-8 text-center">{i + 1}</span>
               <div class="flex-1 min-w-0">
-                <div class="font-semibold text-slate-100 group-hover:text-indigo-200">{p.data.title}</div>
-                <div class="text-sm text-slate-400 truncate">{p.data.description}</div>
+                <div class="font-semibold text-zinc-100 group-hover:text-zinc-200">{p.data.title}</div>
+                <div class="text-sm text-zinc-400 truncate">{p.data.description}</div>
               </div>
-              <span class="text-slate-500 group-hover:text-indigo-300">→</span>
+              <span class="text-zinc-500 group-hover:text-zinc-300">→</span>
             </a>
           </li>
         ))}

@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../../layouts/Layout.astro';
 import { getCollection } from 'astro:content';
 
@@ -8,17 +8,17 @@ const promptById = new Map(prompts.map((p) => [p.id, p]));
 
 const ordered = paths.sort((a, b) => a.data.order - b.data.order);
 const levelMeta = {
-  start: { label: 'Start here', emoji: '🌱', color: 'bg-emerald-500/10 border-emerald-500/30 text-emerald-200' },
-  advance: { label: 'Advance', emoji: '🚀', color: 'bg-amber-500/10 border-amber-500/30 text-amber-200' },
-  master: { label: 'Master', emoji: '👑', color: 'bg-rose-500/10 border-rose-500/30 text-rose-200' }
+  start: { label: 'Start here', color: 'bg-zinc-500/10 border-zinc-500/30 text-zinc-200' },
+  advance: { label: 'Advance', color: 'bg-zinc-500/10 border-zinc-500/30 text-zinc-200' },
+  master: { label: 'Master', color: 'bg-zinc-500/10 border-zinc-500/30 text-zinc-200' }
 } as const;
 const base = import.meta.env.BASE_URL;
 ---
 
 <Layout title="Learning paths" description="Guided tracks that take you from your first prompt to orchestrating full AI workflows.">
   <section class="mx-auto max-w-5xl px-4 sm:px-6 py-12">
-    <h1 class="text-4xl font-extrabold tracking-tight">Learning <span class="grad-text">paths</span></h1>
-    <p class="mt-3 text-lg text-slate-400 max-w-2xl">
+    <h1 class="text-4xl font-extrabold tracking-tight">Learning <span class="silver-text">paths</span></h1>
+    <p class="mt-3 text-lg text-zinc-400 max-w-2xl">
       Three tracks, each grouping the right prompts in the right order. Start at the top,
       finish with the confidence to orchestrate real work.
     </p>
@@ -32,22 +32,22 @@ const base = import.meta.env.BASE_URL;
         return (
           <div class="panel card-lift p-6" data-reveal>
             <div class="flex items-center gap-3 mb-2">
-              <span class={`chip border ${lm.color}`}>{lm.emoji} {lm.label}</span>
-              <span class="text-xs text-slate-500">Track {path.data.order} of {ordered.length}</span>
+              <span class={`chip border ${lm.color}`}>{lm.label}</span>
+              <span class="text-xs text-zinc-500">Track {path.data.order} of {ordered.length}</span>
             </div>
-            <h2 class="text-2xl font-bold text-slate-100">
-              <a href={`${base}paths/${path.id}`} class="hover:text-indigo-300">{path.data.title}</a>
+            <h2 class="text-2xl font-bold text-zinc-100">
+              <a href={`${base}paths/${path.id}`} class="hover:text-zinc-300">{path.data.title}</a>
             </h2>
-            <p class="text-slate-400 mt-2">{path.data.description}</p>
+            <p class="text-zinc-400 mt-2">{path.data.description}</p>
             <div class="mt-4 flex flex-wrap gap-2">
               {refs.map((p) => (
-                <a href={`${base}prompts/${p.id}`} class="chip bg-white/5 border border-white/10 text-slate-300 hover:bg-white/10 hover:text-white">
+                <a href={`${base}prompts/${p.id}`} class="chip bg-white/5 border border-white/10 text-zinc-300 hover:bg-white/10 hover:text-white">
                   {p.data.title}
                 </a>
               ))}
             </div>
-            <a href={`${base}paths/${path.id}`} class="inline-block mt-4 text-sm font-semibold text-indigo-300 hover:text-indigo-200">
-              Start this path →
+            <a href={`${base}paths/${path.id}`} class="inline-block mt-4 text-sm font-semibold text-zinc-300 hover:text-zinc-200">
+              Start this path โ’
             </a>
           </div>
         );

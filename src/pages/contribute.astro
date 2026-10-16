@@ -1,4 +1,4 @@
----
+﻿---
 import Layout from '../layouts/Layout.astro';
 
 const repo = import.meta.env.PUBLIC_REPO || 'YOUR_USERNAME/promptforge';
@@ -13,8 +13,8 @@ const forkUrl = `https://github.com/${owner}/${name}/fork`;
   description="Submit new prompts via GitHub pull request — validated and auto-tagged automatically."
 >
   <section class="mx-auto max-w-4xl px-4 sm:px-6 py-12">
-    <h1 class="text-4xl font-extrabold tracking-tight">Contribute a <span class="grad-text">prompt</span></h1>
-    <p class="mt-3 text-lg text-slate-400 max-w-2xl">
+    <h1 class="text-4xl font-extrabold tracking-tight">Contribute a <span class="silver-text">prompt</span></h1>
+    <p class="mt-3 text-lg text-zinc-400 max-w-2xl">
       PromptForge is a git repo as its own database. Submitting a prompt is just a pull
       request that adds one markdown file. A GitHub Action validates it against the Zod
       schema and auto-tags it — no forms, no accounts beyond GitHub.
@@ -22,31 +22,31 @@ const forkUrl = `https://github.com/${owner}/${name}/fork`;
 
     <div class="mt-8 grid gap-6 md:grid-cols-3">
       <div class="panel p-5">
-        <div class="text-2xl mb-2">1️⃣</div>
-        <h2 class="font-semibold text-slate-100">Fork the repo</h2>
-        <p class="text-sm text-slate-400 mt-1">One click on GitHub.</p>
-        <a href={forkUrl} target="_blank" rel="noopener" class="btn-ghost mt-3">Fork repository →</a>
+        <div class="text-2xl mb-2">1โฃ</div>
+        <h2 class="font-semibold text-zinc-100">Fork the repo</h2>
+        <p class="text-sm text-zinc-400 mt-1">One click on GitHub.</p>
+        <a href={forkUrl} target="_blank" rel="noopener" class="btn-ghost mt-3">Fork repository โ’</a>
       </div>
       <div class="panel p-5">
-        <div class="text-2xl mb-2">2️⃣</div>
-        <h2 class="font-semibold text-slate-100">Add a prompt file</h2>
-        <p class="text-sm text-slate-400 mt-1">Create one markdown file in <code class="bg-white/10 px-1 rounded">src/content/prompts/</code>.</p>
-        <a href={newFileUrl} target="_blank" rel="noopener" class="btn-ghost mt-3">Open the editor →</a>
+        <div class="text-2xl mb-2">2โฃ</div>
+        <h2 class="font-semibold text-zinc-100">Add a prompt file</h2>
+        <p class="text-sm text-zinc-400 mt-1">Create one markdown file in <code class="bg-white/10 px-1 rounded">src/content/prompts/</code>.</p>
+        <a href={newFileUrl} target="_blank" rel="noopener" class="btn-ghost mt-3">Open the editor โ’</a>
       </div>
       <div class="panel p-5">
-        <div class="text-2xl mb-2">3️⃣</div>
-        <h2 class="font-semibold text-slate-100">Open a pull request</h2>
-        <p class="text-sm text-slate-400 mt-1">CI validates the schema and auto-tags your category.</p>
-        <a href={`https://github.com/${owner}/${name}/compare`} target="_blank" rel="noopener" class="btn-ghost mt-3">Create a PR →</a>
+        <div class="text-2xl mb-2">3โฃ</div>
+        <h2 class="font-semibold text-zinc-100">Open a pull request</h2>
+        <p class="text-sm text-zinc-400 mt-1">CI validates the schema and auto-tags your category.</p>
+        <a href={`https://github.com/${owner}/${name}/compare`} target="_blank" rel="noopener" class="btn-ghost mt-3">Create a PR โ’</a>
       </div>
     </div>
 
-    <h2 class="text-2xl font-bold text-slate-100 mt-12 mb-4">The file format</h2>
-    <p class="text-slate-400 mb-4">
+    <h2 class="text-2xl font-bold text-zinc-100 mt-12 mb-4">The file format</h2>
+    <p class="text-zinc-400 mb-4">
       Every prompt is a markdown file with YAML frontmatter. Copy this template, fill it in,
       and the first fenced code block becomes the copyable prompt:
     </p>
-    <pre class="panel p-5 overflow-x-auto text-sm font-mono text-slate-300 leading-relaxed">{`---
+    <pre class="panel p-5 overflow-x-auto text-sm font-mono text-zinc-300 leading-relaxed">{`---
 title: "My amazing prompt"
 description: "One sentence describing what it does."
 category: "writing"          # writing | coding | productivity | analysis | creative | learning | marketing | automation
@@ -72,17 +72,17 @@ Your prompt here. Use {{variable}} placeholders for inputs.
 Explain when this prompt is useful.
 `}</pre>
 
-    <div class="mt-6 panel p-5 border-indigo-500/30">
-      <h3 class="font-semibold text-slate-100">What happens next</h3>
-      <ul class="list-disc list-outside pl-5 mt-2 text-sm text-slate-400 space-y-1">
-        <li><strong class="text-slate-200">Validate</strong> — a GitHub Action checks your frontmatter against the Zod schema.</li>
-        <li><strong class="text-slate-200">Auto-tag</strong> — an Action reads your title + body and suggests/assigns a category if yours is missing or off.</li>
-        <li><strong class="text-slate-200">Review</strong> — a maintainer merges, and your prompt goes live on the next deploy.</li>
+    <div class="mt-6 panel p-5 border-zinc-500/30">
+      <h3 class="font-semibold text-zinc-100">What happens next</h3>
+      <ul class="list-disc list-outside pl-5 mt-2 text-sm text-zinc-400 space-y-1">
+        <li><strong class="text-zinc-200">Validate</strong> — a GitHub Action checks your frontmatter against the Zod schema.</li>
+        <li><strong class="text-zinc-200">Auto-tag</strong> — an Action reads your title + body and suggests/assigns a category if yours is missing or off.</li>
+        <li><strong class="text-zinc-200">Review</strong> — a maintainer merges, and your prompt goes live on the next deploy.</li>
       </ul>
     </div>
 
     <div class="mt-8">
-      <a href={`${base}`} class="btn-primary px-5 py-2.5">← Back to browsing</a>
+      <a href={`${base}`} class="btn-primary px-5 py-2.5">โ Back to browsing</a>
     </div>
   </section>
 </Layout>

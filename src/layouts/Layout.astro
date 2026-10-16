@@ -14,13 +14,14 @@ const {
 const base = import.meta.env.BASE_URL;
 const nav = [
   { href: '', label: 'Browse' },
-  { href: 'paths', label: 'Learning paths' },
+  { href: 'paths', label: 'Paths' },
   { href: 'tools', label: 'Tools' },
-  { href: 'run', label: 'Run' },
+  { href: 'run', label: 'Playground' },
   { href: 'contribute', label: 'Contribute' }
 ];
 const fullTitle = title === 'PromptForge' ? title : `${title} · PromptForge`;
 const logo = `${base}#`;
+const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE'];
 ---
 
 <!doctype html>
@@ -33,43 +34,48 @@ const logo = `${base}#`;
     <meta property="og:title" content={fullTitle} />
     <meta property="og:description" content={description} />
     <meta property="og:type" content="website" />
-    <meta name="theme-color" content="#08080e" />
+    <meta name="theme-color" content="#0a0a0b" />
     <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
     <link rel="sitemap" href={`${base}sitemap.xml`} />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
       rel="stylesheet"
     />
   </head>
-  <body class="min-h-screen flex flex-col">
-    <header class="sticky top-0 z-40 border-b border-white/10 bg-[#0a0a10]/80 backdrop-blur">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 h-16 flex items-center gap-4">
-        <a href={logo} class="flex items-center gap-2 font-bold text-lg tracking-tight shrink-0">
-          <span class="grid place-items-center w-8 h-8 rounded-lg bg-gradient-to-br from-indigo-500 to-violet-500 text-white">⚒️</span>
-          <span>Prompt<span class="grad-text">Forge</span></span>
+  <body class="min-h-screen flex flex-col bg-[#0a0a0b]">
+    <div id="scroll-progress" class="fixed top-0 left-0 z-50 h-[2px] w-0 bg-zinc-100" aria-hidden="true"></div>
+
+    <header class="sticky top-0 z-40 border-b border-[#1c1c20] bg-[#0a0a0b]/85 backdrop-blur">
+      <div class="mx-auto max-w-6xl px-5 sm:px-6 h-16 flex items-center gap-6">
+        <a href={logo} class="flex items-center gap-2.5 shrink-0">
+          <span class="grid place-items-center w-7 h-7 border border-zinc-500 text-zinc-100 font-display font-bold text-sm">P</span>
+          <span class="font-display font-semibold text-lg tracking-tight text-zinc-100">Prompt<span class="silver-text">Forge</span></span>
         </a>
 
-        <nav class="hidden md:flex items-center gap-1 text-sm text-slate-300">
-          {nav.map((n) => (
-            <a
-              href={`${base}${n.href}`}
-              class="px-3 py-2 rounded-lg hover:bg-white/5 hover:text-white transition-colors"
-              aria-current={Astro.url.pathname.replace(base, '') === n.href || (n.href === '' && Astro.url.pathname.replace(base, '') === '') ? 'page' : undefined}
-            >
-              {n.label}
-            </a>
-          ))}
+        <nav class="hidden md:flex items-center gap-1 text-sm text-zinc-400">
+          {nav.map((n) => {
+            const current = Astro.url.pathname.replace(base, '') === n.href || (n.href === '' && Astro.url.pathname.replace(base, '') === '');
+            return (
+              <a
+                href={`${base}${n.href}`}
+                class={`px-3 py-2 transition-colors ${current ? 'text-zinc-100' : 'hover:text-zinc-100'}`}
+                aria-current={current ? 'page' : undefined}
+              >
+                {n.label}
+              </a>
+            );
+          })}
         </nav>
 
-        <div class="ml-auto flex items-center gap-2">
+        <div class="ml-auto flex items-center gap-3">
           <div id="auth-widget"></div>
           <details class="md:hidden relative">
             <summary class="list-none btn-ghost px-3 py-2 cursor-pointer select-none">☰</summary>
             <div class="absolute right-0 mt-2 w-48 panel p-2 flex flex-col gap-1">
               {nav.map((n) => (
-                <a href={`${base}${n.href}`} class="px-3 py-2 rounded-lg hover:bg-white/5 text-sm text-slate-200">{n.label}</a>
+                <a href={`${base}${n.href}`} class="px-3 py-2 text-sm text-zinc-200 hover:bg-white/5">{n.label}</a>
               ))}
             </div>
           </details>
@@ -79,24 +85,35 @@ const logo = `${base}#`;
 
     <main class="flex-1"><slot /></main>
 
-    <footer class="border-t border-white/10 mt-16">
-      <div class="mx-auto max-w-6xl px-4 sm:px-6 py-10 grid gap-8 sm:grid-cols-3 text-sm text-slate-400">
+    <footer class="border-t border-[#1c1c20] mt-20">
+      <div class="marquee py-4 text-zinc-500 font-display font-semibold text-2xl uppercase">
+        <div class="marquee-track">
+          {[0, 1].map(() => (
+            <div class="flex items-center gap-8 pr-8">
+              {marquee.map((m) => (
+                <span class="flex items-center gap-8">{m}<span class="text-zinc-700">·</span></span>
+              ))}
+            </div>
+          ))}
+        </div>
+      </div>
+      <div class="mx-auto max-w-6xl px-5 sm:px-6 py-12 grid gap-10 sm:grid-cols-3 text-sm text-zinc-500">
         <div>
-          <p class="font-semibold text-slate-200 mb-2">PromptForge</p>
-          <p class="leading-relaxed">A free, open-source library of AI prompts, commands, tools and workflows — built and maintained by the community.</p>
+          <p class="font-display font-semibold text-zinc-200 mb-3">PromptForge</p>
+          <p class="leading-relaxed max-w-xs">A free, open-source library of AI prompts, commands, tools and workflows — built and maintained by the community.</p>
         </div>
         <div>
-          <p class="font-semibold text-slate-200 mb-2">Explore</p>
-          <ul class="space-y-1.5">
+          <p class="mono-label mb-3">Explore</p>
+          <ul class="space-y-2">
             {nav.map((n) => (
-              <li><a href={`${base}${n.href}`} class="hover:text-white">{n.label}</a></li>
+              <li><a href={`${base}${n.href}`} class="hover:text-zinc-100 transition-colors">{n.label}</a></li>
             ))}
-            <li><a href={`${base}about`} class="hover:text-white">About</a></li>
+            <li><a href={`${base}about`} class="hover:text-zinc-100 transition-colors">About</a></li>
           </ul>
         </div>
         <div>
-          <p class="font-semibold text-slate-200 mb-2">100% free</p>
-          <ul class="space-y-1.5">
+          <p class="mono-label mb-3">Principles</p>
+          <ul class="space-y-2">
             <li>Static site · no server costs</li>
             <li>Keyless LLM via Pollinations</li>
             <li>GitHub OAuth login</li>
@@ -104,8 +121,8 @@ const logo = `${base}#`;
           </ul>
         </div>
       </div>
-      <div class="border-t border-white/10 py-4 text-center text-xs text-slate-500">
-        Built with Astro + Tailwind · Deployed free on GitHub Pages · Zero recurring cost
+      <div class="border-t border-[#1c1c20] py-5 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-zinc-600">
+        Astro + Tailwind · GitHub Pages · $0 forever
       </div>
     </footer>
 
@@ -114,7 +131,18 @@ const logo = `${base}#`;
       initAuth();
     </script>
     <script>
-      // Global scroll-reveal + header shadow (no library).
+      // Scroll progress + reveal + header shadow.
+      const progress = document.getElementById('scroll-progress');
+      const onScroll = () => {
+        const h = document.documentElement;
+        const max = h.scrollHeight - h.clientHeight;
+        if (progress) progress.style.width = (max > 0 ? (h.scrollTop / max) * 100 : 0) + '%';
+        const header = document.querySelector('header');
+        if (header) header.classList.toggle('border-[#26262b]', window.scrollY > 8);
+      };
+      addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
       const reveal = () => {
         const els = document.querySelectorAll('[data-reveal]:not(.is-visible)');
         if (!('IntersectionObserver' in window)) {
@@ -133,24 +161,15 @@ const logo = `${base}#`;
               }
             }
           },
-          { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+          { threshold: 0.1, rootMargin: '0px 0px -50px 0px' }
         );
         els.forEach((el) => io.observe(el));
       };
-      const headerShadow = () => {
-        const h = document.querySelector('header');
-        if (!h) return;
-        const onScroll = () => h.classList.toggle('shadow-[0_8px_30px_-12px_rgba(0,0,0,0.8)]', window.scrollY > 8);
-        onScroll();
-        addEventListener('scroll', onScroll, { passive: true });
+      const initReveal = () => {
+        if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', reveal);
+        else reveal();
       };
-      if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', () => { reveal(); headerShadow(); });
-      } else {
-        reveal();
-        headerShadow();
-      }
-      // Re-run reveal when client-rendered grids inject new nodes.
+      initReveal();
       document.addEventListener('pf:reveal', reveal);
     </script>
   </body>

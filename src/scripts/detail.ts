@@ -1,4 +1,4 @@
-// Voting + copy + run behavior for the prompt detail page.
+﻿// Voting + copy + run behavior for the prompt detail page.
 
 const VOTES_KEY = 'pf.votes';
 
@@ -34,13 +34,13 @@ export function initDetail() {
     app.innerHTML = `
       <div class="flex items-center gap-3">
         <div class="flex items-center gap-1">
-          <button data-vote="1" class="grid place-items-center w-10 h-10 rounded-xl border ${myVote === 1 ? 'bg-indigo-500/20 border-indigo-500/50 text-indigo-200' : 'bg-white/5 border-white/10 text-slate-400 hover:text-indigo-300'} transition-colors" aria-label="upvote">▲</button>
-          <span class="text-lg font-semibold text-slate-100 w-10 text-center">${up - down}</span>
-          <button data-vote="-1" class="grid place-items-center w-10 h-10 rounded-xl border ${myVote === -1 ? 'bg-rose-500/20 border-rose-500/50 text-rose-200' : 'bg-white/5 border-white/10 text-slate-400 hover:text-rose-300'} transition-colors" aria-label="downvote">▼</button>
+          <button data-vote="1" class="grid place-items-center w-10 h-10 rounded-xl border ${myVote === 1 ? 'bg-zinc-500/20 border-zinc-500/50 text-zinc-200' : 'bg-white/5 border-white/10 text-zinc-400 hover:text-zinc-300'} transition-colors" aria-label="upvote">โ–ฒ</button>
+          <span class="text-lg font-semibold text-zinc-100 w-10 text-center">${up - down}</span>
+          <button data-vote="-1" class="grid place-items-center w-10 h-10 rounded-xl border ${myVote === -1 ? 'bg-zinc-500/20 border-zinc-500/50 text-zinc-200' : 'bg-white/5 border-white/10 text-zinc-400 hover:text-zinc-300'} transition-colors" aria-label="downvote">โ–ผ</button>
         </div>
-        <div class="text-xs text-slate-500">${up} ▲ · ${down} ▼</div>
-        <button data-copy class="btn-ghost px-4 py-2">📋 Copy prompt</button>
-        <a href="${esc(d.runUrl)}" class="btn-primary px-4 py-2">▶ Run</a>
+        <div class="text-xs text-zinc-500">${up} โ–ฒ ยท ${down} โ–ผ</div>
+        <button data-copy class="btn-ghost px-4 py-2">๐“ Copy prompt</button>
+        <a href="${esc(d.runUrl)}" class="btn-primary px-4 py-2">โ–ถ Run</a>
       </div>`;
     app.querySelector('[data-vote="1"]')?.addEventListener('click', () => {
       votes[d.id] = myVote === 1 ? 0 : 1;
@@ -53,10 +53,10 @@ export function initDetail() {
     app.querySelector('[data-copy]')?.addEventListener('click', async (e) => {
       try {
         await navigator.clipboard.writeText(d.prompt);
-        (e.currentTarget as HTMLElement).textContent = '✅ Copied';
-        setTimeout(() => ((e.currentTarget as HTMLElement).textContent = '📋 Copy prompt'), 1500);
+        (e.currentTarget as HTMLElement).textContent = 'โ… Copied';
+        setTimeout(() => ((e.currentTarget as HTMLElement).textContent = '๐“ Copy prompt'), 1500);
       } catch {
-        (e.currentTarget as HTMLElement).textContent = '⚠️ Copy failed';
+        (e.currentTarget as HTMLElement).textContent = 'โ  Copy failed';
       }
     });
   }

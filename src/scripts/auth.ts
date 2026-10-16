@@ -1,4 +1,4 @@
-// GitHub OAuth "Device Flow" login — runs fully client-side, no backend,
+﻿// GitHub OAuth "Device Flow" login — runs fully client-side, no backend,
 // no client secret. Only needs a public GitHub OAuth App "Client ID".
 
 const TOKEN_KEY = 'pf.github.token';
@@ -40,7 +40,7 @@ function esc(s: string) {
 }
 
 async function startDeviceFlow(clientId: string, el: HTMLElement) {
-  el.innerHTML = '<span class="text-sm text-slate-300">Contacting GitHub…</span>';
+  el.innerHTML = '<span class="text-sm text-zinc-300">Contacting GitHub…</span>';
   try {
     const res = await fetch('https://github.com/login/device/code', {
       method: 'POST',
@@ -49,21 +49,21 @@ async function startDeviceFlow(clientId: string, el: HTMLElement) {
     });
     const data = await res.json();
     if (!data.device_code) {
-      el.innerHTML = `<span class="text-sm text-rose-300">GitHub error: ${esc(data.error_description || data.error || 'unknown')}</span>`;
+      el.innerHTML = `<span class="text-sm text-zinc-300">GitHub error: ${esc(data.error_description || data.error || 'unknown')}</span>`;
       return;
     }
     const codeEl = document.createElement('span');
     codeEl.innerHTML = `
       <div class="flex flex-col gap-2 text-sm">
-        <div class="font-semibold text-slate-100">Enter code <span class="font-mono text-indigo-300 text-base">${esc(data.user_code)}</span></div>
-        <a href="${esc(data.verification_uri)}" target="_blank" rel="noopener" class="btn-primary">Open GitHub →</a>
-        <div class="text-xs text-slate-400">Waiting for authorization…</div>
+        <div class="font-semibold text-zinc-100">Enter code <span class="font-mono text-zinc-300 text-base">${esc(data.user_code)}</span></div>
+        <a href="${esc(data.verification_uri)}" target="_blank" rel="noopener" class="btn-primary">Open GitHub โ’</a>
+        <div class="text-xs text-zinc-400">Waiting for authorization…</div>
       </div>`;
     el.appendChild(codeEl);
     window.open(data.verification_uri, '_blank');
     await pollToken(clientId, data, el);
   } catch (e: any) {
-    el.innerHTML = `<span class="text-sm text-rose-300">Network error: ${esc(String(e))}</span>`;
+    el.innerHTML = `<span class="text-sm text-zinc-300">Network error: ${esc(String(e))}</span>`;
   }
 }
 
@@ -93,14 +93,14 @@ async function pollToken(clientId: string, data: any, el: HTMLElement) {
         interval += 5;
         continue;
       }
-      el.innerHTML = `<span class="text-sm text-rose-300">Login error: ${esc(tok.error_description || tok.error)}</span>`;
+      el.innerHTML = `<span class="text-sm text-zinc-300">Login error: ${esc(tok.error_description || tok.error)}</span>`;
       return;
     } catch (e: any) {
-      el.innerHTML = `<span class="text-sm text-rose-300">Network error: ${esc(String(e))}</span>`;
+      el.innerHTML = `<span class="text-sm text-zinc-300">Network error: ${esc(String(e))}</span>`;
       return;
     }
   }
-  el.innerHTML = '<span class="text-sm text-rose-300">Timed out — please try again.</span>';
+  el.innerHTML = '<span class="text-sm text-zinc-300">Timed out — please try again.</span>';
 }
 
 async function loadUser(token: string) {
@@ -124,7 +124,7 @@ function render() {
     el.innerHTML = `
       <div class="flex items-center gap-2">
         <img src="${esc(user.avatar_url)}" alt="" class="w-7 h-7 rounded-full ring-1 ring-white/20" referrerpolicy="no-referrer" />
-        <span class="text-sm text-slate-200 hidden sm:inline">${esc(user.login)}</span>
+        <span class="text-sm text-zinc-200 hidden sm:inline">${esc(user.login)}</span>
         <button data-logout class="btn-ghost px-2.5 py-1.5 text-xs">Sign out</button>
       </div>`;
     el.querySelector('[data-logout]')?.addEventListener('click', () => {
@@ -138,10 +138,10 @@ function render() {
         <button data-login class="btn-ghost px-3 py-2 text-xs" title="Login requires a GitHub OAuth Client ID (free to create)">Sign in with GitHub</button>`;
       el.querySelector('[data-login]')?.addEventListener('click', () => {
         el.innerHTML = `
-          <div class="panel p-3 text-xs text-slate-300 max-w-xs">
-            <p class="font-semibold text-slate-100 mb-1">Login isn't configured yet</p>
+          <div class="panel p-3 text-xs text-zinc-300 max-w-xs">
+            <p class="font-semibold text-zinc-100 mb-1">Login isn't configured yet</p>
             <p class="leading-relaxed">Set <code class="bg-white/10 px-1 rounded">PUBLIC_GITHUB_CLIENT_ID</code> (a free GitHub OAuth App Client ID with Device Flow enabled).</p>
-            <a href="https://github.com/settings/developers" target="_blank" rel="noopener" class="text-indigo-300 underline">Create one →</a>
+            <a href="https://github.com/settings/developers" target="_blank" rel="noopener" class="text-zinc-300 underline">Create one โ’</a>
           </div>`;
       });
     } else {

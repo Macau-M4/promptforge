@@ -20,33 +20,33 @@ const promptText = extractPromptBlock(prompt.body || '');
 
 <Layout title={title} description={description}>
   <article class="mx-auto max-w-3xl px-4 sm:px-6 py-10">
-    <nav class="text-sm text-slate-500 mb-6">
-      <a href={`${base}`} class="hover:text-slate-300">Browse</a>
+    <nav class="text-sm text-zinc-500 mb-6">
+      <a href={`${base}`} class="hover:text-zinc-300">Browse</a>
       <span class="mx-1">/</span>
       <span>{cat.label}</span>
     </nav>
 
     <header class="panel p-6 mb-6">
       <div class="flex flex-wrap items-center gap-2 mb-3">
-        <span class="chip bg-indigo-500/10 border border-indigo-500/30 text-indigo-200">{cat.emoji} {cat.label}</span>
+        <span class="chip bg-zinc-500/10 border border-zinc-500/30 text-zinc-200">{cat.label}</span>
         <span class={`chip border ${diff.color}`}>{diff.label}</span>
-        <span class="chip bg-white/5 border border-white/10 text-slate-400">model: {model}</span>
+        <span class="chip bg-white/5 border border-white/10 text-zinc-400">model: {model}</span>
       </div>
-      <h1 class="text-3xl font-bold text-slate-100 leading-tight">{title}</h1>
-      <p class="text-slate-400 mt-2">{description}</p>
+      <h1 class="text-3xl font-bold text-zinc-100 leading-tight">{title}</h1>
+      <p class="text-zinc-400 mt-2">{description}</p>
       <div class="flex flex-wrap gap-1 mt-3">
-        {tags.map((t) => <span class="chip bg-white/5 border border-white/10 text-slate-500">#{t}</span>)}
+        {tags.map((t) => <span class="chip bg-white/5 border border-white/10 text-zinc-500">#{t}</span>)}
       </div>
-      <div class="mt-4 text-xs text-slate-500">by {author} · added {created} · updated {updated}</div>
+      <div class="mt-4 text-xs text-zinc-500">by {author} · added {created} · updated {updated}</div>
       <div class="mt-4"><div id="detail-widget"></div></div>
     </header>
 
-    <div class="prose-pf panel p-6">
+    <div class="pzinc-pf panel p-6">
       <Content />
     </div>
 
     <div class="mt-8 flex flex-wrap gap-3">
-      <a href={`${base}run?prompt=${prompt.id}`} class="btn-primary px-5 py-2.5">▶ Run this prompt</a>
+      <a href={`${base}run?prompt=${prompt.id}`} class="btn-primary px-5 py-2.5">Run this prompt</a>
       <a href={`${base}contribute`} class="btn-ghost px-5 py-2.5">Contribute a prompt</a>
     </div>
   </article>
