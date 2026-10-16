@@ -255,8 +255,11 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
             return;
           }
           e.preventDefault();
-          ptOverlay.style.setProperty('--ptx', e.clientX + 'px');
-          ptOverlay.style.setProperty('--pty', e.clientY + 'px');
+          const r = a.getBoundingClientRect();
+          const cx = r.left + r.width / 2;
+          const cy = r.top + r.height / 2;
+          ptOverlay.style.setProperty('--ptx', cx + 'px');
+          ptOverlay.style.setProperty('--pty', cy + 'px');
           ptOverlay.classList.add('expanding');
           setTimeout(() => {
             sessionStorage.setItem(PT_KEY, '1');
