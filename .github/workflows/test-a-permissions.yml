@@ -1,9 +1,0 @@
-name: test-a-permissions
-on: [push]
-permissions:
-  contents: read
-jobs:
-  hi:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo ok-a
