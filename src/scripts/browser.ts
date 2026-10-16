@@ -232,6 +232,8 @@ export function initBrowser() {
           const r = card.getBoundingClientRect();
           const px = (e.clientX - r.left) / r.width - 0.5;
           const py = (e.clientY - r.top) / r.height - 0.5;
+          card.style.setProperty('--gx', (e.clientX - r.left) + 'px');
+          card.style.setProperty('--gy', (e.clientY - r.top) + 'px');
           card.style.transform = `perspective(900px) rotateX(${(-py * 4).toFixed(2)}deg) rotateY(${(px * 5).toFixed(2)}deg) translateY(-3px)`;
         });
         card.addEventListener('pointerleave', () => {

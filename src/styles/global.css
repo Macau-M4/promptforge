@@ -73,10 +73,12 @@
     @apply font-display font-bold uppercase tracking-tight leading-[0.95];
   }
   .silver-text {
-    background: linear-gradient(180deg, #ffffff 0%, #d8d8dd 55%, #8a8a92 100%);
+    background: linear-gradient(110deg, #ffffff 18%, #cfcfd6 38%, #ffffff 50%, #9a9aa3 64%, #ffffff 82%);
+    background-size: 220% auto;
     -webkit-background-clip: text;
     background-clip: text;
     color: transparent;
+    animation: shimmer 3.2s linear infinite;
   }
   .mono-label {
     @apply font-mono text-[11px] uppercase tracking-[0.2em] text-zinc-500;
@@ -93,20 +95,23 @@
     background: #16161a;
   }
 
-  /* Scroll reveal */
+  /* Scroll reveal — blur + lift + scale for a cinematic entrance */
   [data-reveal] {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.65s var(--ease), transform 0.65s var(--ease);
+    transform: translateY(34px) scale(0.97);
+    filter: blur(8px);
+    transition: opacity 0.7s var(--ease), transform 0.85s var(--ease), filter 0.85s var(--ease);
+    will-change: transform, opacity, filter;
   }
   [data-reveal].is-visible {
     opacity: 1;
     transform: none;
+    filter: blur(0);
   }
   @media (prefers-reduced-motion: reduce) {
-    /* Keep the one-time entrance reveal (fade only, no movement) so content is
-       never shown frozen/hidden, while still honoring the reduced-motion intent. */
-    [data-reveal] { transform: none; }
+    /* Keep the one-time entrance reveal (fade only, no movement/blur) so content
+       is never shown frozen/hidden, while still honoring the reduced-motion intent. */
+    [data-reveal] { transform: none; filter: none; }
   }
 
   /* Kinetic text (hero) — staggered word reveal */
@@ -117,15 +122,65 @@
   }
   .kinetic-line > span {
     display: inline-block;
-    transform: translateY(120%) rotate(4deg);
+    transform: translateY(115%) rotate(5deg);
     transform-origin: left bottom;
+    opacity: 0;
     animation: kineticUp 1.15s cubic-bezier(0.16, 1, 0.3, 1) both;
-    will-change: transform;
+    will-change: transform, opacity;
   }
   @media (prefers-reduced-motion: reduce) {
     /* Keep the essential one-time headline entrance (the single most important
        animation); only the continuous/decorative loops are disabled below. */
     .kinetic-line > span { animation-duration: 0.7s; }
+  }
+
+  /* Cursor spotlight (monochrome, fine-pointer only) */
+  #cursor-glow {
+    position: fixed;
+    inset: 0;
+    z-index: 70;
+    pointer-events: none;
+    mix-blend-mode: screen;
+    background: radial-gradient(520px circle at var(--mx, 50vw) var(--my, 40vh), rgba(255, 255, 255, 0.10), transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+  }
+  body.cursor-active #cursor-glow { opacity: 1; }
+
+  /* Magnetic buttons (translate handled by JS) */
+  .magnetic {
+    will-change: transform;
+    transition: transform 0.15s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+
+  /* Card glare follows the pointer during tilt */
+  .card-lift[data-tilt] {
+    position: relative;
+    overflow: hidden;
+  }
+  .card-lift[data-tilt]::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: radial-gradient(380px circle at var(--gx, 50%) var(--gy, 50%), rgba(255, 255, 255, 0.12), transparent 62%);
+    opacity: 0;
+    transition: opacity 0.25s ease;
+  }
+  .card-lift[data-tilt]:hover::after { opacity: 1; }
+
+  /* Aurora glow blobs (hero backdrop) */
+  .aurora-blob {
+    position: absolute;
+    border-radius: 9999px;
+    filter: blur(80px);
+    pointer-events: none;
+    will-change: transform;
+  }
+  .aurora-a { animation: auroraA 18s ease-in-out infinite; }
+  .aurora-b { animation: auroraB 22s ease-in-out infinite; }
+  @media (prefers-reduced-motion: reduce) {
+    .aurora-a, .aurora-b { animation: none; }
   }
 
   /* Light sweep (ambient, monochrome) */
@@ -171,7 +226,23 @@
 }
 
 @keyframes kineticUp {
-  to { transform: translateY(0) rotate(0); }
+  0% { transform: translateY(115%) rotate(5deg); opacity: 0; }
+  55% { transform: translateY(-4%) rotate(-1deg); opacity: 1; }
+  100% { transform: translateY(0) rotate(0deg); opacity: 1; }
+}
+
+@keyframes shimmer {
+  to { background-position: -220% center; }
+}
+
+@keyframes auroraA {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(7%, -5%) scale(1.18); }
+}
+
+@keyframes auroraB {
+  0%, 100% { transform: translate(0, 0) scale(1.12); }
+  50% { transform: translate(-8%, 6%) scale(0.92); }
 }
 
 @keyframes sweep {

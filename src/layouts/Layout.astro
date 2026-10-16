@@ -51,6 +51,7 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
   </head>
   <body class="min-h-screen flex flex-col bg-[#0a0a0b]">
     <div id="scroll-progress" class="fixed top-0 left-0 z-50 h-[2px] w-0 bg-zinc-100" aria-hidden="true"></div>
+    <div id="cursor-glow" aria-hidden="true"></div>
 
     <header class="sticky top-0 z-40 border-b border-[#1c1c20] bg-[#0a0a0b]/85 backdrop-blur">
       <div class="mx-auto max-w-6xl px-5 sm:px-6 h-16 flex items-center gap-6">
@@ -186,6 +187,38 @@ const marquee = ['PROMPTS', 'TOOLS', 'WORKFLOWS', 'LEARN', 'VOTE', 'RUN', 'FORGE
         if (revealedByIO) return;
         document.querySelectorAll('[data-reveal]:not(.is-visible)').forEach((el) => el.classList.add('is-visible'));
       }, 3000);
+
+      // Cursor spotlight + magnetic buttons (fine-pointer, non-reduced-motion).
+      const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+      const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const glow = document.getElementById('cursor-glow');
+      if (glow && finePointer && !reduceMotion) {
+        document.body.classList.add('cursor-active');
+        let tx = window.innerWidth / 2, ty = window.innerHeight * 0.4;
+        let x = tx, y = ty;
+        addEventListener('pointermove', (e) => { tx = e.clientX; ty = e.clientY; }, { passive: true });
+        const follow = () => {
+          x += (tx - x) * 0.12;
+          y += (ty - y) * 0.12;
+          glow.style.setProperty('--mx', x + 'px');
+          glow.style.setProperty('--my', y + 'px');
+          requestAnimationFrame(follow);
+        };
+        requestAnimationFrame(follow);
+      }
+      if (finePointer && !reduceMotion) {
+        const magnetize = (btn: HTMLElement) => {
+          btn.classList.add('magnetic');
+          btn.addEventListener('pointermove', (e) => {
+            const r = btn.getBoundingClientRect();
+            const dx = e.clientX - (r.left + r.width / 2);
+            const dy = e.clientY - (r.top + r.height / 2);
+            btn.style.transform = `translate(${(dx * 0.2).toFixed(1)}px, ${(dy * 0.35).toFixed(1)}px)`;
+          });
+          btn.addEventListener('pointerleave', () => { btn.style.transform = ''; });
+        };
+        document.querySelectorAll<HTMLElement>('.btn-primary, .btn-ghost').forEach((b) => magnetize(b));
+      }
     </script>
   </body>
 </html>

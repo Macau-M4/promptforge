@@ -118,6 +118,7 @@ export function initHero() {
 
   function drawParticles(t: number) {
     const pOff = finePointer ? (pointer.tx - 0.5) * 16 : 0;
+    const pts: { x: number; y: number; depth: number; s: number }[] = [];
     for (const p of particles) {
       p.x += p.vx;
       p.y += p.vy;
@@ -126,9 +127,49 @@ export function initHero() {
       const depth = 0.35 + p.z * 0.65;
       const x = p.x + pOff * depth;
       const y = p.y + Math.sin(t * 0.4 + p.z * 6) * 3 * depth;
+      pts.push({ x, y, depth, s: p.s });
+    }
+
+    // Constellation: faint links between nearby particles.
+    ctx.lineWidth = 0.5;
+    for (let i = 0; i < pts.length; i++) {
+      for (let j = i + 1; j < pts.length; j++) {
+        const a = pts[i], b = pts[j];
+        const dx = a.x - b.x, dy = a.y - b.y;
+        const d2 = dx * dx + dy * dy;
+        if (d2 < 14400) { // 120px
+          const alpha = (1 - Math.sqrt(d2) / 120) * 0.13;
+          ctx.strokeStyle = `rgba(232,232,238,${alpha.toFixed(3)})`;
+          ctx.beginPath();
+          ctx.moveTo(a.x, a.y);
+          ctx.lineTo(b.x, b.y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Link the cursor to nearby particles (web effect).
+    if (finePointer && pointer.active) {
+      const cx = pointer.tx * W, cy = pointer.ty * H;
+      for (const p of pts) {
+        const dx = p.x - cx, dy = p.y - cy;
+        const d2 = dx * dx + dy * dy;
+        if (d2 < 25600) { // 160px
+          const alpha = (1 - Math.sqrt(d2) / 160) * 0.18;
+          ctx.strokeStyle = `rgba(255,255,255,${alpha.toFixed(3)})`;
+          ctx.beginPath();
+          ctx.moveTo(cx, cy);
+          ctx.lineTo(p.x, p.y);
+          ctx.stroke();
+        }
+      }
+    }
+
+    // Draw the particles on top.
+    for (const p of pts) {
       ctx.beginPath();
-      ctx.arc(x, y, p.s * depth, 0, Math.PI * 2);
-      ctx.fillStyle = `rgba(232,232,238,${0.24 * depth + 0.08})`;
+      ctx.arc(p.x, p.y, p.s * p.depth, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(232,232,238,${0.24 * p.depth + 0.08})`;
       ctx.fill();
     }
   }
